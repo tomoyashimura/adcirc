@@ -1,0 +1,812 @@
+makefile:19: (INFO) Guessing the type of platform ADCIRC will run on...
+makefile:31: (INFO) Name is x86_64-unknown-linux-gnu, Machine is x86_64, Vendor is unknown, and OS is linux-gnu.
+makefile:32: (INFO) The root directory for the build is /S/home01/G6012/d0954/DATA/model_run/adcirc_update
+makefile:33: (INFO) The ADCIRC version is 4611767
+cmplrflags.mk:575: (INFO) Corresponding machine found in cmplrflags.mk.
+makefile:39: (INFO) The compiler variable in cmplrflags.mk is set to es4.
+makefile:41: (INFO) The following compilers have been selected...
+makefile:42: (INFO) The Fortran compiler for adcprep is set to nfort.
+makefile:43: (INFO) The serial Fortran compiler is set to nfort.
+makefile:44: (INFO) The parallel Fortran compiler is set to mpinfort.
+makefile:45: (INFO) The C compiler is set to ncc.
+make -C /S/home01/G6012/d0954/DATA/model_run/adcirc_update/thirdparty/metis/Lib/ CC="ncc" CFLAGS="-I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_update/prep -O2 -DLINUX" O_DIR="/S/data01/G6012/d0954/model_run/adcirc_update/work/odir_metis/" LIBMETIS="/S/data01/G6012/d0954/model_run/adcirc_update/work/odir_metis/libmetis.a" ARFLAGS="rv"
+make[1]: ディレクトリ '/S/data01/G6012/d0954/model_run/adcirc_update/thirdparty/metis/Lib' に入ります
+make[1]: '/S/data01/G6012/d0954/model_run/adcirc_update/work/odir_metis/libmetis.a' は更新済みです.
+make[1]: ディレクトリ '/S/data01/G6012/d0954/model_run/adcirc_update/thirdparty/metis/Lib' から出ます
+make BUILDTYPE=adcprep  adcprep
+make[1]: ディレクトリ '/S/data01/G6012/d0954/model_run/adcirc_update/work' に入ります
+makefile:19: (INFO) Guessing the type of platform ADCIRC will run on...
+makefile:31: (INFO) Name is x86_64-unknown-linux-gnu, Machine is x86_64, Vendor is unknown, and OS is linux-gnu.
+makefile:32: (INFO) The root directory for the build is /S/home01/G6012/d0954/DATA/model_run/adcirc_update
+makefile:33: (INFO) The ADCIRC version is 4611767
+cmplrflags.mk:575: (INFO) Corresponding machine found in cmplrflags.mk.
+makefile:39: (INFO) The compiler variable in cmplrflags.mk is set to es4.
+makefile:41: (INFO) The following compilers have been selected...
+makefile:42: (INFO) The Fortran compiler for adcprep is set to nfort.
+makefile:43: (INFO) The serial Fortran compiler is set to nfort.
+makefile:44: (INFO) The parallel Fortran compiler is set to mpinfort.
+makefile:45: (INFO) The C compiler is set to ncc.
+nfort (NFORT) 5.2.0 (Build 13:49:55 Feb 21 2024)
+Copyright (C) 2018,2024 NEC Corporation.
+nfort -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_update/prep -O3 -fextend-source  -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/  -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/version.o  /S/home01/G6012/d0954/DATA/model_run/adcirc_update/version.F
+Obsolescent: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/version.F, line 1: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/; fi
+nfort -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_update/prep -O3 -fextend-source  -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/  -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/mesh.o  /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 320: Unused local variable I
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 594: Unused local variable I
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 594: Variable JE set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 594: Unused local variable JN
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 594: Variable NHY set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 748: Variable AGRIDTMP set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 748: Unused local variable I
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 748: Unused local variable J
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 748: Variable JE set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 748: Unused local variable JN
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 748: NABOUT explicitly imported into READ14FEMESH but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 748: Variable NFLUXFTMP set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 748: Variable NHY set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1344: NABOUT explicitly imported into READMESHXDMF but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1477: Unused local variable I
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable LON13
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable LON21
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable LON32
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: NBFR explicitly imported into INITIALIZEMESH but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable SFEAR1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable SFEAR2
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable SFEAR3
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable SLAMR1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable SLAMR2
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable SLAMR3
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable X4
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1792: Unused local variable Y4
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2142: Missing comma in format specification
+         detected at 'radiating boundary. The GWCE is forced with the ,'@'total normal flux computed by adding the'
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Variable IBTYPE52 set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable KMIN
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable LONIK
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable LONJI
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable LONKJ
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: PI explicitly imported into INITIALIZEBOUNDARIES but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable SFEARI
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable SFEARJ
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable SFEARK
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable SLAMRI
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable SLAMRJ
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2947: Unused local variable SLAMRK
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3370: Variable NE1 set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3392: Missing comma in format specification
+         detected at ' HAVE THE SAME COORDINATES.'@'!!!!!! EXECUTION WILL NOW BE TERMINATED !!!!!!'
+Extension: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3471: Byte count on numeric data type
+                        detected at *@8
+Extension: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3500: Byte count on numeric data type
+                        detected at *@8
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3539: Unused dummy variable ATTRIBUTEINDEX
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3539: Unused dummy variable XDMFFORTRANOBJ
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4077: Unused local variable IA2
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4354: Unused local variable JJ
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4354: Unused local variable X_ARRAY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4354: Unused local variable X_VEC
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4354: Unused local variable Y_ARRAY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4354: Unused local variable Y_VEC
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4407: Unused local variable Y1YM
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4407: Unused local variable Y2YM
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4476: Unused dummy variable NO_MPI_FINALIZE
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4586: Variable ERRORVAR set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4586: Variable IGNOREMSG set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4586: Unused local variable MSG
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4707: Variable TR set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5242: Unused local variable IP
+Extension: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5254: Byte count on numeric data type
+                        detected at *@8
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5451: Unused local variable DL
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5451: Unused local variable DLX
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5554: Unused dummy variable SLAMV
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5591: NBVV explicitly imported into ONIBTYP64FLOODPLAIN but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5591: Variable NNBB1 set but never referenced
+Obsolescent: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 35: Fixed source form
+[NEC Fortran Compiler normal termination, 67 warnings]
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 194: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 199: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 203: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 221: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 248: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 289: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 345: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 353: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 356: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 359: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 362: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 365: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 368: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 371: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 374: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 377: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 380: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 398: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 407: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 427: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 454: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 468: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 487: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 514: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 540: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 545: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 558: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 636: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 645: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 683: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 690: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 698: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1368: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1369: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1379: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1383: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1384: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1386: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1391: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1393: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1395: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1397: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1399: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1404: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1406: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1408: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1410: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1412: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1414: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1416: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1418: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1427: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1433: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1440: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1462: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1519: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1523: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1541: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1542: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1545: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1554: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1555: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1556: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1578: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1590: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1697: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1747: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1748: Vectorized loop.
+nfort: vec( 102): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1749: Partially vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1755: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1775: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 1862: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2199: Vectorized loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2205: Moved invariant if outside of an inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2212: Vectorized loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2218: Moved invariant if outside of an inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2456: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2471: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2636: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2656: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2676: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2695: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2726: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2788: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2810: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2820: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2855: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2882: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2918: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2981: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2982: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2985: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2985: Vectorized loop.
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2986: Outer loop unrolled inside inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2986: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2997: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2998: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 2999: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3001: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3002: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3004: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3005: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3010: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3011: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3012: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3013: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3014: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3015: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3016: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3019: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3020: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3021: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3022: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3023: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3024: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3025: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3026: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3027: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3028: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3029: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3030: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3031: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3032: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3033: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3034: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3035: Vectorized loop.
+nfort: opt(1589): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3159: Outer loop moved inside inner loop(s).: N
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3159: Vectorized loop.
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3162: Outer loop unrolled inside inner loop.: NN
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3162: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3181: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3201: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3221: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3246: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3252: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3255: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3279: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3296: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3297: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3302: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3307: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3340: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3427: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3428: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3429: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3430: Vectorized loop.
+nfort: vec( 102): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3433: Partially vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3450: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3566: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3567: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3568: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3633: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3670: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3672: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3674: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3676: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3678: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3680: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3682: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3684: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3685: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3716: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3718: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3720: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3722: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3724: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3756: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3758: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3760: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3762: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3764: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3766: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3767: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3796: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3798: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3800: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3802: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3804: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3806: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3808: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3810: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3812: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3814: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3815: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3846: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3848: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3850: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3852: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3854: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3856: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3858: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3860: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3862: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3864: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3866: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3868: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3870: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3915: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3922: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3925: Vectorized loop.
+nfort: opt(1135): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3932: Outer loop conditionally executes inner loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3932: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3934: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3939: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3941: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3957: Vectorized loop.
+nfort: opt(1112): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3958: Loop fused with previous loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3959: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3968: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3969: Vectorized loop.
+nfort: opt(1135): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3974: Outer loop conditionally executes inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3976: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3979: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3990: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3993: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 3995: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4007: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4029: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4037: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4038: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4041: Vectorized loop.
+nfort: opt(1772): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4060: Loop nest fused with following nest(s).
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4060: Outer loop unrolled inside inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4060: Vectorized loop.
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4068: Outer loop unrolled inside inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4068: Vectorized loop.
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4069: Outer loop unrolled inside inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4069: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4090: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4099: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4157: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4301: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4315: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4405: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4507: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4514: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4519: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4534: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4543: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4547: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4549: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4552: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4554: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4555: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4559: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4564: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4569: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4595: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4596: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4598: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4599: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4601: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4602: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4606: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4606: Vectorized loop.
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4607: Outer loop unrolled inside inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4607: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4632: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4682: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4691: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4733: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4736: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4739: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4742: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4745: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4778: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4781: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4783: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4785: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4787: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4868: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4872: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4943: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4945: Constant-length loop is expanded.
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4973: Outer loop unrolled inside inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 4973: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5012: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5014: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5016: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5018: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5021: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5023: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5025: Constant-length loop is expanded.
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5027: Outer loop unrolled inside inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5027: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5030: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5032: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5034: Constant-length loop is expanded.
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5036: Outer loop unrolled inside inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5036: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5108: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5111: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5114: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5118: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5119: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5121: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5185: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5193: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5231: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5309: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5353: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5356: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5357: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5369: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5370: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5377: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5378: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5390: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5396: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5397: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5398: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5431: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5443: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5444: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5477: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5479: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5483: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5484: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5491: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5504: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/mesh.F, line 5520: Vectorized loop.
+if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/; fi
+nfort -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_update/prep -O3 -fextend-source  -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/  -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/nodalattr.o  /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 867: REPLACENULLSWITHSPACES explicitly imported into READNODALATTRXDMF but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 917: Missing comma in format specification
+         detected at 'Nodal Attributes file (unit 13) does '@'not contain all the attributes listed in the '
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 918: Missing comma in format specification
+         detected at 'not contain all the attributes listed in the '@'model parameter file (unit 15).'
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 976: NE explicitly imported into ALLOCATENODALATTRIBUTES but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 976: NTIF explicitly imported into ALLOCATENODALATTRIBUTES but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1570: Unused local variable REAL_LOADER
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1570: Variable SKIPPED set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1621: Unused dummy variable MYPROC
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1621: Unused dummy variable NSCREEN
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1682: Unused dummy variable MYPROC
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1682: Unused dummy variable NSCREEN
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1749: Unused dummy variable MYPROC
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1749: Unused dummy variable NSCREEN
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2078: CBAROCLINIC explicitly imported into INITNODALATTR but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2078: Unused dummy variable G
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2078: Unused dummy variable NABOUT
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2257: NP explicitly imported into INITVEW1DCHANNELWETPERIMETER but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2440: Unused local variable MLDRAT
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2508: Unused local variable UV1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable COSAMIGT
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable CXX
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable CXY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable CYY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable DISSTIDAL
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable DISSTOTAL
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: DTDP explicitly imported into APPLY2DINTERNALWAVEDRAG but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Local variable HR is initialized but never used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable J
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable JJWGAMMA
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable NCYC
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: RAMP explicitly imported into APPLY2DINTERNALWAVEDRAG but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: RVELF explicitly imported into APPLY2DINTERNALWAVEDRAG but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable SINAMIGT
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable UDMY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2704: Unused local variable VDMY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2772: DTDP explicitly imported into APPLY2DMOMENTUMDISP but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2772: Variable UV1 set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3024: Variable DUM1 set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3024: Variable DUM2 set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3024: Unused dummy variable NABOUT
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3024: Variable NE2 set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3124: DEBUG explicitly imported into NA_TERMINATE but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3124: ECHO explicitly imported into NA_TERMINATE but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3124: ERROR explicitly imported into NA_TERMINATE but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3124: Unused dummy variable NO_MPI_FINALIZE
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3124: WARNING explicitly imported into NA_TERMINATE but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3230: ALLMESSAGE explicitly imported into PREPCONDENSEDNODES but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3230: DEBUG explicitly imported into PREPCONDENSEDNODES but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3230: ECHO explicitly imported into PREPCONDENSEDNODES but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3230: ERROR explicitly imported into PREPCONDENSEDNODES but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3230: INFO explicitly imported into PREPCONDENSEDNODES but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3230: Unused local variable ON_THE_SAME_BOUNDARY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3230: WARNING explicitly imported into PREPCONDENSEDNODES but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3234: Unused local variable UT
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3234: Unused local variable VT
+Obsolescent: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 102: Fixed source form
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 478: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 483: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 491: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1041: DO index variable K is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1177: DO index variable K is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1202: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1213: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1251: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1268: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1285: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1295: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1301: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1327: DO index variable K is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1601: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1606: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1655: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1656: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1663: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1664: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1670: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1719: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1720: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1727: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1728: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1730: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1737: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1836: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1854: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1868: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1880: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1910: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1926: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1937: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1974: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2006: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2029: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2046: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2059: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2067: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2135: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2146: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2156: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2158: DO index variable J is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2166: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2174: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2308: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2322: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2379: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2387: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2406: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2425: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2741: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3007: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3054: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3072: DO index variable I is not a local variable (it is from module NODALATTRIBUTES)
+[NEC Fortran Compiler normal termination, 111 warnings]
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 416: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 478: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 483: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 491: Unvectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 497: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 498: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 522: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 524: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 961: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 963: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 967: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1041: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1120: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1138: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1177: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1352: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1504: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1509: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1547: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1601: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1606: Unvectorized loop.
+nfort: opt(1408): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1655: Loop interchanged.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1655: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1662: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1669: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1670: Unvectorized loop.
+nfort: opt(1408): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1719: Loop interchanged.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1719: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1726: Constant-length loop is expanded.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1730: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1736: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1737: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1836: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1854: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1868: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1880: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1910: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1926: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1937: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 1974: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2006: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2009: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2029: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2033: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2046: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2059: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2067: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2073: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2135: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2146: Vectorized loop.
+nfort: opt(1135): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2156: Outer loop conditionally executes inner loop.
+nfort: vec( 102): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2156: Partially vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2158: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2166: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2174: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2203: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2204: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2208: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2253: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2308: Vectorized loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2309: Moved invariant if outside of an inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2322: Vectorized loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2324: Moved invariant if outside of an inner loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2326: Moved invariant if outside of an inner loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2340: Moved invariant if outside of an inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2379: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2387: Vectorized loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2390: Moved invariant if outside of an inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2406: Vectorized loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2408: Moved invariant if outside of an inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2425: Vectorized loop.
+nfort: opt(1409): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2477: Alternate code generated.: NH
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2477: Vectorized loop.
+nfort: vec( 102): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2477: Partially vectorized loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2479: Moved invariant if outside of an inner loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2481: Moved invariant if outside of an inner loop.
+nfort: opt(1394): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2495: Moved invariant if outside of an inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2558: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2571: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2596: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2599: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2623: Vectorized loop.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2631: Constant-length loop is expanded.
+nfort: opt(1418): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2669: Constant-length loop is expanded.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2681: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2688: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2697: Vectorized loop.
+nfort: opt(1112): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2698: Loop fused with previous loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2699: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2741: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 2986: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3007: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3052: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3054: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3072: Unvectorized loop.
+nfort: opt(1135): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3155: Outer loop conditionally executes inner loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3155: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3158: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3169: Vectorized loop.
+nfort: opt(1592): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3170: Outer loop unrolled inside inner loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3170: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3171: Vectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3178: Unvectorized loop.
+nfort: vec( 103): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3186: Unvectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3195: Vectorized loop.
+nfort: vec( 101): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3196: Vectorized loop.
+nfort: vec( 102): /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/nodalattr.F, line 3198: Partially vectorized loop.
+if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/; fi
+make[1]: 循環 /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/wind.o <- /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/wind.o 依存関係が破棄されました.
+nfort -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_update/prep -O3 -fextend-source  -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/  -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/wind.o  /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 518: Unused dummy variable NODENUMBER
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 710: Unused local variable IW3
+Extension: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 854: Byte count on numeric data type
+                        detected at *@8
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 1802: G explicitly imported into GETMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 1802: H0 explicitly imported into GETMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 1802: Unused local variable ICEDRAGCO
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 1802: Unused local variable ICEMAG
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 1802: Unused local variable ICEX
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 1802: Unused local variable ICEY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 1802: ICS explicitly imported into GETMETEOROLOGICALFORCING but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 1802: Variable NHG set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: APPLYCANOPYCOEFFICIENT explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: APPLYDIRECTIONALWINDREDUCTION explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: Unused local variable BF
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: CICEOUT explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: DATETIME explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: DP explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: ETA2 explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: H0 explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: ICS explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: LOADCANOPYCOEF explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: LOADDIREFFRLEN explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: Variable NHG set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: PR1 explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: RAMPMETE explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: RES_BC_FLAG explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: SPONGE explicitly imported into COLDSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: Unused local variable WINDX
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: Unused local variable WINDY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 2121: Unused local variable WTRATIO
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3301: DTDP explicitly imported into HOTSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3301: FINDSTORMCENTER explicitly imported into HOTSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3301: G explicitly imported into HOTSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3301: H0 explicitly imported into HOTSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3301: ICS explicitly imported into HOTSTARTMETEOROLOGICALFORCING but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3301: Variable NHG set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3301: RAMPMETE explicitly imported into HOTSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3301: RES_BC_FLAG explicitly imported into HOTSTARTMETEOROLOGICALFORCING but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3301: SPONGE explicitly imported into HOTSTARTMETEOROLOGICALFORCING but not used
+Extension: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3333: Byte count on numeric data type
+                        detected at *@8
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3412: Unused local variable NSCREEN
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3412: Unused local variable SCREENUNIT
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3833: SFEA explicitly imported into NWS10INIT but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 3833: SLAM explicitly imported into NWS10INIT but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4093: MB2PA explicitly imported into NWS10GET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4093: SFEA explicitly imported into NWS10GET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4093: SLAM explicitly imported into NWS10GET but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4180: Variable PHI set but never referenced
+Extension: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4245: Byte count on numeric data type
+                        detected at *@8
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4350: Variable IDAY set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4350: Variable IHOUR set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4350: Variable IMONTH set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4350: Variable IYEAR set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4350: Unused local variable KERR
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4820: Variable ICODE set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4820: Unused local variable IF
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4820: Variable IM2 set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4820: Variable JM2 set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4820: Unused local variable LAMBDA
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4820: Unused dummy variable NODE
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable ARG
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable BETAU1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable BETAU2
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable BETAU3
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable DLAT
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable DLNT
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable DLON
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable I1M1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable I1P1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable I2M1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable I2P1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable I3M1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Unused local variable I3P1
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 4881: Variable IM2 set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5202: Unused local variable A
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5202: ICS explicitly imported into HOLLANDGET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5202: Unused local variable J
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5202: LOCALDIR explicitly imported into HOLLANDGET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5202: MYPROC explicitly imported into HOLLANDGET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5202: Unused local variable TM
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5202: Unused local variable WTRATIO
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5202: X explicitly imported into HOLLANDGET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5202: Y explicitly imported into HOLLANDGET but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5568: Variable INOWCASTCPRESS set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5568: Variable INOWCASTRMW set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5568: Variable INOWCASTRRP set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5568: Unused local variable J
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5568: MYPROC explicitly imported into GETHOLLANDSTORMDATA but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5699: Unused local variable A1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5699: Unused local variable A2
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5699: Unused dummy variable ICS
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5699: Unused local variable J
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5699: Variable TT set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5699: Unused dummy variable X
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 5699: Unused dummy variable Y
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Variable CHOLLB set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable CLAT1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable CLON1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable CPRESS1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable DT
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable DX
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable DY
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: ICS explicitly imported into NWS19GET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable ITPC
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable LAT1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable LON1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable NWI
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable R
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable RMW1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable SPD1
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable TIME1
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Variable TIMENEW set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable TIMEOLD
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Variable TOLD set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6237: Unused local variable VR
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6964: ICS explicitly imported into NWS20GET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6964: Unused local variable R
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6964: Variable TIMENEW set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6964: Variable TOLD set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6964: Unused local variable VMAXBL
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 6964: Unused local variable VR
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 7416: DP explicitly imported into NWS15GET but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 7416: Variable MAXSPEED set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 7416: MNP explicitly imported into NWS15GET but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 7593: Variable COMMA set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 7593: Unused local variable COUNTER
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 7593: Unused local variable NUMVALUES
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 7593: Variable PAREN set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 7593: Variable THROWAWAYCOORDINATE set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 7921: DEBUG explicitly imported into INIT_GFDL but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8188: ALLMESSAGE explicitly imported into GET_GFDL but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8188: DEBUG explicitly imported into GET_GFDL but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8188: ERROR explicitly imported into GET_GFDL but not used
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8188: Variable HTMP set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8188: Variable MTMP set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8188: Unused local variable NTMP
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8188: Variable RPTS_GFDL set but never referenced
+Questionable: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8188: Variable SPTMP set but never referenced
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8281: ALLMESSAGE explicitly imported into NWS16GET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8281: DEBUG explicitly imported into NWS16GET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8281: ECHO explicitly imported into NWS16GET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8281: ERROR explicitly imported into NWS16GET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8546: NP_G explicitly imported into INITDYNAMICWATERLEVELCORRECTION but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8640: Unused local variable I
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8759: Unused local variable FD_NODE_NUMBER
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8759: NODES_LG explicitly imported into READDYNAMICWATERLEVELCORRECTIONDATASET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8759: NP_G explicitly imported into READDYNAMICWATERLEVELCORRECTIONDATASET but not used
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8759: Unused local variable SD_NODE_NUMBER
+Warning: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8791: Unused local variable DMY
+Fatal Error: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/src/wind.F, line 8973: Cannot find module GL2LOC_MAPPING
+             detected at :@BCASTTOLOCAL_INT
+make[1]: *** [makefile:496: /S/home01/G6012/d0954/DATA/model_run/adcirc_update/work/odir1/wind.o] エラー 1
+make[1]: ディレクトリ '/S/data01/G6012/d0954/model_run/adcirc_update/work' から出ます
+make: *** [makefile:526: adcprep] エラー 2

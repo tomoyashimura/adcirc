@@ -794,7 +794,7 @@ endif
 $(O_DIR)writer.o      : $(WRITER_DEP)
 $(O_DIR)globalio.o    :  globalio.F  $(ADC_MOBJ) $(O_DIR)mesh.o $(O_DIR)global_3dvs.o
 $(O_DIR)harm.o        :  harm.F $(O_DIR)mesh.o
-$(O_DIR)wind.o        :  wind.F  $(VORT_MOBJ) $(MESH_MOBJ) $(HASH_MOBJ) $(NA_MOBJ) $(WIND_MOBJ)
+$(O_DIR)wind.o        :  wind.F  $(VORT_MOBJ) $(MESH_MOBJ) $(HASH_MOBJ) $(NA_MOBJ) $(GL2LOC_MOBJ) $(WIND_MOBJ)
 $(O_DIR)owiwind.o     :  owiwind.F  $(VORT_MOBJ)
 $(O_DIR)owiwind_netcdf.o : owiwind_netcdf.F
 $(O_DIR)owi_ice.o     :  owi_ice.F  $(VORT_MOBJ)
