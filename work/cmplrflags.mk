@@ -421,6 +421,167 @@ ifeq ($(compiler),intel-ND)
   NETCDFHOME=/afs/crc.nd.edu/x86_64_linux/n/netcdf/4.7.0/intel/18.0/
 endif
 
+
+#############################################################################
+# T.Shimura 20200210:  These flags work on Kyoto U Bsystem ##################
+#############################################################################
+ifeq ($(compiler),intel-KU)
+  PPFC          :=  ifort
+  FC            :=  ifort
+  PFC           :=  mpiifort
+#  FFLAGS1       :=  $(INCDIRS) -convert big_endian -w -O3 -assume byterecl -132 -assume buffered_io #-i-dynamic
+  FFLAGS1       :=  $(INCDIRS) -w -O3 -assume byterecl -132 -assume buffered_io #-i-dynamic
+  ifeq ($(DEBUG),full)
+     #FFLAGS1    :=  $(INCDIRS) -g -O0 -traceback -debug -check all -FI -convert big_endian -assume byterecl -132 -DEBUG -DALL_TRACE -DFULL_STACK -DFLUSH_MESSAGES
+  FFLAGS1    :=  $(INCDIRS) -g -O0 -traceback -debug -check all -FI -assume byterecl -132 \
+-DEBUG -DALL_TRACE -DFULL_STACK -DFLUSH_MESSAGES
+  endif
+  FFLAGS2       :=  $(FFLAGS1)
+  FFLAGS3       :=  $(FFLAGS1)
+  DA            :=  -DREAL8 -DLINUX -DCSCA
+  DP            :=  -DREAL8 -DLINUX -DCSCA -DCMPI #-DNOFSBPG #-DNOIVB -DPOWELL
+  DPRE          :=  -DREAL8 -DLINUX -DADCSWAN
+  ifeq ($(SWAN),enable)
+     DPRE       := $(DPRE) -DADCSWAN
+  endif
+  IMODS         :=  -I
+  CC            := icc
+  CCBE          := $(CC)
+  CFLAGS        := $(INCDIRS) -O3 -m64 -mcmodel=medium -DLINUX
+  FLIBS         := 
+  ifeq ($(DATETIME),enable)
+     #DATETIMEHOME  := /home/b/b33749/utility/datetime-fortran-1.6.1/
+     #DATETIMEHOME  := /home/b/b33749/utility/datetime-fortran/buid/
+     DATETIMEHOME  := /home/b/b33749/utility/datetime-fortran-1.6.1/
+     FLIBS         := -ldatetime -L$(DATETIMEHOME)/lib/
+  endif
+  ifeq ($(GRIB2),enable)
+     WGRIB2HOME    := /home/b/b33749/utility/grib2/lib/
+     FLIBS         := $(FLIBS) -lwgrib2_api -lwgrib2 -ljasper -L$(WGRIB2HOME)
+  endif
+  ifeq ($(DEBUG),full)
+     CFLAGS     := $(INCDIRS) -g -O0 -m64 -march=k8 -mcmodel=medium -DLINUX
+  endif
+  ifeq ($(NETCDF),enable)
+     HDF5HOME=/opt/app/hdf5/1.10.0-patch1/intel-17.0/lib/
+     #HDF5HOME=/opt/crc/h/hdf5/intel/18.0/build/lib/      
+     FLIBS      := $(FLIBS) -lnetcdff -L$(HDF5HOME) 
+  endif   
+  CLIBS         :=
+  MSGLIBS       :=
+  $(warning (INFO) Corresponding machine found in cmplrflags.mk.)
+  ifneq ($(FOUND),TRUE)
+     FOUND := TRUE
+  else
+     MULTIPLE := TRUE
+  endif
+  #NETCDFHOME=/opt/app/netcdf/4.4.0/intel-17.0/
+  NETCDFHOME=/opt/app/netcdf-parallel/4.1.3/intel-17.0/
+endif
+
+########################################################################
+# T.Shimura 20221011:  These flags work on H121 Intel ##################
+########################################################################
+ifeq ($(compiler),intel-h121)
+  PPFC          :=  ifort
+  FC            :=  ifort
+  PFC           :=  mpiifort
+  FFLAGS1       :=  $(INCDIRS) -w -O3 -assume byterecl -132 -assume buffered_io #-i-dynamic
+  ifeq ($(DEBUG),full)
+     FFLAGS1    :=  $(INCDIRS) -g -O0 -traceback -debug -check all -FI -assume byterecl -132 -DEBUG -DALL_TRACE -DFULL_STACK -DFLUSH_MESSAGES
+  endif
+  FFLAGS2       :=  $(FFLAGS1)
+  FFLAGS3       :=  $(FFLAGS1)
+  DA            :=  -DREAL8 -DLINUX -DCSCA
+  DP            :=  -DREAL8 -DLINUX -DCSCA -DCMPI #-DNOFSBPG #-DNOIVB -DPOWELL
+  DPRE          :=  -DREAL8 -DLINUX -DADCSWAN
+  ifeq ($(SWAN),enable)
+     DPRE       := $(DPRE) -DADCSWAN
+  endif
+  IMODS         :=  -I
+  CC            := icc
+  CCBE          := $(CC)
+  CFLAGS        := $(INCDIRS) -O3 -m64 -mcmodel=medium -DLINUX
+  FLIBS         := 
+  ifeq ($(DATETIME),enable)
+     DATETIMEHOME  := /home/shimura/utility/datetime/datetime-fortran_intel/
+     FLIBS         := -ldatetime -L$(DATETIMEHOME)/lib/
+  endif
+  ifeq ($(GRIB2),enable)
+     WGRIB2HOME    := /home/shimura/utility/wgrib2/grib2_intel/lib/
+     FLIBS         := $(FLIBS) -lwgrib2_api -lwgrib2 -ljasper -L$(WGRIB2HOME)
+  endif
+  ifeq ($(DEBUG),full)
+     CFLAGS     := $(INCDIRS) -g -O0 -m64 -march=k8 -mcmodel=medium -DLINUX
+  endif
+  ifeq ($(NETCDF),enable)
+     HDF5HOME=/usr/local/hdf5/lib/
+     #HDF5HOME=/opt/crc/h/hdf5/intel/18.0/build/lib/      
+     FLIBS      := $(FLIBS) -lnetcdff -L$(HDF5HOME) 
+  endif   
+  CLIBS         :=
+  MSGLIBS       :=
+  $(warning (INFO) Corresponding machine found in cmplrflags.mk.)
+  ifneq ($(FOUND),TRUE)
+     FOUND := TRUE
+  else
+     MULTIPLE := TRUE
+  endif
+  NETCDFHOME=/home/shimura/utility/netcdf/netcdf_intel/netcdf-fortran-4.6.0-intel/
+endif
+#########################################################################
+
+########################################################################
+# T.Shimura 20230414:  These flags work on ES4 ##################
+########################################################################
+ifeq ($(compiler),es4)
+  PPFC          :=  nfort
+  FC            :=  nfort
+  PFC           :=  mpinfort
+  #FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source -mparallel -mparallel-innerloop -floop-count=4000000 -fdiag-vector=2 -fno-associative-math #-i-dynamic
+  FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source 
+  ifeq ($(DEBUG),full)
+     FFLAGS1    :=  $(INCDIRS) -g -O0 -traceback -debug -check all -FI -assume byterecl -132 -DEBUG -DALL_TRACE -DFULL_STACK -DFLUSH_MESSAGES
+  endif
+  FFLAGS2       :=  $(FFLAGS1)
+  FFLAGS3       :=  $(FFLAGS1)
+  DA            :=  -DREAL8 -DLINUX -DCSCA
+  DP            :=  -DREAL8 -DLINUX -DCSCA -DCMPI #-DNOFSBPG #-DNOIVB -DPOWELL
+  DPRE          :=  -DREAL8 -DLINUX -DADCSWAN
+  ifeq ($(SWAN),enable)
+     DPRE       := $(DPRE) -DADCSWAN
+  endif
+  IMODS         :=  -I
+  CC            := ncc
+  CCBE          := $(CC)
+  CFLAGS        := $(INCDIRS) -O2 -DLINUX
+  FLIBS         :=
+  ifeq ($(DATETIME),enable)
+     DATETIMEHOME  := /S/home01/G6012/d0954/util/datetime/datetime-fortran/
+     FLIBS         := -ldatetime -L$(DATETIMEHOME)/lib/
+  endif
+  ifeq ($(GRIB2),enable)
+     WGRIB2HOME    := /home/shimura/utility/wgrib2/grib2_intel/lib/
+     FLIBS         := $(FLIBS) -lwgrib2_api -lwgrib2 -ljasper -L$(WGRIB2HOME)
+  endif
+  ifeq ($(DEBUG),full)
+     CFLAGS     := $(INCDIRS) -g -O0 -m64 -march=k8 -mcmodel=medium -DLINUX
+  endif
+  ifeq ($(NETCDF),enable)
+     FLIBS := $(FLIBS) -L/opt/share/NetCDF4_ve/netcdf-fortran/4.5.2/lib -lnetcdff -L/opt/share/zlib_ve/1.2.11/lib -L/opt/share/szip_ve/2.1.1/lib -L/opt/share/HDF5_ve/1.10.5/lib -L/opt/share/NetCDF4_ve/netcdf-c/4.7.2/lib -lnetcdf -lm -lnetcdf -lhdf5_hl -lhdf5 -lz -ldl -lsz
+  endif
+  CLIBS         :=
+  MSGLIBS       :=
+  $(warning (INFO) Corresponding machine found in cmplrflags.mk.)
+  ifneq ($(FOUND),TRUE)
+     FOUND := TRUE
+  else
+     MULTIPLE := TRUE
+  endif
+endif
+#########################################################################
+
+
 # SGI ICE X (e.g. topaz@ERDC) using Intel compilers, added by TCM
 # jgf: Added flags for Thunder@AFRL.
 ifeq ($(compiler),intel-sgi)
