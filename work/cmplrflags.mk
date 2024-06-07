@@ -28,7 +28,7 @@ ifeq ($(MACHINE)-$(OS),x86_64-linux-gnu)
 #compiler=circleci
 #
 #
-# Compiler Flags for gfortran and gcc
+ # Compiler Flags for gfortran and gcc
 ifeq ($(compiler),gnu)
   PPFC		:=  gfortran
   FC		:=  gfortran
