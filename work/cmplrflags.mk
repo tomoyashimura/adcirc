@@ -540,7 +540,7 @@ ifeq ($(compiler),es4)
   PFC           :=  mpinfort
   #FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source -mparallel -mparallel-innerloop -floop-count=4000000 -fdiag-vector=2 -fno-associative-math #-i-dynamic
   #FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source 
-  FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source -report-all -finline-functions -f inline-max-function-size=200 -finline-file=$(SRCDIR)/src/nodalattr.F -DES_TUNE
+  FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=$(SRCDIR)/src/nodalattr.F -DES_TUNE
   ifeq ($(DEBUG),full)
      FFLAGS1    :=  $(INCDIRS) -g -O0 -traceback -debug -check all -FI -assume byterecl -132 -DEBUG -DALL_TRACE -DFULL_STACK -DFLUSH_MESSAGES
   endif
