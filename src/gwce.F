@@ -1366,7 +1366,7 @@ C..... DW
          SFmxAvg=SFMXEle(IE)  ;
          SFmyAvg=SFMYEle(IE) ;
          sfdxfac=(1 - IFSFM)*SFacAvg + IFSFM*SFmxAvg ;
-         sfdyfac=(1 - IFSFM)*1.0_SZ  + IFSFM*SFmyAvg ;
+         sfdyfac=(1 - IFSFM)*1.0D0  + IFSFM*SFmyAvg ;
 
          ! continuity
          SFCXAvg=SFCXEle(IE) ;
@@ -4076,7 +4076,7 @@ C
       SUBROUTINE APPLY_SLOPE_LIMITS(ETA2Lim,LocNP)
       use global, only : nodecode,NOFF,IFNLFA,
      &      setMessageSource, unsetMessageSource, allMessage,
-     &      logMessage, DEBUG, ECHO, WARNING, ERROR
+     &      logMessage, DEBUG, ECHO, INFO, WARNING, ERROR
       use mesh, only : ne, nm, areas, totalArea
       use NodalAttributes, ONLY : LoadEleSlopeLim,
      &     elemental_slope_limiter_active
