@@ -1,4 +1,4 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
   COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/couple2baroclinic3D.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
@@ -172,7 +172,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclini
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:01 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:54 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
@@ -189,7 +189,7 @@ DIAGNOSTIC LIST
    102: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
@@ -236,7 +236,7 @@ FORMAT LIST
    104:                 END SUBROUTINE ALLOC_BC3D_to_2D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:01 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:54 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
@@ -245,7 +245,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:01 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:54 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
@@ -333,7 +333,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:01 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:54 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
@@ -412,7 +412,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:02 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
@@ -460,7 +460,7 @@ DIAGNOSTIC LIST
    171: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
@@ -554,7 +554,7 @@ FORMAT LIST
    182:                 END SUBROUTINE Read_BC3D_NetCDF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:02 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
@@ -738,7 +738,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:02 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
@@ -1023,7 +1023,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:02 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
@@ -1266,7 +1266,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
@@ -1359,7 +1359,7 @@ DIAGNOSTIC LIST
    478: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
@@ -1684,7 +1684,7 @@ FORMAT LIST
    486:                 END SUBROUTINE Get_LonLatDepthTime
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
@@ -1900,7 +1900,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
@@ -2143,7 +2143,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
@@ -2349,7 +2349,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
@@ -2382,7 +2382,7 @@ DIAGNOSTIC LIST
    551: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
@@ -2500,7 +2500,7 @@ FORMAT LIST
    583:                 END SUBROUTINE Read_BC3D_NetCDF_on_ADCIRC_Grid
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
@@ -2575,7 +2575,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
@@ -2693,7 +2693,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
@@ -2796,7 +2796,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
@@ -2811,7 +2811,7 @@ DIAGNOSTIC LIST
    601: inl(1212): Source for routine not found.: NETCDF::NF90_GET_VAR_2D_EIGHTBYTEREAL
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
@@ -2860,7 +2860,7 @@ FORMAT LIST
    611:                 END FUNCTION read_nc_var
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
@@ -2885,7 +2885,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
@@ -2897,7 +2897,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
@@ -2928,7 +2928,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
@@ -2943,7 +2943,7 @@ DIAGNOSTIC LIST
    627: inl(1212): Source for routine not found.: NETCDF::NF90_GET_VAR_1D_EIGHTBYTEREAL
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
@@ -2984,7 +2984,7 @@ FORMAT LIST
    631:                 END FUNCTION read_nc_var_adc
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
@@ -3001,7 +3001,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
@@ -3013,7 +3013,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
@@ -3044,7 +3044,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
@@ -3072,7 +3072,7 @@ DIAGNOSTIC LIST
    712: inl(1222): Inlined: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
@@ -3185,7 +3185,7 @@ FORMAT LIST
    726:                 END SUBROUTINE Initial_BC3D_NetCDF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
@@ -3222,7 +3222,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
@@ -3504,7 +3504,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:03 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
@@ -3779,7 +3779,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
@@ -3824,7 +3824,7 @@ DIAGNOSTIC LIST
    857: opt(1112): Loop fused with previous loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
@@ -3983,7 +3983,7 @@ FORMAT LIST
    868:                 END SUBROUTINE Update_BC3D_Info
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
@@ -4003,7 +4003,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
@@ -4225,7 +4225,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
@@ -4427,7 +4427,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
@@ -4488,7 +4488,7 @@ DIAGNOSTIC LIST
   1015: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
@@ -4663,7 +4663,7 @@ FORMAT LIST
   1025:                 END SUBROUTINE Put_BC3D_on_ADCIRC_Grid
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
@@ -4672,7 +4672,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
@@ -4791,7 +4791,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
@@ -4924,7 +4924,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
@@ -4960,7 +4960,7 @@ DIAGNOSTIC LIST
   1164: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
@@ -5135,7 +5135,7 @@ FORMAT LIST
   1182:                 END SUBROUTINE FBPG_Disp_from_BC3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
@@ -5144,7 +5144,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
@@ -5229,7 +5229,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
@@ -5316,7 +5316,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE
@@ -5328,7 +5328,7 @@ DIAGNOSTIC LIST
   1217: inl(1212): Source for routine not found.: MESSENGER::MSG_FINI
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE
@@ -5394,7 +5394,7 @@ FORMAT LIST
   1229:                 END SUBROUTINE BC3DTerminate
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE
@@ -5409,7 +5409,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE
@@ -5418,7 +5418,7 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:04 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE

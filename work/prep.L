@@ -1,4 +1,4 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
   COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/prep.o
@@ -172,7 +172,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP10
@@ -204,7 +204,7 @@ DIAGNOSTIC LIST
    161: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP10
@@ -341,7 +341,7 @@ FORMAT LIST
    164:                 END SUBROUTINE PREP10
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP10
@@ -366,7 +366,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP10
@@ -419,7 +419,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP10
@@ -542,7 +542,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP11
@@ -593,7 +593,7 @@ DIAGNOSTIC LIST
    482: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP11
@@ -919,7 +919,7 @@ FORMAT LIST
    485:                 END SUBROUTINE PREP11
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP11
@@ -934,7 +934,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP11
@@ -1044,7 +1044,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP11
@@ -1228,7 +1228,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
@@ -1294,7 +1294,7 @@ DIAGNOSTIC LIST
    706: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
@@ -1528,7 +1528,7 @@ FORMAT LIST
    710:                 END SUBROUTINE RELOCALIZE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
@@ -1561,7 +1561,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
@@ -1734,7 +1734,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
@@ -1927,7 +1927,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13
@@ -1965,7 +1965,7 @@ DIAGNOSTIC LIST
    877: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13
@@ -2137,7 +2137,7 @@ FORMAT LIST
    880:                 END SUBROUTINE PREP13
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13
@@ -2158,7 +2158,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13
@@ -2246,7 +2246,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13
@@ -2382,7 +2382,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
@@ -2433,7 +2433,7 @@ DIAGNOSTIC LIST
   1030: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
@@ -2614,7 +2614,7 @@ FORMAT LIST
   1055:                 END SUBROUTINE ProcessNodalAttr
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
@@ -2623,7 +2623,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
@@ -2799,7 +2799,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
@@ -2999,7 +2999,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
@@ -3085,7 +3085,7 @@ DIAGNOSTIC LIST
   1209: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
@@ -3260,7 +3260,7 @@ FORMAT LIST
   1211:                 end subroutine prep13XDMF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
@@ -3295,7 +3295,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
@@ -3607,7 +3607,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
@@ -3919,7 +3919,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:22 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP14
@@ -4037,7 +4037,7 @@ DIAGNOSTIC LIST
   1740: opt(1025): Reference to this procedure inhibits optimization.: IWRITE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP14
@@ -4598,7 +4598,7 @@ FORMAT LIST
   1753:                 END SUBROUTINE PREP14
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:22 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP14
@@ -4623,7 +4623,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:22 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP14
@@ -4876,7 +4876,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:22 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP14
@@ -5250,7 +5250,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15
@@ -5461,7 +5461,7 @@ DIAGNOSTIC LIST
   2432: opt(1025): Reference to this procedure inhibits optimization.: IWRITE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15
@@ -6159,7 +6159,7 @@ FORMAT LIST
   2440:                 END SUBROUTINE PREP15
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15
@@ -6209,7 +6209,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15
@@ -6886,7 +6886,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15
@@ -7656,7 +7656,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
@@ -7696,7 +7696,7 @@ DIAGNOSTIC LIST
   2560: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
@@ -7874,7 +7874,7 @@ FORMAT LIST
   2609:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
@@ -7883,7 +7883,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
@@ -7954,7 +7954,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
@@ -8054,7 +8054,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP18
@@ -8130,7 +8130,7 @@ DIAGNOSTIC LIST
   2859: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP18
@@ -8421,7 +8421,7 @@ FORMAT LIST
   2882:                 END SUBROUTINE PREP18
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP18
@@ -8440,7 +8440,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP18
@@ -8578,7 +8578,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP18
@@ -8819,7 +8819,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP19
@@ -8846,7 +8846,7 @@ DIAGNOSTIC LIST
   2962: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP19
@@ -8950,7 +8950,7 @@ FORMAT LIST
   2965:                 END SUBROUTINE PREP19
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP19
@@ -8965,7 +8965,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP19
@@ -9007,7 +9007,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP19
@@ -9080,7 +9080,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP20
@@ -9107,7 +9107,7 @@ DIAGNOSTIC LIST
   3058: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP20
@@ -9211,7 +9211,7 @@ FORMAT LIST
   3062:                 END SUBROUTINE PREP20
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP20
@@ -9224,7 +9224,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP20
@@ -9267,7 +9267,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP20
@@ -9340,7 +9340,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP22
@@ -9378,7 +9378,7 @@ DIAGNOSTIC LIST
   3339: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP22
@@ -9576,7 +9576,7 @@ FORMAT LIST
   3349:                 END SUBROUTINE PREP22
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP22
@@ -9597,7 +9597,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP22
@@ -9683,7 +9683,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP22
@@ -9825,7 +9825,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP23
@@ -9845,7 +9845,7 @@ DIAGNOSTIC LIST
   3418: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP23
@@ -9940,7 +9940,7 @@ FORMAT LIST
   3425:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP23
@@ -9949,7 +9949,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP23
@@ -9976,7 +9976,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP23
@@ -10037,7 +10037,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP24
@@ -10065,7 +10065,7 @@ DIAGNOSTIC LIST
   3547: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP24
@@ -10202,7 +10202,7 @@ FORMAT LIST
   3550:                 END SUBROUTINE PREP24
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP24
@@ -10217,7 +10217,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP24
@@ -10257,7 +10257,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP24
@@ -10364,7 +10364,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP5354
@@ -10398,7 +10398,7 @@ DIAGNOSTIC LIST
   3707: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP5354
@@ -10567,7 +10567,7 @@ FORMAT LIST
   3710:                 END SUBROUTINE PREP5354
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP5354
@@ -10584,7 +10584,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP5354
@@ -10730,7 +10730,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:34 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP5354
@@ -11008,7 +11008,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
@@ -11030,7 +11030,7 @@ DIAGNOSTIC LIST
   3799: vec( 180): I/O statement obstructs vectorization.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
@@ -11159,7 +11159,7 @@ FORMAT LIST
   3818:                 END SUBROUTINE Process5354
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
@@ -11168,7 +11168,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
@@ -11228,7 +11228,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
@@ -11366,7 +11366,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP141
@@ -11401,7 +11401,7 @@ DIAGNOSTIC LIST
   3979: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP141
@@ -11575,7 +11575,7 @@ FORMAT LIST
   3989:                 END SUBROUTINE PREP141
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP141
@@ -11594,7 +11594,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP141
@@ -11661,7 +11661,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP141
@@ -11767,7 +11767,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP35
@@ -11795,7 +11795,7 @@ DIAGNOSTIC LIST
   4072: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP35
@@ -11896,7 +11896,7 @@ FORMAT LIST
   4077:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP35
@@ -11911,7 +11911,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP35
@@ -11953,7 +11953,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP35
@@ -12020,7 +12020,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP36
@@ -12049,7 +12049,7 @@ DIAGNOSTIC LIST
   4158: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP36
@@ -12157,7 +12157,7 @@ FORMAT LIST
   4163:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP36
@@ -12172,7 +12172,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP36
@@ -12222,7 +12222,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP36
@@ -12300,7 +12300,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP37
@@ -12329,7 +12329,7 @@ DIAGNOSTIC LIST
   4244: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP37
@@ -12437,7 +12437,7 @@ FORMAT LIST
   4249:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP37
@@ -12452,7 +12452,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP37
@@ -12502,7 +12502,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP37
@@ -12580,7 +12580,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP38
@@ -12605,7 +12605,7 @@ DIAGNOSTIC LIST
   4337: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP38
@@ -12720,7 +12720,7 @@ FORMAT LIST
   4342:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP38
@@ -12735,7 +12735,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP38
@@ -12784,7 +12784,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP38
@@ -12862,7 +12862,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP39
@@ -12898,7 +12898,7 @@ DIAGNOSTIC LIST
   4476: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP39
@@ -13058,7 +13058,7 @@ FORMAT LIST
   4480:                 END SUBROUTINE PREP39
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP39
@@ -13071,7 +13071,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP39
@@ -13165,7 +13165,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP39
@@ -13291,7 +13291,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:28 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
@@ -13354,7 +13354,7 @@ DIAGNOSTIC LIST
   4912: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
@@ -13814,7 +13814,7 @@ FORMAT LIST
   4921:                 END SUBROUTINE HOTINITCOND
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:28 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
@@ -13842,7 +13842,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:28 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
@@ -14039,7 +14039,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:35 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:28 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
@@ -14464,7 +14464,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
@@ -14534,7 +14534,7 @@ DIAGNOSTIC LIST
   5471: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
@@ -15114,7 +15114,7 @@ FORMAT LIST
   5480:                 END SUBROUTINE HOTLOCALIZE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
@@ -15159,7 +15159,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
@@ -15276,7 +15276,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
@@ -15493,7 +15493,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
@@ -15565,7 +15565,7 @@ DIAGNOSTIC LIST
   5990: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
@@ -16105,7 +16105,7 @@ FORMAT LIST
   5999:                 END SUBROUTINE HOTGLOBALIZE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
@@ -16134,7 +16134,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
@@ -16252,7 +16252,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
@@ -16462,7 +16462,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
@@ -16523,7 +16523,7 @@ DIAGNOSTIC LIST
   6155: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
@@ -16696,7 +16696,7 @@ FORMAT LIST
   6163:                 END SUBROUTINE ReadHotStart3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
@@ -16705,7 +16705,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
@@ -16837,7 +16837,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
@@ -17059,7 +17059,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
@@ -17120,7 +17120,7 @@ DIAGNOSTIC LIST
   6317: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
@@ -17294,7 +17294,7 @@ FORMAT LIST
   6325:                 END SUBROUTINE WriteHotStart3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
@@ -17303,7 +17303,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
@@ -17435,7 +17435,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
@@ -17776,7 +17776,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
@@ -17837,7 +17837,7 @@ DIAGNOSTIC LIST
   6512: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
@@ -18045,7 +18045,7 @@ FORMAT LIST
   6521:                 END SUBROUTINE ReadHotStart3DGlobal
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
@@ -18054,7 +18054,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
@@ -18186,7 +18186,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:36 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
@@ -18527,7 +18527,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
@@ -18588,7 +18588,7 @@ DIAGNOSTIC LIST
   6670: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
@@ -18758,7 +18758,7 @@ FORMAT LIST
   6679:                 END SUBROUTINE WriteHotStart3DGLOBAL
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
@@ -18767,7 +18767,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
@@ -18899,7 +18899,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
@@ -19240,7 +19240,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
@@ -19286,7 +19286,7 @@ DIAGNOSTIC LIST
   6776: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
@@ -19402,7 +19402,7 @@ FORMAT LIST
   6783:                 END SUBROUTINE ReadInitCond3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
@@ -19411,7 +19411,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
@@ -19518,7 +19518,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
@@ -19655,7 +19655,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
@@ -19701,7 +19701,7 @@ DIAGNOSTIC LIST
   6883: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
@@ -19820,7 +19820,7 @@ FORMAT LIST
   6890:                 END SUBROUTINE WriteInitCond3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
@@ -19829,7 +19829,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
@@ -19936,7 +19936,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
@@ -20193,7 +20193,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
@@ -20221,7 +20221,7 @@ DIAGNOSTIC LIST
   6953: vec( 108): Unvectorizable loop structure.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
@@ -20310,7 +20310,7 @@ FORMAT LIST
   6966:                 END SUBROUTINE OpenFullDomainFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
@@ -20319,7 +20319,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
@@ -20365,7 +20365,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
@@ -20431,7 +20431,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
@@ -20442,7 +20442,7 @@ DIAGNOSTIC LIST
   7005: inl(1212): Source for routine not found.: IWRITE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
@@ -20506,7 +20506,7 @@ FORMAT LIST
   7018:                 END SUBROUTINE OpenSubDomainFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
@@ -20517,7 +20517,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
@@ -20526,7 +20526,7 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
@@ -20553,7 +20553,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
@@ -20590,7 +20590,7 @@ DIAGNOSTIC LIST
   7128: opt(1084): Branch out of the loop inhibits optimization.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
@@ -20723,7 +20723,7 @@ FORMAT LIST
   7142:                 END SUBROUTINE OpenPrepFiles
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
@@ -20734,7 +20734,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
@@ -20874,7 +20874,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
@@ -21021,7 +21021,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP80
@@ -21061,7 +21061,7 @@ DIAGNOSTIC LIST
   7472: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP80
@@ -21261,7 +21261,7 @@ FORMAT LIST
   7496:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP80
@@ -21270,7 +21270,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP80
@@ -21355,7 +21355,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREP80
@@ -21530,7 +21530,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
@@ -21581,7 +21581,7 @@ DIAGNOSTIC LIST
   7639: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
@@ -21740,7 +21740,7 @@ FORMAT LIST
   7648:                 END SUBROUTINE prepUnSWAN
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
@@ -21751,7 +21751,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
@@ -21844,7 +21844,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:37 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
@@ -21949,7 +21949,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
@@ -22120,7 +22120,7 @@ DIAGNOSTIC LIST
   9088: inl(1212): Source for routine not found.: NETCDFIO::FREENETCDFCOORD
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
@@ -23574,7 +23574,7 @@ FORMAT LIST
   9091:                 END SUBROUTINE prepNetCDF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
@@ -23757,7 +23757,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
@@ -25629,7 +25629,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
@@ -27148,7 +27148,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME
@@ -27161,7 +27161,7 @@ DIAGNOSTIC LIST
   9108: vec( 118): Unvectorizable data type.: FILE_NAME
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME
@@ -27195,7 +27195,7 @@ FORMAT LIST
   9111:                 end subroutine makeFileName
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME
@@ -27204,7 +27204,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME
@@ -27231,7 +27231,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:42 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME

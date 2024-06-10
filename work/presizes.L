@@ -1,4 +1,4 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
   COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/presizes.o
@@ -172,7 +172,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_INIT
@@ -183,7 +183,7 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_INIT
@@ -210,7 +210,7 @@ FORMAT LIST
     37:                 end subroutine memory_init
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_INIT
@@ -219,7 +219,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_INIT
@@ -228,7 +228,7 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_INIT
@@ -255,7 +255,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_STATUS
@@ -266,7 +266,7 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_STATUS
@@ -295,7 +295,7 @@ FORMAT LIST
     45:                 end subroutine memory_status
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_STATUS
@@ -304,7 +304,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_STATUS
@@ -313,7 +313,7 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_STATUS
@@ -340,7 +340,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_ALLOC
@@ -351,7 +351,7 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_ALLOC
@@ -381,7 +381,7 @@ FORMAT LIST
     54:                 end subroutine memory_alloc
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_ALLOC
@@ -390,7 +390,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_ALLOC
@@ -399,7 +399,7 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_ALLOC
@@ -426,7 +426,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_DEALLOC
@@ -437,7 +437,7 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_DEALLOC
@@ -464,7 +464,7 @@ FORMAT LIST
     60:                 end subroutine memory_dealloc
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_DEALLOC
@@ -473,7 +473,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_DEALLOC
@@ -482,7 +482,7 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:26 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: MEMORY_USAGE::MEMORY_DEALLOC
@@ -509,7 +509,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:27 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP14
@@ -548,7 +548,7 @@ DIAGNOSTIC LIST
    477: vec( 126): Idiom detected.: MAX/MIN
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP14
@@ -762,7 +762,7 @@ FORMAT LIST
    495:                 end subroutine sizeup14
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:27 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP14
@@ -773,7 +773,7 @@ INLINE LIST
   -> INLINE: MEMORY_USAGE::MEMORY_ALLOC (presizes.F:371)
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:27 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP14
@@ -856,7 +856,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:27 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:20 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP14
@@ -962,7 +962,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP15
@@ -1069,7 +1069,7 @@ DIAGNOSTIC LIST
   1453: opt(1317): Logical clause simplified.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP15
@@ -2107,7 +2107,7 @@ FORMAT LIST
   1531:                 END SUBROUTINE SIZEUP15
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP15
@@ -2130,7 +2130,7 @@ INLINE LIST
   -> INLINE: PRESIZES::SETFORMATUSAGE (presizes.F:1304)
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP15
@@ -2331,7 +2331,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SIZEUP15
@@ -2564,7 +2564,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SETFORMATUSAGE
@@ -2575,7 +2575,7 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SETFORMATUSAGE
@@ -2614,7 +2614,7 @@ FORMAT LIST
   1556:                 end subroutine setFormatUsage
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SETFORMATUSAGE
@@ -2623,7 +2623,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SETFORMATUSAGE
@@ -2632,7 +2632,7 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:11:28 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:21 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/presizes.F
 
 PROCEDURE NAME: PRESIZES::SETFORMATUSAGE

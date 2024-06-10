@@ -1,4 +1,4 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
   COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/read_global.o
@@ -172,7 +172,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:17 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
@@ -260,7 +260,7 @@ DIAGNOSTIC LIST
    397: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
@@ -638,7 +638,7 @@ FORMAT LIST
    403:                 end subroutine prepRead14
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:17 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
@@ -681,7 +681,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:17 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
@@ -1020,7 +1020,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:17 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
@@ -1406,7 +1406,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:17 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
@@ -1437,7 +1437,7 @@ DIAGNOSTIC LIST
    484: vec( 126): Idiom detected.: MAX/MIN
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
@@ -1533,7 +1533,7 @@ FORMAT LIST
    488:                 end subroutine getMeshParametersXDMF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:17 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
@@ -1554,7 +1554,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:17 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
@@ -1614,7 +1614,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:17 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
@@ -1691,7 +1691,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:19 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:11 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15
@@ -1785,7 +1785,7 @@ DIAGNOSTIC LIST
   2019: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15
@@ -3336,7 +3336,7 @@ FORMAT LIST
   2023:                 END SUBROUTINE READ15
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:19 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:11 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15
@@ -3498,7 +3498,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:19 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:11 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15
@@ -3801,7 +3801,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:19 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:11 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15
@@ -4212,7 +4212,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
@@ -4260,7 +4260,7 @@ DIAGNOSTIC LIST
   2452: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
@@ -4709,7 +4709,7 @@ FORMAT LIST
   2457:                 END SUBROUTINE READ15_3DVS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
@@ -4825,7 +4825,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
@@ -4990,7 +4990,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
@@ -5190,7 +5190,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
@@ -5208,7 +5208,7 @@ DIAGNOSTIC LIST
   2503: opt(1418): Constant-length loop is expanded.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
@@ -5270,7 +5270,7 @@ FORMAT LIST
   2508:                 end subroutine setup_kdt_search
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
@@ -5279,7 +5279,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
@@ -5297,7 +5297,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
@@ -5328,7 +5328,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
@@ -5360,7 +5360,7 @@ DIAGNOSTIC LIST
   2628: inl(1212): Source for routine not found.: KDTREE2_MODULE::KDTREE2_DESTROY
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
@@ -5498,7 +5498,7 @@ FORMAT LIST
   2634:                 end subroutine kdtsearch
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
@@ -5513,7 +5513,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
@@ -5549,7 +5549,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
@@ -5609,7 +5609,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE
@@ -5630,7 +5630,7 @@ DIAGNOSTIC LIST
   2692: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE
@@ -5719,7 +5719,7 @@ FORMAT LIST
   2710:                 END SUBROUTINE CoordToEle
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE
@@ -5728,7 +5728,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE
@@ -5757,7 +5757,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:12:20 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE

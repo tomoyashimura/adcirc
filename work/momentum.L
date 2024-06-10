@@ -1,4 +1,4 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
   COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/momentum.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
@@ -172,7 +172,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:23 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::INITMOMENTUMEQ
@@ -183,7 +183,7 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::INITMOMENTUMEQ
@@ -219,7 +219,7 @@ FORMAT LIST
    107:                 end subroutine initMomentumEq
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:23 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::INITMOMENTUMEQ
@@ -228,7 +228,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:23 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::INITMOMENTUMEQ
@@ -237,7 +237,7 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:23 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::INITMOMENTUMEQ
@@ -264,7 +264,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:23 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::SOLVEMOMENTUMEQ
@@ -278,7 +278,7 @@ DIAGNOSTIC LIST
    135: inl(1212): Source for routine not found.: MESSENGER::UPDATER
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::SOLVEMOMENTUMEQ
@@ -326,7 +326,7 @@ FORMAT LIST
    140:                 end subroutine solveMomentumEq
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:23 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::SOLVEMOMENTUMEQ
@@ -345,7 +345,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:23 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::SOLVEMOMENTUMEQ
@@ -354,7 +354,7 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:29 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:23 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::SOLVEMOMENTUMEQ
@@ -381,7 +381,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:24 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC
@@ -544,7 +544,7 @@ DIAGNOSTIC LIST
   1218: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC
@@ -1648,7 +1648,7 @@ FORMAT LIST
   1244:                 END SUBROUTINE MOM_EQS_NEW_NC
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:24 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC
@@ -1687,7 +1687,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:24 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC
@@ -1958,7 +1958,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:24 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC
@@ -2171,7 +2171,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:24 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC::UPDATE_U_PERSLNODES
@@ -2184,7 +2184,7 @@ DIAGNOSTIC LIST
   1236: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: VV2
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC::UPDATE_U_PERSLNODES
@@ -2225,7 +2225,7 @@ FORMAT LIST
   1241:                     END SUBROUTINE UPDATE_U_PERSLNODES
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:24 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC::UPDATE_U_PERSLNODES
@@ -2234,7 +2234,7 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:24 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC::UPDATE_U_PERSLNODES
@@ -2252,7 +2252,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:24 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_NC::UPDATE_U_PERSLNODES
@@ -2287,7 +2287,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_CONSERV
@@ -2441,7 +2441,7 @@ DIAGNOSTIC LIST
   2054: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_CONSERV
@@ -3257,7 +3257,7 @@ FORMAT LIST
   2058:                 END SUBROUTINE MOM_EQS_NEW_CONSERV
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_CONSERV
@@ -3273,7 +3273,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_CONSERV
@@ -3404,7 +3404,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NEW_CONSERV
@@ -3517,7 +3517,7 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NON_CONSERV_PC
@@ -3643,7 +3643,7 @@ DIAGNOSTIC LIST
   2798: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NON_CONSERV_PC
@@ -4383,7 +4383,7 @@ FORMAT LIST
   2802:                 END SUBROUTINE MOM_EQS_NON_CONSERV_PC
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NON_CONSERV_PC
@@ -4399,7 +4399,7 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NON_CONSERV_PC
@@ -4516,7 +4516,7 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:13:30 2024
+NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:25 2024
 FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/momentum.F
 
 PROCEDURE NAME: MOMENTUM::MOM_EQS_NON_CONSERV_PC

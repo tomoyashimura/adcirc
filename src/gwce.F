@@ -378,6 +378,113 @@ C...... DW
       REAL(8) :: SPM1, SPM2, SPM3 
       LOGICAL :: ETA_SPONGE = .false., GWCE_SPONGE = .false.
       REAL(8) :: Ma2, Cfac = 1.0D0, CfacS0 = 1.0D0
+
+#ifdef ES_TUNE
+      INTEGER,DIMENSION(NE) :: jw12, jw13, jw21, jw23, jw31, jw32
+      REAL(8),DIMENSION(NE,3) :: Temp_LV_A
+      INTEGER,PARAMETER :: VLEN=256
+      INTEGER :: IE0, IE2
+      INTEGER :: ista, iend
+      REAL(8) :: WK_IFNLCT(VLEN) 
+      REAL(8) :: WK_IFNLCAT(VLEN)
+      REAL(8) :: WK_NCELE(VLEN)
+      REAL(8) :: WK_E0N1(VLEN)
+      REAL(8) :: WK_E0N2(VLEN)
+      REAL(8) :: WK_E0N3(VLEN)
+      REAL(8) :: WK_E1N1(VLEN)
+      REAL(8) :: WK_E1N2(VLEN)
+      REAL(8) :: WK_E1N3(VLEN)
+      REAL(8) :: WK_ESN1(VLEN)
+      REAL(8) :: WK_ESN2(VLEN)
+      REAL(8) :: WK_ESN3(VLEN)
+      REAL(8) :: WK_U1N1(VLEN)
+      REAL(8) :: WK_U1N2(VLEN)
+      REAL(8) :: WK_U1N3(VLEN)
+      REAL(8) :: WK_V1N1(VLEN)
+      REAL(8) :: WK_V1N2(VLEN)
+      REAL(8) :: WK_V1N3(VLEN)
+      REAL(8) :: WK_QX1N1(VLEN)
+      REAL(8) :: WK_QX1N2(VLEN)
+      REAL(8) :: WK_QX1N3(VLEN)
+      REAL(8) :: WK_QY1N1(VLEN)
+      REAL(8) :: WK_QY1N2(VLEN)
+      REAL(8) :: WK_QY1N3(VLEN)
+      REAL(8) :: WK_H1N1(VLEN)
+      REAL(8) :: WK_H1N2(VLEN)
+      REAL(8) :: WK_H1N3(VLEN)
+      REAL(8) :: WK_EVMN1(VLEN)
+      REAL(8) :: WK_EVMN2(VLEN)
+      REAL(8) :: WK_EVMN3(VLEN)
+      REAL(8) :: WK_T0N1(VLEN)
+      REAL(8) :: WK_T0N2(VLEN)
+      REAL(8) :: WK_T0N3(VLEN)
+      REAL(8) :: WK_ESAN1(VLEN)
+      REAL(8) :: WK_ESAN2(VLEN)
+      REAL(8) :: WK_ESAN3(VLEN)
+      REAL(8) :: WK_ABC00_EAN1(VLEN)
+      REAL(8) :: WK_ABC00_EAN2(VLEN)
+      REAL(8) :: WK_ABC00_EAN3(VLEN)
+      REAL(8) :: WK_U1AN1(VLEN)
+      REAL(8) :: WK_U1AN2(VLEN)
+      REAL(8) :: WK_U1AN3(VLEN)
+      REAL(8) :: WK_V1AN1(VLEN)
+      REAL(8) :: WK_V1AN2(VLEN)
+      REAL(8) :: WK_V1AN3(VLEN)
+      REAL(8) :: WK_SgN1_eta(VLEN)
+      REAL(8) :: WK_SgN2_eta(VLEN)
+      REAL(8) :: WK_SgN3_eta(VLEN)
+      REAL(8) :: WK_SgN1_mnx(VLEN)
+      REAL(8) :: WK_SgN2_mnx(VLEN)
+      REAL(8) :: WK_SgN3_mnx(VLEN)
+      REAL(8) :: WK_SgN1_mny(VLEN)
+      REAL(8) :: WK_SgN2_mny(VLEN)
+      REAL(8) :: WK_SgN3_mny(VLEN)
+      REAL(8) :: WK_Pr1N1(VLEN)
+      REAL(8) :: WK_Pr1N2(VLEN)
+      REAL(8) :: WK_Pr1N3(VLEN)
+      REAL(8) :: WK_TiPN1(VLEN)
+      REAL(8) :: WK_TiPN2(VLEN)
+      REAL(8) :: WK_TiPN3(VLEN)
+      REAL(8) :: WK_BSXAvg(VLEN)
+      REAL(8) :: WK_BSYAvg(VLEN)
+      REAL(8) :: WK_AreaIE2(VLEN)
+      REAL(8) :: WK_AreaIE1(VLEN)
+      REAL(8) :: WK_AreaIE4(VLEN)
+      REAL(8) :: WK_TANPHIAvg(VLEN)
+      REAL(8) :: WK_SFCXADJ(VLEN)
+      REAL(8) :: WK_SFCYADJ(VLEN)
+      REAL(8) :: WK_FDX1(VLEN)
+      REAL(8) :: WK_FDX2(VLEN)
+      REAL(8) :: WK_FDX3(VLEN)
+      REAL(8) :: WK_FDY1(VLEN)
+      REAL(8) :: WK_FDY2(VLEN)
+      REAL(8) :: WK_FDY3(VLEN)
+      REAL(8) :: WK_E0XGrad2A(VLEN)
+      REAL(8) :: WK_E0YGrad2A(VLEN)
+      REAL(8) :: WK_E1XGrad2A(VLEN)
+      REAL(8) :: WK_E1YGrad2A(VLEN)
+      REAL(8) :: WK_Tau0XGrad2A(VLEN)
+      REAL(8) :: WK_Tau0YGrad2A(VLEN)
+      REAL(8) :: WK_MX(VLEN)
+      REAL(8) :: WK_MY(VLEN)
+      REAL(8) :: WK_DispXAvg(VLEN)
+      REAL(8) :: WK_DispYAvg(VLEN)
+      REAL(8) :: WK_CorifAvg(VLEN)
+      REAL(8) :: WK_Tau0Avg(VLEN)
+      REAL(8) :: WK_U1Avg(VLEN)
+      REAL(8) :: WK_V1Avg(VLEN)
+      REAL(8) :: WK_QX1Avg(VLEN)
+      REAL(8) :: WK_QY1Avg(VLEN)
+      REAL(8) :: WK_ESAvg(VLEN)
+      REAL(8) :: WK_GDPAvgOAreaIE4(VLEN)
+      REAL(8) :: WK_GDPAvgOAreaIE4_S0(VLEN)
+      REAL(8) :: WK_GHAvgOAreaIE2(VLEN)
+      REAL(8) :: WK_WSXAvg(VLEN)
+      REAL(8) :: WK_WSYAvg(VLEN)
+      REAL(8) :: WK_BCXAvg(VLEN)
+      REAL(8) :: WK_BCYAvg(VLEN)
+#endif /* ES_TUNE */
+
       INTEGER :: NNBB1, NNBB2  ! Added for VEW1D  08-11-2022 SB
       REAL(8):: fBuf          !
 !JLW: adding total water depth variable for previous TS
@@ -447,6 +554,27 @@ C              WJP 02.24.2018 Get the infinity norm of the matrix
 
          !jgf48.4619: Added Seizo's handling of Lumping vs non-Lumping
          COEFASSYM : IF ( ILump.eq.0 ) THEN ! default case: fully consistent LHS
+
+#ifdef ES_TUNE
+            DO JN=2,NEIMAX
+            DO IE=1,NE
+                NMI1=NM(IE,1)
+                NMI2=NM(IE,2)
+                NMI3=NM(IE,3)
+                NMJ1=NMI1
+                NMJ2=NMI2
+                NMJ3=NMI3
+                IF(NeiTab(NMI1,JN).EQ.NMJ2) JW12(IE)=JN
+                IF(NeiTab(NMI1,JN).EQ.NMJ3) JW13(IE)=JN
+                IF(NeiTab(NMI2,JN).EQ.NMJ1) JW21(IE)=JN
+                IF(NeiTab(NMI2,JN).EQ.NMJ3) JW23(IE)=JN
+                IF(NeiTab(NMI3,JN).EQ.NMJ1) JW31(IE)=JN
+                IF(NeiTab(NMI3,JN).EQ.NMJ2) JW32(IE)=JN
+            END DO
+            END DO
+!nec$ list_vector
+#endif /* ES_TUNE */
+
             FULLMASS: DO IE=1,NE
                NMI1=NM(IE,1)
                NMI2=NM(IE,2)
@@ -505,10 +633,14 @@ C.... DW, Nov 2019 if IFNL_HDP = 1 use DP + ETA = H in the GWCE
                ENDIF   
 C.....         WJP adjust the dispersion equation through
 C              Ali et al. formula
+
+#ifdef PCALIDISP
                if (CAliDisp) then
                   Ma2   = G*DPavg/Cs2
                   Cfac = (1.0D0 - 0.25D0*Ma2 - Ad*DPavg**Bd)**2
                endif
+#endif
+
                ! DMW 2022/06 Apply slope limiting to gravity
                GA00DPAvgOAreaIE4 = ALPHAL(IE)*A00*G*DPAvg*Cfac/AreaIE4
                Tau0Avg = (Tau0Var(NMI1)+Tau0Var(NMI2)+Tau0Var(NMI3))/3.d0
@@ -543,6 +675,14 @@ C
                ENDIF
 C
 C.......... DW
+#ifdef ES_TUNE
+               J12=JW12(IE)
+               J13=JW13(IE)
+               J21=JW21(IE)
+               J23=JW23(IE)
+               J31=JW31(IE)
+               J32=JW32(IE)
+#else /* ES_TUNE */
                DO JN=2,NEIMAX
                   IF(NeiTab(NMI1,JN).EQ.NMJ2) J12=JN
                   IF(NeiTab(NMI1,JN).EQ.NMJ3) J13=JN
@@ -551,6 +691,7 @@ C.......... DW
                   IF(NeiTab(NMI3,JN).EQ.NMJ1) J31=JN
                   IF(NeiTab(NMI3,JN).EQ.NMJ2) J32=JN
                END DO
+#endif /* ES_TUNE */
 C.........     WJP multiplying by cosine(lat) if doing the 
 C              spherical correction 
 C              Node-by-Node
@@ -650,6 +791,10 @@ c...        for each elevation specified boundary node, zero all off diagonal
 c...        terms on the row and set diagnoal term to EP
             DO I=1,NETA
                Coef(NBD(I),1)=EP
+#ifdef ES_TUNE
+             END DO
+             DO I=1,NETA
+#endif /* ES_TUNE */
                DO J=2,NNEIGH(NBD(I))
                   Coef(NBD(I),J)=0.0d0
                ENDDO
@@ -989,6 +1134,629 @@ C..... End DW
 #endif
 
 C...  Assemble the GWCE RHS except for the boundary integral terms
+
+#ifdef ES_TUNE
+#ifdef CSCA
+      DO IE2=1,NE, VLEN
+       ista = IE2
+       iend = min(IE2+VLEN-1, NE)
+
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+
+C...     Set nodal values for each element
+
+Corbitt 120322: Localized Advection
+         IF (LoadAdvectionState) CALL ADVECTLOCAL(IE)
+         WK_IFNLCT(IE0) = IFNLCT
+         WK_IFNLCAT(IE0) = IFNLCAT
+       end do
+
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         NC1=NODECODE(NM1)
+         NC2=NODECODE(NM2)
+         NC3=NODECODE(NM3)
+         WK_NCELE(IE0)=NC1*NC2*NC3*NOFF(IE)
+         WK_E0N1(IE0)=ETA1(NM1)
+         WK_E0N2(IE0)=ETA1(NM2)
+         WK_E0N3(IE0)=ETA1(NM3)
+         WK_E1N1(IE0)=ETA2(NM1)
+         WK_E1N2(IE0)=ETA2(NM2)
+         WK_E1N3(IE0)=ETA2(NM3)
+         WK_ESN1(IE0)=ETAS(NM1)
+         WK_ESN2(IE0)=ETAS(NM2)
+         WK_ESN3(IE0)=ETAS(NM3)
+         WK_U1N1(IE0)=UU1(NM1)
+         WK_U1N2(IE0)=UU1(NM2)
+         WK_U1N3(IE0)=UU1(NM3)
+         WK_V1N1(IE0)=VV1(NM1)
+         WK_V1N2(IE0)=VV1(NM2)
+         WK_V1N3(IE0)=VV1(NM3)
+         WK_QX1N1(IE0)=QX1(NM1)
+         WK_QX1N2(IE0)=QX1(NM2)
+         WK_QX1N3(IE0)=QX1(NM3)
+         WK_QY1N1(IE0)=QY1(NM1)
+         WK_QY1N2(IE0)=QY1(NM2)
+         WK_QY1N3(IE0)=QY1(NM3)
+         WK_H1N1(IE0)=DP(NM1)+IFNLFA*WK_E1N1(IE0)
+         WK_H1N2(IE0)=DP(NM2)+IFNLFA*WK_E1N2(IE0)
+         WK_H1N3(IE0)=DP(NM3)+IFNLFA*WK_E1N3(IE0)
+         WK_EVMN1(IE0)=EVM(NM1)
+         WK_EVMN2(IE0)=EVM(NM2)
+         WK_EVMN3(IE0)=EVM(NM3)
+         WK_T0N1(IE0)=Tau0Var(NM1)
+         WK_T0N2(IE0)=Tau0Var(NM2)
+         WK_T0N3(IE0)=Tau0Var(NM3)
+       end do
+C
+C.... DW: begin ! absorbing layer
+C
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         WK_ESAN1(IE0) = 0.D0
+         WK_ESAN2(IE0) = 0.D0
+         WK_ESAN3(IE0) = 0.D0 ;
+
+         WK_ABC00_EAN1(IE0) = 0.D0
+         WK_ABC00_EAN2(IE0) = 0.D0
+         WK_ABC00_EAN3(IE0) = 0.D0
+
+         WK_U1AN1(IE0) = 0.D0
+         WK_U1AN2(IE0) = 0.D0
+         WK_U1AN3(IE0) = 0.D0
+         WK_V1AN1(IE0) = 0.D0
+         WK_V1AN2(IE0) = 0.D0
+         WK_V1AN3(IE0) = 0.D0
+
+         WK_SgN1_eta(IE0) = 0.D0
+         WK_SgN2_eta(IE0) = 0.D0
+         WK_SgN3_eta(IE0) = 0.D0
+         WK_SgN1_mnx(IE0) = 0.D0
+         WK_SgN2_mnx(IE0) = 0.D0
+         WK_SgN3_mnx(IE0) = 0.D0
+         WK_SgN1_mny(IE0) = 0.D0
+         WK_SgN2_mny(IE0) = 0.D0
+         WK_SgN3_mny(IE0) = 0.D0 ;
+
+         IF ( GWCE_SPONGE ) THEN
+            WK_SgN1_eta(IE0) = absorblayer_sigma_eta(NM1,1) ;
+            WK_SgN2_eta(IE0) = absorblayer_sigma_eta(NM2,1) ;
+            WK_SgN3_eta(IE0) = absorblayer_sigma_eta(NM3,1) ;
+
+            WK_SgN1_mnx(IE0) = absorblayer_sigma_mnx(NM1,1) ;
+            WK_SgN2_mnx(IE0) = absorblayer_sigma_mnx(NM2,1) ;
+            WK_SgN3_mnx(IE0) = absorblayer_sigma_mnx(NM3,1) ;
+
+            WK_SgN1_mny(IE0) = absorblayer_sigma_mny(NM1,1) ;
+            WK_SgN2_mny(IE0) = absorblayer_sigma_mny(NM2,1) ;
+            WK_SgN3_mny(IE0) = absorblayer_sigma_mny(NM3,1) ;
+
+            E0AN1 = eta0_abslayer(NM1) ;
+            E0AN2 = eta0_abslayer(NM2) ;
+            E0AN3 = eta0_abslayer(NM3) ;
+
+            E1AN1 = eta1_abslayer(NM1) ;
+            E1AN2 = eta1_abslayer(NM2) ;
+            E1AN3 = eta1_abslayer(NM3) ;
+
+            E2AN1 = eta2_abslayer(NM1) ;
+            E2AN2 = eta2_abslayer(NM2) ;
+            E2AN3 = eta2_abslayer(NM3) ;
+
+            WK_ESAN1(IE0) = E2AN1 - E0AN1 ;
+            WK_ESAN2(IE0) = E2AN2 - E0AN2 ;
+            WK_ESAN3(IE0) = E2AN3 - E0AN3 ;
+
+            WK_ABC00_EAN1(IE0) = A00*E2AN1 + B00*E1AN1 + C00*E0AN1 ;
+            WK_ABC00_EAN2(IE0) = A00*E2AN2 + B00*E1AN2 + C00*E0AN2 ;
+            WK_ABC00_EAN3(IE0) = A00*E2AN3 + B00*E1AN3 + C00*E0AN3 ;
+
+            WK_U1AN1(IE0) = uu1_abslayer(NM1) ;
+            WK_U1AN2(IE0) = uu1_abslayer(NM2) ;
+            WK_U1AN3(IE0) = uu1_abslayer(NM3) ;
+
+            WK_V1AN1(IE0) = vv1_abslayer(NM1) ;
+            WK_V1AN2(IE0) = vv1_abslayer(NM2) ;
+            WK_V1AN3(IE0) = vv1_abslayer(NM3) ;
+         END IF
+       end do
+C
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         WK_Pr1N1(IE0)=0.0d0
+         WK_Pr1N2(IE0)=0.0d0
+         WK_Pr1N3(IE0)=0.0d0
+
+         IF ((NWS.NE.0).OR.(NRS.NE.0)) THEN     !wind or radiation stress
+            WK_Pr1N1(IE0)=PR1(NM1)
+            WK_Pr1N2(IE0)=PR1(NM2)
+            WK_Pr1N3(IE0)=PR1(NM3)
+
+            !c Pressure c!
+            IF ( NO_MET_IN_SPONGE ) THEN
+               IF ( absorblayer_sigma_eta(NM1,1) > 1.0e-9 ) THEN
+                  WK_Pr1N1(IE0) = PRBCKGRND_MH2O
+               END IF
+               IF ( absorblayer_sigma_eta(NM2,1) > 1.0e-9 ) THEN
+                  WK_Pr1N2(IE0) = PRBCKGRND_MH2O
+               END IF
+               IF ( absorblayer_sigma_eta(NM3,1) > 1.0e-9 ) THEN
+                  WK_Pr1N3(IE0) = PRBCKGRND_MH2O
+               END IF
+            END IF
+         ENDIF
+       end do
+C ....,... END DW
+C
+!!         ! jgf: Adding support for water level offset as a pseudo barometric
+!!         ! pressure
+!!         if (usingDynamicWaterLevelCorrection.eqv..true.) then
+!!            Off1N1 = dynamicWaterLevelCorrection1(NM1)
+!!            Off1N2 = dynamicWaterLevelCorrection1(NM2)
+!!            Off1N3 = dynamicWaterLevelCorrection1(NM3)
+!!         endif
+
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         WK_TiPN1(IE0)=0.d0
+         WK_TiPN2(IE0)=0.d0
+         WK_TiPN3(IE0)=0.d0
+         IF (CTIP) THEN                        !tidal potential
+            WK_TiPN1(IE0)=TiP1(NM1)
+            WK_TiPN2(IE0)=TiP1(NM2)
+            WK_TiPN3(IE0)=TiP1(NM3)
+         ENDIF
+
+          BSXN1=0.0d0
+          BSXN2=0.0d0
+          BSXN3=0.0d0
+          BSYN1=0.0d0
+          BSYN2=0.0d0
+          BSYN3=0.0d0
+         IF (C2DDI) THEN                       !2D bottom friction
+            !WJP taking into account the symmetrical friction matrix
+            BSXN1 = TKM(1,NM1)*WK_QX1N1(IE0) + TKM(3,NM1)*WK_QY1N1(IE0)
+            BSYN1 = TKM(3,NM1)*WK_QX1N1(IE0) + TKM(2,NM1)*WK_QY1N1(IE0)
+            BSXN2 = TKM(1,NM2)*WK_QX1N2(IE0) + TKM(3,NM2)*WK_QY1N2(IE0)
+            BSYN2 = TKM(3,NM2)*WK_QX1N2(IE0) + TKM(2,NM2)*WK_QY1N2(IE0)
+            BSXN3 = TKM(1,NM3)*WK_QX1N3(IE0) + TKM(3,NM3)*WK_QY1N3(IE0)
+            BSYN3 = TKM(3,NM3)*WK_QX1N3(IE0) + TKM(2,NM3)*WK_QY1N3(IE0)
+         ENDIF
+         IF (C3D) THEN                         !3D bottom friction
+            BSXN1=BSX1(NM1)
+            BSXN2=BSX1(NM2)
+            BSXN3=BSX1(NM3)
+            BSYN1=BSY1(NM1)
+            BSYN2=BSY1(NM2)
+            BSYN3=BSY1(NM3)
+         ENDIF
+         WK_BSXAvg(IE0)=(BSXN1+BSXN2+BSXN3)/3.d0
+         WK_BSYAvg(IE0)=(BSYN1+BSYN2+BSYN3)/3.d0
+       end do
+
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         WK_AreaIE2(IE0)=1.0d0/Areas(IE)               !2A
+         WK_AreaIE1(IE0)=Areas(IE)/2.d0             ! A
+         WK_AreaIE4(IE0)=1.0d0/(2.d0*Areas(IE))            !4A
+         SFacAvg= SFacEle(IE)
+C..... DW
+         ! derivative: accomodate corrected spherical coordinate
+         SFmxAvg=SFMXEle(IE)  ;
+         SFmyAvg=SFMYEle(IE) ;
+         sfdxfac=(1 - IFSFM)*SFacAvg + IFSFM*SFmxAvg ;
+         sfdyfac=(1 - IFSFM)*1.0_SZ  + IFSFM*SFmyAvg ;
+
+         ! continuity
+         SFCXAvg=SFCXEle(IE) ;
+         SFCYAvg=SFCYEle(IE) ;
+         YCFACAvg=YCSFACEle(IE) ;
+         WK_TANPHIAvg(IE0)=TANPHIEle(IE) ;
+         WK_SFCXADJ(IE0) = SFCXAvg/sfdxfac ;
+         WK_SFCYADJ(IE0) = YCFACAvg*SFCYAvg/sfdyfac ;
+
+         WK_FDX1(IE0) = FDXE(1,IE)*sfdxfac ; !c dx/dlambda*b1*2A
+         WK_FDX2(IE0) = FDXE(2,IE)*sfdxfac ; !c dx/dlambda*b2*2A
+         WK_FDX3(IE0) = FDXE(3,IE)*sfdxfac ; !c dx/dlambda*b3*2A
+         WK_FDY1(IE0) = FDYE(1,IE)*sfdyfac ; !c dy/dphi*a1*2A
+         WK_FDY2(IE0) = FDYE(2,IE)*sfdyfac ; !c dy/dphi*a1*2A
+         WK_FDY3(IE0) = FDYE(3,IE)*sfdyfac ; !c dy/dphi*a1*2A
+       end do
+
+C..... DW
+
+C...     Compute part of several spatial gradients for use below
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         WK_E0XGrad2A(IE0) = 0.0d0
+         WK_E0YGrad2A(IE0) = 0.0d0
+         IF (ILump.eq.0) THEN
+            WK_E0XGrad2A(IE0)=WK_E0N1(IE0)*WK_FDX1(IE0)+WK_E0N2(IE0)*WK_FDX2(IE0)+WK_E0N3(IE0)*WK_FDX3(IE0)        !2*Area*deta0/dx
+            WK_E0YGrad2A(IE0)=WK_E0N1(IE0)*WK_FDY1(IE0)+WK_E0N2(IE0)*WK_FDY2(IE0)+WK_E0N3(IE0)*WK_FDY3(IE0)        !2*Area*deta0/dy
+         ENDIF
+         WK_E1XGrad2A(IE0)=WK_E1N1(IE0)*WK_FDX1(IE0)+WK_E1N2(IE0)*WK_FDX2(IE0)+WK_E1N3(IE0)*WK_FDX3(IE0)        !2*Area*deta1/dx
+         WK_E1YGrad2A(IE0)=WK_E1N1(IE0)*WK_FDY1(IE0)+WK_E1N2(IE0)*WK_FDY2(IE0)+WK_E1N3(IE0)*WK_FDY3(IE0)        !2*Area*deta1/dy
+         WK_Tau0XGrad2A(IE0)=WK_T0N1(IE0)*WK_FDX1(IE0)+WK_T0N2(IE0)*WK_FDX2(IE0)+WK_T0N3(IE0)*WK_FDX3(IE0)      !2*Area*dTau0/dx
+         WK_Tau0YGrad2A(IE0)=WK_T0N1(IE0)*WK_FDY1(IE0)+WK_T0N2(IE0)*WK_FDY2(IE0)+WK_T0N3(IE0)*WK_FDY3(IE0)      !2*Area*dTau0/dy
+
+C...... BEG: DW, Nov 2019
+         WK_Tau0XGrad2A(IE0)=WK_SFCXADJ(IE0)*WK_Tau0XGrad2A(IE0)      !2*Area*dTau0/dx
+         WK_Tau0YGrad2A(IE0)=WK_SFCYADJ(IE0)*WK_Tau0YGrad2A(IE0)      !2*Area*dTau0/dy
+C...... END DW
+
+C...     Compute the Kolar & Gray lateral stress term extended for spatially varying EVM
+C...     ********     Need to think about this more: DW ********
+C...     ********     Kolar & Gray does not seem to be suitable for
+C...     ********     the spherical coordinates
+         WK_MX(IE0)=0.0d0
+         WK_MY(IE0)=0.0d0
+         IF(CGWCE_LS_KGQ) THEN
+            EVMXGrad=(WK_EVMN1(IE0)*WK_FDX1(IE0)+WK_EVMN2(IE0)*WK_FDX2(IE0)+WK_EVMN3(IE0)*WK_FDX3(IE0))*WK_AreaIE2(IE0)
+            EVMYGrad=(WK_EVMN1(IE0)*WK_FDY1(IE0)+WK_EVMN2(IE0)*WK_FDY2(IE0)+WK_EVMN3(IE0)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+            EVMAvgODT=((WK_EVMN1(IE0)+WK_EVMN2(IE0)+WK_EVMN3(IE0))/3.d0)/DT
+            WK_MX(IE0)=(EVMXGrad*(WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_QX1N3(IE0)*WK_FDX3(IE0))
+     &         +EVMYGrad*(WK_QY1N1(IE0)*WK_FDX1(IE0)+WK_QY1N2(IE0)*WK_FDX2(IE0)+WK_QY1N3(IE0)*WK_FDX3(IE0))
+     &         -EVMAvgODT*(WK_ESN1(IE0)*WK_FDX1(IE0)+WK_ESN2(IE0)*WK_FDX2(IE0)+WK_ESN3(IE0)*WK_FDX3(IE0)))*WK_AreaIE2(IE0)
+            WK_MY(IE0)=(EVMXGrad*(WK_QX1N1(IE0)*WK_FDY1(IE0)+WK_QX1N2(IE0)*WK_FDY2(IE0)+WK_QX1N3(IE0)*WK_FDY3(IE0))
+     &         +EVMYGrad*(WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_QY1N3(IE0)*WK_FDY3(IE0))
+     &         -EVMAvgODT*(WK_ESN1(IE0)*WK_FDY1(IE0)+WK_ESN2(IE0)*WK_FDY2(IE0)+WK_ESN3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+         ENDIF
+
+C...     Compute the remainder of the 2 Part lateral stress terms
+
+         IF((CGWCE_LS_2PartQ).OR.(CGWCE_LS_2PartV) .OR.
+     &        (CGWCE_LS_2PartSQ).OR.(CGWCE_LS_2PartSV)) THEN
+C           X-direction
+            LSXYEle = (LSXY(NM1)+LSXY(NM2)+LSXY(NM3))/3.d0
+            LSYXEle = (LSYX(NM1)+LSYX(NM2)+LSYX(NM3))/3.d0
+            WK_MX(IE0)=(LSXX(NM1)*WK_FDX1(IE0)+LSXX(NM2)*WK_FDX2(IE0)+LSXX(NM3)*WK_FDX3(IE0)
+     &         +LSXY(NM1)*WK_FDY1(IE0)+LSXY(NM2)*WK_FDY2(IE0)+LSXY(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+     &         -WK_TANPHIAvg(IE0)*(LSXYEle + LSYXEle)
+C           Y-direction
+            LSXXEle = (LSXX(NM1)+LSXX(NM2)+LSXX(NM3))/3.d0
+            LSYYEle = (LSYY(NM1)+LSYY(NM2)+LSYY(NM3))/3.d0
+            WK_MY(IE0)=(LSYX(NM1)*WK_FDX1(IE0)+LSYX(NM2)*WK_FDX2(IE0)+LSYX(NM3)*WK_FDX3(IE0)
+     &         +LSYY(NM1)*WK_FDY1(IE0)+LSYY(NM2)*WK_FDY2(IE0)+LSYY(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+     &         +WK_TANPHIAvg(IE0)*(LSXXEle - LSYYEle)
+         ENDIF
+       end do
+
+C...     Compute the spatial gradients of the velocity dispersion terms if 3D
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         WK_DispXAvg(IE0)=0.0d0
+         WK_DispYAvg(IE0)=0.0d0
+         IF (C3D) THEN                         !3D bottom friction
+            DispX = (DUU1(NM1)*WK_FDX1(IE0)+DUU1(NM2)*WK_FDX2(IE0)+DUU1(NM3)*WK_FDX3(IE0)
+     &          +  DUV1(NM1)*WK_FDY1(IE0)+DUV1(NM2)*WK_FDY2(IE0)+DUV1(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+            DispY = (DUV1(NM1)*WK_FDX1(IE0)+DUV1(NM2)*WK_FDX2(IE0)+DUV1(NM3)*WK_FDX3(IE0)
+     &          +  DVV1(NM1)*WK_FDY1(IE0)+DVV1(NM2)*WK_FDY2(IE0)+DVV1(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+            WK_DispXAvg(IE0) = WK_IFNLCT(IE0)*DispX
+            WK_DispYAvg(IE0) = WK_IFNLCT(IE0)*DispY
+         ENDIF
+
+C...     Compute elemental averages
+         WK_CorifAvg(IE0)=(Corif(NM1)+Corif(NM2)+Corif(NM3))/3.d0
+         WK_Tau0Avg(IE0)=(WK_T0N1(IE0)+WK_T0N2(IE0)+WK_T0N3(IE0))/3.d0
+         WK_U1Avg(IE0)=(WK_U1N1(IE0)+WK_U1N2(IE0)+WK_U1N3(IE0))/3.d0
+         WK_V1Avg(IE0)=(WK_V1N1(IE0)+WK_V1N2(IE0)+WK_V1N3(IE0))/3.d0
+         WK_QX1Avg(IE0)=(WK_QX1N1(IE0)+WK_QX1N2(IE0)+WK_QX1N3(IE0))/3.d0
+         WK_QY1Avg(IE0)=(WK_QY1N1(IE0)+WK_QY1N2(IE0)+WK_QY1N3(IE0))/3.d0
+         WK_ESAvg(IE0)=(WK_ESN1(IE0)+WK_ESN2(IE0)+WK_ESN3(IE0))/3.d0
+
+C.....   DW, Nov 2019
+         DPAvg = (DP(NM1)+DP(NM2)+DP(NM3))/3.d0 + ! BAVG if GWCE_HDP = .FALSE.
+     &        IFNLFA*IFNL_HDP*(WK_E1N1(IE0) + WK_E1N2(IE0) + WK_E1N3(IE0))/3.d0 ; ! H^{s}_{avg} otherwise
+
+         DPAvgS0 = (DP(NM1)+DP(NM2)+DP(NM3))/3.d0 + ! BAVG if GWCE_HDP = .FALSE.
+     &        IFNLFA*IFNL_HDP*(WK_E0N1(IE0) + WK_E0N2(IE0) + WK_E0N3(IE0))/3.d0 ; ! H^{s-1}_{avg} otherwise
+
+
+C.....   WJP adjust the dispersion equation through
+C        Ali et al. formula
+
+#ifdef PCALIDISP
+         if (CAliDisp) then
+            Ma2    = G*DPavg/Cs2
+            Cfac   = (1.0_SZ - 0.25_SZ*Ma2 - Ad*DPavg**Bd)**2
+            Ma2    = G*DPavg/Cs2
+            CfacS0 = (1.0_SZ - 0.25_SZ*Ma2 - Ad*DPavgS0**Bd)**2
+         endif
+       end do
+#endif PCALIDISP
+
+         WK_GDPAvgOAreaIE4(IE0) = G*DPAvg*Cfac*WK_AreaIE4(IE0)
+         WK_GDPAvgOAreaIE4_S0(IE0) = G*DPAvgS0*CfacS0*WK_AreaIE4(IE0)
+       end do
+
+C....  END DW & WJP
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         HAvg=(WK_H1N1(IE0)+WK_H1N2(IE0)+WK_H1N3(IE0))/3.d0
+         GHAvg=G*HAvg
+         WK_GHAvgOAreaIE2(IE0)=GHAvg*WK_AreaIE2(IE0)
+C        WJP: Add on the contribution from spherical correction term
+C        from the momentum equation
+         ! (tan \phi V_{lambda})/R + f
+         WK_CorifAvg(IE0) = WK_CorifAvg(IE0) + WK_IFNLCT(IE0)*WK_TANPHIAvg(IE0)*WK_U1Avg(IE0)
+C
+!---------
+         WK_WSXAvg(IE0)=0.0d0
+         WK_WSYAvg(IE0)=0.0d0
+         IF ((NWS.NE.0).OR.(NRS.NE.0)) THEN     !wind or radiation stress
+            fwsx1 = 1.D0 ; fwsx2 = 1.D0 ; fwsx3 = 1.D0 ;
+            fwsy1 = 1.D0 ; fwsy2 = 1.D0 ; fwsy3 = 1.D0 ;
+            IF ( NO_MET_IN_SPONGE ) THEN
+               IF ( absorblayer_sigma_mnx(NM1,1) > 1e-9 ) fwsx1 = 0.D0
+               IF ( absorblayer_sigma_mnx(NM2,1) > 1e-9 ) fwsx2 = 0.D0
+               IF ( absorblayer_sigma_mnx(NM3,1) > 1e-9 ) fwsx3 = 0.D0
+
+               IF ( absorblayer_sigma_mny(NM1,1) > 1e-9 ) fwsy1 = 0.D0
+               IF ( absorblayer_sigma_mny(NM2,1) > 1e-9 ) fwsy2 = 0.D0
+               IF ( absorblayer_sigma_mny(NM3,1) > 1e-9 ) fwsy3 = 0.D0
+            END IF
+
+            WK_WSXAvg(IE0)=(fwsx1*WSX1(NM1)+fwsx2*WSX1(NM2)+fwsx3*WSX1(NM3))/3.d0
+            WK_WSYAvg(IE0)=(fwsy1*WSY1(NM1)+fwsy2*WSY1(NM2)+fwsy3*WSY1(NM3))/3.d0
+         ENDIF
+C------- END DW
+C
+         WK_BCXAvg(IE0)=0.0d0
+         WK_BCYAvg(IE0)=0.0d0
+         IF (CBaroclinic) THEN
+#ifndef NOFSBPG
+            WK_BCXAvg(IE0) = (WK_H1N1(IE0)*VIDBCPDXOH(NM1)+WK_H1N2(IE0)*VIDBCPDXOH(NM2)
+     &                                    +WK_H1N3(IE0)*VIDBCPDXOH(NM3))/3.d0
+            WK_BCYAvg(IE0) = (WK_H1N1(IE0)*VIDBCPDYOH(NM1)+WK_H1N2(IE0)*VIDBCPDYOH(NM2)
+     &                                    +WK_H1N3(IE0)*VIDBCPDYOH(NM3))/3.d0
+#else
+            WK_BCXAvg(IE0) = (DP(NM1)*VIDBCPDXOH(NM1) + DP(NM2)*VIDBCPDXOH(NM2)
+     &                + DP(NM3)*VIDBCPDXOH(NM3))/3.d0
+            WK_BCYAvg(IE0) = (DP(NM1)*VIDBCPDYOH(NM1) + DP(NM2)*VIDBCPDYOH(NM2)
+     &                + DP(NM3)*VIDBCPDYOH(NM3))/3.d0
+#endif
+         ENDIF
+       end do
+
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+C...     Compute additional partial factors
+C........DW: begin add absorbing layer term
+         SigmaAvg = (WK_SgN1_eta(IE0) + WK_SgN2_eta(IE0) + WK_SgN3_eta(IE0))/3.D0
+         Tau0SigmaAvg = (WK_SgN1_eta(IE0)*WK_T0N1(IE0) + WK_SgN2_eta(IE0)*WK_T0N2(IE0) +
+     &                   WK_SgN3_eta(IE0)*WK_T0N3(IE0))/3.d0
+
+         Tau0Avg_S = WK_Tau0Avg(IE0) +
+     &     ((A00 + B00)*2.D0*Tau0SigmaAvg*DT + SigmaAvg)*sponge_dis_mthd
+
+         MsFacR=WK_AreaIE1(IE0)*(1.d0/DT-Tau0Avg_S/2.d0)/DT/12.d0
+         MsFacR_S = (-(A00 + B00 + C00)*WK_AreaIE1(IE0)*
+     &          Tau0SigmaAvg/12.D0)*sponge_dis_mthd
+
+         MsFacRS_ABC00 = (Tau0SigmaAvg*WK_AreaIE1(IE0)/12.D0)*sponge_dis_mthd
+         MsFacRS_T = ((SigmaAvg/(2.D0*DT))*WK_AreaIE1(IE0)/12.D0)*sponge_dis_mthd
+C......... end DW
+C
+         GOAreaIE4=G*WK_AreaIE4(IE0)
+         Tau0SpaVar=(WK_QX1Avg(IE0)*WK_Tau0XGrad2A(IE0)+WK_QY1Avg(IE0)*WK_Tau0YGrad2A(IE0))/6.d0
+         A00pB00=A00+B00
+
+C...     Compute the JX, JY terms less the advection terms
+         Tau0QXAvg=(WK_T0N1(IE0)*WK_QX1N1(IE0)+WK_T0N2(IE0)*WK_QX1N2(IE0)+WK_T0N3(IE0)*WK_QX1N3(IE0))/3.d0
+         SigmaQxAvg = (WK_SgN1_mnx(IE0)*WK_QX1N1(IE0) +
+     &         WK_SgN2_mnx(IE0)*WK_QX1N2(IE0) + WK_SgN3_mnx(IE0)*WK_QX1N3(IE0))/3.d0 ;
+         AvgSigmaHAbsU = (WK_SgN1_mnx(IE0)*WK_H1N1(IE0)*WK_U1AN1(IE0) +
+     &        WK_SgN2_mnx(IE0)*WK_H1N2(IE0)*WK_U1AN2(IE0) + WK_SgN3_mnx(IE0)*WK_H1N3(IE0)*WK_U1AN3(IE0))/3.D0 ;
+         JXAvg = WK_CorifAvg(IE0)*WK_QY1Avg(IE0)
+     &          -IFNLFA*GOAreaIE4*(1 - IFNL_HDP)*(
+     &               WK_E1N1(IE0)*WK_E1N1(IE0)*WK_FDX1(IE0) +WK_E1N2(IE0)*WK_E1N2(IE0)*WK_FDX2(IE0) + WK_E1N3(IE0)*WK_E1N3(IE0)*WK_FDX3(IE0))
+     &          -WK_GHAvgOAreaIE2(IE0)*((WK_Pr1N1(IE0)-WK_TiPN1(IE0))*WK_FDX1(IE0)
+     &                     +(WK_Pr1N2(IE0)-WK_TiPN2(IE0))*WK_FDX2(IE0)+(WK_Pr1N3(IE0)-WK_TiPN3(IE0))*WK_FDX3(IE0))
+     &          +WK_WSXAvg(IE0)-WK_BSXAvg(IE0)+WK_MX(IE0)-WK_DispXAvg(IE0)-WK_BCXAvg(IE0)+Tau0QXAvg
+C--- begin: DW, absorbing layer
+     &          - SigmaQxAvg*sponge_dis_mthd
+     &          + AvgSigmaHAbsU*sponge_dis_mthd
+C--- end DW
+
+
+         Tau0QYAvg=(WK_T0N1(IE0)*WK_QY1N1(IE0)+WK_T0N2(IE0)*WK_QY1N2(IE0)+WK_T0N3(IE0)*WK_QY1N3(IE0))/3.d0
+         SigmaQyAvg = (WK_SgN1_mny(IE0)*WK_QY1N1(IE0) +
+     &         WK_SgN2_mny(IE0)*WK_QY1N2(IE0) + WK_SgN3_mny(IE0)*WK_QY1N3(IE0))/3.d0 ;
+         AvgSigmaHAbsV = (WK_SgN1_mny(IE0)*WK_H1N1(IE0)*WK_V1AN1(IE0) +
+     &        WK_SgN2_mny(IE0)*WK_H1N2(IE0)*WK_V1AN2(IE0) + WK_SgN3_mny(IE0)*WK_H1N3(IE0)*WK_V1AN3(IE0))/3.D0 ;
+
+         JYAvg =-WK_CorifAvg(IE0)*WK_QX1Avg(IE0)
+     &          -IFNLFA*GOAreaIE4*(1 - IFNL_HDP)*(
+     &                WK_E1N1(IE0)*WK_E1N1(IE0)*WK_FDY1(IE0)+WK_E1N2(IE0)*WK_E1N2(IE0)*WK_FDY2(IE0)+WK_E1N3(IE0)*WK_E1N3(IE0)*WK_FDY3(IE0))
+     &          -WK_GHAvgOAreaIE2(IE0)*((WK_Pr1N1(IE0)-WK_TiPN1(IE0))*WK_FDY1(IE0)
+     &                    +(WK_Pr1N2(IE0)-WK_TiPN2(IE0))*WK_FDY2(IE0)+(WK_Pr1N3(IE0)-WK_TiPN3(IE0))*WK_FDY3(IE0))
+     &          +WK_WSYAvg(IE0)-WK_BSYAvg(IE0)+WK_MY(IE0)-WK_DispYAvg(IE0)-WK_BCYAvg(IE0)+Tau0QYAvg
+C--- begin: DW, absorbing layer
+     &          -SigmaQYAvg*sponge_dis_mthd
+     &          +AvgSigmaHAbsV*sponge_dis_mthd
+C--- end DW
+
+C...     Complete the JX, JY terms depending on the advection formulation
+         IF(CGWCE_Advec_NC) THEN        !nonconservative advection
+           JXAvg = JXAvg - WK_IFNLCT(IE0)*(
+     &              WK_QX1Avg(IE0)*(WK_U1N1(IE0)*WK_FDX1(IE0)+WK_U1N2(IE0)*WK_FDX2(IE0)+WK_U1N3(IE0)*WK_FDX3(IE0))
+     &             +WK_QY1Avg(IE0)*(WK_U1N1(IE0)*WK_FDY1(IE0)+WK_U1N2(IE0)*WK_FDY2(IE0)+WK_U1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+     &             +WK_IFNLCAT(IE0)*WK_U1Avg(IE0)*WK_ESAvg(IE0)/DT
+           JYAvg = JYAvg - WK_IFNLCT(IE0)*(
+     &              WK_QX1Avg(IE0)*(WK_V1N1(IE0)*WK_FDX1(IE0)+WK_V1N2(IE0)*WK_FDX2(IE0)+WK_V1N3(IE0)*WK_FDX3(IE0))
+     &             +WK_QY1Avg(IE0)*(WK_V1N1(IE0)*WK_FDY1(IE0)+WK_V1N2(IE0)*WK_FDY2(IE0)+WK_V1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+     &             +WK_IFNLCAT(IE0)*WK_V1Avg(IE0)*WK_ESAvg(IE0)/DT
+         ENDIF
+         IF(CGWCE_Advec_C1) THEN        !conservative v1 advection
+           JXAvg = JXAvg - WK_IFNLCT(IE0)*(
+     &              (WK_U1N1(IE0)*WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_U1N2(IE0)*WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_U1N3(IE0)*WK_QX1N3(IE0)*WK_FDX3(IE0))
+     &             +(WK_U1N1(IE0)*WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_U1N2(IE0)*WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_U1N3(IE0)*WK_QY1N3(IE0)*WK_FDY3(IE0)))
+     &             *WK_AreaIE2(IE0)
+           JYAvg = JYAvg - WK_IFNLCT(IE0)*(
+     &              (WK_V1N1(IE0)*WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_V1N2(IE0)*WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_V1N3(IE0)*WK_QX1N3(IE0)*WK_FDX3(IE0))
+     &             +(WK_V1N1(IE0)*WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_V1N2(IE0)*WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_V1N3(IE0)*WK_QY1N3(IE0)*WK_FDY3(IE0)))
+     &             *WK_AreaIE2(IE0)
+         ENDIF
+         IF(CGWCE_Advec_C2) THEN        !conservative v2 advection
+           JXAvg = JXAvg - WK_IFNLCT(IE0)*(
+     &              WK_QX1Avg(IE0)*(WK_U1N1(IE0)*WK_FDX1(IE0)+WK_U1N2(IE0)*WK_FDX2(IE0)+WK_U1N3(IE0)*WK_FDX3(IE0))
+     &             +WK_QY1Avg(IE0)*(WK_U1N1(IE0)*WK_FDY1(IE0)+WK_U1N2(IE0)*WK_FDY2(IE0)+WK_U1N3(IE0)*WK_FDY3(IE0))
+     &             +WK_U1Avg(IE0)*(WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_QX1N3(IE0)*WK_FDX3(IE0))
+     &             +WK_U1Avg(IE0)*(WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_QY1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+           JYAvg = JYAvg - WK_IFNLCT(IE0)*(
+     &              WK_QX1Avg(IE0)*(WK_V1N1(IE0)*WK_FDX1(IE0)+WK_V1N2(IE0)*WK_FDX2(IE0)+WK_V1N3(IE0)*WK_FDX3(IE0))
+     &             +WK_QY1Avg(IE0)*(WK_V1N1(IE0)*WK_FDY1(IE0)+WK_V1N2(IE0)*WK_FDY2(IE0)+WK_V1N3(IE0)*WK_FDY3(IE0))
+     &             +WK_V1Avg(IE0)*(WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_QX1N3(IE0)*WK_FDX3(IE0))
+     &             +WK_V1Avg(IE0)*(WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_QY1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+         ENDIF
+
+C...... BEG: DW, DEC 2019
+C...     Needs multiplying by cos(lat) in case of the correction
+C        Node by node
+         SPM1 = SFCT(NM1) ;
+         SPM2 = SFCT(NM2) ;
+         SPM3 = SFCT(NM3) ;
+C...... END DW
+
+C...     Assemble forcing for node NM1 (local index j=1)
+
+         Temp_LV_A1=
+
+C...     Transient and Tau0 terms from LHS
+     &         (OnDiag*WK_ESN1(IE0)*SPM1 + OffDiag*(WK_ESN2(IE0)*SPM2+WK_ESN3(IE0)*SPM3))*MsFacR
+
+C...     Free surface terms from LHS (time levels s-1 & s)
+     &        - WK_GDPAvgOAreaIE4_S0(IE0)*( C00*( WK_SFCXADJ(IE0)*WK_FDX1(IE0)*WK_E0XGrad2A(IE0)+
+     &                                    WK_SFCYADJ(IE0)*WK_FDY1(IE0)*WK_E0YGrad2A(IE0) ) )
+     &        - WK_GDPAvgOAreaIE4(IE0)*(A00pB00*( WK_SFCXADJ(IE0)*WK_FDX1(IE0)*WK_E1XGrad2A(IE0)+
+     &                                    WK_SFCYADJ(IE0)*WK_FDY1(IE0)*WK_E1YGrad2A(IE0) ) )
+
+C...     Terms from momentum eqs.
+     &        +(WK_SFCXADJ(IE0)*JXAvg*WK_FDX1(IE0) + WK_SFCYADJ(IE0)*JYAvg*WK_FDY1(IE0))*0.5d0
+
+C...     Spatially varying Tau0 terms
+     &        +Tau0SpaVar
+C
+C..... DW: begin
+     &        +(OnDiag*WK_E0N1(IE0) + OffDiag*(WK_E0N2(IE0)+WK_E0N3(IE0)))*MsFacR_S
+     &        +(onDiag*WK_ESAN1(IE0) + OffDiag*(WK_ESAN2(IE0)+WK_ESAN3(IE0)))*MsFacRS_T
+     &        +(onDiag*WK_ABC00_EAN1(IE0) +
+     &                OffDiag*(WK_ABC00_EAN2(IE0) + WK_ABC00_EAN3(IE0)))*MsFacRS_ABC00
+C..... END DW
+C
+
+C...     Assemble forcing for node NM2 (local index j=2)
+         Temp_LV_A2=
+
+C...     Transient and Tau0 terms from LHS
+     &         (OnDiag*WK_ESN2(IE0)*SPM2 + OffDiag*(WK_ESN1(IE0)*SPM1+WK_ESN3(IE0)*SPM3))*MsFacR
+
+C...     Free surface terms from LHS (time levels s-1 & s)
+     &        - WK_GDPAvgOAreaIE4_S0(IE0)*( C00*( WK_SFCXADJ(IE0)*WK_FDX2(IE0)*WK_E0XGrad2A(IE0) +
+     &                                    WK_SFCYADJ(IE0)*WK_FDY2(IE0)*WK_E0YGrad2A(IE0) ) )
+     &        - WK_GDPAvgOAreaIE4(IE0)*(A00pB00*( WK_SFCXADJ(IE0)*WK_FDX2(IE0)*WK_E1XGrad2A(IE0) +
+     &                                    WK_SFCYADJ(IE0)*WK_FDY2(IE0)*WK_E1YGrad2A(IE0) ) )
+
+C...     Terms from momentum eqs.
+     &        +(WK_SFCXADJ(IE0)*JXAvg*WK_FDX2(IE0) + WK_SFCYADJ(IE0)*JYAvg*WK_FDY2(IE0))*0.5d0
+
+C...     Spatially varying Tau0 terms
+     &        +Tau0SpaVar
+C
+C..... DW: begin
+     &        +(OnDiag*WK_E0N2(IE0) + OffDiag*(WK_E0N1(IE0)+WK_E0N3(IE0)))*MsFacR_S
+     &        +(onDiag*WK_ESAN2(IE0) + OffDiag*(WK_ESAN1(IE0)+WK_ESAN3(IE0)))*MsFacRS_T
+     &        +(onDiag*WK_ABC00_EAN2(IE0) +
+     &                 OffDiag*(WK_ABC00_EAN1(IE0) + WK_ABC00_EAN3(IE0)))*MsFacRS_ABC00
+C..... END DW
+C
+
+
+C...     Assemble forcing for node NM3 (local index j=3)
+
+         Temp_LV_A3=
+
+C...     Transient and Tau0 terms from LHS
+     &         (OnDiag*WK_ESN3(IE0)*SPM3 + OffDiag*(WK_ESN1(IE0)*SPM1+WK_ESN2(IE0)*SPM2))*MsFacR
+
+C...     Free surface terms from LHS (time levels s-1 & s)
+     &        - WK_GDPAvgOAreaIE4_S0(IE0)*(  C00*( WK_SFCXADJ(IE0)*WK_FDX3(IE0)*WK_E0XGrad2A(IE0) +
+     &                                     WK_SFCYADJ(IE0)*WK_FDY3(IE0)*WK_E0YGrad2A(IE0) ) )
+     &        - WK_GDPAvgOAreaIE4(IE0)*( A00pB00*( WK_SFCXADJ(IE0)*WK_FDX3(IE0)*WK_E1XGrad2A(IE0) +
+     &                                     WK_SFCYADJ(IE0)*WK_FDY3(IE0)*WK_E1YGrad2A(IE0) ) )
+
+C...     Terms from momentum eqs.
+     &        +(WK_SFCXADJ(IE0)*JXAvg*WK_FDX3(IE0) + WK_SFCYADJ(IE0)*JYAvg*WK_FDY3(IE0))*0.5d0
+
+C...     Spatially varying Tau0 terms
+     &        +Tau0SpaVar
+C
+C..... DW: begin, absorbing layer
+     &        +(OnDiag*WK_E0N3(IE0) + OffDiag*(WK_E0N1(IE0)+WK_E0N2(IE0)))*MsFacR_S
+     &        +(OnDiag*WK_ESAN3(IE0) + OffDiag*(WK_ESAN1(IE0)+WK_ESAN2(IE0)))*MsFacRS_T
+     &        +(OnDiag*WK_ABC00_EAN3(IE0) +
+     &               OffDiag*(WK_ABC00_EAN1(IE0) + WK_ABC00_EAN2(IE0)))*MsFacRS_ABC00
+C..... END DW
+C
+
+C...     Put these partial products into further elemental storage for a vector computer
+C...     These will be put into nodal storage outside of the elemental loop
+
+         Temp_LV_A(IE,1)=Temp_LV_A1*WK_NCELE(IE0)
+         Temp_LV_A(IE,2)=Temp_LV_A2*WK_NCELE(IE0)
+         Temp_LV_A(IE,3)=Temp_LV_A3*WK_NCELE(IE0)
+
+       end do
+      END DO                  !End of elemental loop
+
+!nec$ list_vector
+      DO IE=1,NE
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+         GWCE_LV(NM1)=GWCE_LV(NM1)+Temp_LV_A(IE,1)
+         GWCE_LV(NM2)=GWCE_LV(NM2)+Temp_LV_A(IE,2)
+         GWCE_LV(NM3)=GWCE_LV(NM3)+Temp_LV_A(IE,3)
+      END DO
+#endif /* CSCA */
+#else /* ES_TUNE */
 
       DO 1037 IE=1,NE
 
@@ -1617,6 +2385,7 @@ C...     Put these partial products directly into nodal storage for a scalar (no
 #endif
 
  1037 CONTINUE                  !End of elemental loop
+#endif /* ES_TUNE */
 
 C...  Put load vector elemental values into nodal storage for a vector computer
 #ifdef CVEC
@@ -3307,7 +4076,7 @@ C
       SUBROUTINE APPLY_SLOPE_LIMITS(ETA2Lim,LocNP)
       use global, only : nodecode,NOFF,IFNLFA,
      &      setMessageSource, unsetMessageSource, allMessage,
-     &      logMessage, DEBUG, ECHO, INFO, WARNING, ERROR
+     &      logMessage, DEBUG, ECHO, WARNING, ERROR
       use mesh, only : ne, nm, areas, totalArea
       use NodalAttributes, ONLY : LoadEleSlopeLim,
      &     elemental_slope_limiter_active
