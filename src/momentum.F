@@ -252,6 +252,51 @@ C..... DW
       REAL(8) :: SPNGCOEF_X, SPNGCOEF_Y
       REAL(8):: pr1_NM1, pr1_NM2, pr1_NM3
       REAL(8):: pr2_NM1, pr2_NM2, pr2_NM3
+#ifdef ES_TUNE
+      INTEGER,PARAMETER :: VLEN=256
+      INTEGER :: IE0, IE2
+      INTEGER :: ista, iend
+      REAL(8) :: TEMP_LV_A(VLEN,3)
+      REAL(8) :: TEMP_LV_B(VLEN,3)
+      REAL(8) :: WK_IFNLCT(VLEN)
+      REAL(8) :: WK_H1N1(VLEN)
+      REAL(8) :: WK_H1N2(VLEN)
+      REAL(8) :: WK_H1N3(VLEN)
+      REAL(8) :: WK_AREAIE(VLEN,3)
+      REAL(8) :: WK_FDX1(VLEN)
+      REAL(8) :: WK_FDX2(VLEN)
+      REAL(8) :: WK_FDX3(VLEN)
+      REAL(8) :: WK_FDY1(VLEN)
+      REAL(8) :: WK_FDY2(VLEN)
+      REAL(8) :: WK_FDY3(VLEN)
+      REAL(8) :: WK_U1Avg(VLEN) 
+      REAL(8) :: WK_V1Avg(VLEN) 
+      REAL(8) :: WK_DU1DXA(VLEN)
+      REAL(8) :: WK_DU1DYA(VLEN)
+      REAL(8) :: WK_DV1DXA(VLEN)
+      REAL(8) :: WK_DV1DYA(VLEN)
+      REAL(8) :: WK_EVMEle(VLEN)
+      REAL(8) :: WK_DBTPDXA(VLEN)
+      REAL(8) :: WK_DBTPDYA(VLEN)
+      REAL(8) :: WK_DBCPDX1A(VLEN)
+      REAL(8) :: WK_DBCPDX2A(VLEN)
+      REAL(8) :: WK_DBCPDX3A(VLEN)
+      REAL(8) :: WK_DBCPDY1A(VLEN)
+      REAL(8) :: WK_DBCPDY2A(VLEN)
+      REAL(8) :: WK_DBCPDY3A(VLEN)
+      REAL(8) :: WK_LSXXN1(VLEN)
+      REAL(8) :: WK_LSXXN2(VLEN)
+      REAL(8) :: WK_LSXXN3(VLEN)
+      REAL(8) :: WK_LSXYN1(VLEN)
+      REAL(8) :: WK_LSXYN2(VLEN)
+      REAL(8) :: WK_LSXYN3(VLEN)
+      REAL(8) :: WK_LSYXN1(VLEN)
+      REAL(8) :: WK_LSYXN2(VLEN)
+      REAL(8) :: WK_LSYXN3(VLEN)
+      REAL(8) :: WK_LSYYN1(VLEN)
+      REAL(8) :: WK_LSYYN2(VLEN)
+      REAL(8) :: WK_LSYYN3(VLEN)
+#endif /* ES_TUNE */      
 C......DW
 C..... SB
       INTEGER:: NNBB1, NNBB2
@@ -290,6 +335,495 @@ C     WJP: initialize baroclinic pressure gradients to zero
       DBCPDX1A = 0d0; DBCPDX2A = 0d0; DBCPDX3A = 0d0;
       DBCPDY1A = 0d0; DBCPDY2A = 0d0; DBCPDY3A = 0d0;
 
+#ifdef ES_TUNE
+#ifdef CSCA
+      DO IE2=1,NE, VLEN
+       ista = IE2
+       iend = min(IE2+VLEN-1, NE)
+
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+C...  SET NODAL VALUES FOR EACH ELEMENT
+
+
+Corbitt 120322: Localized Advection
+         IF (LoadAdvectionState) CALL ADVECTLOCAL(IE)
+         WK_IFNLCT(IE0) = IFNLCT
+       end do
+
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+         U1N1=UU1(NM1)
+         U1N2=UU1(NM2)
+         U1N3=UU1(NM3)
+         V1N1=VV1(NM1)
+         V1N2=VV1(NM2)
+         V1N3=VV1(NM3)
+         WK_H1N1(IE0)=DP(NM1)+IFNLFA*ETA1(NM1)
+         WK_H1N2(IE0)=DP(NM2)+IFNLFA*ETA1(NM2)
+         WK_H1N3(IE0)=DP(NM3)+IFNLFA*ETA1(NM3)
+         SFacAvg = SFacEle(IE)
+C..... BEG DW/WJP
+         SFmxAvg= SFMXEle(IE) ;
+         SFmyAvg= SFMYEle(IE) ;
+         sfdxfac = (1 - IFSFM)*SFacAvg + IFSFM*SFmxAvg ;
+         sfdyfac = (1 - IFSFM)*1.0D0 + IFSFM*SFmyAvg ;
+C..... END DW/WJP
+
+         AreaIE2 = Areas(IE)
+         AreaIE  = 0.5d0*AreaIE2
+         WK_AREAIE(IE0,1) = AreaIE
+         WK_AREAIE(IE0,2) = 1.0d0/AreaIE
+         WK_AREAIE(IE0,3) = 1.0d0/AreaIE2
+C..... DW
+         WK_FDX1(IE0) = FDXE(1,IE)*sfdxfac ; !c WK_FDX1(IE0)=(Y(NM2)-Y(NM3))*MX !b1*mx
+         WK_FDX2(IE0) = FDXE(2,IE)*sfdxfac ; !c WK_FDX2(IE0)=(Y(NM3)-Y(NM1))*MX !b2*mx
+         WK_FDX3(IE0) = FDXE(3,IE)*sfdxfac ; !c WK_FDX3(IE0)=(Y(NM1)-Y(NM2))*MX !b3*mx
+         WK_FDY1(IE0) = FDYE(1,IE)*sfdyfac ; !c WK_FDY1(IE0)=(X(NM3)-X(NM2))*MY !a1*my
+         WK_FDY2(IE0) = FDYE(2,IE)*sfdyfac ; !c WK_FDY2(IE0)=(X(NM1)-X(NM3))*MY !a2*my
+         WK_FDY3(IE0) = FDYE(3,IE)*sfdyfac ; !c WK_FDY3(IE0)=(X(NM2)-X(NM1))*MY !a3*my
+C..... DW
+
+C...  Compute element averaged quantities
+
+         WK_U1Avg(IE0) = THIRD*(U1N1+U1N2+U1N3)
+         WK_V1Avg(IE0) = THIRD*(V1N1+V1N2+V1N3)
+
+         WK_DU1DXA(IE0)=(U1N1*WK_FDX1(IE0)+U1N2*WK_FDX2(IE0)+U1N3*WK_FDX3(IE0))*0.5d0
+         WK_DU1DYA(IE0)=(U1N1*WK_FDY1(IE0)+U1N2*WK_FDY2(IE0)+U1N3*WK_FDY3(IE0))*0.5d0
+         WK_DV1DXA(IE0)=(V1N1*WK_FDX1(IE0)+V1N2*WK_FDX2(IE0)+V1N3*WK_FDX3(IE0))*0.5d0
+         WK_DV1DYA(IE0)=(V1N1*WK_FDY1(IE0)+V1N2*WK_FDY2(IE0)+V1N3*WK_FDY3(IE0))*0.5d0
+       end do
+
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         WK_EVMEle(IE0)= THIRD*(EVM(NM1)+EVM(NM2)+EVM(NM3))
+         !If using Smagorinski vertically-integrated lateral stress coefficient
+         IF (CSmag_Eh.or.Smag_Comp_Flag) THEN
+            EVMSmag=WK_EVMEle(IE0)*
+     &              sqrt((WK_DU1DXA(IE0)-WK_DV1DYA(IE0))*(WK_DU1DXA(IE0)-WK_DV1DYA(IE0))
+     &                  +(WK_DU1DYA(IE0)+WK_DV1DXA(IE0))*(WK_DU1DYA(IE0)+WK_DV1DXA(IE0)))
+            !tcm v52.30.01 added test for limits
+            IF (Smag_Comp_Flag) then
+               IF (EVMSmag .gt. SMAG_UPPER_LIM) EVMSmag = SMAG_UPPER_LIM
+               IF (EVMSmag .lt. SMAG_LOWER_LIM) EVMSmag = SMAG_LOWER_LIM
+            ENDIF
+            WK_EVMEle(IE0)=EVMSmag
+         ENDIF
+
+C...  Compute terms associated with the barotropic pressure
+
+         BTP1N1=ETA1(NM1)
+         BTP2N1=ETA2(NM1)
+         BTP1N2=ETA1(NM2)
+         BTP2N2=ETA2(NM2)
+         BTP1N3=ETA1(NM3)
+         BTP2N3=ETA2(NM3)
+
+C.....If using atm pressure add it into the barotropic pressure
+C....... DW
+         IF (NWS.NE.0) THEN
+            pr1_NM1 = PR1(NM1)
+            pr1_NM2 = PR1(NM2)
+            pr1_NM3 = PR1(NM3)
+
+            pr2_NM1 = PR2(NM1)
+            pr2_NM2 = PR2(NM2)
+            pr2_NM3 = PR2(NM3)
+
+            IF ( NO_MET_IN_SPONGE ) THEN
+               !
+               IF ( absorblayer_sigma_eta(NM1,1) > 1e-9 ) THEN
+                  pr1_NM1  =  PRBCKGRND_MH2O
+                  pr2_NM1  =  PRBCKGRND_MH2O
+               END IF
+               IF ( absorblayer_sigma_eta(NM2,1) > 1e-9 ) THEN
+                  pr1_NM2  =  PRBCKGRND_MH2O
+                  pr2_NM2  =  PRBCKGRND_MH2O
+               END IF
+               IF ( absorblayer_sigma_eta(NM3,1) > 1e-9 ) THEN
+                  pr1_NM3  =  PRBCKGRND_MH2O
+                  pr2_NM3  =  PRBCKGRND_MH2O
+               END IF
+               !
+            END IF
+
+            BTP1N1=BTP1N1+PR1_NM1
+            BTP2N1=BTP2N1+PR2_NM1
+            BTP1N2=BTP1N2+PR1_NM2
+            BTP2N2=BTP2N2+PR2_NM2
+            BTP1N3=BTP1N3+PR1_NM3
+            BTP2N3=BTP2N3+PR2_NM3
+         ENDIF
+C....    DW
+
+         !jgf: Subtract dynamic water level offset from barotropic pressure
+         IF (usingDynamicWaterLevelCorrection.eqv..true.) THEN
+            BTP1N1=BTP1N1-dynamicWaterLevelCorrection1(NM1)
+            BTP2N1=BTP2N1-dynamicWaterLevelCorrection2(NM1)
+            BTP1N2=BTP1N2-dynamicWaterLevelCorrection1(NM2)
+            BTP2N2=BTP2N2-dynamicWaterLevelCorrection2(NM2)
+            BTP1N3=BTP1N3-dynamicWaterLevelCorrection1(NM3)
+            BTP2N3=BTP2N3-dynamicWaterLevelCorrection2(NM3)
+         ENDIF
+
+C.......If using tidal potential terms, add these into the barotropic pressure
+
+         IF (CTIP) THEN
+            BTP1N1=BTP1N1-TiP1(NM1)
+            BTP2N1=BTP2N1-TiP2(NM1)
+            BTP1N2=BTP1N2-TiP1(NM2)
+            BTP2N2=BTP2N2-TiP2(NM2)
+            BTP1N3=BTP1N3-TiP1(NM3)
+            BTP2N3=BTP2N3-TiP2(NM3)
+         ENDIF
+
+C...  Compute the barotropic pressure gradient x area for the element
+
+         DBTPDX1A = BTP1N1*WK_FDX1(IE0)+BTP1N2*WK_FDX2(IE0)+BTP1N3*WK_FDX3(IE0)
+         DBTPDX2A = BTP2N1*WK_FDX1(IE0)+BTP2N2*WK_FDX2(IE0)+BTP2N3*WK_FDX3(IE0)
+         DBTPDY1A = BTP1N1*WK_FDY1(IE0)+BTP1N2*WK_FDY2(IE0)+BTP1N3*WK_FDY3(IE0)
+         DBTPDY2A = BTP2N1*WK_FDY1(IE0)+BTP2N2*WK_FDY2(IE0)+BTP2N3*WK_FDY3(IE0)
+
+C...  WJP: For the new dispersion relation
+#ifdef PCALIDISP
+         IF (CAliDisp) THEN
+            H2N1=DP(NM1)+IFNLFA*ETA2(NM1)
+            H2N2=DP(NM2)+IFNLFA*ETA2(NM2)
+            H2N3=DP(NM3)+IFNLFA*ETA2(NM3)
+            ! time 1
+            H1Avg = THIRD*(WK_H1N1(IE0) + WK_H1N2(IE0) + WK_H1N3(IE0))
+            Ma2   = G*H1Avg/Cs2
+            Cfac1 = (1.0D0 - 0.25D0*Ma2 - Ad*H1Avg**Bd)**2
+            ! time 2
+            H2Avg = THIRD*(H2N1 + H2N2 + H2N3)
+            Ma2   = G*H2Avg/Cs2
+            Cfac2 = (1.0D0 - 0.25D0*Ma2 - Ad*H2Avg**Bd)**2
+         ENDIF
+#endif /* PCALIDISP */
+
+         WK_DBTPDXA(IE0) = 0.5D0*(Cfac1*DBTPDX1A + Cfac2*DBTPDX2A)
+         WK_DBTPDYA(IE0) = 0.5D0*(Cfac1*DBTPDY1A + Cfac2*DBTPDY2A)
+       end do
+
+C...  WJP: Compute the baroclinic pressure gradient from a 3D ocean model
+       IF (CBaroclinic) THEN
+         do IE=ista, iend
+           IE0 = IE-IE2+1
+           NM1=NM(IE,1)
+           NM2=NM(IE,2)
+           NM3=NM(IE,3)
+           WK_DBCPDX1A(IE0) = VIDBCPDXOH(NM1) * WK_AREAIE(IE0,1)
+           WK_DBCPDX2A(IE0) = VIDBCPDXOH(NM2) * WK_AREAIE(IE0,1)
+           WK_DBCPDX3A(IE0) = VIDBCPDXOH(NM3) * WK_AREAIE(IE0,1)
+           WK_DBCPDY1A(IE0) = VIDBCPDYOH(NM1) * WK_AREAIE(IE0,1)
+           WK_DBCPDY2A(IE0) = VIDBCPDYOH(NM2) * WK_AREAIE(IE0,1)
+           WK_DBCPDY3A(IE0) = VIDBCPDYOH(NM3) * WK_AREAIE(IE0,1)
+         end do
+       ELSE
+         do IE0=1,VLEN
+           WK_DBCPDX1A(IE0) = 0d0
+           WK_DBCPDX2A(IE0) = 0d0
+           WK_DBCPDX3A(IE0) = 0d0
+           WK_DBCPDY1A(IE0) = 0d0
+           WK_DBCPDY2A(IE0) = 0d0
+           WK_DBCPDY3A(IE0) = 0d0
+         end do
+       ENDIF
+
+
+C...  Compute the lateral viscous terms for the element (flux formulation)
+       do IE0=1,VLEN
+         WK_LSXXN1(IE0)=0.0d0
+         WK_LSXXN2(IE0)=0.0d0
+         WK_LSXXN3(IE0)=0.0d0
+         WK_LSXYN1(IE0)=0.0d0
+         WK_LSXYN2(IE0)=0.0d0
+         WK_LSXYN3(IE0)=0.0d0
+         WK_LSYXN1(IE0)=0.0d0
+         WK_LSYXN2(IE0)=0.0d0
+         WK_LSYXN3(IE0)=0.0d0
+         WK_LSYYN1(IE0)=0.0d0
+         WK_LSYYN2(IE0)=0.0d0
+         WK_LSYYN3(IE0)=0.0d0
+       end do
+
+       IF (CME_LS_IBPQ) THEN
+         do IE=ista, iend
+           IE0 = IE-IE2+1
+           NM1=NM(IE,1)
+           NM2=NM(IE,2)
+           NM3=NM(IE,3)
+           QX1N1=QX1(NM1)
+           QX1N2=QX1(NM2)
+           QX1N3=QX1(NM3)
+           QY1N1=QY1(NM1)
+           QY1N2=QY1(NM2)
+           QY1N3=QY1(NM3)
+           DQX1DX=(QX1N1*WK_FDX1(IE0)+QX1N2*WK_FDX2(IE0)+QX1N3*WK_FDX3(IE0))*WK_AREAIE(IE0,3)
+           DQX1DY=(QX1N1*WK_FDY1(IE0)+QX1N2*WK_FDY2(IE0)+QX1N3*WK_FDY3(IE0))*WK_AREAIE(IE0,3)
+           DQY1DX=(QY1N1*WK_FDX1(IE0)+QY1N2*WK_FDX2(IE0)+QY1N3*WK_FDX3(IE0))*WK_AREAIE(IE0,3)
+           DQY1DY=(QY1N1*WK_FDY1(IE0)+QY1N2*WK_FDY2(IE0)+QY1N3*WK_FDY3(IE0))*WK_AREAIE(IE0,3)
+           WK_LSXXN1(IE0)=WK_EVMEle(IE0)*DQX1DX
+           WK_LSXXN2(IE0)=WK_LSXXN1(IE0)
+           WK_LSXXN3(IE0)=WK_LSXXN1(IE0)
+           WK_LSXYN1(IE0)=WK_EVMEle(IE0)*DQX1DY
+           WK_LSXYN2(IE0)=WK_LSXYN1(IE0)
+           WK_LSXYN3(IE0)=WK_LSXYN1(IE0)
+           WK_LSYXN1(IE0)=WK_EVMEle(IE0)*DQY1DX
+           WK_LSYXN2(IE0)=WK_LSYXN1(IE0)
+           WK_LSYXN3(IE0)=WK_LSYXN1(IE0)
+           WK_LSYYN1(IE0)=WK_EVMEle(IE0)*DQY1DY
+           WK_LSYYN2(IE0)=WK_LSYYN1(IE0)
+           WK_LSYYN3(IE0)=WK_LSYYN1(IE0)
+         end do
+       ENDIF
+
+C...  Compute the lateral viscous terms for the element (symmetric flux formulation)
+
+       IF (CME_LS_IBPSQ) THEN
+         do IE=ista, iend
+           IE0 = IE-IE2+1
+           NM1=NM(IE,1)
+           NM2=NM(IE,2)
+           NM3=NM(IE,3)
+            QX1N1=QX1(NM1)
+            QX1N2=QX1(NM2)
+            QX1N3=QX1(NM3)
+            QY1N1=QY1(NM1)
+            QY1N2=QY1(NM2)
+            QY1N3=QY1(NM3)
+            DQX1DX=(QX1N1*WK_FDX1(IE0)+QX1N2*WK_FDX2(IE0)+QX1N3*WK_FDX3(IE0))*WK_AREAIE(IE0,3)
+            DQX1DY=(QX1N1*WK_FDY1(IE0)+QX1N2*WK_FDY2(IE0)+QX1N3*WK_FDY3(IE0))*WK_AREAIE(IE0,3)
+            DQY1DX=(QY1N1*WK_FDX1(IE0)+QY1N2*WK_FDX2(IE0)+QY1N3*WK_FDX3(IE0))*WK_AREAIE(IE0,3)
+            DQY1DY=(QY1N1*WK_FDY1(IE0)+QY1N2*WK_FDY2(IE0)+QY1N3*WK_FDY3(IE0))*WK_AREAIE(IE0,3)
+            WK_LSXXN1(IE0)=WK_EVMEle(IE0)*DQX1DX
+            WK_LSXXN2(IE0)=WK_LSXXN1(IE0)
+            WK_LSXXN3(IE0)=WK_LSXXN1(IE0)
+            WK_LSXYN1(IE0)=0.5d0*WK_EVMEle(IE0)*(DQX1DY+DQY1DX)
+            WK_LSXYN2(IE0)=WK_LSXYN1(IE0)
+            WK_LSXYN3(IE0)=WK_LSXYN1(IE0)
+            WK_LSYXN1(IE0)=WK_LSXYN1(IE0)
+            WK_LSYXN2(IE0)=WK_LSXYN2(IE0)
+            WK_LSYXN3(IE0)=WK_LSXYN3(IE0)
+            WK_LSYYN1(IE0)=WK_EVMEle(IE0)*DQY1DY
+            WK_LSYYN2(IE0)=WK_LSYYN1(IE0)
+            WK_LSYYN3(IE0)=WK_LSYYN1(IE0)
+         end do
+       ENDIF
+
+C...  Compute the lateral viscous terms for the element (velocity formulation)
+
+       IF (CME_LS_IBPV) THEN
+         do IE=ista, iend
+           IE0 = IE-IE2+1
+           NM1=NM(IE,1)
+           NM2=NM(IE,2)
+           NM3=NM(IE,3)
+           DU1DX=WK_DU1DXA(IE0)*WK_AREAIE(IE0,2)
+           DU1DY=WK_DU1DYA(IE0)*WK_AREAIE(IE0,2)
+           DV1DX=WK_DV1DXA(IE0)*WK_AREAIE(IE0,2)
+           DV1DY=WK_DV1DYA(IE0)*WK_AREAIE(IE0,2)
+           EVMH1N1=WK_EVMEle(IE0)*WK_H1N1(IE0)
+           EVMH1N2=WK_EVMEle(IE0)*WK_H1N2(IE0)
+           EVMH1N3=WK_EVMEle(IE0)*WK_H1N3(IE0)
+           WK_LSXXN1(IE0)=EVMH1N1*DU1DX
+           WK_LSXXN2(IE0)=EVMH1N2*DU1DX
+           WK_LSXXN3(IE0)=EVMH1N3*DU1DX
+           WK_LSXYN1(IE0)=EVMH1N1*DU1DY
+           WK_LSXYN2(IE0)=EVMH1N2*DU1DY
+           WK_LSXYN3(IE0)=EVMH1N3*DU1DY
+           WK_LSYXN1(IE0)=EVMH1N1*DV1DX
+           WK_LSYXN2(IE0)=EVMH1N2*DV1DX
+           WK_LSYXN3(IE0)=EVMH1N3*DV1DX
+           WK_LSYYN1(IE0)=EVMH1N1*DV1DY
+           WK_LSYYN2(IE0)=EVMH1N2*DV1DY
+           WK_LSYYN3(IE0)=EVMH1N3*DV1DY
+         end do
+       ENDIF
+
+C...  Compute the lateral viscous terms for the element (symmetric velocity formulation)
+
+       IF (CME_LS_IBPSV) THEN
+         do IE=ista, iend
+           IE0 = IE-IE2+1
+           NM1=NM(IE,1)
+           NM2=NM(IE,2)
+           NM3=NM(IE,3)
+           DU1DX=WK_DU1DXA(IE0)*WK_AREAIE(IE0,2)
+           DU1DY=WK_DU1DYA(IE0)*WK_AREAIE(IE0,2)
+           DV1DX=WK_DV1DXA(IE0)*WK_AREAIE(IE0,2)
+           DV1DY=WK_DV1DYA(IE0)*WK_AREAIE(IE0,2)
+           EVMH1N1=WK_EVMEle(IE0)*WK_H1N1(IE0)
+           EVMH1N2=WK_EVMEle(IE0)*WK_H1N2(IE0)
+           EVMH1N3=WK_EVMEle(IE0)*WK_H1N3(IE0)
+           WK_LSXXN1(IE0)=EVMH1N1*DU1DX
+           WK_LSXXN2(IE0)=EVMH1N2*DU1DX
+           WK_LSXXN3(IE0)=EVMH1N3*DU1DX
+           WK_LSXYN1(IE0)=0.5d0*EVMH1N1*(DU1DY+DV1DX)
+           WK_LSXYN2(IE0)=0.5d0*EVMH1N2*(DU1DY+DV1DX)
+           WK_LSXYN3(IE0)=0.5d0*EVMH1N3*(DU1DY+DV1DX)
+           WK_LSYXN1(IE0)=WK_LSXYN1(IE0)
+           WK_LSYXN2(IE0)=WK_LSXYN2(IE0)
+           WK_LSYXN3(IE0)=WK_LSXYN3(IE0)
+           WK_LSYYN1(IE0)=EVMH1N1*DV1DY
+           WK_LSYYN2(IE0)=EVMH1N2*DV1DY
+           WK_LSYYN3(IE0)=EVMH1N3*DV1DY
+         end do
+       ENDIF
+
+C
+       do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+
+         NC1=NODECODE(NM1)
+         NC2=NODECODE(NM2)
+         NC3=NODECODE(NM3)
+         NCELE=NC1*NC2*NC3*NOFF(IE)
+
+C...  Compute the advective term gradients x area for the element
+
+         U1AvgDU1DXA=WK_U1Avg(IE0)*WK_DU1DXA(IE0)
+         V1AvgDU1DYA=WK_V1Avg(IE0)*WK_DU1DYA(IE0)
+         U1AvgDV1DXA=WK_U1Avg(IE0)*WK_DV1DXA(IE0)
+         V1AvgDV1DYA=WK_V1Avg(IE0)*WK_DV1DYA(IE0)
+
+C...  LOAD NON-LUMPED ELEMENTAL COMPONENTS FOR X-MOMENTUM EQUATION INTO
+C...  TEMP_LV_A VECTOR FOR NODE NM1
+
+         TEMP_LV_A1=NCEle*DT*(
+C...  ADVECTIVE TERMS
+     &             -WK_IFNLCT(IE0)*(U1AvgDU1DXA+V1AvgDU1DYA)
+C...  BAROTROPIC & BAROCLINIC PRESSURE GRADIENT TERMS
+     &             -GO2*WK_DBTPDXA(IE0) - WK_DBCPDX1A(IE0)
+C...  LATERAL VISCOUS TERMS
+     &             -(1.5d0*(WK_LSXXN1(IE0)*WK_FDX1(IE0)+WK_LSXYN1(IE0)*WK_FDY1(IE0))
+     &               - WK_AREAIE(IE0,1)*TANPHI(NM1)*(WK_LSXYN1(IE0)+WK_LSYXN1(IE0)))/WK_H1N1(IE0)
+C...  STILL NEED TO DIVIDE BY TOTAL AREA AROUND A NODE
+     &             )
+
+
+C...
+C...  LOAD NON-LUMPED ELEMENTAL COMPONENTS FOR X-MOMENTUM EQUATION INTO
+C...  TEMP_LV_A VECTOR FOR NODE NM2
+C...
+         TEMP_LV_A2=NCEle*DT*(
+C...  ADVECTIVE TERMS
+     &             -WK_IFNLCT(IE0)*(U1AvgDU1DXA+V1AvgDU1DYA)
+C...  BAROTROPIC & BAROCLINIC PRESSURE GRADIENT TERMS
+     &             -GO2*WK_DBTPDXA(IE0) - WK_DBCPDX2A(IE0)
+C...  LATERAL VISCOUS TERMS
+     &             -(1.5d0*(WK_LSXXN2(IE0)*WK_FDX2(IE0)+WK_LSXYN2(IE0)*WK_FDY2(IE0))
+     &               - WK_AREAIE(IE0,1)*TANPHI(NM2)*(WK_LSXYN2(IE0)+WK_LSYXN2(IE0)))/WK_H1N2(IE0)
+C...  STILL NEED TO DIVIDE BY TOTAL AREA AROUND A NODE
+     &             )
+
+C...
+C...  LOAD NON-LUMPED ELEMENTAL COMPONENTS FOR X-MOMENTUM EQUATION INTO
+C...  TEMP_LV_A VECTOR FOR NODE NM3
+C...
+         TEMP_LV_A3=NCEle*DT*(
+C...  ADVECTIVE TERMS
+     &             -WK_IFNLCT(IE0)*(U1AvgDU1DXA+V1AvgDU1DYA)
+C...  BAROTROPIC & BAROCLINIC PRESSURE GRADIENT TERMS
+     &             -GO2*WK_DBTPDXA(IE0) - WK_DBCPDX3A(IE0)
+C...  LATERAL VISCOUS TERMS
+     &             -(1.5d0*(WK_LSXXN3(IE0)*WK_FDX3(IE0)+WK_LSXYN3(IE0)*WK_FDY3(IE0))
+     &               - WK_AREAIE(IE0,1)*TANPHI(NM3)*(WK_LSXYN3(IE0)+WK_LSYXN3(IE0)))/WK_H1N3(IE0)
+C...  STILL NEED TO DIVIDE BY TOTAL AREA AROUND A NODE
+     &             )
+
+C...  LOAD NON-LUMPED ELEMENTAL COMPONENTS FOR Y-MOMENTUM EQUATION INTO
+C...  TEMP_LV_B VECTOR FOR NODE NM1
+
+         TEMP_LV_B1=NCEle*DT*(
+C...  ADVECTIVE TERMS
+     &             -WK_IFNLCT(IE0)*(U1AvgDV1DXA+V1AvgDV1DYA)
+C...  BAROTROPIC & BAROCLINIC PRESSURE GRADIENT TERMS
+     &             -GO2*WK_DBTPDYA(IE0) - WK_DBCPDY1A(IE0)
+C...  LATERAL VISCOUS TERMS
+     &             -(1.5d0*(WK_LSYXN1(IE0)*WK_FDX1(IE0)+WK_LSYYN1(IE0)*WK_FDY1(IE0))
+     &               + WK_AREAIE(IE0,1)*TANPHI(NM1)*(WK_LSXXN1(IE0)-WK_LSYYN1(IE0)))/WK_H1N1(IE0)
+
+C...  STILL NEED TO DIVIDE BY TOTAL AREA AROUND A NODE
+     &             )
+
+C...  LOAD NON-LUMPED ELEMENTAL COMPONENTS FOR Y-MOMENTUM EQUATION INTO
+C...  TEMP_LV_B VECTOR FOR NODE NM2
+
+         TEMP_LV_B2=NCEle*DT*(
+C...  ADVECTIVE TERMS
+     &             -WK_IFNLCT(IE0)*(U1AvgDV1DXA+V1AvgDV1DYA)
+C...  BAROTROPIC & BAROCLINIC PRESSURE GRADIENT TERMS
+     &             -GO2*WK_DBTPDYA(IE0) - WK_DBCPDY2A(IE0)
+C...  LATERAL VISCOUS TERMS
+     &             -(1.5d0*(WK_LSYXN2(IE0)*WK_FDX2(IE0)+WK_LSYYN2(IE0)*WK_FDY2(IE0))
+     &               + WK_AREAIE(IE0,1)*TANPHI(NM2)*(WK_LSXXN2(IE0)-WK_LSYYN2(IE0)))/WK_H1N2(IE0)
+C...  STILL NEED TO DIVIDE BY TOTAL AREA AROUND A NODE
+     &             )
+
+C...  LOAD NON-LUMPED ELEMENTAL COMPONENTS FOR Y-MOMENTUM EQUATION INTO
+C...  TEMP_LV_B VECTOR FOR NODE NM3
+
+         TEMP_LV_B3=NCEle*DT*(
+C...  ADVECTIVE TERMS
+     &             -WK_IFNLCT(IE0)*(U1AvgDV1DXA+V1AvgDV1DYA)
+C...  BAROTROPIC & BAROCLINIC PRESSURE GRADIENT TERMS
+     &             -GO2*WK_DBTPDYA(IE0) - WK_DBCPDY3A(IE0)
+C...  LATERAL VISCOUS TERMS
+     &             -(1.5d0*(WK_LSYXN3(IE0)*WK_FDX3(IE0)+WK_LSYYN3(IE0)*WK_FDY3(IE0))
+     &               + WK_AREAIE(IE0,1)*TANPHI(NM3)*(WK_LSXXN3(IE0)-WK_LSYYN3(IE0)))/WK_H1N3(IE0)
+C...  STILL NEED TO DIVIDE BY TOTAL AREA AROUND A NODE
+     &             )
+
+C     Original (incorrect) area integration - for historical comparison
+
+         IF (CME_AreaInt_Orig) THEN
+            TEMP_LV_A1=TEMP_LV_A1*WK_AREAIE(IE0,2)
+            TEMP_LV_A2=TEMP_LV_A2*WK_AREAIE(IE0,2)
+            TEMP_LV_A3=TEMP_LV_A3*WK_AREAIE(IE0,2)
+            TEMP_LV_B1=TEMP_LV_B1*WK_AREAIE(IE0,2)
+            TEMP_LV_B2=TEMP_LV_B2*WK_AREAIE(IE0,2)
+            TEMP_LV_B3=TEMP_LV_B3*WK_AREAIE(IE0,2)
+         ENDIF
+
+C     LINES TO RUN ON A VECTOR COMPUTER
+         TEMP_LV_A(IE0,1)=TEMP_LV_A1
+         TEMP_LV_A(IE0,2)=TEMP_LV_A2
+         TEMP_LV_A(IE0,3)=TEMP_LV_A3
+         TEMP_LV_B(IE0,1)=TEMP_LV_B1
+         TEMP_LV_B(IE0,2)=TEMP_LV_B2
+         TEMP_LV_B(IE0,3)=TEMP_LV_B3
+      end do
+
+!nec$ list_vector
+      do IE=ista, iend
+         IE0 = IE-IE2+1
+         NM1=NM(IE,1)
+         NM2=NM(IE,2)
+         NM3=NM(IE,3)
+         MOM_LV_X(NM1)=MOM_LV_X(NM1)+TEMP_LV_A(IE0,1)
+         MOM_LV_X(NM2)=MOM_LV_X(NM2)+TEMP_LV_A(IE0,2)
+         MOM_LV_X(NM3)=MOM_LV_X(NM3)+TEMP_LV_A(IE0,3)
+         MOM_LV_Y(NM1)=MOM_LV_Y(NM1)+TEMP_LV_B(IE0,1)
+         MOM_LV_Y(NM2)=MOM_LV_Y(NM2)+TEMP_LV_B(IE0,2)
+         MOM_LV_Y(NM3)=MOM_LV_Y(NM3)+TEMP_LV_B(IE0,3)
+      end do
+      ENDDO
+#endif /* CSCA */
+#else /* ES_TUNE */
       DO IE=1,NE
 
 C...  SET NODAL VALUES FOR EACH ELEMENT
@@ -707,6 +1241,7 @@ C           AND QUV ON A SCALAR COMPUTER USING THE TEMPORARY VECTORS
 #endif
 
       ENDDO
+#endif /* ES_TUNE */
 
 C     LINES TO RUN ON A VECTOR COMPUTER
 C     NOTE: THESE LINES FINALIZE THE ASSEMBLY PROCESS FOR MOM_LV_X, MOM_LV_Y
@@ -753,6 +1288,10 @@ C      DispY=0.D0
                MOM_LV_Y(I)=MOM_LV_Y(I)/MJU(I)
             ENDIF
          ENDIF
+#ifdef ES_TUNE
+      WSX=0.D0
+      WSY=0.D0
+#endif /* ES_TUNE */
          IF((NWS.NE.0).OR.(NRS.NE.0)) THEN
             WSX=DTO2*IFWIND*(WSX1(I)/H1(I)+WSX2(I)/H2(I))
             WSY=DTO2*IFWIND*(WSY1(I)/H1(I)+WSY2(I)/H2(I))
@@ -771,6 +1310,11 @@ C......  DW : BEGIN !c absorbing layer
            IF ( absorblayer_sigma_mnx(I,1) > 1e-9 ) WSX = 0.D0 
            IF ( absorblayer_sigma_mny(I,1) > 1e-9 ) WSY = 0.D0 
          ENDIF
+
+#ifdef ES_TUNE
+      SPNGCOEF_X = 0.D0
+      SPNGCOEF_Y = 0.D0
+#endif /* ES_TUNE */
 
          IF (MOM_SPONGE) THEN
             SPNGCOEF_X = absorblayer_sigma_mnx(I,1)*sponge_dis_mthd
