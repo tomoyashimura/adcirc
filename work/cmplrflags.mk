@@ -539,7 +539,8 @@ ifeq ($(compiler),es4)
   FC            :=  nfort
   PFC           :=  mpinfort
   #FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source -mparallel -mparallel-innerloop -floop-count=4000000 -fdiag-vector=2 -fno-associative-math #-i-dynamic
-  FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source 
+  #FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source 
+  FFLAGS1       :=  $(INCDIRS) -O3 -fextend-source -report-all -finline-functions -f inline-max-function-size=200 -finline-file=$(SRCDIR)/src/nodalattr.F -DES_TUNE
   ifeq ($(DEBUG),full)
      FFLAGS1    :=  $(INCDIRS) -g -O0 -traceback -debug -check all -FI -assume byterecl -132 -DEBUG -DALL_TRACE -DFULL_STACK -DFLUSH_MESSAGES
   endif
@@ -554,7 +555,8 @@ ifeq ($(compiler),es4)
   IMODS         :=  -I
   CC            := ncc
   CCBE          := $(CC)
-  CFLAGS        := $(INCDIRS) -O2 -DLINUX
+  #CFLAGS        := $(INCDIRS) -O2 -DLINUX
+  CFLAGS        := $(INCDIRS) -O2 -DLINUX -report-all -DES_TUNE
   FLIBS         :=
   ifeq ($(DATETIME),enable)
      DATETIMEHOME  := /S/home01/G6012/d0954/util/datetime/datetime-fortran/
