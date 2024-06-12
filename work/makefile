@@ -30,7 +30,7 @@ PARALLEL_ADCIRC   := padcirc
 LIBADC            := libadc.a
 $(warning (INFO) Name is $(NAME), Machine is $(MACHINE), Vendor is $(VENDOR), and OS is $(OS).)
 $(warning (INFO) The root directory for the build is $(SRCDIR))
-$(warning (INFO) The ADCIRC version is $(shell ../scripts/adcirc_version.py --tag --create-version-file --directory $(SRCDIR)))
+#$(warning (INFO) The ADCIRC version is $(shell ../scripts/adcirc_version.py --tag --create-version-file --directory $(SRCDIR)))
 include cmplrflags.mk
 #Casey 090302: Include variables/flags from SWAN.
 include ../thirdparty/swan/macros.inc
@@ -117,7 +117,7 @@ ifeq ($(BUILDTYPE),adcprep)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir1/
   FFLAGS:= $(FFLAGS1) $(DPRE) $(IMODS) $(O_DIR) $(FFLAGSGSW)
-  VPATH :=  $(SRCDIR)/prep:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR):$(SRCDIR)/src:$(SRCDIR)/wind
+  VPATH := $(SRCDIR)/prep:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR):$(SRCDIR)/src:$(SRCDIR)/wind
   ifeq ($(XDMF),enable)
      FLIBS    :=  -L$(XDMFHOME)/lib -lXdmfCore -lXdmfUtils -lXdmf $(FLIBS)
   endif
@@ -133,7 +133,7 @@ ifeq ($(BUILDTYPE),adcprep_be)
   CF:= $(FC)
   O_DIR:=$(SRCDIR)/work/odir2/
   FFLAGS:= $(FFLAGS1) $(DPRE) $(IMODS) $(O_DIR)
-  VPATH :=  $(SRCDIR)/prep:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/src:$(SRCDIR):$(SRCDIR)/wind
+  VPATH := $(SRCDIR)/prep:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/src:$(SRCDIR):$(SRCDIR)/wind
   ifeq ($(XDMF),enable)
      FLIBS    :=  -L$(XDMFHOME)/lib -lXdmfCore -lXdmfUtils -lXdmf $(FLIBS)
   endif
@@ -149,7 +149,7 @@ ifeq ($(BUILDTYPE),adcirc)
   CF:= $(FC)
   O_DIR:=$(SRCDIR)/work/odir3/
   FFLAGS:= $(FFLAGS2) $(DA) $(IMODS) $(O_DIR) $(FFLAGSGSW)
-  VPATH:=  $(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/wind:$(SRCDIR):$(SRCDIR)/prep
+  VPATH:= $(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/wind:$(SRCDIR):$(SRCDIR)/prep
   ifeq ($(XDMF),enable)
      FLIBS    :=  -L$(XDMFHOME)/lib -lXdmfCore -lXdmfUtils -lXdmf $(FLIBS)
   endif
@@ -165,7 +165,7 @@ ifeq ($(BUILDTYPE),adcswan)
   CF:= $(FC)
   O_DIR:=$(SRCDIR)/work/odir33/
   FFLAGS:= $(FFLAGS2) -DCSWAN $(DA) $(IMODS) $(O_DIR) $(FFLAGSGSW)
-  VPATH:=  $(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/wind:$(SRCDIR):$(SRCDIR)/prep:$(SRCDIR)/thirdparty/swan
+  VPATH:= $(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/wind:$(SRCDIR):$(SRCDIR)/prep:$(SRCDIR)/thirdparty/swan
   ifeq ($(XDMF),enable)
      FLIBS    :=  -L$(XDMFHOME)/lib -lXdmfCore -lXdmfUtils -lXdmf $(FLIBS)
   endif
@@ -188,7 +188,7 @@ ifeq ($(BUILDTYPE),$(PARALLEL_ADCIRC))
   CF:= $(PFC)
   O_DIR:=$(SRCDIR)/work/odir4/
   FFLAGS:= $(FFLAGS3) $(DP) $(IMODS) $(O_DIR) $(FFLAGSGSW)
-  VPATH :=  $(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/wind:$(SRCDIR):$(SRCDIR)/prep
+  VPATH := $(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/wind:$(SRCDIR):$(SRCDIR)/prep
   ifeq ($(XDMF),enable)
      FLIBS    :=  -L$(XDMFHOME)/lib -lXdmfCore -lXdmfUtils -lXdmf $(FLIBS)
   endif
@@ -204,7 +204,7 @@ ifeq ($(BUILDTYPE),padcswan)
   CF:= $(PFC)
   O_DIR:=$(SRCDIR)/work/odir44/
   FFLAGS:= $(FFLAGS3) -DCSWAN $(DP) $(IMODS) $(O_DIR) $(FFLAGSGSW)
-  VPATH :=  $(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/wind:$(SRCDIR):$(SRCDIR)/prep:$(SRCDIR)/thirdparty/swan
+  VPATH := $(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)/wind:$(SRCDIR):$(SRCDIR)/prep:$(SRCDIR)/thirdparty/swan
   ifeq ($(XDMF),enable)
      FLIBS    :=  -L$(XDMFHOME)/lib -lXdmfCore -lXdmfUtils -lXdmf $(FLIBS)
   endif
@@ -242,7 +242,7 @@ ifeq ($(BUILDTYPE),p15)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir5/
   FFLAGS:= $(FFLAGS2) $(IMODS) $(O_DIR)
-  VPATH :=  $(SRCDIR)/wind
+  VPATH := $(SRCDIR)/wind
   MSG_MOBJ:=
 endif
 #                                      owi22
@@ -250,7 +250,7 @@ ifeq ($(BUILDTYPE),owi22)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir6/
   FFLAGS:= $(FFLAGS2) $(IMODS) $(O_DIR)
-  VPATH :=  $(SRCDIR)/wind
+  VPATH := $(SRCDIR)/wind
   MSG_MOBJ:=
 endif
 #                                      build13
@@ -258,7 +258,7 @@ ifeq ($(BUILDTYPE),build13)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir7/
    FFLAGS:= $(FFLAGS2) $(IMODS) $(O_DIR)
-  VPATH :=  $(SRCDIR)/util
+  VPATH := $(SRCDIR)/util
   MSG_MOBJ:=
 endif
 #                                      build12
@@ -266,7 +266,7 @@ ifeq ($(BUILDTYPE),build12)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir8/
   FFLAGS:= $(FFLAGS2) $(IMODS) $(O_DIR)
-  VPATH :=  $(SRCDIR)/util
+  VPATH := $(SRCDIR)/util
   MSG_MOBJ:=
 endif
 #
@@ -274,7 +274,7 @@ ifeq ($(BUILDTYPE),buildstwave23)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir9/
   FFLAGS:= $(FFLAGS2) $(IMODS) $(O_DIR)
-  VPATH :=  $(SRCDIR)/util
+  VPATH := $(SRCDIR)/util
   MSG_MOBJ:=
 endif
 #                                      hot2asc
@@ -282,7 +282,7 @@ ifeq ($(BUILDTYPE),hot2asc)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir10/
   FFLAGS:= $(FFLAGS2) $(IMODS) $(O_DIR) $(LIBS)
-  VPATH :=  $(SRCDIR)/util
+  VPATH := $(SRCDIR)/util
   MSG_MOBJ:=
 endif
 #                                      inflate
@@ -290,7 +290,7 @@ ifeq ($(BUILDTYPE),inflate)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir11/
   FFLAGS:= $(FFLAGS2) $(IMODS) $(O_DIR) $(LIBS)
-  VPATH :=  $(SRCDIR)/util
+  VPATH := $(SRCDIR)/util
   MSG_MOBJ:=
 endif
 #                                      hstime
@@ -301,7 +301,7 @@ ifeq ($(BUILDTYPE),hstime)
   ifeq ($(NETCDF),enable)
     LIBS  := -L$(NETCDFHOME)/lib -lnetcdf -lnetcdff $(FLIBS)
   endif
-  VPATH :=  $(SRCDIR)/util
+  VPATH := $(SRCDIR)/util
   MSG_MOBJ:=
 endif
 #                                      adcpost (for 3D and harmonic)
@@ -309,7 +309,7 @@ ifeq ($(BUILDTYPE),adcpost)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir13/
   FFLAGS:= $(FFLAGS1) $(DPRE) $(IMODS) $(O_DIR)
-  VPATH :=  $(SRCDIR)/prep:$(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)
+  VPATH := $(SRCDIR)/prep:$(SRCDIR)/src:$(SRCDIR)/thirdparty/KDTREE2:$(SRCDIR)
 endif
 #                                      aswip
 ifeq ($(BUILDTYPE),aswip)
@@ -330,7 +330,7 @@ ifeq ($(BUILDTYPE),adccmp)
   CF:= $(PPFC)
   O_DIR:=$(SRCDIR)/work/odir17/
   FFLAGS:= $(FFLAGS2) $(IMODS) $(O_DIR) $(DA)
-  VPATH :=  $(SRCDIR)/util
+  VPATH := $(SRCDIR)/util
   MSG_MOBJ:=
 endif
 #
