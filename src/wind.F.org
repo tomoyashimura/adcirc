@@ -386,20 +386,6 @@ C.... convert background pressure from millibars to meters of water
             CALL EXIT(1)
 C
       END SELECT
-C
-#ifdef ES_TUNE 
-      SELECT CASE(TRIM(DragLawString))
-         CASE("Lupkes","default","Powell")
-            write(16,*) 'Drag law is OK for ES_TUNE ' 
-         CASE DEFAULT
-            WRITE(16,'(A10)') DragLawString
-            WRITE(16,*) 'Execution will now be terminated.'
-#ifdef CMPI
-            call msg_fini()
-#endif
-            CALL EXIT(1)
-      END SELECT
-#endif /* ES_TUNE */
 
 #if defined(WIND_TRACE) || defined(ALL_TRACE)
       call allMessage(DEBUG,"Return.")
@@ -741,8 +727,7 @@ C     ----------------------------------------------------------------
       REAL(8) :: PercentIce
       REAL(8) :: pic, WindDrag, IceDrag, Cform
       REAL(8) :: Cskin = 1.5d-3, Cform_max = 3.67d-3, beta = 0.6d0
-
-#ifndef ES_TUNE
+C
       SELECT CASE(TRIM(DragLawString))
 C
       CASE("RaysIce")
@@ -782,9 +767,8 @@ C....... see: Lüpkes, et al. (2012), JGR: doi:10.1029/2012JD017630. &
 C....... Joyce et al. (2019), OM: doi:10.1016/j.ocemod.2019.101421
          IF (PercentIce.lt.0.d0) then
             WindIceDrag = WindDrag
-         ELSE 
+         ELSE
             pic = min(PercentIce*0.01d0,1d0)
-            pic = PercentIce*0.01d0
             Cform = Cform_max*(1d0-pic)**beta
             WindIceDrag = WindDrag*(1d0 - pic) + (Cskin + Cform)*pic
          ENDIF
@@ -799,17 +783,8 @@ C....... Joyce et al. (2019), OM: doi:10.1016/j.ocemod.2019.101421
          CALL EXIT(1)
 C
       END SELECT
-C     for fast computation on ES4, just "Lupkes","default","Powell" switch is used
-#else  /* ES_TUNE */  
-      pic = PercentIce*0.01d0
-      pic = min(PercentIce,1d0)
-      pic = max(PercentIce,0d0)
-      Cform = Cform_max*(1d0-pic)**beta
-      WindIceDrag = WindDrag*(1d0 - pic) + (Cskin + Cform)*pic
-#endif /* ES_TUNE */    
       IF(WindIceDrag.gt.WindDragLimit) WindIceDrag=WindDragLimit
 C
-
       RETURN
 C     ----------------------------------------------------------------
       END FUNCTION WindIceDrag
@@ -9774,7 +9749,7 @@ C---------------------------------------------------------------------
 #ifdef DATETIME        
 #ifdef ADCNETCDF
         IF ( NWS == 14 ) THEN
-          IF ( (.not. grb2flag) .AND. read_NWS14_NetCdf_using_core_0 )  THEN   
+          IF ( read_NWS14_NetCdf_using_core_0 )  THEN   
              IF ( MYPROC == 0 ) THEN     
                call Check_err(NF90_CLOSE(PfileNCID))
                call Check_err(NF90_CLOSE(WfileNCID))
