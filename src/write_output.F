@@ -1312,7 +1312,7 @@ C     prmin.63
       PrMinDescript % writeFlag             = .false.
       PrMinDescript % minmax_timestamp      = .true.
       if (nws.ne.0) then
-         PrMinDescript % readMaxMin         = .true.
+         PrMinDescript % readMaxMin         = .false.
       endif
       if ( PrMinDescript % specifier .eq. XDMF ) then
          PrMinDescript % specifier = ASCII
@@ -1349,7 +1349,7 @@ C      IF (mnproc.gt.1) THEN
       WVMaxDescript % writeFlag             = .false.
       WVMaxDescript % minmax_timestamp      = .true.
       if (nws.ne.0) then
-         WVMaxDescript % readMaxMin         = .true.
+         WVMaxDescript % readMaxMin         = .false.
       endif
       if ( WVMaxDescript % specifier .eq. XDMF ) then
          WVMaxDescript % specifier = ASCII
@@ -1387,7 +1387,7 @@ C      IF (mnproc.gt.1) THEN
       RSMaxDescript % writeFlag             = .false.
       RSMaxDescript % minmax_timestamp      = .true.
       if (nrs.ne.0) then
-         RSMaxDescript % readMaxMin         = .true.
+         RSMaxDescript % readMaxMin         = .false.
       endif
       if ( RSMaxDescript % specifier .eq. XDMF ) then
          RSMaxDescript % specifier = ASCII
