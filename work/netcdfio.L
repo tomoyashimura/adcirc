@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
-  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/netcdfio.o
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/netcdfio.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:51 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFOUTPUTFILE
 DIAGNOSTIC LIST
@@ -187,8 +187,8 @@ DIAGNOSTIC LIST
    577: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFOUTPUTFILE
 FORMAT LIST
@@ -377,8 +377,8 @@ FORMAT LIST
    585:                 END SUBROUTINE initNetCDFOutputFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:51 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFOUTPUTFILE
 INLINE LIST
@@ -438,20 +438,6 @@ INLINE LIST
      *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:516)
      *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:519)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:521)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:523)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:525)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:527)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:529)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:531)
-     *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:534)
      *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:536)
@@ -461,20 +447,6 @@ INLINE LIST
   -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:540)
      *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:542)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:545)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:547)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:549)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:551)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:553)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:555)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:557)
      *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::INITNODALDATAFILE (netcdfio.F:560)
      *** Expansion routine is too big for automatic expansion.
@@ -496,8 +468,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:51 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFOUTPUTFILE
 VECTORIZATION LIST
@@ -505,8 +477,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:51 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFOUTPUTFILE
 CODE GENERATION LIST
@@ -515,7 +487,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 22 [s0-s4 s8-s12 s15-s16 s18 s23-s26 s59-s63]
+      Scalar registers         : 23 [s0-s4 s8-s12 s15-s16 s18-s19 s23-s26 s59-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -532,8 +504,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:52 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITSTATIONFILE
 DIAGNOSTIC LIST
@@ -544,7 +516,8 @@ DIAGNOSTIC LIST
    638: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
    645: opt(1418): Constant-length loop is expanded.
    655: inl(1222): Inlined: NETCDFIO::CREATENETCDFOUTPUTFILE
-  4074: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
+  4001: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
+  4021: inl(1212): Source for routine not found.: GLOBAL::SCREENMESSAGE
   4079: inl(1212): Source for routine not found.: NETCDF::NF90_CREATE
   4080: inl(1212): Source for routine not found.: NETCDF_ERROR::CHECK_ERR
   4082: inl(1212): Source for routine not found.: NETCDF::NF90_DEF_DIM
@@ -695,8 +668,8 @@ DIAGNOSTIC LIST
   1505: inl(1222): Inlined: NETCDFIO::ADDHARMONICANALYSISPARAMETERSTONETCDFFILE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITSTATIONFILE
 FORMAT LIST
@@ -1641,8 +1614,8 @@ FORMAT LIST
   1517:                 END SUBROUTINE initStationFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:52 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITSTATIONFILE
 INLINE LIST
@@ -1654,6 +1627,14 @@ INLINE LIST
      *** Source for routine not found.
   -> INLINE: NETCDFIO::CREATENETCDFOUTPUTFILE (netcdfio.F:655)
    -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:3957)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::ALLMESSAGE (netcdfio.F:4001)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4021)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4025)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4026)
       *** Source for routine not found.
    -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:4041)
       *** Source for routine not found.
@@ -2824,8 +2805,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:52 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITSTATIONFILE
 VECTORIZATION LIST
@@ -2876,6 +2857,11 @@ VECTORIZATION LIST
   LOOP BEGIN: (netcdfio.F:3968)
     <Unvectorized loop.>
     *** Unvectorizable data type. : FILENAME (netcdfio.F:3968)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3997)
+    <Unvectorized loop.>
+    *** Unvectorizable loop structure. (netcdfio.F:3997)
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:678)
@@ -3370,8 +3356,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:52 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITSTATIONFILE
 CODE GENERATION LIST
@@ -3380,36 +3366,36 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 48 [s0-s12 s15-s16 s18-s20 s22-s40 s53-s63]
+      Scalar registers         : 50 [s0-s12 s15-s16 s18-s40 s52-s63]
       Vector registers         :  8 [v56-v63]
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 11472 bytes
-      Register spill area      :  1080 bytes
+    Total size                 : 12512 bytes
+      Register spill area      :  1072 bytes
       Parameter area           :   120 bytes
       Register save area       :   176 bytes
-      User data area           : 10088 bytes
+      User data area           : 11136 bytes
       Others                   :     8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:3974)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3974)
     *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3974)
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3974)
     *** Estimated execution cycle                       : 5
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3970)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3970)
@@ -3421,7 +3407,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3968)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3968)
@@ -3430,6 +3416,10 @@ CODE GENERATION LIST
 
   LOOP BEGIN: (netcdfio.F:3968)
     *** Estimated execution cycle                       : 5
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3997)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:678)
@@ -3465,7 +3455,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:916)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:919)
@@ -3477,7 +3467,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:921)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:925)
@@ -3489,7 +3479,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:927)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:931)
@@ -3501,7 +3491,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:933)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:938)
@@ -3513,7 +3503,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:940)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:944)
@@ -3525,7 +3515,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:946)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:850)
@@ -3537,7 +3527,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:852)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:855)
@@ -3549,7 +3539,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:856)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:864)
@@ -3561,7 +3551,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:866)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:869)
@@ -3573,7 +3563,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:870)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:879)
@@ -3585,7 +3575,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:881)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:884)
@@ -3597,7 +3587,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:885)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:802)
@@ -3609,7 +3599,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:804)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:807)
@@ -3621,7 +3611,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:809)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:817)
@@ -3633,7 +3623,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:819)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:823)
@@ -3645,7 +3635,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:825)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:833)
@@ -3657,7 +3647,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:835)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:839)
@@ -3669,7 +3659,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:841)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:743)
@@ -3681,7 +3671,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:745)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:748)
@@ -3693,7 +3683,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:749)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:757)
@@ -3705,7 +3695,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:759)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:762)
@@ -3717,7 +3707,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:764)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:773)
@@ -3729,7 +3719,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:775)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:779)
@@ -3741,15 +3731,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:781)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10437)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10437)
     *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10437)
-    *** Estimated execution cycle                       : 8
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10437)
@@ -3769,15 +3759,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10438)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10441)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10441)
     *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10441)
-    *** Estimated execution cycle                       : 8
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10441)
@@ -3789,7 +3779,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
@@ -3801,11 +3791,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
@@ -3817,12 +3807,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNODALDATAFILE
 DIAGNOSTIC LIST
@@ -3832,8 +3822,9 @@ DIAGNOSTIC LIST
   1547: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
   1563: vec( 101): Vectorized loop.
   1567: inl(1222): Inlined: NETCDFIO::CREATENETCDFOUTPUTFILE
+  4001: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
+  4021: inl(1212): Source for routine not found.: GLOBAL::SCREENMESSAGE
   4041: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
-  4074: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
   4079: inl(1212): Source for routine not found.: NETCDF::NF90_CREATE
   4080: inl(1212): Source for routine not found.: NETCDF_ERROR::CHECK_ERR
   4082: inl(1212): Source for routine not found.: NETCDF::NF90_DEF_DIM
@@ -4075,74 +4066,6 @@ DIAGNOSTIC LIST
   2809: vec( 108): Unvectorizable loop structure.
   2824: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
   2826: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  2862: vec( 103): Unvectorized loop.
-  2862: vec( 108): Unvectorizable loop structure.
-  2872: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  2890: vec( 103): Unvectorized loop.
-  2890: vec( 118): Unvectorizable data type.: VARNAMES
-  2891: vec( 103): Unvectorized loop.
-  2891: vec( 108): Unvectorizable loop structure.
-  2901: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  2921: vec( 103): Unvectorized loop.
-  2921: vec( 108): Unvectorizable loop structure.
-  2930: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  2948: vec( 103): Unvectorized loop.
-  2948: vec( 118): Unvectorizable data type.: VARNAMES
-  2949: vec( 103): Unvectorized loop.
-  2949: vec( 108): Unvectorizable loop structure.
-  2959: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  2979: vec( 103): Unvectorized loop.
-  2979: vec( 108): Unvectorizable loop structure.
-  2990: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3008: vec( 103): Unvectorized loop.
-  3008: vec( 118): Unvectorizable data type.: VARNAMES
-  3009: vec( 103): Unvectorized loop.
-  3009: vec( 108): Unvectorizable loop structure.
-  3021: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3041: vec( 103): Unvectorized loop.
-  3041: vec( 108): Unvectorizable loop structure.
-  3051: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3069: vec( 103): Unvectorized loop.
-  3069: vec( 118): Unvectorizable data type.: VARNAMES
-  3070: vec( 103): Unvectorized loop.
-  3070: vec( 108): Unvectorizable loop structure.
-  3080: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3097: vec( 103): Unvectorized loop.
-  3097: vec( 118): Unvectorizable data type.: VARNAMES
-  3098: vec( 103): Unvectorized loop.
-  3098: vec( 118): Unvectorizable data type.: VARNAMES
-  3101: vec( 103): Unvectorized loop.
-  3101: vec( 108): Unvectorizable loop structure.
-  3104: vec( 103): Unvectorized loop.
-  3104: vec( 108): Unvectorizable loop structure.
-  3197: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3199: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3202: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3204: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3234: vec( 103): Unvectorized loop.
-  3234: vec( 118): Unvectorizable data type.: VARNAMES
-  3236: vec( 103): Unvectorized loop.
-  3236: vec( 108): Unvectorizable loop structure.
-  3278: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3281: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3302: vec( 103): Unvectorized loop.
-  3302: vec( 108): Unvectorizable loop structure.
-  3313: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3331: vec( 103): Unvectorized loop.
-  3331: vec( 118): Unvectorizable data type.: VARNAMES
-  3332: vec( 103): Unvectorized loop.
-  3332: vec( 108): Unvectorizable loop structure.
-  3343: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3362: vec( 103): Unvectorized loop.
-  3362: vec( 118): Unvectorizable data type.: VARNAMES
-  3363: vec( 103): Unvectorized loop.
-  3363: vec( 108): Unvectorizable loop structure.
-  3374: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
-  3392: vec( 103): Unvectorized loop.
-  3392: vec( 118): Unvectorizable data type.: VARNAMES
-  3393: vec( 103): Unvectorized loop.
-  3393: vec( 108): Unvectorizable loop structure.
-  3404: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
   3423: vec( 103): Unvectorized loop.
   3423: vec( 118): Unvectorizable data type.: VARNAMES
   3425: vec( 103): Unvectorized loop.
@@ -4195,8 +4118,8 @@ DIAGNOSTIC LIST
   3812: vec( 108): Unvectorizable loop structure.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNODALDATAFILE
 FORMAT LIST
@@ -5551,7 +5474,7 @@ FORMAT LIST
   2858:           C
   2859:                       dat%nodal_data_dims(1) = dat%myMesh%num_nodes_dim_id
   2860:                       dat%nodal_data_dims(2) = dat%myTime%timenc_dim_id
-  2861: +======>              dat%varnames(1) = 'swan_HS'
+  2861:                       dat%varnames(1) = 'swan_HS'
   2862:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   2863:                &         NF90_DOUBLE, dat%nodal_data_dims, dat%nodal_data_id)
   2864:                       CALL check_err(iret)
@@ -5562,7 +5485,7 @@ FORMAT LIST
   2869:                &             'standard_name',
   2870:                &             'sea_surface_wave_significant_height')
   2871:                       CALL check_err(iret)
-  2872:         I             CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
+  2872:                       CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
   2873:                &           'm', 'ft')
   2874:                       iret = nf90_put_att(dat%ncid, dat%nodal_data_id,
   2875:                &             '_FillValue', doubleval)
@@ -5580,7 +5503,7 @@ FORMAT LIST
   2887:                    CASE(316)
   2888:           C
   2889:                       dat%nodal_data_dims_max(1) = dat%myMesh%num_nodes_dim_id
-  2890: +======>              dat%varnames(1) = 'swan_HS_max'
+  2890:                       dat%varnames(1) = 'swan_HS_max'
   2891:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   2892:                &      NF90_DOUBLE, dat%nodal_data_dims_max, dat%max_nodal_data_id)
   2893:                       CALL check_err(iret)
@@ -5591,7 +5514,7 @@ FORMAT LIST
   2898:                &             'standard_name',
   2899:                &             'maximum_sea_surface_wave_significant_height')
   2900:                       CALL check_err(iret)
-  2901:         I             CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
+  2901:                       CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
   2902:                &           'm', 'ft')
   2903:                       iret = nf90_put_att(dat%ncid, dat%max_nodal_data_id,
   2904:                &             '_FillValue', doubleval)
@@ -5610,7 +5533,7 @@ FORMAT LIST
   2917:           C
   2918:                       dat%nodal_data_dims(1) = dat%myMesh%num_nodes_dim_id
   2919:                       dat%nodal_data_dims(2) = dat%myTime%timenc_dim_id
-  2920: +======>              dat%varnames(1) = 'swan_DIR'
+  2920:                       dat%varnames(1) = 'swan_DIR'
   2921:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   2922:                &         NF90_DOUBLE, dat%nodal_data_dims, dat%nodal_data_id)
   2923:                       CALL check_err(iret)
@@ -5620,7 +5543,7 @@ FORMAT LIST
   2927:                       iret = nf90_put_att(dat%ncid, dat%nodal_data_id,
   2928:                &             'standard_name', 'sea_surface_wave_to_direction')
   2929:                       CALL check_err(iret)
-  2930:         I             CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
+  2930:                       CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
   2931:                &           'degrees', 'degrees_CW_from_East')
   2932:                       iret = nf90_put_att(dat%ncid, dat%nodal_data_id,
   2933:                &             '_FillValue', doubleval)
@@ -5638,7 +5561,7 @@ FORMAT LIST
   2945:                    CASE(317)
   2946:           C
   2947:                       dat%nodal_data_dims_max(1) = dat%myMesh%num_nodes_dim_id
-  2948: +======>              dat%varnames(1) = 'swan_DIR_max'
+  2948:                       dat%varnames(1) = 'swan_DIR_max'
   2949:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   2950:                &             NF90_DOUBLE, dat%nodal_data_dims_max,
   2951:                &             dat%max_nodal_data_id)
@@ -5649,7 +5572,7 @@ FORMAT LIST
   2956:                       iret = nf90_put_att(dat%ncid, dat%max_nodal_data_id,
   2957:                &      'standard_name', 'maximum_sea_surface_wave_to_direction')
   2958:                       CALL check_err(iret)
-  2959:         I             CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
+  2959:                       CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
   2960:                &           'degrees', 'degrees_CW_from_East')
   2961:                       iret = nf90_put_att(dat%ncid, dat%max_nodal_data_id,
   2962:                &             '_FillValue', doubleval)
@@ -5668,7 +5591,7 @@ FORMAT LIST
   2975:           C
   2976:                       dat%nodal_data_dims(1) = dat%myMesh%num_nodes_dim_id
   2977:                       dat%nodal_data_dims(2) = dat%myTime%timenc_dim_id
-  2978: +======>              dat%varnames(1) = 'swan_TM01'
+  2978:                       dat%varnames(1) = 'swan_TM01'
   2979:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   2980:                &         NF90_DOUBLE, dat%nodal_data_dims, dat%nodal_data_id)
   2981:                       CALL check_err(iret)
@@ -5680,7 +5603,7 @@ FORMAT LIST
   2987:                &      'sea_surface_wave_mean_period_from_variance_spectral'//
   2988:                &      '_density_first_frequency_moment')
   2989:                       CALL check_err(iret)
-  2990:         I             CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
+  2990:                       CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
   2991:                &           's', 's')
   2992:                       iret = nf90_put_att(dat%ncid, dat%nodal_data_id,
   2993:                &             '_FillValue', doubleval)
@@ -5698,7 +5621,7 @@ FORMAT LIST
   3005:                    CASE(318)
   3006:           C
   3007:                       dat%nodal_data_dims_max(1) = dat%myMesh%num_nodes_dim_id
-  3008: +======>              dat%varnames(1) = 'swan_TM01_max'
+  3008:                       dat%varnames(1) = 'swan_TM01_max'
   3009:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   3010:                &             NF90_DOUBLE, dat%nodal_data_dims_max,
   3011:                &             dat%max_nodal_data_id)
@@ -5711,7 +5634,7 @@ FORMAT LIST
   3018:                &      'maximum_sea_surface_wave_mean_period_from_variance_'//
   3019:                &      'spectral_density_first_frequency_moment')
   3020:                       CALL check_err(iret)
-  3021:         I             CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
+  3021:                       CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
   3022:                &           's', 's')
   3023:                       iret = nf90_put_att(dat%ncid, dat%max_nodal_data_id,
   3024:                &             '_FillValue', doubleval)
@@ -5730,7 +5653,7 @@ FORMAT LIST
   3037:           C
   3038:                       dat%nodal_data_dims(1) = dat%myMesh%num_nodes_dim_id
   3039:                       dat%nodal_data_dims(2) = dat%myTime%timenc_dim_id
-  3040: +======>              dat%varnames(1) = 'swan_TPS'
+  3040:                       dat%varnames(1) = 'swan_TPS'
   3041:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   3042:                &         NF90_DOUBLE, dat%nodal_data_dims, dat%nodal_data_id)
   3043:                       CALL check_err(iret)
@@ -5741,7 +5664,7 @@ FORMAT LIST
   3048:                &             'standard_name','sea_surface_wave_period_'//
   3049:                &             'at_variance_spectral_density_maximum')
   3050:                       CALL check_err(iret)
-  3051:         I             CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
+  3051:                       CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
   3052:                &           's', 's')
   3053:                       iret = nf90_put_att(dat%ncid, dat%nodal_data_id,
   3054:                &             '_FillValue', doubleval)
@@ -5759,7 +5682,7 @@ FORMAT LIST
   3066:                    CASE(319)
   3067:           C
   3068:                       dat%nodal_data_dims_max(1) = dat%myMesh%num_nodes_dim_id
-  3069: +======>              dat%varnames(1) = 'swan_TPS_max'
+  3069:                       dat%varnames(1) = 'swan_TPS_max'
   3070:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   3071:                &      NF90_DOUBLE, dat%nodal_data_dims_max, dat%max_nodal_data_id)
   3072:                       CALL check_err(iret)
@@ -5770,7 +5693,7 @@ FORMAT LIST
   3077:                &             'standard_name','maximum_sea_surface_wave_period'//
   3078:                &             '_at_variance_spectral_density_maximum')
   3079:                       CALL check_err(iret)
-  3080:         I             CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
+  3080:                       CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
   3081:                &           's', 's')
   3082:                       iret = nf90_put_att(dat%ncid, dat%max_nodal_data_id,
   3083:                &             '_FillValue', doubleval)
@@ -5787,8 +5710,8 @@ FORMAT LIST
   3094:           C
   3095:                    CASE(305)
   3096:           C
-  3097: +======>              dat%varnames(1) = 'swan_windx'
-  3098: +======>              dat%varnames(2) = 'swan_windy'
+  3097:                       dat%varnames(1) = 'swan_windx'
+  3098:                       dat%varnames(2) = 'swan_windy'
   3099:                       dat%nodal_data_dims(1) = dat%myMesh%num_nodes_dim_id
   3100:                       dat%nodal_data_dims(2) = dat%myTime%timenc_dim_id
   3101:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
@@ -5887,14 +5810,14 @@ FORMAT LIST
   3194:           
   3195:                       select case(abs(nws))
   3196:                          case(1,2)
-  3197:         I                call putUnitsAttribute(dat%ncid, dat%u_nodal_data_id,
+  3197:                          call putUnitsAttribute(dat%ncid, dat%u_nodal_data_id,
   3198:                &                 'm2 s-2', 'ft s-2')
-  3199:         I                call putUnitsAttribute(dat%ncid, dat%v_nodal_data_id,
+  3199:                          call putUnitsAttribute(dat%ncid, dat%v_nodal_data_id,
   3200:                &                 'm2 s-2', 'ft s-2')
   3201:                          case default
-  3202:         I                call putUnitsAttribute(dat%ncid, dat%u_nodal_data_id,
+  3202:                          call putUnitsAttribute(dat%ncid, dat%u_nodal_data_id,
   3203:                &                 'm s-1', 'ft s-1')
-  3204:         I                call putUnitsAttribute(dat%ncid, dat%v_nodal_data_id,
+  3204:                          call putUnitsAttribute(dat%ncid, dat%v_nodal_data_id,
   3205:                &                 'm s-1', 'ft s-1')
   3206:                       end select
   3207:                       iret = nf90_put_att(dat%ncid, dat%u_nodal_data_id,
@@ -5924,7 +5847,7 @@ FORMAT LIST
   3231:           C
   3232:                    CASE(320)
   3233:           C
-  3234: +======>              dat%varnames(1) = 'swan_wind_max'
+  3234:                       dat%varnames(1) = 'swan_wind_max'
   3235:                       dat%nodal_data_dims_max(1) = dat%myMesh%num_nodes_dim_id
   3236:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   3237:                &      NF90_DOUBLE,dat%nodal_data_dims_max,dat%max_nodal_data_id)
@@ -5968,10 +5891,10 @@ FORMAT LIST
   3275:                       endif
   3276:                       select case(abs(nws))
   3277:                          case(1,2)
-  3278:         I                call putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
+  3278:                          call putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
   3279:                &                 'm2 s-2', 'ft s-2')
   3280:                          case default
-  3281:         I                call putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
+  3281:                          call putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
   3282:                &                 'm s-1', 'ft s-1')
   3283:                       end select
   3284:                       iret = nf90_put_att(dat%ncid, dat%max_nodal_data_id,
@@ -5991,7 +5914,7 @@ FORMAT LIST
   3298:           C
   3299:                       dat%nodal_data_dims(1) = dat%myMesh%num_nodes_dim_id
   3300:                       dat%nodal_data_dims(2) = dat%myTime%timenc_dim_id
-  3301: +======>              dat%varnames(1) = 'swan_TM02'
+  3301:                       dat%varnames(1) = 'swan_TM02'
   3302:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   3303:                &         NF90_DOUBLE, dat%nodal_data_dims, dat%nodal_data_id)
   3304:                       CALL check_err(iret)
@@ -6003,7 +5926,7 @@ FORMAT LIST
   3310:                &      'sea_surface_wave_mean_period_from_variance_spectral'//
   3311:                &      '_density_second_frequency_moment')
   3312:                       CALL check_err(iret)
-  3313:         I             CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
+  3313:                       CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
   3314:                &           's', 's')
   3315:                       iret = nf90_put_att(dat%ncid, dat%nodal_data_id,
   3316:                &             '_FillValue', doubleval)
@@ -6021,7 +5944,7 @@ FORMAT LIST
   3328:                    CASE(321)
   3329:           C
   3330:                       dat%nodal_data_dims_max(1) = dat%myMesh%num_nodes_dim_id
-  3331: +======>              dat%varnames(1) = 'swan_TM02_max'
+  3331:                       dat%varnames(1) = 'swan_TM02_max'
   3332:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   3333:                &      NF90_DOUBLE, dat%nodal_data_dims_max, dat%max_nodal_data_id)
   3334:                       CALL check_err(iret)
@@ -6033,7 +5956,7 @@ FORMAT LIST
   3340:                &      'maximum_sea_surface_wave_mean_period_from_variance_'//
   3341:                &      'spectral_density_second_frequency_moment')
   3342:                       CALL check_err(iret)
-  3343:         I             CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
+  3343:                       CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
   3344:                &           's', 's')
   3345:                       iret = nf90_put_att(dat%ncid, dat%max_nodal_data_id,
   3346:                &             '_FillValue', doubleval)
@@ -6052,7 +5975,7 @@ FORMAT LIST
   3359:           C
   3360:                       dat%nodal_data_dims(1) = dat%myMesh%num_nodes_dim_id
   3361:                       dat%nodal_data_dims(2) = dat%myTime%timenc_dim_id
-  3362: +======>              dat%varnames(1) = 'swan_TMM10'
+  3362:                       dat%varnames(1) = 'swan_TMM10'
   3363:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   3364:                &         NF90_DOUBLE, dat%nodal_data_dims, dat%nodal_data_id)
   3365:                       CALL check_err(iret)
@@ -6064,7 +5987,7 @@ FORMAT LIST
   3371:                &      'sea_surface_wave_mean_period_from_variance_spectral'//
   3372:                &      '_density_inverse_frequency_moment')
   3373:                       CALL check_err(iret)
-  3374:         I             CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
+  3374:                       CALL putUnitsAttribute(dat%ncid, dat%nodal_data_id,
   3375:                &           's', 's')
   3376:                       iret = nf90_put_att(dat%ncid, dat%nodal_data_id,
   3377:                &             '_FillValue', doubleval)
@@ -6082,7 +6005,7 @@ FORMAT LIST
   3389:                    CASE(322)
   3390:           C
   3391:                       dat%nodal_data_dims_max(1) = dat%myMesh%num_nodes_dim_id
-  3392: +======>              dat%varnames(1) = 'swan_TMM10_max'
+  3392:                       dat%varnames(1) = 'swan_TMM10_max'
   3393:                       iret = nf90_def_var(dat%ncid,trim(dat%varnames(1)),
   3394:                &      NF90_DOUBLE, dat%nodal_data_dims_max, dat%max_nodal_data_id)
   3395:                       CALL check_err(iret)
@@ -6094,7 +6017,7 @@ FORMAT LIST
   3401:                &      'maximum_sea_surface_wave_mean_period_from_variance_'//
   3402:                &      'spectral_density_inverse_frequency_moment')
   3403:                       CALL check_err(iret)
-  3404:         I             CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
+  3404:                       CALL putUnitsAttribute(dat%ncid, dat%max_nodal_data_id,
   3405:                &           's', 's')
   3406:                       iret = nf90_put_att(dat%ncid, dat%max_nodal_data_id,
   3407:                &             '_FillValue', doubleval)
@@ -6513,8 +6436,8 @@ FORMAT LIST
   3820:                 END SUBROUTINE initNodalDataFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNODALDATAFILE
 INLINE LIST
@@ -6524,6 +6447,14 @@ INLINE LIST
      *** Source for routine not found.
   -> INLINE: NETCDFIO::CREATENETCDFOUTPUTFILE (netcdfio.F:1567)
    -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:3957)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::ALLMESSAGE (netcdfio.F:4001)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4021)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4025)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4026)
       *** Source for routine not found.
    -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:4041)
       *** Source for routine not found.
@@ -8378,724 +8309,6 @@ INLINE LIST
      *** Source for routine not found.
   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2851)
      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:2862)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2864)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2865)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2867)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2868)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2871)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:2872)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:2874)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2876)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2877)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2879)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2880)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2882)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2883)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2885)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:2891)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2893)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2894)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2896)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2897)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2900)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:2901)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:2903)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2905)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2906)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2908)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2909)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2911)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2912)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2914)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:2921)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2923)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2924)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2926)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2927)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2929)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:2930)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:2932)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2934)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2935)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2937)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2938)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2940)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2941)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2943)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:2949)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2952)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2953)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2955)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2956)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2958)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:2959)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:2961)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2963)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2964)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2966)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2967)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2969)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2970)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2972)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:2979)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2981)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2982)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2984)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2985)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2989)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:2990)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:2992)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2994)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2995)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:2997)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:2998)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3000)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3001)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3003)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3009)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3012)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3013)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3015)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3016)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3020)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3021)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3023)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3025)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3026)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3028)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3029)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3031)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3032)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3034)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3041)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3043)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3044)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3046)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3047)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3050)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3051)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3053)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3055)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3056)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3058)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3059)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3061)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3062)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3064)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3070)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3072)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3073)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3075)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3076)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3079)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3080)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3082)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3084)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3085)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3087)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3088)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3090)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3091)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3093)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3101)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3103)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3104)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3106)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3110)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3113)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3114)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3117)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3118)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3120)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3121)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3124)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3125)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3128)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3129)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3131)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3133)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3135)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3136)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3138)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3139)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3141)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3142)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3144)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3145)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3147)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3148)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3154)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3156)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3157)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3159)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3160)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3162)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3163)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3165)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3166)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3168)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3169)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3173)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3175)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3176)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3178)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3179)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3181)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3182)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3184)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3185)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3187)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3188)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3191)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3197)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3199)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3202)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3204)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3207)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3209)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3210)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3212)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3213)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3215)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3216)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3218)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3219)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3221)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3222)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3224)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3225)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3227)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3228)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3230)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3236)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3238)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3242)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3245)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3246)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3249)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3251)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3253)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3254)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3256)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3261)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3263)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3264)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3266)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3268)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3270)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3271)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3273)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3278)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3281)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3284)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3286)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3287)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3289)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3290)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3292)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3293)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3295)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3302)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3304)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3305)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3307)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3308)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3312)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3313)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3315)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3317)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3318)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3320)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3321)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3323)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3324)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3326)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3332)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3334)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3335)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3337)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3338)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3342)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3343)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3345)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3347)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3348)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3350)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3351)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3353)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3354)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3356)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3363)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3365)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3366)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3368)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3369)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3373)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3374)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3376)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3378)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3379)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3381)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3382)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3384)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3385)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3387)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3393)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3395)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3396)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3398)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3399)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3403)
-     *** Source for routine not found.
-  -> INLINE: NETCDFIO::PUTUNITSATTRIBUTE (netcdfio.F:3404)
-   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:10847)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10853)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:10855)
-      *** Source for routine not found.
-   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:10857)
-      *** Source for routine not found.
-   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:10862)
-      *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_ONE_EIGHTBYTEREAL (netcdfio.F:3406)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3408)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3409)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3411)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3412)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3414)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF::NF90_PUT_ATT_TEXT (netcdfio.F:3415)
-     *** Source for routine not found.
-  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3417)
-     *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_DEF_VAR_MANYDIMS (netcdfio.F:3425)
      *** Source for routine not found.
   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:3427)
@@ -9586,8 +8799,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNODALDATAFILE
 VECTORIZATION LIST
@@ -9644,6 +8857,11 @@ VECTORIZATION LIST
   LOOP BEGIN: (netcdfio.F:3968)
     <Unvectorized loop.>
     *** Unvectorizable data type. : FILENAME (netcdfio.F:3968)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3997)
+    <Unvectorized loop.>
+    *** Unvectorizable loop structure. (netcdfio.F:3997)
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3593)
@@ -9749,111 +8967,6 @@ VECTORIZATION LIST
   LOOP BEGIN: (netcdfio.F:3428)
     <Unvectorized loop.>
     *** Unvectorizable loop structure. (netcdfio.F:3428)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3392)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:3392)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3392)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3392)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3393)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3393)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3331)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:3331)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3331)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3331)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3332)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3332)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3234)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:3234)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3234)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3234)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3236)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3236)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3069)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:3069)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3069)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3069)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3070)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3070)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3008)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:3008)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3008)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3008)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3009)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3009)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2948)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:2948)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2948)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:2948)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2949)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:2949)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2890)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:2890)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2890)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:2890)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2891)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:2891)
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2679)
@@ -9989,101 +9102,6 @@ VECTORIZATION LIST
   LOOP BEGIN: (netcdfio.F:2081)
     <Unvectorized loop.>
     *** Unvectorizable loop structure. (netcdfio.F:2081)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3362)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:3362)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3362)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3362)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3363)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3363)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3301)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3301)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3302)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3302)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3097)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:3097)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3097)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3097)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3098)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. (netcdfio.F:3098)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3098)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3098)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3101)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3101)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3104)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3104)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3040)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:3040)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3041)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:3041)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2978)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:2978)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2979)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:2979)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2920)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:2920)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2921)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:2921)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2861)
-    <Unvectorized loop.>
-    *** Unvectorizable data type. : VARNAMES (netcdfio.F:2861)
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2862)
-    <Unvectorized loop.>
-    *** Unvectorizable loop structure. (netcdfio.F:2862)
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2310)
@@ -10792,8 +9810,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNODALDATAFILE
 CODE GENERATION LIST
@@ -10808,11 +9826,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 16960 bytes
-      Register spill area      :  2096 bytes
+    Total size                 : 16880 bytes
+      Register spill area      :  1960 bytes
       Parameter area           :   120 bytes
       Register save area       :   176 bytes
-      User data area           : 14560 bytes
+      User data area           : 14616 bytes
       Others                   :     8 bytes
 
     Note: Total size of Routine stack does not include
@@ -10823,19 +9841,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3974)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3974)
     *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3974)
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3974)
     *** Estimated execution cycle                       : 5
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3970)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3970)
@@ -10847,7 +9865,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3968)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3968)
@@ -10856,6 +9874,10 @@ CODE GENERATION LIST
 
   LOOP BEGIN: (netcdfio.F:3968)
     *** Estimated execution cycle                       : 5
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3997)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3593)
@@ -10871,11 +9893,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3596)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3599)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3566)
@@ -10887,7 +9909,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3567)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3536)
@@ -10899,7 +9921,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3537)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3478)
@@ -10915,11 +9937,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3481)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3484)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3422)
@@ -10935,95 +9957,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3425)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3428)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3392)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3392)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3393)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3331)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3331)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3332)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3234)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3234)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3236)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3069)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3069)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3070)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3008)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3008)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3009)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2948)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2948)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2949)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2890)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2890)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2891)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2679)
@@ -11043,11 +9981,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2682)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2686)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2565)
@@ -11063,11 +10001,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2568)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2572)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2369)
@@ -11087,11 +10025,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2372)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2377)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2224)
@@ -11107,11 +10045,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2227)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2231)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2075)
@@ -11127,87 +10065,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2078)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2081)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3362)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3362)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3363)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3301)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3302)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3097)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3097)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3098)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3098)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3101)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3104)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3040)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3041)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2978)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2979)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2920)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2921)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2861)
-    *** Estimated execution cycle                       : 5
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:2862)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2310)
@@ -11215,7 +10077,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2311)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2802)
@@ -11235,11 +10097,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2806)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2809)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3650)
@@ -11251,7 +10113,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3651)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2762)
@@ -11259,7 +10121,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2766)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2048)
@@ -11267,7 +10129,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2049)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2733)
@@ -11275,7 +10137,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2735)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2428)
@@ -11287,11 +10149,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2432)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2435)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2337)
@@ -11299,7 +10161,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2340)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2132)
@@ -11311,11 +10173,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2136)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2139)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2019)
@@ -11323,7 +10185,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:2020)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1911)
@@ -11331,7 +10193,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1912)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1937)
@@ -11339,7 +10201,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1938)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1963)
@@ -11347,7 +10209,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1964)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1989)
@@ -11355,7 +10217,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1990)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1854)
@@ -11363,7 +10225,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1855)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1880)
@@ -11371,7 +10233,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1881)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1831)
@@ -11379,7 +10241,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1832)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1835)
@@ -11391,7 +10253,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1836)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1839)
@@ -11403,7 +10265,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1840)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1789)
@@ -11415,7 +10277,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1791)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1794)
@@ -11427,7 +10289,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1796)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1800)
@@ -11439,7 +10301,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1802)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1805)
@@ -11451,7 +10313,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1807)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1811)
@@ -11463,7 +10325,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1813)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1816)
@@ -11475,7 +10337,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1817)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1727)
@@ -11487,7 +10349,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1729)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1732)
@@ -11499,7 +10361,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1733)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1740)
@@ -11511,7 +10373,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1742)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1745)
@@ -11523,7 +10385,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1746)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1754)
@@ -11535,7 +10397,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1756)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1759)
@@ -11547,7 +10409,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1760)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1686)
@@ -11559,7 +10421,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1688)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1691)
@@ -11571,7 +10433,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1692)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1699)
@@ -11583,7 +10445,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1701)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1704)
@@ -11595,7 +10457,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1705)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1712)
@@ -11607,7 +10469,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1714)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1717)
@@ -11619,7 +10481,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1719)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1635)
@@ -11631,7 +10493,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1636)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1639)
@@ -11643,7 +10505,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1640)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1647)
@@ -11655,7 +10517,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1648)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1651)
@@ -11667,7 +10529,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1652)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1660)
@@ -11679,7 +10541,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1661)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1664)
@@ -11691,15 +10553,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:1665)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10437)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10437)
     *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10437)
-    *** Estimated execution cycle                       : 8
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10437)
@@ -11719,15 +10581,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10438)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10441)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10441)
     *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10441)
-    *** Estimated execution cycle                       : 8
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10441)
@@ -11739,11 +10601,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3812)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
@@ -11755,11 +10617,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
@@ -11771,12 +10633,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEHARMONICANALYSISPARAMETERSINNETCDFFILE
 DIAGNOSTIC LIST
@@ -11790,8 +10652,8 @@ DIAGNOSTIC LIST
   3855: inl(1212): Source for routine not found.: NETCDF::NF90_DEF_VAR_ONEDIM
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEHARMONICANALYSISPARAMETERSINNETCDFFILE
 FORMAT LIST
@@ -11886,8 +10748,8 @@ FORMAT LIST
   3902:                 END SUBROUTINE defineHarmonicAnalysisParametersInNetcdfFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEHARMONICANALYSISPARAMETERSINNETCDFFILE
 INLINE LIST
@@ -11991,8 +10853,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEHARMONICANALYSISPARAMETERSINNETCDFFILE
 VECTORIZATION LIST
@@ -12000,8 +10862,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEHARMONICANALYSISPARAMETERSINNETCDFFILE
 CODE GENERATION LIST
@@ -12027,8 +10889,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::ADDHARMONICANALYSISPARAMETERSTONETCDFFILE
 DIAGNOSTIC LIST
@@ -12041,8 +10903,8 @@ DIAGNOSTIC LIST
   3922: inl(1212): Source for routine not found.: NETCDF::NF90_PUT_VAR_1D_EIGHTBYTEREAL
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::ADDHARMONICANALYSISPARAMETERSTONETCDFFILE
 FORMAT LIST
@@ -12084,8 +10946,8 @@ FORMAT LIST
   3931:                 END SUBROUTINE addHarmonicAnalysisParametersToNetcdfFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::ADDHARMONICANALYSISPARAMETERSTONETCDFFILE
 INLINE LIST
@@ -12125,8 +10987,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::ADDHARMONICANALYSISPARAMETERSTONETCDFFILE
 VECTORIZATION LIST
@@ -12134,8 +10996,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::ADDHARMONICANALYSISPARAMETERSTONETCDFFILE
 CODE GENERATION LIST
@@ -12161,8 +11023,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATENETCDFOUTPUTFILE
 DIAGNOSTIC LIST
@@ -12179,16 +11041,19 @@ DIAGNOSTIC LIST
   3974: vec( 103): Unvectorized loop.
   3974: vec( 108): Unvectorizable loop structure.
   3974: vec( 118): Unvectorizable data type.: FILENAME
+  3997: vec( 103): Unvectorized loop.
+  3997: vec( 108): Unvectorizable loop structure.
+  4001: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
+  4021: inl(1212): Source for routine not found.: GLOBAL::SCREENMESSAGE
   4041: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
-  4074: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
   4079: inl(1212): Source for routine not found.: NETCDF::NF90_CREATE
   4080: inl(1212): Source for routine not found.: NETCDF_ERROR::CHECK_ERR
   4082: inl(1212): Source for routine not found.: NETCDF::NF90_DEF_DIM
   4086: inl(1212): Source for routine not found.: NETCDF::NF90_DEF_VAR_MANYDIMS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATENETCDFOUTPUTFILE
 FORMAT LIST
@@ -12367,14 +11232,22 @@ FORMAT LIST
   4096:                 END SUBROUTINE createNetCDFOutputFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATENETCDFOUTPUTFILE
 INLINE LIST
 
   ROOT: NETCDFIO::CREATENETCDFOUTPUTFILE (netcdfio.F:3940)
   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:3957)
+     *** Source for routine not found.
+  -> NOINLINE: GLOBAL::ALLMESSAGE (netcdfio.F:4001)
+     *** Source for routine not found.
+  -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4021)
+     *** Source for routine not found.
+  -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4025)
+     *** Source for routine not found.
+  -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4026)
      *** Source for routine not found.
   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:4041)
      *** Source for routine not found.
@@ -12396,8 +11269,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATENETCDFOUTPUTFILE
 VECTORIZATION LIST
@@ -12447,9 +11320,14 @@ VECTORIZATION LIST
     *** Unvectorizable data type. : FILENAME (netcdfio.F:3968)
   LOOP END
 
+  LOOP BEGIN: (netcdfio.F:3997)
+    <Unvectorized loop.>
+    *** Unvectorizable loop structure. (netcdfio.F:3997)
+  LOOP END
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:55 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATENETCDFOUTPUTFILE
 CODE GENERATION LIST
@@ -12458,36 +11336,36 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 40 [s0-s12 s15-s16 s18-s21 s23-s34 s55-s63]
+      Scalar registers         : 39 [s0-s12 s15-s16 s18-s21 s23-s34 s56-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 2496 bytes
-      Register spill area      :   32 bytes
+    Total size                 : 3568 bytes
+      Register spill area      :   40 bytes
       Parameter area           :  120 bytes
       Register save area       :  176 bytes
-      User data area           : 2160 bytes
+      User data area           : 3224 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:3974)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3974)
     *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3974)
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3974)
     *** Estimated execution cycle                       : 5
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3970)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3970)
@@ -12499,7 +11377,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3968)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3968)
@@ -12510,9 +11388,13 @@ CODE GENERATION LIST
     *** Estimated execution cycle                       : 5
   LOOP END
 
+  LOOP BEGIN: (netcdfio.F:3997)
+    *** Estimated execution cycle                       : 6
+  LOOP END
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFCOORD
 DIAGNOSTIC LIST
@@ -12542,22 +11424,8 @@ DIAGNOSTIC LIST
   4179: vec( 101): Vectorized loop.
   4180: vec( 101): Vectorized loop.
   4181: vec( 101): Vectorized loop.
-  4183: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   4183: vec( 102): Partially vectorized loop.
   4200: vec( 101): Vectorized loop.
-  4204: opt(3014): Moved reference within a conditional branch.
-  4205: opt(3014): Moved reference within a conditional branch.
-  4207: opt(3014): Moved reference within a conditional branch.
-  4208: opt(3014): Moved reference within a conditional branch.
-  4209: opt(3014): Moved reference within a conditional branch.
-  4210: opt(3014): Moved reference within a conditional branch.
-  4212: opt(3014): Moved reference within a conditional branch.
-  4213: opt(3014): Moved reference within a conditional branch.
-  4214: opt(3014): Moved reference within a conditional branch.
-  4215: opt(3014): Moved reference within a conditional branch.
-  4216: opt(3014): Moved reference within a conditional branch.
-  4217: opt(3014): Moved reference within a conditional branch.
-  4218: opt(3014): Moved reference within a conditional branch.
   4223: opt(1592): Outer loop unrolled inside inner loop.
   4223: vec( 101): Vectorized loop.
   4225: opt(1592): Outer loop unrolled inside inner loop.: I
@@ -12565,8 +11433,8 @@ DIAGNOSTIC LIST
   4239: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFCOORD
 FORMAT LIST
@@ -12726,8 +11594,8 @@ FORMAT LIST
   4241:                 END SUBROUTINE initNetCDFCoord
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFCOORD
 INLINE LIST
@@ -12739,8 +11607,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFCOORD
 VECTORIZATION LIST
@@ -12935,8 +11803,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFCOORD
 CODE GENERATION LIST
@@ -12951,11 +11819,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 29456 bytes
-      Register spill area      : 14624 bytes
+    Total size                 : 29472 bytes
+      Register spill area      : 14632 bytes
       Parameter area           :    32 bytes
       Register save area       :   176 bytes
-      User data area           : 14624 bytes
+      User data area           : 14632 bytes
       Others                   :     0 bytes
 
     Note: Total size of Routine stack does not include
@@ -13002,11 +11870,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:4161)
-    *** Estimated execution cycle                       : 220
+    *** Estimated execution cycle                       : 160
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:4161)
-    *** Estimated execution cycle                       : 50
+    *** Estimated execution cycle                       : 51
     *** The number of SCALAR REGISTER TRANSFER          : 13
 
     LOOP BEGIN: (netcdfio.F:4164)
@@ -13055,14 +11923,16 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:4200)
-    *** Estimated execution cycle                       : 205
+    *** Estimated execution cycle                       : 209
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 29
+          Total                                         : 30
+            Not enough registers                        :  1
             Over basic blocks                           : 29
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 27
+          Total                                         : 28
+            Not enough registers                        :  1
             Over basic blocks                           : 27
-    *** The number of SCALAR REGISTER TRANSFER          : 15
+    *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (netcdfio.F:4200)
       *** Estimated execution cycle                     : 596
@@ -13096,7 +11966,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:4225)
-    *** Estimated execution cycle                       : 42
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 12
 
     LOOP BEGIN: (netcdfio.F:4226)
@@ -13105,7 +11975,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:4225)
-    *** Estimated execution cycle                       : 70
+    *** Estimated execution cycle                       : 71
     *** The number of SCALAR REGISTER TRANSFER          : 29
 
     LOOP BEGIN: (netcdfio.F:4226)
@@ -13114,8 +11984,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITEOUTARRAYNETCDF
 DIAGNOSTIC LIST
@@ -13129,8 +11999,8 @@ DIAGNOSTIC LIST
   4403: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITEOUTARRAYNETCDF
 FORMAT LIST
@@ -13307,8 +12177,8 @@ FORMAT LIST
   4405:                 END SUBROUTINE writeOutArrayNetCDF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITEOUTARRAYNETCDF
 INLINE LIST
@@ -13366,20 +12236,6 @@ INLINE LIST
      *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4334)
      *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4337)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4339)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4341)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4343)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4345)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4347)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4349)
-     *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4352)
      *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4354)
@@ -13389,20 +12245,6 @@ INLINE LIST
   -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4358)
      *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4360)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4363)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4365)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4367)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4369)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4371)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4373)
-     *** Expansion routine is too big for automatic expansion.
-  -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4375)
      *** Expansion routine is too big for automatic expansion.
   -> NOINLINE: NETCDFIO::WRITENODALDATA (netcdfio.F:4378)
      *** Expansion routine is too big for automatic expansion.
@@ -13424,8 +12266,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITEOUTARRAYNETCDF
 VECTORIZATION LIST
@@ -13433,8 +12275,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITEOUTARRAYNETCDF
 CODE GENERATION LIST
@@ -13460,8 +12302,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITESTATIONDATA
 DIAGNOSTIC LIST
@@ -13484,8 +12326,8 @@ DIAGNOSTIC LIST
   4735: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITESTATIONDATA
 FORMAT LIST
@@ -13838,8 +12680,8 @@ FORMAT LIST
   4743:                 end subroutine writeStationData
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITESTATIONDATA
 INLINE LIST
@@ -14152,8 +12994,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITESTATIONDATA
 VECTORIZATION LIST
@@ -14184,8 +13026,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITESTATIONDATA
 CODE GENERATION LIST
@@ -14194,24 +13036,24 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 44 [s0-s12 s15-s16 s18-s39 s57-s63]
+      Scalar registers         : 42 [s0-s12 s15-s16 s18-s38 s58-s63]
       Vector registers         :  9 [v55-v63]
       Vector mask registers    :  2 [vm14-vm15]
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 7728 bytes
-      Register spill area      :  176 bytes
+    Total size                 : 7696 bytes
+      Register spill area      :  160 bytes
       Parameter area           :   80 bytes
       Register save area       :  176 bytes
-      User data area           : 7296 bytes
+      User data area           : 7280 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:5328)
-    *** Estimated execution cycle                       : 374
+    *** Estimated execution cycle                       : 377
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5351)
@@ -14223,12 +13065,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5355)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENODALDATA
 DIAGNOSTIC LIST
@@ -14249,42 +13091,22 @@ DIAGNOSTIC LIST
   5369: inl(1212): Source for routine not found.: NETCDF::NF90_PUT_VAR_1D_EIGHTBYTEREAL
   5375: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
   4814: inl(1212): Source for routine not found.: NETCDF::NF90_PUT_VAR_2D_EIGHTBYTEREAL
-  5110: opt(3014): Moved reference within a conditional branch.
-  5110: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5110: vec( 101): Vectorized loop.
-  5127: opt(3014): Moved reference within a conditional branch.
-  5127: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5127: vec( 101): Vectorized loop.
-  5131: opt(3014): Moved reference within a conditional branch.
-  5131: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5131: vec( 101): Vectorized loop.
-  5155: opt(3014): Moved reference within a conditional branch.
-  5155: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5155: vec( 101): Vectorized loop.
-  5159: opt(3014): Moved reference within a conditional branch.
-  5159: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5159: vec( 101): Vectorized loop.
-  5183: opt(3014): Moved reference within a conditional branch.
-  5183: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5183: vec( 101): Vectorized loop.
-  5201: opt(3014): Moved reference within a conditional branch.
-  5201: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5201: vec( 101): Vectorized loop.
-  5219: opt(3014): Moved reference within a conditional branch.
-  5219: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5219: vec( 101): Vectorized loop.
-  5223: opt(3014): Moved reference within a conditional branch.
-  5223: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5223: vec( 101): Vectorized loop.
-  5247: opt(3014): Moved reference within a conditional branch.
-  5247: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5247: vec( 101): Vectorized loop.
   5249: inl(1212): Source for routine not found.: NETCDF::NF90_PUT_VAR_1D_FOURBYTEINT
   5267: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENODALDATA
 FORMAT LIST
@@ -14831,8 +13653,8 @@ FORMAT LIST
   5275:                 end subroutine writeNodalData
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENODALDATA
 INLINE LIST
@@ -15261,8 +14083,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENODALDATA
 VECTORIZATION LIST
@@ -15418,8 +14240,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENODALDATA
 CODE GENERATION LIST
@@ -15428,28 +14250,28 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 56 [s0-s12 s15-s16 s18-s43 s49-s63]
+      Scalar registers         : 56 [s0-s12 s15-s16 s18-s42 s48-s63]
       Vector registers         : 49 [v15-v63]
       Vector mask registers    :  2 [vm14-vm15]
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 10736 bytes
-      Register spill area      :   624 bytes
+    Total size                 : 10160 bytes
+      Register spill area      :   336 bytes
       Parameter area           :    80 bytes
       Register save area       :   176 bytes
-      User data area           :  9856 bytes
+      User data area           :  9568 bytes
       Others                   :     0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:4781)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5328)
-    *** Estimated execution cycle                       : 374
+    *** Estimated execution cycle                       : 377
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5351)
@@ -15461,7 +14283,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5355)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5247)
@@ -15545,8 +14367,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETRECORDCOUNTERANDSTORETIME
 DIAGNOSTIC LIST
@@ -15570,8 +14392,8 @@ DIAGNOSTIC LIST
   5375: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETRECORDCOUNTERANDSTORETIME
 FORMAT LIST
@@ -15682,8 +14504,8 @@ FORMAT LIST
   5377:                 end subroutine setRecordCounterAndStoreTime
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETRECORDCOUNTERANDSTORETIME
 INLINE LIST
@@ -15717,8 +14539,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETRECORDCOUNTERANDSTORETIME
 VECTORIZATION LIST
@@ -15749,8 +14571,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:56 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETRECORDCOUNTERANDSTORETIME
 CODE GENERATION LIST
@@ -15759,7 +14581,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 37 [s0-s6 s8-s12 s15-s16 s18-s33 s57-s63]
+      Scalar registers         : 36 [s0-s6 s8-s12 s15-s16 s18-s33 s58-s63]
       Vector registers         :  9 [v55-v63]
       Vector mask registers    :  2 [vm14-vm15]
       VREG directive           :  0
@@ -15776,7 +14598,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:5328)
-    *** Estimated execution cycle                       : 374
+    *** Estimated execution cycle                       : 377
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5351)
@@ -15788,12 +14610,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5355)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART
 DIAGNOSTIC LIST
@@ -15802,8 +14624,9 @@ DIAGNOSTIC LIST
 
   5409: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
   5434: inl(1222): Inlined: NETCDFIO::CREATENETCDFOUTPUTFILE
+  4001: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
+  4021: inl(1212): Source for routine not found.: GLOBAL::SCREENMESSAGE
   4041: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
-  4074: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
   4079: inl(1212): Source for routine not found.: NETCDF::NF90_CREATE
   4080: inl(1212): Source for routine not found.: NETCDF_ERROR::CHECK_ERR
   4082: inl(1212): Source for routine not found.: NETCDF::NF90_DEF_DIM
@@ -15872,8 +14695,8 @@ DIAGNOSTIC LIST
   5970: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART
 FORMAT LIST
@@ -16488,8 +15311,8 @@ FORMAT LIST
   5978:                 END SUBROUTINE initNetCDFHotstart
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART
 INLINE LIST
@@ -16499,6 +15322,14 @@ INLINE LIST
      *** Source for routine not found.
   -> INLINE: NETCDFIO::CREATENETCDFOUTPUTFILE (netcdfio.F:5434)
    -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:3957)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::ALLMESSAGE (netcdfio.F:4001)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4021)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4025)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::SCREENMESSAGE (netcdfio.F:4026)
       *** Source for routine not found.
    -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:4041)
       *** Source for routine not found.
@@ -17147,8 +15978,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART
 VECTORIZATION LIST
@@ -17196,6 +16027,11 @@ VECTORIZATION LIST
   LOOP BEGIN: (netcdfio.F:3968)
     <Unvectorized loop.>
     *** Unvectorizable data type. : FILENAME (netcdfio.F:3968)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3997)
+    <Unvectorized loop.>
+    *** Unvectorizable loop structure. (netcdfio.F:3997)
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5652)
@@ -17414,8 +16250,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART
 CODE GENERATION LIST
@@ -17424,36 +16260,36 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 47 [s0-s12 s15-s16 s18-s42 s57-s63]
+      Scalar registers         : 48 [s0-s12 s15-s16 s18-s42 s56-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 4816 bytes
-      Register spill area      :  416 bytes
+    Total size                 : 5824 bytes
+      Register spill area      :  392 bytes
       Parameter area           :  120 bytes
       Register save area       :  176 bytes
-      User data area           : 4096 bytes
+      User data area           : 5128 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:3974)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:3974)
     *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3974)
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3974)
     *** Estimated execution cycle                       : 5
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3970)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3970)
@@ -17465,7 +16301,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3968)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:3968)
@@ -17474,6 +16310,10 @@ CODE GENERATION LIST
 
   LOOP BEGIN: (netcdfio.F:3968)
     *** Estimated execution cycle                       : 5
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:3997)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5652)
@@ -17485,7 +16325,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5654)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5657)
@@ -17497,7 +16337,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5658)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5668)
@@ -17509,7 +16349,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5670)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5673)
@@ -17521,7 +16361,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5674)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5717)
@@ -17541,7 +16381,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5728)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5730)
@@ -17553,7 +16393,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5731)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5737)
@@ -17565,7 +16405,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5741)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5743)
@@ -17577,7 +16417,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5744)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5750)
@@ -17589,7 +16429,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5753)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5756)
@@ -17601,15 +16441,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:5757)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10437)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10437)
     *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10437)
-    *** Estimated execution cycle                       : 8
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10437)
@@ -17629,15 +16469,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10438)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10441)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10441)
     *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10441)
-    *** Estimated execution cycle                       : 8
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10441)
@@ -17649,8 +16489,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONIC
 DIAGNOSTIC LIST
@@ -17769,8 +16609,8 @@ DIAGNOSTIC LIST
   6354: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONIC
 FORMAT LIST
@@ -18168,8 +17008,8 @@ FORMAT LIST
   6362:                 END SUBROUTINE initNetCDFHotstartHarmonic
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONIC
 INLINE LIST
@@ -18648,8 +17488,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONIC
 VECTORIZATION LIST
@@ -19095,8 +17935,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONIC
 CODE GENERATION LIST
@@ -19105,17 +17945,17 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 45 [s0-s12 s15-s16 s18-s41 s58-s63]
+      Scalar registers         : 44 [s0-s12 s15-s16 s18-s41 s59-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 4096 bytes
-      Register spill area      : 1016 bytes
+    Total size                 : 3488 bytes
+      Register spill area      :  712 bytes
       Parameter area           :  120 bytes
       Register save area       :  176 bytes
-      User data area           : 2776 bytes
+      User data area           : 2472 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
@@ -19130,7 +17970,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6059)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6062)
@@ -19142,7 +17982,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6063)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6069)
@@ -19154,7 +17994,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6070)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6073)
@@ -19166,7 +18006,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6074)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6080)
@@ -19178,7 +18018,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6083)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6086)
@@ -19190,7 +18030,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6087)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6094)
@@ -19202,7 +18042,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6095)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6097)
@@ -19214,7 +18054,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6098)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6109)
@@ -19226,7 +18066,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6110)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6113)
@@ -19238,7 +18078,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6114)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6133)
@@ -19250,7 +18090,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6134)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6137)
@@ -19262,7 +18102,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6138)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6151)
@@ -19274,7 +18114,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6152)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6155)
@@ -19286,7 +18126,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6156)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6179)
@@ -19298,7 +18138,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6180)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6183)
@@ -19310,7 +18150,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6184)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6209)
@@ -19322,7 +18162,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6210)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6213)
@@ -19334,7 +18174,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6214)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6229)
@@ -19346,7 +18186,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6230)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6233)
@@ -19358,124 +18198,124 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6234)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONICMEANSVARIANCES
 DIAGNOSTIC LIST
@@ -19548,8 +18388,8 @@ DIAGNOSTIC LIST
   6607: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONICMEANSVARIANCES
 FORMAT LIST
@@ -19814,8 +18654,8 @@ FORMAT LIST
   6615:                 END SUBROUTINE initNetCDFHotstartHarmonicMeansVariances
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONICMEANSVARIANCES
 INLINE LIST
@@ -20009,8 +18849,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONICMEANSVARIANCES
 VECTORIZATION LIST
@@ -20206,8 +19046,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTARTHARMONICMEANSVARIANCES
 CODE GENERATION LIST
@@ -20241,7 +19081,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6430)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6433)
@@ -20253,7 +19093,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6434)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6449)
@@ -20265,7 +19105,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6452)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6455)
@@ -20277,7 +19117,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6456)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6476)
@@ -20289,7 +19129,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6479)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6482)
@@ -20301,7 +19141,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6483)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6498)
@@ -20313,7 +19153,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6501)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6504)
@@ -20325,7 +19165,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6505)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6522)
@@ -20337,7 +19177,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6529)
@@ -20349,7 +19189,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6545)
@@ -20361,7 +19201,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6549)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6552)
@@ -20373,20 +19213,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6553)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART3D
 DIAGNOSTIC LIST
@@ -20466,8 +19306,8 @@ DIAGNOSTIC LIST
   6976: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART3D
 FORMAT LIST
@@ -20850,8 +19690,8 @@ FORMAT LIST
   6984:                 END SUBROUTINE initNetCDFHotstart3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART3D
 INLINE LIST
@@ -21136,8 +19976,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART3D
 VECTORIZATION LIST
@@ -21358,8 +20198,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:57 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::INITNETCDFHOTSTART3D
 CODE GENERATION LIST
@@ -21368,7 +20208,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 42 [s0-s12 s15-s16 s18 s23-s42 s58-s63]
+      Scalar registers         : 43 [s0-s12 s15-s16 s18-s19 s23-s42 s58-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -21393,7 +20233,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6681)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6694)
@@ -21405,7 +20245,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6695)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6708)
@@ -21417,7 +20257,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6709)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6722)
@@ -21429,7 +20269,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6723)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6736)
@@ -21441,7 +20281,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6737)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6750)
@@ -21453,7 +20293,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6751)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6764)
@@ -21465,7 +20305,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6765)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6782)
@@ -21477,7 +20317,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6783)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6795)
@@ -21485,7 +20325,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6796)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6808)
@@ -21493,7 +20333,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6809)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6826)
@@ -21505,7 +20345,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6827)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6838)
@@ -21517,7 +20357,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6839)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6850)
@@ -21529,7 +20369,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6851)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6867)
@@ -21541,7 +20381,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6868)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6879)
@@ -21553,12 +20393,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:6880)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEPARAMETERWITHTEXT
 DIAGNOSTIC LIST
@@ -21576,8 +20416,8 @@ DIAGNOSTIC LIST
   7021: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEPARAMETERWITHTEXT
 FORMAT LIST
@@ -21629,8 +20469,8 @@ FORMAT LIST
   7023:                 END SUBROUTINE defineParameterWithText
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEPARAMETERWITHTEXT
 INLINE LIST
@@ -21654,8 +20494,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEPARAMETERWITHTEXT
 VECTORIZATION LIST
@@ -21671,8 +20511,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEPARAMETERWITHTEXT
 CODE GENERATION LIST
@@ -21681,7 +20521,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 28 [s0-s12 s15-s16 s23-s32 s61-s63]
+      Scalar registers         : 29 [s0-s12 s15-s16 s18 s23-s32 s61-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -21698,16 +20538,16 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:7012)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART
 DIAGNOSTIC LIST
@@ -21741,8 +20581,8 @@ DIAGNOSTIC LIST
   7320: inl(1222): Inlined: NETCDFIO::UPDATEMETADATA
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART
 FORMAT LIST
@@ -22061,8 +20901,8 @@ FORMAT LIST
   7328:                 END SUBROUTINE writeNetCDFHotstart
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART
 INLINE LIST
@@ -22460,8 +21300,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART
 VECTORIZATION LIST
@@ -22532,8 +21372,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:58 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART
 CODE GENERATION LIST
@@ -22559,11 +21399,11 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:7082)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7082)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7082)
@@ -22575,11 +21415,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:7083)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
@@ -22591,11 +21431,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
@@ -22607,12 +21447,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONIC
 DIAGNOSTIC LIST
@@ -22639,8 +21479,8 @@ DIAGNOSTIC LIST
   7601: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONIC
 FORMAT LIST
@@ -22935,8 +21775,8 @@ FORMAT LIST
   7609:                 END SUBROUTINE writeNetCDFHotstartHarmonic
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONIC
 INLINE LIST
@@ -23225,8 +22065,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONIC
 VECTORIZATION LIST
@@ -23238,8 +22078,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONIC
 CODE GENERATION LIST
@@ -23248,7 +22088,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 50 [s0-s12 s15-s16 s18-s21 s23-s44 s55-s63]
+      Scalar registers         : 51 [s0-s12 s15-s16 s18-s44 s55-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -23276,8 +22116,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONICMEANSVARIANCES
 DIAGNOSTIC LIST
@@ -23298,8 +22138,8 @@ DIAGNOSTIC LIST
   7751: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONICMEANSVARIANCES
 FORMAT LIST
@@ -23461,8 +22301,8 @@ FORMAT LIST
   7759:                 END SUBROUTINE writeNetCDFHotstartHarmonicMeansVariances
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONICMEANSVARIANCES
 INLINE LIST
@@ -23591,8 +22431,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONICMEANSVARIANCES
 VECTORIZATION LIST
@@ -23600,8 +22440,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTARTHARMONICMEANSVARIANCES
 CODE GENERATION LIST
@@ -23610,7 +22450,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 38 [s0-s12 s15-s16 s18-s34 s58-s63]
+      Scalar registers         : 39 [s0-s12 s15-s16 s18-s35 s58-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -23627,8 +22467,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3D
 DIAGNOSTIC LIST
@@ -23649,8 +22489,8 @@ DIAGNOSTIC LIST
   7940: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3D
 FORMAT LIST
@@ -23851,8 +22691,8 @@ FORMAT LIST
   7948:                 END SUBROUTINE writeNetCDFHotstart3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3D
 INLINE LIST
@@ -24081,8 +22921,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3D
 VECTORIZATION LIST
@@ -24090,8 +22930,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3D
 CODE GENERATION LIST
@@ -24100,7 +22940,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 36 [s0-s12 s15-s16 s18-s34 s60-s63]
+      Scalar registers         : 37 [s0-s12 s15-s16 s18-s35 s60-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -24117,8 +22957,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3DVAR
 DIAGNOSTIC LIST
@@ -24140,8 +22980,8 @@ DIAGNOSTIC LIST
   8119: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3DVAR
 FORMAT LIST
@@ -24399,8 +23239,8 @@ FORMAT LIST
   8193:           #ifdef CMPI
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3DVAR
 INLINE LIST
@@ -24537,8 +23377,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3DVAR
 VECTORIZATION LIST
@@ -24549,8 +23389,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:58 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::WRITENETCDFHOTSTART3DVAR
 CODE GENERATION LIST
@@ -24559,7 +23399,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 36 [s0-s12 s15-s16 s18 s23-s34 s56-s63]
+      Scalar registers         : 36 [s0-s12 s15-s16 s18 s23-s35 s57-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -24576,12 +23416,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:8011)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART
 DIAGNOSTIC LIST
@@ -24600,6 +23440,7 @@ DIAGNOSTIC LIST
   8189: vec( 118): Unvectorizable data type.: HS%MYFILE%FILENAME
   8189: vec( 118): Unvectorizable data type.
   8192: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
+  8194: inl(1212): Source for routine not found.: MESSENGER::MSG_FINI
   8198: inl(1212): Source for routine not found.: NETCDF::NF90_OPEN
   8199: inl(1212): Source for routine not found.: NETCDF_ERROR::CHECK_ERR
   8203: inl(1222): Inlined: NETCDFIO::GETDIMENSIONS
@@ -24628,8 +23469,8 @@ DIAGNOSTIC LIST
   8448: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART
 FORMAT LIST
@@ -24973,8 +23814,8 @@ FORMAT LIST
   8456:                 END SUBROUTINE readNetCDFHotstart
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART
 INLINE LIST
@@ -24985,6 +23826,8 @@ INLINE LIST
   -> NOINLINE: GLOBAL::LOGMESSAGE (netcdfio.F:8183)
      *** Source for routine not found.
   -> NOINLINE: GLOBAL::ALLMESSAGE (netcdfio.F:8192)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MSG_FINI (netcdfio.F:8194)
      *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_OPEN (netcdfio.F:8198)
      *** Source for routine not found.
@@ -25385,8 +24228,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART
 VECTORIZATION LIST
@@ -25588,8 +24431,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:59 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART
 CODE GENERATION LIST
@@ -25604,22 +24447,22 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 15952 bytes
-      Register spill area      :  4720 bytes
+    Total size                 : 15840 bytes
+      Register spill area      :  4664 bytes
       Parameter area           :   104 bytes
       Register save area       :   176 bytes
-      User data area           : 10944 bytes
+      User data area           : 10888 bytes
       Others                   :     8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:8182)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8182)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8182)
@@ -25631,11 +24474,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8183)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8189)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8189)
@@ -25647,7 +24490,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8189)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8828)
@@ -25745,8 +24588,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READANDMAPTOSUBDOMAINMAXMINNETCDF
 DIAGNOSTIC LIST
@@ -25778,6 +24621,7 @@ DIAGNOSTIC LIST
   8532: vec( 103): Unvectorized loop.
   8532: vec( 108): Unvectorizable loop structure.
   8538: inl(1222): Inlined: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS
+  8791: inl(1212): Source for routine not found.: MESSENGER::MSG_LBCAST
   8539: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
   8545: vec( 103): Unvectorized loop.
   8545: vec( 108): Unvectorizable loop structure.
@@ -25816,11 +24660,24 @@ DIAGNOSTIC LIST
   8661: vec( 108): Unvectorizable loop structure.
   8663: vec( 103): Unvectorized loop.
   8663: vec( 108): Unvectorizable loop structure.
+  8672: inl(1222): Inlined: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS
+  8680: inl(1222): Inlined: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS
   8693: inl(1212): Source for routine not found.: NETCDF::NF90_GET_VAR_1D_FOURBYTEINT
+  8715: inl(1222): Inlined: NETCDFIO::CREATEFULLDOMAININDEXLISTS
+  8726: inl(1212): Source for routine not found.: MESSENGER::MAPTOSUBDOMAININTMPI
+  8726: opt(3009): Copy-in/out loops have been generated.: IARRAY
+  8726: opt(3009): Copy-in/out loops have been generated.: IMAP
+  8726: opt(3009): Copy-in/out loops have been generated.: IARRAY_G
+  8726: vec( 101): Vectorized loop.
+  8739: vec( 101): Vectorized loop.
+  8741: inl(1212): Source for routine not found.: MESSENGER::MAPTOSUBDOMAINREALMPI
+  8742: vec( 101): Vectorized loop.
+  8755: vec( 101): Vectorized loop.
+  8758: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READANDMAPTOSUBDOMAINMAXMINNETCDF
 FORMAT LIST
@@ -26042,7 +24899,7 @@ FORMAT LIST
   8669:           #ifdef CMPI
   8670:                   if(mnproc.gt.1)then
   8671:                       no_early_return = .true.
-  8672:                       call communicateMapToSubdomainMaxMinNetcdfStatus(no_early_return)
+  8672:         I             call communicateMapToSubdomainMaxMinNetcdfStatus(no_early_return)
   8673:                       ldmy(1) = timestampsFound
   8674:                       call msg_lbcast(ldmy,1)
   8675:                   endif
@@ -26050,7 +24907,7 @@ FORMAT LIST
   8677:                 else
   8678:           #ifdef CMPI
   8679:                   no_early_return = .false.
-  8680:                   call communicateMapToSubdomainMaxMinNetcdfStatus(no_early_return)
+  8680:         I         call communicateMapToSubdomainMaxMinNetcdfStatus(no_early_return)
   8681:                   if(.not.no_early_return)return
   8682:           
   8683:                   call msg_lbcast(ldmy,1)
@@ -26085,7 +24942,7 @@ FORMAT LIST
   8712:                    ! if it has not already happened for the reading of the netcdf
   8713:                    ! hotstart file.
   8714:                    if (fullDomainIndexListsInitialized.eqv..false.) then
-  8715:                       call createFullDomainIndexLists()
+  8715:         I             call createFullDomainIndexLists()
   8716:                    endif
   8717:                    !
   8718:                    ! get fulldomain data and map the data to this subdomain
@@ -26096,7 +24953,7 @@ FORMAT LIST
   8723:                         iret = nf90_get_var(dat%ncid, dat%max_nodal_data_id, descript%iarray_g)
   8724:                         call check_err(iret)
   8725:                       endif
-  8726:                       call mapToSubdomainIntMPI(dat%myMesh%num_nodes,np,descript%iarray,descript%imap,descript%iarray_g)
+  8726: V======>              call mapToSubdomainIntMPI(dat%myMesh%num_nodes,np,descript%iarray,descript%imap,descript%iarray_g)
   8727:                    else
   8728:                       ! float
   8729:                       if(myproc.eq.0)then
@@ -26109,10 +24966,10 @@ FORMAT LIST
   8736:                       allocate(tmp0(1:np_g))
   8737:                       allocate(tmp1(1:np))
   8738:                       if(myproc.eq.0)then
-  8739:                         tmp0(:) = descript%array_g(:)
+  8739: V======>                tmp0(:) = descript%array_g(:)
   8740:                       endif
   8741:                       call mapToSubdomainRealMPI(np_g,np,tmp1,descript%imap,tmp0)
-  8742:                       descript%array(:) = tmp1(:)
+  8742: V======>              descript%array(:) = tmp1(:)
   8743:                    endif
   8744:                    ! time of occurrence
   8745:                    if (timestampsFound) then
@@ -26125,10 +24982,10 @@ FORMAT LIST
   8752:                       allocate(tmp0(1:np_g))
   8753:                       allocate(tmp1(1:np))
   8754:                       if(myproc.eq.0)then
-  8755:                         tmp0(:) = descript%array2_g(:)
+  8755: V======>                tmp0(:) = descript%array2_g(:)
   8756:                       endif
   8757:                       call mapToSubdomainRealMPI(np_g,np,tmp1,descript%imap,tmp0)
-  8758:                       descript%array2(:) = tmp1(:)
+  8758: V======>              descript%array2(:) = tmp1(:)
   8759:                    endif
   8760:           #endif
   8761:                 endif
@@ -26147,8 +25004,8 @@ FORMAT LIST
   8774:                 end subroutine readAndMapToSubdomainMaxMinNetCDF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READANDMAPTOSUBDOMAINMAXMINNETCDF
 INLINE LIST
@@ -26159,6 +25016,8 @@ INLINE LIST
   -> NOINLINE: GLOBAL::ALLMESSAGE (netcdfio.F:8532)
      *** Source for routine not found.
   -> INLINE: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS (netcdfio.F:8538)
+   -> NOINLINE: MESSENGER::MSG_LBCAST (netcdfio.F:8791)
+      *** Source for routine not found.
   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:8539)
      *** Source for routine not found.
   -> NOINLINE: GLOBAL::LOGMESSAGE (netcdfio.F:8546)
@@ -26166,6 +25025,8 @@ INLINE LIST
   -> NOINLINE: GLOBAL::ALLMESSAGE (netcdfio.F:8552)
      *** Source for routine not found.
   -> INLINE: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS (netcdfio.F:8558)
+   -> NOINLINE: MESSENGER::MSG_LBCAST (netcdfio.F:8791)
+      *** Source for routine not found.
   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:8559)
      *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_OPEN (netcdfio.F:8563)
@@ -26210,6 +25071,8 @@ INLINE LIST
   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:8586)
      *** Source for routine not found.
   -> INLINE: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS (netcdfio.F:8588)
+   -> NOINLINE: MESSENGER::MSG_LBCAST (netcdfio.F:8791)
+      *** Source for routine not found.
   -> NOINLINE: GLOBAL::ALLMESSAGE (netcdfio.F:8594)
      *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_INQ_VARID (netcdfio.F:8613)
@@ -26235,6 +25098,8 @@ INLINE LIST
   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:8642)
      *** Source for routine not found.
   -> INLINE: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS (netcdfio.F:8645)
+   -> NOINLINE: MESSENGER::MSG_LBCAST (netcdfio.F:8791)
+      *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_INQ_VARID (netcdfio.F:8658)
      *** Source for routine not found.
   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:8659)
@@ -26242,6 +25107,16 @@ INLINE LIST
   -> NOINLINE: NETCDF::NF90_INQ_VARID (netcdfio.F:8661)
      *** Source for routine not found.
   -> NOINLINE: GLOBAL::LOGMESSAGE (netcdfio.F:8663)
+     *** Source for routine not found.
+  -> INLINE: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS (netcdfio.F:8672)
+   -> NOINLINE: MESSENGER::MSG_LBCAST (netcdfio.F:8791)
+      *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MSG_LBCAST (netcdfio.F:8674)
+     *** Source for routine not found.
+  -> INLINE: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS (netcdfio.F:8680)
+   -> NOINLINE: MESSENGER::MSG_LBCAST (netcdfio.F:8791)
+      *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MSG_LBCAST (netcdfio.F:8683)
      *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_GET_VAR_1D_FOURBYTEINT (netcdfio.F:8693)
      *** Source for routine not found.
@@ -26255,6 +25130,29 @@ INLINE LIST
      *** Source for routine not found.
   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:8706)
      *** Source for routine not found.
+  -> INLINE: NETCDFIO::CREATEFULLDOMAININDEXLISTS (netcdfio.F:8715)
+   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:8817)
+      *** Source for routine not found.
+   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (netcdfio.F:8846)
+      *** Source for routine not found.
+  -> NOINLINE: NETCDF::NF90_GET_VAR_1D_FOURBYTEINT (netcdfio.F:8723)
+     *** Source for routine not found.
+  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:8724)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MAPTOSUBDOMAININTMPI (netcdfio.F:8726)
+     *** Source for routine not found.
+  -> NOINLINE: NETCDF::NF90_GET_VAR_1D_EIGHTBYTEREAL (netcdfio.F:8730)
+     *** Source for routine not found.
+  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:8731)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MAPTOSUBDOMAINREALMPI (netcdfio.F:8741)
+     *** Source for routine not found.
+  -> NOINLINE: NETCDF::NF90_GET_VAR_1D_EIGHTBYTEREAL (netcdfio.F:8747)
+     *** Source for routine not found.
+  -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:8748)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MAPTOSUBDOMAINREALMPI (netcdfio.F:8757)
+     *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_CLOSE (netcdfio.F:8765)
      *** Source for routine not found.
   -> NOINLINE: NETCDF_ERROR::CHECK_ERR (netcdfio.F:8766)
@@ -26263,11 +25161,14 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READANDMAPTOSUBDOMAINMAXMINNETCDF
 VECTORIZATION LIST
+
+  NOTE: The number of operation does not include the instruction
+        for register spill and restore.
 
   LOOP BEGIN: (netcdfio.F:8532)
     <Unvectorized loop.>
@@ -26459,6 +25360,66 @@ VECTORIZATION LIST
     *** Unvectorizable loop structure. (netcdfio.F:8663)
   LOOP END
 
+  LOOP BEGIN: (netcdfio.F:8828)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8828)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8828)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8838)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8838)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8838)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8739)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8739)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8739)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8742)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8742)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8742)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8726)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8726)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8726)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8726)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8726)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8726)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8726)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8726)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8726)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8726)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8726)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8726)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8755)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8755)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8755)
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8758)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (netcdfio.F:8758)
+    *** The number of VLOAD, VSTORE. :  1,  1. (netcdfio.F:8758)
+  LOOP END
+
   LOOP BEGIN: (netcdfio.F:8576)
     <Unvectorized loop.>
     *** Unvectorizable loop structure. (netcdfio.F:8576)
@@ -26470,8 +25431,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READANDMAPTOSUBDOMAINMAXMINNETCDF
 CODE GENERATION LIST
@@ -26480,24 +25441,24 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 46 [s0-s12 s15-s16 s18-s21 s23-s40 s55-s63]
-      Vector registers         :  0
-      Vector mask registers    :  0
+      Scalar registers         : 51 [s0-s12 s15-s16 s18-s41 s52-s63]
+      Vector registers         : 14 [v50-v63]
+      Vector mask registers    :  1 [vm15]
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 5488 bytes
-      Register spill area      :  232 bytes
-      Parameter area           :  104 bytes
-      Register save area       :  176 bytes
-      User data area           : 4968 bytes
-      Others                   :    8 bytes
+    Total size                 : 14848 bytes
+      Register spill area      :  4560 bytes
+      Parameter area           :   104 bytes
+      Register save area       :   176 bytes
+      User data area           : 10000 bytes
+      Others                   :     8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:8532)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8529)
@@ -26605,7 +25566,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8545)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8545)
@@ -26617,59 +25578,105 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8546)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8591)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8621)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8632)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8627)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8658)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8661)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8663)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8828)
+    *** Estimated execution cycle                       : 169
+    *** The number of VECTOR REGISTER RESTORE
+          Total                                         : 1
+            Over basic blocks                           : 1
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8838)
+    *** Estimated execution cycle                       : 169
+    *** The number of VECTOR REGISTER RESTORE
+          Total                                         : 1
+            Over basic blocks                           : 1
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8739)
+    *** Estimated execution cycle                       : 63
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8742)
+    *** Estimated execution cycle                       : 63
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8726)
+    *** Estimated execution cycle                       : 63
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8726)
+    *** Estimated execution cycle                       : 63
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8726)
+    *** Estimated execution cycle                       : 63
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8726)
+    *** Estimated execution cycle                       : 63
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8755)
+    *** Estimated execution cycle                       : 63
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:8758)
+    *** Estimated execution cycle                       : 63
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8576)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8552)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  No diagnostic message.
+  8791: inl(1212): Source for routine not found.: MESSENGER::MSG_LBCAST
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS
 FORMAT LIST
@@ -26706,17 +25713,19 @@ FORMAT LIST
   8795:                 end subroutine communicateMapToSubdomainMaxMinNetcdfStatus
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS
 INLINE LIST
 
-  No message.
+  ROOT: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS (netcdfio.F:8781)
+  -> NOINLINE: MESSENGER::MSG_LBCAST (netcdfio.F:8791)
+     *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS
 VECTORIZATION LIST
@@ -26724,8 +25733,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::COMMUNICATEMAPTOSUBDOMAINMAXMINNETCDFSTATUS
 CODE GENERATION LIST
@@ -26734,25 +25743,25 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         :  4 [s8-s11]
+      Scalar registers         : 14 [s0-s1 s8-s12 s15-s16 s23-s24 s61-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 0 bytes
-      Register spill area      : 0 bytes
-      Parameter area           : 0 bytes
-      Register save area       : 0 bytes
-      User data area           : 0 bytes
-      Others                   : 0 bytes
+    Total size                 : 240 bytes
+      Register spill area      :   0 bytes
+      Parameter area           :  16 bytes
+      Register save area       : 176 bytes
+      User data area           :  48 bytes
+      Others                   :   0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATEFULLDOMAININDEXLISTS
 DIAGNOSTIC LIST
@@ -26765,8 +25774,8 @@ DIAGNOSTIC LIST
   8846: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATEFULLDOMAININDEXLISTS
 FORMAT LIST
@@ -26826,8 +25835,8 @@ FORMAT LIST
   8848:                 end subroutine createFullDomainIndexLists
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATEFULLDOMAININDEXLISTS
 INLINE LIST
@@ -26839,8 +25848,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATEFULLDOMAININDEXLISTS
 VECTORIZATION LIST
@@ -26861,8 +25870,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::CREATEFULLDOMAININDEXLISTS
 CODE GENERATION LIST
@@ -26902,8 +25911,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAIN
 DIAGNOSTIC LIST
@@ -26919,8 +25928,8 @@ DIAGNOSTIC LIST
   8894: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAIN
 FORMAT LIST
@@ -26982,8 +25991,8 @@ FORMAT LIST
   8896:                 END SUBROUTINE mapFulldomainToSubdomain
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAIN
 INLINE LIST
@@ -27003,8 +26012,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAIN
 VECTORIZATION LIST
@@ -27027,8 +26036,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAIN
 CODE GENERATION LIST
@@ -27062,8 +26071,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINMBYNP
 DIAGNOSTIC LIST
@@ -27078,8 +26087,8 @@ DIAGNOSTIC LIST
   8938: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINMBYNP
 FORMAT LIST
@@ -27134,8 +26143,8 @@ FORMAT LIST
   8940:                 END SUBROUTINE mapFulldomainToSubdomainMByNP
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINMBYNP
 INLINE LIST
@@ -27151,8 +26160,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINMBYNP
 VECTORIZATION LIST
@@ -27184,8 +26193,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINMBYNP
 CODE GENERATION LIST
@@ -27211,7 +26220,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 49
+    *** Estimated execution cycle                       : 48
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8931)
@@ -27220,8 +26229,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 87
-    *** The number of SCALAR REGISTER TRANSFER          : 35
+    *** Estimated execution cycle                       : 84
+    *** The number of SCALAR REGISTER TRANSFER          : 36
 
     LOOP BEGIN: (netcdfio.F:8931)
       *** Estimated execution cycle                     : 160
@@ -27229,8 +26238,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINNPBYM
 DIAGNOSTIC LIST
@@ -27245,8 +26254,8 @@ DIAGNOSTIC LIST
   8978: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINNPBYM
 FORMAT LIST
@@ -27298,8 +26307,8 @@ FORMAT LIST
   8980:                 END SUBROUTINE mapFulldomainToSubdomainNPByM
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINNPBYM
 INLINE LIST
@@ -27315,8 +26324,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINNPBYM
 VECTORIZATION LIST
@@ -27350,8 +26359,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::MAPFULLDOMAINTOSUBDOMAINNPBYM
 CODE GENERATION LIST
@@ -27377,26 +26386,26 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 44
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 187
+      *** Estimated execution cycle                     : 153
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 56
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 524
+      *** Estimated execution cycle                     : 492
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::GETDIMENSIONS
 DIAGNOSTIC LIST
@@ -27411,8 +26420,8 @@ DIAGNOSTIC LIST
   9031: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::GETDIMENSIONS
 FORMAT LIST
@@ -27478,8 +26487,8 @@ FORMAT LIST
   9033:                 END SUBROUTINE getDimensions
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::GETDIMENSIONS
 INLINE LIST
@@ -27515,8 +26524,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::GETDIMENSIONS
 VECTORIZATION LIST
@@ -27524,8 +26533,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:59 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::GETDIMENSIONS
 CODE GENERATION LIST
@@ -27551,8 +26560,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:00 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONIC
 DIAGNOSTIC LIST
@@ -27560,6 +26569,7 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   9068: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
+  9089: inl(1212): Source for routine not found.: MESSENGER::MSG_FINI
   9093: inl(1212): Source for routine not found.: NETCDF::NF90_OPEN
   9094: inl(1212): Source for routine not found.: NETCDF_ERROR::CHECK_ERR
   9098: inl(1222): Inlined: NETCDFIO::GETDIMENSIONS
@@ -27587,8 +26597,8 @@ DIAGNOSTIC LIST
   9353: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONIC
 FORMAT LIST
@@ -27930,14 +26940,16 @@ FORMAT LIST
   9361:                 END SUBROUTINE readNetCDFHotstartHarmonic
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:00 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONIC
 INLINE LIST
 
   ROOT: NETCDFIO::READNETCDFHOTSTARTHARMONIC (netcdfio.F:9042)
   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:9068)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MSG_FINI (netcdfio.F:9089)
      *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_OPEN (netcdfio.F:9093)
      *** Source for routine not found.
@@ -28250,8 +27262,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:00 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONIC
 VECTORIZATION LIST
@@ -28416,8 +27428,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:00 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONIC
 CODE GENERATION LIST
@@ -28432,11 +27444,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 16384 bytes
-      Register spill area      :  4576 bytes
+    Total size                 : 16416 bytes
+      Register spill area      :  4592 bytes
       Parameter area           :   104 bytes
       Register save area       :   176 bytes
-      User data area           : 11520 bytes
+      User data area           : 11536 bytes
       Others                   :     8 bytes
 
     Note: Total size of Routine stack does not include
@@ -28457,7 +27469,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 49
+    *** Estimated execution cycle                       : 48
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8931)
@@ -28466,8 +27478,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 87
-    *** The number of SCALAR REGISTER TRANSFER          : 35
+    *** Estimated execution cycle                       : 84
+    *** The number of SCALAR REGISTER TRANSFER          : 36
 
     LOOP BEGIN: (netcdfio.F:8931)
       *** Estimated execution cycle                     : 160
@@ -28475,7 +27487,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 49
+    *** Estimated execution cycle                       : 48
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8931)
@@ -28484,8 +27496,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 87
-    *** The number of SCALAR REGISTER TRANSFER          : 35
+    *** Estimated execution cycle                       : 84
+    *** The number of SCALAR REGISTER TRANSFER          : 36
 
     LOOP BEGIN: (netcdfio.F:8931)
       *** Estimated execution cycle                     : 160
@@ -28493,7 +27505,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 49
+    *** Estimated execution cycle                       : 48
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8931)
@@ -28502,8 +27514,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 87
-    *** The number of SCALAR REGISTER TRANSFER          : 35
+    *** Estimated execution cycle                       : 84
+    *** The number of SCALAR REGISTER TRANSFER          : 36
 
     LOOP BEGIN: (netcdfio.F:8931)
       *** Estimated execution cycle                     : 160
@@ -28511,7 +27523,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 49
+    *** Estimated execution cycle                       : 48
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8931)
@@ -28520,8 +27532,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 87
-    *** The number of SCALAR REGISTER TRANSFER          : 35
+    *** Estimated execution cycle                       : 84
+    *** The number of SCALAR REGISTER TRANSFER          : 36
 
     LOOP BEGIN: (netcdfio.F:8931)
       *** Estimated execution cycle                     : 160
@@ -28529,7 +27541,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 49
+    *** Estimated execution cycle                       : 48
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8931)
@@ -28538,8 +27550,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 87
-    *** The number of SCALAR REGISTER TRANSFER          : 35
+    *** Estimated execution cycle                       : 84
+    *** The number of SCALAR REGISTER TRANSFER          : 36
 
     LOOP BEGIN: (netcdfio.F:8931)
       *** Estimated execution cycle                     : 160
@@ -28547,7 +27559,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 49
+    *** Estimated execution cycle                       : 48
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8931)
@@ -28556,8 +27568,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8930)
-    *** Estimated execution cycle                       : 87
-    *** The number of SCALAR REGISTER TRANSFER          : 35
+    *** Estimated execution cycle                       : 84
+    *** The number of SCALAR REGISTER TRANSFER          : 36
 
     LOOP BEGIN: (netcdfio.F:8931)
       *** Estimated execution cycle                     : 160
@@ -28576,8 +27588,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:00 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONICMEANSVARIANCES
 DIAGNOSTIC LIST
@@ -28585,6 +27597,7 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   9391: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
+  9412: inl(1212): Source for routine not found.: MESSENGER::MSG_FINI
   9416: inl(1212): Source for routine not found.: NETCDF::NF90_OPEN
   9417: inl(1212): Source for routine not found.: NETCDF_ERROR::CHECK_ERR
   9421: inl(1222): Inlined: NETCDFIO::GETDIMENSIONS
@@ -28605,8 +27618,8 @@ DIAGNOSTIC LIST
   9491: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONICMEANSVARIANCES
 FORMAT LIST
@@ -28756,14 +27769,16 @@ FORMAT LIST
   9499:                 END SUBROUTINE readNetCDFHotstartHarmonicMeansVariances
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:00 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONICMEANSVARIANCES
 INLINE LIST
 
   ROOT: NETCDFIO::READNETCDFHOTSTARTHARMONICMEANSVARIANCES (netcdfio.F:9372)
   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:9391)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MSG_FINI (netcdfio.F:9412)
      *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_OPEN (netcdfio.F:9416)
      *** Source for routine not found.
@@ -28940,8 +27955,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:00 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONICMEANSVARIANCES
 VECTORIZATION LIST
@@ -29034,8 +28049,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:00 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:00 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTARTHARMONICMEANSVARIANCES
 CODE GENERATION LIST
@@ -29109,8 +28124,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:01 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART3D
 DIAGNOSTIC LIST
@@ -29118,6 +28133,7 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   9533: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
+  9554: inl(1212): Source for routine not found.: MESSENGER::MSG_FINI
   9558: inl(1212): Source for routine not found.: NETCDF::NF90_OPEN
   9559: inl(1212): Source for routine not found.: NETCDF_ERROR::CHECK_ERR
   9563: inl(1222): Inlined: NETCDFIO::GETDIMENSIONS
@@ -29150,8 +28166,8 @@ DIAGNOSTIC LIST
   9794: inl(1212): Source for routine not found.: NETCDF::NF90_CLOSE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART3D
 FORMAT LIST
@@ -29468,14 +28484,16 @@ FORMAT LIST
   9802:                 END SUBROUTINE readNetCDFHotstart3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:01 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART3D
 INLINE LIST
 
   ROOT: NETCDFIO::READNETCDFHOTSTART3D (netcdfio.F:9508)
   -> NOINLINE: GLOBAL::SETMESSAGESOURCE (netcdfio.F:9533)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MSG_FINI (netcdfio.F:9554)
      *** Source for routine not found.
   -> NOINLINE: NETCDF::NF90_OPEN (netcdfio.F:9558)
      *** Source for routine not found.
@@ -29905,8 +28923,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:01 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART3D
 VECTORIZATION LIST
@@ -30236,8 +29254,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:01 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READNETCDFHOTSTART3D
 CODE GENERATION LIST
@@ -30252,11 +29270,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 8016 bytes
-      Register spill area      :  720 bytes
+    Total size                 : 7840 bytes
+      Register spill area      :  632 bytes
       Parameter area           :  104 bytes
       Register save area       :  176 bytes
-      User data area           : 7008 bytes
+      User data area           : 6920 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
@@ -30319,110 +29337,110 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 44
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 187
+      *** Estimated execution cycle                     : 153
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 458
+      *** Estimated execution cycle                     : 424
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 44
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 187
+      *** Estimated execution cycle                     : 153
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 458
+      *** Estimated execution cycle                     : 424
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 44
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 187
+      *** Estimated execution cycle                     : 153
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 458
+      *** Estimated execution cycle                     : 424
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 44
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 187
+      *** Estimated execution cycle                     : 153
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 458
+      *** Estimated execution cycle                     : 424
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 44
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 187
+      *** Estimated execution cycle                     : 153
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 458
+      *** Estimated execution cycle                     : 424
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 44
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 187
+      *** Estimated execution cycle                     : 153
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 458
+      *** Estimated execution cycle                     : 424
     LOOP END
   LOOP END
 
@@ -30445,44 +29463,44 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 44
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 187
+      *** Estimated execution cycle                     : 153
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 458
+      *** Estimated execution cycle                     : 424
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 44
+    *** Estimated execution cycle                       : 43
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 187
+      *** Estimated execution cycle                     : 153
     LOOP END
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:8972)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (netcdfio.F:8972)
-      *** Estimated execution cycle                     : 458
+      *** Estimated execution cycle                     : 424
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMESHVARIABLES
 DIAGNOSTIC LIST
@@ -30551,8 +29569,8 @@ DIAGNOSTIC LIST
  10206: vec( 108): Unvectorizable loop structure.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMESHVARIABLES
 FORMAT LIST
@@ -31009,8 +30027,8 @@ FORMAT LIST
  10244:                 END SUBROUTINE defineMeshVariables
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMESHVARIABLES
 INLINE LIST
@@ -31379,8 +30397,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMESHVARIABLES
 VECTORIZATION LIST
@@ -31581,8 +30599,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMESHVARIABLES
 CODE GENERATION LIST
@@ -31591,7 +30609,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 39 [s0-s12 s15-s16 s18-s19 s23-s38 s58-s63]
+      Scalar registers         : 40 [s0-s12 s15-s16 s18-s20 s23-s38 s58-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -31616,7 +30634,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10103)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10110)
@@ -31628,7 +30646,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10111)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10118)
@@ -31640,7 +30658,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10120)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10129)
@@ -31652,7 +30670,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10130)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10137)
@@ -31664,7 +30682,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10139)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10146)
@@ -31676,7 +30694,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10147)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10155)
@@ -31688,7 +30706,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10157)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10162)
@@ -31700,7 +30718,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10164)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10172)
@@ -31712,7 +30730,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10173)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10180)
@@ -31724,7 +30742,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10182)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10190)
@@ -31736,7 +30754,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10192)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10197)
@@ -31748,7 +30766,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10199)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10204)
@@ -31760,12 +30778,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10206)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINECOORDINATEATTRIBUTES
 DIAGNOSTIC LIST
@@ -31780,8 +30798,8 @@ DIAGNOSTIC LIST
  10306: inl(1222): Inlined: NETCDFIO::PUTUNITSATTRIBUTE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINECOORDINATEATTRIBUTES
 FORMAT LIST
@@ -31865,8 +30883,8 @@ FORMAT LIST
  10317:                 END SUBROUTINE defineCoordinateAttributes
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINECOORDINATEATTRIBUTES
 INLINE LIST
@@ -31956,8 +30974,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINECOORDINATEATTRIBUTES
 VECTORIZATION LIST
@@ -31965,8 +30983,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:01 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINECOORDINATEATTRIBUTES
 CODE GENERATION LIST
@@ -31992,8 +31010,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTMESHVARIABLES
 DIAGNOSTIC LIST
@@ -32008,8 +31026,8 @@ DIAGNOSTIC LIST
  10411: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTMESHVARIABLES
 FORMAT LIST
@@ -32119,8 +31137,8 @@ FORMAT LIST
  10413:                 END SUBROUTINE putMeshVariables
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTMESHVARIABLES
 INLINE LIST
@@ -32204,8 +31222,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTMESHVARIABLES
 VECTORIZATION LIST
@@ -32213,8 +31231,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTMESHVARIABLES
 CODE GENERATION LIST
@@ -32240,8 +31258,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINETIMEATTRIBUTES
 DIAGNOSTIC LIST
@@ -32260,8 +31278,8 @@ DIAGNOSTIC LIST
  10441: vec( 118): Unvectorizable data type.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINETIMEATTRIBUTES
 FORMAT LIST
@@ -32307,8 +31325,8 @@ FORMAT LIST
  10445:                 END SUBROUTINE defineTimeAttributes
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINETIMEATTRIBUTES
 INLINE LIST
@@ -32332,8 +31350,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINETIMEATTRIBUTES
 VECTORIZATION LIST
@@ -32394,8 +31412,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINETIMEATTRIBUTES
 CODE GENERATION LIST
@@ -32404,7 +31422,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 34 [s0-s5 s8-s12 s15-s16 s18-s20 s23-s34 s58-s63]
+      Scalar registers         : 34 [s0-s5 s8-s12 s15-s16 s18-s20 s23-s33 s57-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -32421,11 +31439,11 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:10437)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10437)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10437)
@@ -32445,15 +31463,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10438)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10441)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10441)
     *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10441)
-    *** Estimated execution cycle                       : 8
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10441)
@@ -32465,8 +31483,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMETADATA
 DIAGNOSTIC LIST
@@ -32537,8 +31555,8 @@ DIAGNOSTIC LIST
  10675: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMETADATA
 FORMAT LIST
@@ -32784,8 +31802,8 @@ FORMAT LIST
  10677:                 END SUBROUTINE defineMetaData
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMETADATA
 INLINE LIST
@@ -33073,8 +32091,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMETADATA
 VECTORIZATION LIST
@@ -33350,8 +32368,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::DEFINEMETADATA
 CODE GENERATION LIST
@@ -33360,7 +32378,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 32 [s0-s12 s15-s16 s23-s32 s57-s63]
+      Scalar registers         : 33 [s0-s12 s15-s16 s18 s23-s32 s57-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -33377,7 +32395,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:10506)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10506)
@@ -33389,11 +32407,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10506)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10509)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10509)
@@ -33405,43 +32423,43 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10509)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10512)
-    *** Estimated execution cycle                       : 8
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10512)
     *** Estimated execution cycle                       : 6
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10512)
-    *** Estimated execution cycle                       : 5
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10512)
     *** Estimated execution cycle                       : 7
   LOOP END
 
-  LOOP BEGIN: (netcdfio.F:10515)
-    *** Estimated execution cycle                       : 8
+  LOOP BEGIN: (netcdfio.F:10512)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
-  LOOP BEGIN: (netcdfio.F:10515)
+  LOOP BEGIN: (netcdfio.F:10512)
+    *** Estimated execution cycle                       : 5
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10512)
     *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10515)
+    *** Estimated execution cycle                       : 7
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10515)
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10515)
     *** Estimated execution cycle                       : 5
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10515)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10518)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10518)
@@ -33453,43 +32471,43 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10518)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10521)
-    *** Estimated execution cycle                       : 8
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10521)
     *** Estimated execution cycle                       : 6
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10521)
-    *** Estimated execution cycle                       : 5
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10521)
     *** Estimated execution cycle                       : 7
   LOOP END
 
-  LOOP BEGIN: (netcdfio.F:10524)
-    *** Estimated execution cycle                       : 8
+  LOOP BEGIN: (netcdfio.F:10521)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
-  LOOP BEGIN: (netcdfio.F:10524)
+  LOOP BEGIN: (netcdfio.F:10521)
+    *** Estimated execution cycle                       : 5
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10521)
     *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10524)
+    *** Estimated execution cycle                       : 7
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10524)
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10524)
     *** Estimated execution cycle                       : 5
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10524)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10527)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10527)
@@ -33501,27 +32519,27 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10527)
-    *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10530)
-    *** Estimated execution cycle                       : 8
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10530)
     *** Estimated execution cycle                       : 6
-  LOOP END
-
-  LOOP BEGIN: (netcdfio.F:10530)
-    *** Estimated execution cycle                       : 5
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10530)
     *** Estimated execution cycle                       : 7
   LOOP END
 
+  LOOP BEGIN: (netcdfio.F:10530)
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10530)
+    *** Estimated execution cycle                       : 5
+  LOOP END
+
+  LOOP BEGIN: (netcdfio.F:10530)
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
   LOOP BEGIN: (netcdfio.F:10533)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10533)
@@ -33533,11 +32551,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10533)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10536)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10536)
@@ -33549,11 +32567,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10536)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10539)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10539)
@@ -33565,11 +32583,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10539)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10545)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10545)
@@ -33581,20 +32599,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10545)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10553)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10556)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::METALENGTH
 DIAGNOSTIC LIST
@@ -33607,8 +32625,8 @@ DIAGNOSTIC LIST
  10697: vec( 108): Unvectorizable loop structure.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::METALENGTH
 FORMAT LIST
@@ -33643,8 +32661,8 @@ FORMAT LIST
  10700:                 end function metalength
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::METALENGTH
 INLINE LIST
@@ -33652,8 +32670,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::METALENGTH
 VECTORIZATION LIST
@@ -33669,8 +32687,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::METALENGTH
 CODE GENERATION LIST
@@ -33679,7 +32697,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 17 [s0-s3 s8-s12 s15-s16 s23-s24 s33 s61-s63]
+      Scalar registers         : 18 [s0-s3 s8-s12 s15-s16 s18 s23-s24 s33 s61-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -33696,16 +32714,16 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:10697)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10694)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::UPDATEMETADATA
 DIAGNOSTIC LIST
@@ -33732,8 +32750,8 @@ DIAGNOSTIC LIST
  10778: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::UPDATEMETADATA
 FORMAT LIST
@@ -33827,8 +32845,8 @@ FORMAT LIST
  10780:                 END SUBROUTINE updateMetaData
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::UPDATEMETADATA
 INLINE LIST
@@ -33912,8 +32930,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::UPDATEMETADATA
 VECTORIZATION LIST
@@ -33959,8 +32977,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::UPDATEMETADATA
 CODE GENERATION LIST
@@ -33969,7 +32987,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 29 [s0-s12 s15-s16 s23-s30 s58-s63]
+      Scalar registers         : 31 [s0-s12 s15-s16 s18 s23-s30 s57-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -33986,7 +33004,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (netcdfio.F:10736)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
@@ -33998,11 +33016,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10736)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
@@ -34014,12 +33032,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:10738)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READMETADATA
 DIAGNOSTIC LIST
@@ -34038,8 +33056,8 @@ DIAGNOSTIC LIST
  10826: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READMETADATA
 FORMAT LIST
@@ -34102,8 +33120,8 @@ FORMAT LIST
  10829:                 END SUBROUTINE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READMETADATA
 INLINE LIST
@@ -34191,8 +33209,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READMETADATA
 VECTORIZATION LIST
@@ -34200,8 +33218,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::READMETADATA
 CODE GENERATION LIST
@@ -34227,8 +33245,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTUNITSATTRIBUTE
 DIAGNOSTIC LIST
@@ -34241,8 +33259,8 @@ DIAGNOSTIC LIST
  10862: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTUNITSATTRIBUTE
 FORMAT LIST
@@ -34292,8 +33310,8 @@ FORMAT LIST
  10865:                 end subroutine putUnitsAttribute
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTUNITSATTRIBUTE
 INLINE LIST
@@ -34311,8 +33329,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTUNITSATTRIBUTE
 VECTORIZATION LIST
@@ -34320,8 +33338,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::PUTUNITSATTRIBUTE
 CODE GENERATION LIST
@@ -34347,8 +33365,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETADCIRCPARAMETERS
 DIAGNOSTIC LIST
@@ -34385,8 +33403,8 @@ DIAGNOSTIC LIST
  11177: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETADCIRCPARAMETERS
 FORMAT LIST
@@ -34703,8 +33721,8 @@ FORMAT LIST
  11179:                 END SUBROUTINE setADCIRCParameters
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETADCIRCPARAMETERS
 INLINE LIST
@@ -34716,8 +33734,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETADCIRCPARAMETERS
 VECTORIZATION LIST
@@ -34895,8 +33913,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:02 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::SETADCIRCPARAMETERS
 CODE GENERATION LIST
@@ -34935,11 +33953,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:11060)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 58
     *** The number of SCALAR REGISTER TRANSFER          : 17
 
     LOOP BEGIN: (netcdfio.F:11060)
-      *** Estimated execution cycle                     : 160
+      *** Estimated execution cycle                     : 192
     LOOP END
   LOOP END
 
@@ -34957,11 +33975,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:11064)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 58
     *** The number of SCALAR REGISTER TRANSFER          : 17
 
     LOOP BEGIN: (netcdfio.F:11064)
-      *** Estimated execution cycle                     : 160
+      *** Estimated execution cycle                     : 192
     LOOP END
   LOOP END
 
@@ -35007,11 +34025,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (netcdfio.F:11105)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 58
     *** The number of SCALAR REGISTER TRANSFER          : 17
 
     LOOP BEGIN: (netcdfio.F:11105)
-      *** Estimated execution cycle                     : 160
+      *** Estimated execution cycle                     : 192
     LOOP END
   LOOP END
 
@@ -35028,8 +34046,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::FREENETCDFCOORD
 DIAGNOSTIC LIST
@@ -35040,8 +34058,8 @@ DIAGNOSTIC LIST
  11213: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:03 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::FREENETCDFCOORD
 FORMAT LIST
@@ -35091,8 +34109,8 @@ FORMAT LIST
  11215:                 END SUBROUTINE freeNetCDFCoord
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::FREENETCDFCOORD
 INLINE LIST
@@ -35104,8 +34122,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::FREENETCDFCOORD
 VECTORIZATION LIST
@@ -35113,8 +34131,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:02 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/netcdfio.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:03 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/netcdfio.F
 
 PROCEDURE NAME: NETCDFIO::FREENETCDFCOORD
 CODE GENERATION LIST

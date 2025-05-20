@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
-  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/wetdry.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/wetdry.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:36 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::INITIALIZEWETTINGANDDRYING
 DIAGNOSTIC LIST
@@ -185,8 +185,8 @@ DIAGNOSTIC LIST
    125: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::INITIALIZEWETTINGANDDRYING
 FORMAT LIST
@@ -225,8 +225,8 @@ FORMAT LIST
    130:                 end subroutine initializeWettingAndDrying
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:36 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::INITIALIZEWETTINGANDDRYING
 INLINE LIST
@@ -234,8 +234,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:36 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::INITIALIZEWETTINGANDDRYING
 VECTORIZATION LIST
@@ -262,8 +262,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:36 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::INITIALIZEWETTINGANDDRYING
 CODE GENERATION LIST
@@ -301,8 +301,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEWETTINGANDDRYING
 DIAGNOSTIC LIST
@@ -315,33 +315,13 @@ DIAGNOSTIC LIST
    214: vec( 101): Vectorized loop.
    219: inl(1222): Inlined: WETDRY::APPLYSUBGRIDBARRIER
    226: opt(1135): Outer loop conditionally executes inner loop.
-   226: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    226: vec( 103): Unvectorized loop.
    226: vec( 113): Overhead of loop division is too large.
-   229: opt(3014): Moved reference within a conditional branch.
-   231: opt(3014): Moved reference within a conditional branch.
-   237: opt(3014): Moved reference within a conditional branch.
-   238: opt(3014): Moved reference within a conditional branch.
-   239: opt(3014): Moved reference within a conditional branch.
    241: vec( 101): Vectorized loop.
-   248: opt(3014): Moved reference within a conditional branch.
-   250: opt(3014): Moved reference within a conditional branch.
-   254: opt(3014): Moved reference within a conditional branch.
-   263: opt(3014): Moved reference within a conditional branch.
-   266: opt(3014): Moved reference within a conditional branch.
-   267: opt(3014): Moved reference within a conditional branch.
-   270: opt(3014): Moved reference within a conditional branch.
-   271: opt(3014): Moved reference within a conditional branch.
-   272: opt(3014): Moved reference within a conditional branch.
-   288: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    288: vec( 101): Vectorized loop.
    288: vec( 103): Unvectorized loop.
    288: vec( 113): Overhead of loop division is too large.
-   294: opt(3014): Moved reference within a conditional branch.
    294: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ETA2
-   295: opt(3014): Moved reference within a conditional branch.
-   297: opt(3014): Moved reference within a conditional branch.
-   298: opt(3014): Moved reference within a conditional branch.
    315: vec( 103): Unvectorized loop.
    315: vec( 110): Vectorization obstructive procedure reference.: MESH::ONIBTYP64FLOODPLAIN
    326: inl(1212): Source for routine not found.: MESH::ONIBTYP64FLOODPLAIN
@@ -371,117 +351,65 @@ DIAGNOSTIC LIST
    790: vec( 101): Vectorized loop.
    791: vec( 101): Vectorized loop.
    792: vec( 101): Vectorized loop.
-   804: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    804: vec( 102): Partially vectorized loop.
-   810: opt(3014): Moved reference within a conditional branch.
-   815: opt(3014): Moved reference within a conditional branch.
    826: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: NNODECODE
-   831: opt(3014): Moved reference within a conditional branch.
    834: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: FRIC
-   842: opt(3014): Moved reference within a conditional branch.
    842: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: TK
    847: opt(1418): Constant-length loop is expanded.
-   847: opt(3014): Moved reference within a conditional branch.
    847: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: TKM
-   850: opt(3014): Moved reference within a conditional branch.
-   852: opt(3014): Moved reference within a conditional branch.
    852: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
-   853: opt(3014): Moved reference within a conditional branch.
    853: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
    854: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
    855: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
    859: opt(1019): Feedback of scalar value from one loop pass to another.: KSLIP
    859: vec( 121): Unvectorizable dependency.
-   862: opt(3014): Moved reference within a conditional branch.
    871: vec( 121): Unvectorizable dependency.
-   874: opt(3014): Moved reference within a conditional branch.
    874: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
-   875: opt(3014): Moved reference within a conditional branch.
    875: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
    876: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
    877: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
-   883: opt(3014): Moved reference within a conditional branch.
    884: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: NNODECODE
-   889: opt(3014): Moved reference within a conditional branch.
    892: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: FRIC
-   900: opt(3014): Moved reference within a conditional branch.
    900: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: TK
    905: opt(1418): Constant-length loop is expanded.
-   905: opt(3014): Moved reference within a conditional branch.
    905: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: TKM
-   908: opt(3014): Moved reference within a conditional branch.
-   910: opt(3014): Moved reference within a conditional branch.
    910: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
-   911: opt(3014): Moved reference within a conditional branch.
    911: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
    912: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
    913: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
    917: vec( 121): Unvectorizable dependency.
-   920: opt(3014): Moved reference within a conditional branch.
    929: vec( 121): Unvectorizable dependency.
-   932: opt(3014): Moved reference within a conditional branch.
    932: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
-   933: opt(3014): Moved reference within a conditional branch.
    933: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
    934: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
    935: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
-   941: opt(3014): Moved reference within a conditional branch.
    942: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: NNODECODE
-   947: opt(3014): Moved reference within a conditional branch.
    950: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: FRIC
-   958: opt(3014): Moved reference within a conditional branch.
    963: opt(1418): Constant-length loop is expanded.
-   963: opt(3014): Moved reference within a conditional branch.
    963: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: TKM
-   966: opt(3014): Moved reference within a conditional branch.
-   968: opt(3014): Moved reference within a conditional branch.
    968: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
-   969: opt(3014): Moved reference within a conditional branch.
    969: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
    975: vec( 121): Unvectorizable dependency.
-   978: opt(3014): Moved reference within a conditional branch.
    987: vec( 121): Unvectorizable dependency.
-   990: opt(3014): Moved reference within a conditional branch.
    990: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
-   991: opt(3014): Moved reference within a conditional branch.
    991: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
    992: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSX1
    993: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: BSY1
   1001: opt(1062): Too many data dependency problems.
   1023: vec( 101): Vectorized loop.
-  1047: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1047: vec( 101): Vectorized loop.
-  1053: opt(3014): Moved reference within a conditional branch.
   1056: opt(1394): Moved invariant if outside of an inner loop.
-  1057: opt(3014): Moved reference within a conditional branch.
-  1061: opt(3014): Moved reference within a conditional branch.
   1078: opt(1394): Moved invariant if outside of an inner loop.
-  1081: opt(3014): Moved reference within a conditional branch.
-  1084: opt(3014): Moved reference within a conditional branch.
-  1087: opt(3014): Moved reference within a conditional branch.
-  1091: opt(3014): Moved reference within a conditional branch.
-  1094: opt(3014): Moved reference within a conditional branch.
-  1097: opt(3014): Moved reference within a conditional branch.
   1243: opt(1135): Outer loop conditionally executes inner loop.
-  1243: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1243: vec( 103): Unvectorized loop.
   1243: vec( 113): Overhead of loop division is too large.
-  1246: opt(3014): Moved reference within a conditional branch.
-  1249: opt(3014): Moved reference within a conditional branch.
   1249: vec( 101): Vectorized loop.
-  1258: opt(3014): Moved reference within a conditional branch.
   1270: opt(1135): Outer loop conditionally executes inner loop.
-  1270: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1270: vec( 102): Partially vectorized loop.
-  1274: opt(3014): Moved reference within a conditional branch.
   1276: vec( 101): Vectorized loop.
   1278: vec( 126): Idiom detected.: SEARCH
-  1279: opt(3014): Moved reference within a conditional branch.
-  1284: opt(3014): Moved reference within a conditional branch.
-  1285: opt(3014): Moved reference within a conditional branch.
   1285: vec( 101): Vectorized loop.
   1298: vec( 101): Vectorized loop.
-  1302: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1302: vec( 101): Vectorized loop.
   1302: vec( 102): Partially vectorized loop.
   1312: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: MJU
@@ -493,15 +421,13 @@ DIAGNOSTIC LIST
   1323: vec( 101): Vectorized loop.
   1350: vec( 101): Vectorized loop.
   1365: vec( 101): Vectorized loop.
-  1376: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1376: vec( 101): Vectorized loop.
-  1378: opt(3014): Moved reference within a conditional branch.
   1387: inl(1222): Inlined: WETDRY::COMPUTEALPHA
   1396: inl(1212): Source for routine not found.: MESSENGER::WETDRYSUM
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEWETTINGANDDRYING
 FORMAT LIST
@@ -1791,8 +1717,8 @@ FORMAT LIST
   1407:                 end subroutine computeWettingAndDrying
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEWETTINGANDDRYING
 INLINE LIST
@@ -1834,8 +1760,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEWETTINGANDDRYING
 VECTORIZATION LIST
@@ -2199,8 +2125,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEWETTINGANDDRYING
 CODE GENERATION LIST
@@ -2250,7 +2176,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (wetdry.F:226)
-    *** Estimated execution cycle                       : 170
+    *** Estimated execution cycle                       : 174
     *** The number of SCALAR REGISTER TRANSFER          : 41
 
     LOOP BEGIN: (wetdry.F:241)
@@ -2259,7 +2185,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (wetdry.F:288)
-    *** Estimated execution cycle                       : 132
+    *** Estimated execution cycle                       : 133
     *** The number of SCALAR REGISTER TRANSFER          : 46
 
     LOOP BEGIN: (wetdry.F:288)
@@ -2267,7 +2193,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (wetdry.F:288)
-      *** Estimated execution cycle                     : 32
+      *** Estimated execution cycle                     : 31
     LOOP END
 
     LOOP BEGIN: (wetdry.F:288)
@@ -2357,28 +2283,28 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (wetdry.F:1243)
-    *** Estimated execution cycle                       : 67
+    *** Estimated execution cycle                       : 66
     *** The number of SCALAR REGISTER TRANSFER          : 17
 
     LOOP BEGIN: (wetdry.F:1249)
-      *** Estimated execution cycle                     : 876
+      *** Estimated execution cycle                     : 748
     LOOP END
   LOOP END
 
   LOOP BEGIN: (wetdry.F:1270)
-    *** Estimated execution cycle                       : 61
+    *** Estimated execution cycle                       : 62
   LOOP END
 
   LOOP BEGIN: (wetdry.F:1270)
     *** Estimated execution cycle                       : 187
-    *** The number of SCALAR REGISTER TRANSFER          : 31
+    *** The number of SCALAR REGISTER TRANSFER          : 34
 
     LOOP BEGIN: (wetdry.F:1276)
-      *** Estimated execution cycle                     : 331
+      *** Estimated execution cycle                     : 334
     LOOP END
 
     LOOP BEGIN: (wetdry.F:1285)
-      *** Estimated execution cycle                     : 179
+      *** Estimated execution cycle                     : 147
     LOOP END
   LOOP END
 
@@ -2387,7 +2313,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (wetdry.F:1302)
-    *** Estimated execution cycle                       : 225
+    *** Estimated execution cycle                       : 227
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 3
             Across calls                                : 2
@@ -2403,7 +2329,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (wetdry.F:1302)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (wetdry.F:1302)
@@ -2411,7 +2337,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (wetdry.F:1302)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (wetdry.F:1302)
@@ -2440,7 +2366,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (wetdry.F:1515)
-    *** Estimated execution cycle                       : 6489
+    *** Estimated execution cycle                       : 6390
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 6
             Not enough registers                        : 6
@@ -2457,7 +2383,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (wetdry.F:1515)
-    *** Estimated execution cycle                       : 6660
+    *** Estimated execution cycle                       : 6561
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 6
             Not enough registers                        : 6
@@ -2474,8 +2400,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::APPLYSUBGRIDBARRIER
 DIAGNOSTIC LIST
@@ -2483,35 +2409,25 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   1441: vec( 101): Vectorized loop.
-  1443: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1443: vec( 102): Partially vectorized loop.
-  1454: opt(3014): Moved reference within a conditional branch.
-  1458: opt(3014): Moved reference within a conditional branch.
-  1462: opt(3014): Moved reference within a conditional branch.
-  1468: opt(3014): Moved reference within a conditional branch.
   1468: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: DP
   1469: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: DP
   1470: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: DP
-  1471: opt(3014): Moved reference within a conditional branch.
   1471: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: SUBGRIDBARRIEROVERTOPPING
   1472: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: SUBGRIDBARRIEROVERTOPPING
-  1475: opt(3014): Moved reference within a conditional branch.
   1475: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: DP
   1476: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: DP
   1477: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: DP
-  1478: opt(3014): Moved reference within a conditional branch.
-  1479: opt(3014): Moved reference within a conditional branch.
   1479: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: SUBGRIDBARRIEROVERTOPPING
   1480: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: SUBGRIDBARRIEROVERTOPPING
   1481: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: SUBGRIDBARRIEROVERTOPPING
-  1484: opt(3014): Moved reference within a conditional branch.
   1484: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: SUBGRIDBARRIEROVERTOPPING
   1485: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: SUBGRIDBARRIEROVERTOPPING
   1486: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: SUBGRIDBARRIEROVERTOPPING
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::APPLYSUBGRIDBARRIER
 FORMAT LIST
@@ -2601,8 +2517,8 @@ FORMAT LIST
   1491:                 end subroutine applySubgridBarrier
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::APPLYSUBGRIDBARRIER
 INLINE LIST
@@ -2610,8 +2526,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::APPLYSUBGRIDBARRIER
 VECTORIZATION LIST
@@ -2650,8 +2566,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::APPLYSUBGRIDBARRIER
 CODE GENERATION LIST
@@ -2689,8 +2605,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEALPHA
 DIAGNOSTIC LIST
@@ -2698,36 +2614,21 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   1513: vec( 101): Vectorized loop.
-  1515: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1515: vec( 101): Vectorized loop.
   1525: opt(1394): Moved invariant if outside of an inner loop.
-  1526: opt(3014): Moved reference within a conditional branch.
-  1530: opt(3014): Moved reference within a conditional branch.
-  1536: opt(3014): Moved reference within a conditional branch.
-  1537: opt(3014): Moved reference within a conditional branch.
-  1538: opt(3014): Moved reference within a conditional branch.
   1539: vec( 128): Fused multiply-add operation applied.
   1540: vec( 128): Fused multiply-add operation applied.
-  1542: opt(3014): Moved reference within a conditional branch.
-  1545: opt(3014): Moved reference within a conditional branch.
-  1549: opt(3014): Moved reference within a conditional branch.
-  1553: opt(3014): Moved reference within a conditional branch.
   1557: vec( 128): Fused multiply-add operation applied.
   1558: vec( 128): Fused multiply-add operation applied.
   1560: vec( 128): Fused multiply-add operation applied.
   1561: vec( 128): Fused multiply-add operation applied.
-  1562: opt(3014): Moved reference within a conditional branch.
   1562: vec( 128): Fused multiply-add operation applied.
-  1564: opt(3014): Moved reference within a conditional branch.
   1564: vec( 128): Fused multiply-add operation applied.
   1567: vec( 128): Fused multiply-add operation applied.
-  1568: opt(3014): Moved reference within a conditional branch.
-  1571: opt(3014): Moved reference within a conditional branch.
-  1572: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEALPHA
 FORMAT LIST
@@ -2831,8 +2732,8 @@ FORMAT LIST
   1579:                 end subroutine computeAlpha
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEALPHA
 INLINE LIST
@@ -2840,8 +2741,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEALPHA
 VECTORIZATION LIST
@@ -2887,8 +2788,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/wetdry.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:38 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/wetdry.F
 
 PROCEDURE NAME: WETDRY::COMPUTEALPHA
 CODE GENERATION LIST
@@ -2918,7 +2819,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (wetdry.F:1515)
-    *** Estimated execution cycle                       : 6489
+    *** Estimated execution cycle                       : 6390
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 6
             Not enough registers                        : 6
@@ -2935,7 +2836,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (wetdry.F:1515)
-    *** Estimated execution cycle                       : 6660
+    *** Estimated execution cycle                       : 6561
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 6
             Not enough registers                        : 6

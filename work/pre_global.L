@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
-  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/pre_global.o
+  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/pre_global.o
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::VERSION_NUMBER
 DIAGNOSTIC LIST
@@ -183,8 +183,8 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::VERSION_NUMBER
 FORMAT LIST
@@ -213,8 +213,8 @@ FORMAT LIST
    455:                 end function
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::VERSION_NUMBER
 INLINE LIST
@@ -222,8 +222,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::VERSION_NUMBER
 VECTORIZATION LIST
@@ -231,8 +231,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::VERSION_NUMBER
 CODE GENERATION LIST
@@ -258,8 +258,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::CMP_VERSION_NUMBERS
 DIAGNOSTIC LIST
@@ -269,8 +269,8 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::CMP_VERSION_NUMBERS
 FORMAT LIST
@@ -300,8 +300,8 @@ FORMAT LIST
    465:                 end function
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::CMP_VERSION_NUMBERS
 INLINE LIST
@@ -309,8 +309,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::CMP_VERSION_NUMBERS
 VECTORIZATION LIST
@@ -318,8 +318,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::CMP_VERSION_NUMBERS
 CODE GENERATION LIST
@@ -345,8 +345,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN1
 DIAGNOSTIC LIST
@@ -361,8 +361,8 @@ DIAGNOSTIC LIST
    590: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN1
 FORMAT LIST
@@ -510,8 +510,8 @@ FORMAT LIST
    594:                 END SUBROUTINE ALLOC_MAIN1
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN1
 INLINE LIST
@@ -523,8 +523,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN1
 VECTORIZATION LIST
@@ -557,8 +557,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN1
 CODE GENERATION LIST
@@ -600,8 +600,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN2
 DIAGNOSTIC LIST
@@ -613,8 +613,8 @@ DIAGNOSTIC LIST
    616: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN2
 FORMAT LIST
@@ -657,8 +657,8 @@ FORMAT LIST
    620:                 END SUBROUTINE ALLOC_MAIN2
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN2
 INLINE LIST
@@ -670,8 +670,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN2
 VECTORIZATION LIST
@@ -686,8 +686,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::ALLOC_MAIN2
 CODE GENERATION LIST
@@ -717,8 +717,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::DEALLOC_MAIN2
 DIAGNOSTIC LIST
@@ -729,8 +729,8 @@ DIAGNOSTIC LIST
    641: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::DEALLOC_MAIN2
 FORMAT LIST
@@ -772,8 +772,8 @@ FORMAT LIST
    645:                 end subroutine dealloc_main2
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::DEALLOC_MAIN2
 INLINE LIST
@@ -785,8 +785,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::DEALLOC_MAIN2
 VECTORIZATION LIST
@@ -794,8 +794,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/pre_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:32 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/pre_global.F
 
 PROCEDURE NAME: PRE_GLOBAL::DEALLOC_MAIN2
 CODE GENERATION LIST

@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
-  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/couple2baroclinic3D.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/couple2baroclinic3D.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclini
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclini
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:54 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:29 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
 DIAGNOSTIC LIST
@@ -189,8 +189,8 @@ DIAGNOSTIC LIST
    102: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
 FORMAT LIST
@@ -236,8 +236,8 @@ FORMAT LIST
    104:                 END SUBROUTINE ALLOC_BC3D_to_2D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:54 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:29 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
 INLINE LIST
@@ -245,8 +245,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:54 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:29 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
 VECTORIZATION LIST
@@ -333,8 +333,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:54 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:29 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::ALLOC_BC3D_TO_2D
 CODE GENERATION LIST
@@ -412,8 +412,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
 DIAGNOSTIC LIST
@@ -460,8 +460,8 @@ DIAGNOSTIC LIST
    171: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
 FORMAT LIST
@@ -554,8 +554,8 @@ FORMAT LIST
    182:                 END SUBROUTINE Read_BC3D_NetCDF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
 INLINE LIST
@@ -738,8 +738,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
 VECTORIZATION LIST
@@ -1023,8 +1023,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF
 CODE GENERATION LIST
@@ -1050,7 +1050,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:143)
@@ -1072,7 +1072,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:145)
@@ -1094,7 +1094,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:147)
@@ -1116,7 +1116,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:152)
@@ -1138,7 +1138,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:154)
@@ -1160,7 +1160,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:163)
@@ -1200,7 +1200,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:160)
@@ -1222,7 +1222,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:169)
@@ -1244,7 +1244,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:171)
@@ -1266,8 +1266,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
 DIAGNOSTIC LIST
@@ -1333,7 +1333,6 @@ DIAGNOSTIC LIST
    405: vec( 101): Vectorized loop.
    405: vec( 181): Allocation obstructs vectorization.
    414: vec( 101): Vectorized loop.
-   429: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    429: vec( 110): Vectorization obstructive procedure reference.: MESH::BL_INTERP
    429: vec( 110): Vectorization obstructive procedure reference.: MESH::CONSERVE_INTERP
    432: vec( 101): Vectorized loop.
@@ -1342,14 +1341,10 @@ DIAGNOSTIC LIST
    436: vec( 101): Vectorized loop.
    437: vec( 101): Vectorized loop.
    443: opt(1135): Outer loop conditionally executes inner loop.
-   443: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    443: vec( 103): Unvectorized loop.
    443: vec( 113): Overhead of loop division is too large.
-   447: opt(3014): Moved reference within a conditional branch.
-   450: opt(3014): Moved reference within a conditional branch.
    450: vec( 101): Vectorized loop.
    450: vec( 126): Idiom detected.: MAX/MIN
-   453: opt(3014): Moved reference within a conditional branch.
    465: vec( 101): Vectorized loop.
    466: vec( 101): Vectorized loop.
    471: vec( 101): Vectorized loop.
@@ -1359,8 +1354,8 @@ DIAGNOSTIC LIST
    478: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
 FORMAT LIST
@@ -1684,8 +1679,8 @@ FORMAT LIST
    486:                 END SUBROUTINE Get_LonLatDepthTime
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
 INLINE LIST
@@ -1900,8 +1895,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
 VECTORIZATION LIST
@@ -2143,8 +2138,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:55 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::GET_LONLATDEPTHTIME
 CODE GENERATION LIST
@@ -2159,18 +2154,18 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 13424 bytes
-      Register spill area      :  5224 bytes
+    Total size                 : 13376 bytes
+      Register spill area      :  5200 bytes
       Parameter area           :    96 bytes
       Register save area       :   176 bytes
-      User data area           :  7928 bytes
+      User data area           :  7904 bytes
       Others                   :     0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (couple2baroclinic3D.F:235)
-    *** Estimated execution cycle                       : 250
+    *** Estimated execution cycle                       : 249
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 1
             Across calls                                : 1
@@ -2178,15 +2173,15 @@ CODE GENERATION LIST
           Total                                         : 7
             Across calls                                : 1
             Over basic blocks                           : 6
-    *** The number of SCALAR REGISTER TRANSFER          : 23
+    *** The number of SCALAR REGISTER TRANSFER          : 24
 
     LOOP BEGIN: (couple2baroclinic3D.F:238)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:251)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:323)
@@ -2284,7 +2279,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:429)
-    *** Estimated execution cycle                       : 716
+    *** Estimated execution cycle                       : 717
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 13
             Over basic blocks                           : 12
@@ -2292,7 +2287,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 44
             Over basic blocks                           : 44
-    *** The number of SCALAR REGISTER TRANSFER          : 46
+    *** The number of SCALAR REGISTER TRANSFER          : 47
 
     LOOP BEGIN: (couple2baroclinic3D.F:432)
       *** Estimated execution cycle                     : 96
@@ -2308,7 +2303,7 @@ CODE GENERATION LIST
 
     LOOP BEGIN: (couple2baroclinic3D.F:443)
       *** Estimated execution cycle                     : 204
-      *** The number of SCALAR REGISTER TRANSFER        : 8
+      *** The number of SCALAR REGISTER TRANSFER        : 11
 
       LOOP BEGIN: (couple2baroclinic3D.F:450)
         *** Estimated execution cycle                   : 96
@@ -2341,16 +2336,16 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:210)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:213)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
 DIAGNOSTIC LIST
@@ -2382,8 +2377,8 @@ DIAGNOSTIC LIST
    551: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
 FORMAT LIST
@@ -2500,8 +2495,8 @@ FORMAT LIST
    583:                 END SUBROUTINE Read_BC3D_NetCDF_on_ADCIRC_Grid
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
 INLINE LIST
@@ -2575,8 +2570,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
 VECTORIZATION LIST
@@ -2693,8 +2688,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_BC3D_NETCDF_ON_ADCIRC_GRID
 CODE GENERATION LIST
@@ -2709,18 +2704,18 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 3504 bytes
-      Register spill area      :  488 bytes
+    Total size                 : 3376 bytes
+      Register spill area      :  424 bytes
       Parameter area           :   56 bytes
       Register save area       :  176 bytes
-      User data area           : 2776 bytes
+      User data area           : 2712 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (couple2baroclinic3D.F:626)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:511)
@@ -2728,7 +2723,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:626)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:512)
@@ -2736,7 +2731,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:626)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:513)
@@ -2744,7 +2739,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:626)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:516)
@@ -2752,7 +2747,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:626)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:517)
@@ -2760,7 +2755,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:626)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:521)
@@ -2796,8 +2791,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
 DIAGNOSTIC LIST
@@ -2811,8 +2806,8 @@ DIAGNOSTIC LIST
    601: inl(1212): Source for routine not found.: NETCDF::NF90_GET_VAR_2D_EIGHTBYTEREAL
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
 FORMAT LIST
@@ -2860,8 +2855,8 @@ FORMAT LIST
    611:                 END FUNCTION read_nc_var
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
 INLINE LIST
@@ -2885,8 +2880,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
 VECTORIZATION LIST
@@ -2897,8 +2892,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR
 CODE GENERATION LIST
@@ -2907,29 +2902,29 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 36 [s0-s12 s15-s16 s18 s23-s35 s57-s63]
+      Scalar registers         : 37 [s0-s12 s15-s16 s18-s19 s23-s35 s57-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 848 bytes
-      Register spill area      :  24 bytes
+    Total size                 : 832 bytes
+      Register spill area      :  16 bytes
       Parameter area           :  56 bytes
       Register save area       : 176 bytes
-      User data area           : 584 bytes
+      User data area           : 576 bytes
       Others                   :   8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (couple2baroclinic3D.F:598)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
 DIAGNOSTIC LIST
@@ -2943,8 +2938,8 @@ DIAGNOSTIC LIST
    627: inl(1212): Source for routine not found.: NETCDF::NF90_GET_VAR_1D_EIGHTBYTEREAL
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
 FORMAT LIST
@@ -2984,8 +2979,8 @@ FORMAT LIST
    631:                 END FUNCTION read_nc_var_adc
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
 INLINE LIST
@@ -3001,8 +2996,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
 VECTORIZATION LIST
@@ -3013,8 +3008,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::READ_NC_VAR_ADC
 CODE GENERATION LIST
@@ -3023,7 +3018,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 27 [s0-s6 s8-s12 s15-s16 s23-s31 s60-s63]
+      Scalar registers         : 28 [s0-s6 s8-s12 s15-s16 s18 s23-s31 s60-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -3040,12 +3035,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (couple2baroclinic3D.F:626)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
 DIAGNOSTIC LIST
@@ -3072,8 +3067,8 @@ DIAGNOSTIC LIST
    712: inl(1222): Inlined: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
 FORMAT LIST
@@ -3185,8 +3180,8 @@ FORMAT LIST
    726:                 END SUBROUTINE Initial_BC3D_NetCDF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
 INLINE LIST
@@ -3222,8 +3217,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
 VECTORIZATION LIST
@@ -3504,8 +3499,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::INITIAL_BC3D_NETCDF
 CODE GENERATION LIST
@@ -3520,30 +3515,30 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 17584 bytes
-      Register spill area      :  8560 bytes
+    Total size                 : 17520 bytes
+      Register spill area      :  8528 bytes
       Parameter area           :    56 bytes
       Register save area       :   176 bytes
-      User data area           :  8784 bytes
+      User data area           :  8752 bytes
       Others                   :     8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (couple2baroclinic3D.F:888)
-    *** Estimated execution cycle                       : 1355
+    *** Estimated execution cycle                       : 1227
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 1
             Over basic blocks                           : 1
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 174
-    *** The number of SCALAR REGISTER TRANSFER          : 49
+    *** Estimated execution cycle                       : 169
+    *** The number of SCALAR REGISTER TRANSFER          : 45
 
     LOOP BEGIN: (couple2baroclinic3D.F:913)
       *** Estimated execution cycle                     : 164
@@ -3560,12 +3555,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:921)
-    *** Estimated execution cycle                       : 172
-    *** The number of SCALAR REGISTER TRANSFER          : 45
+    *** Estimated execution cycle                       : 167
+    *** The number of SCALAR REGISTER TRANSFER          : 41
 
     LOOP BEGIN: (couple2baroclinic3D.F:930)
       *** Estimated execution cycle                     : 164
@@ -3582,15 +3577,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:941)
-    *** Estimated execution cycle                       : 1897
+    *** Estimated execution cycle                       : 1769
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:969)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:969)
-    *** Estimated execution cycle                       : 172
+    *** Estimated execution cycle                       : 169
     *** The number of SCALAR REGISTER TRANSFER          : 42
 
     LOOP BEGIN: (couple2baroclinic3D.F:980)
@@ -3608,19 +3603,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:954)
-    *** Estimated execution cycle                       : 1355
+    *** Estimated execution cycle                       : 1227
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 1
             Over basic blocks                           : 1
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:992)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:992)
-    *** Estimated execution cycle                       : 250
-    *** The number of SCALAR REGISTER TRANSFER          : 64
+    *** Estimated execution cycle                       : 248
+    *** The number of SCALAR REGISTER TRANSFER          : 60
 
     LOOP BEGIN: (couple2baroclinic3D.F:1007)
       *** Estimated execution cycle                     : 292
@@ -3673,18 +3668,18 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:888)
-    *** Estimated execution cycle                       : 1355
+    *** Estimated execution cycle                       : 1227
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 1
             Over basic blocks                           : 1
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 175
+    *** Estimated execution cycle                       : 172
     *** The number of SCALAR REGISTER TRANSFER          : 47
 
     LOOP BEGIN: (couple2baroclinic3D.F:913)
@@ -3702,11 +3697,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:921)
-    *** Estimated execution cycle                       : 172
+    *** Estimated execution cycle                       : 169
     *** The number of SCALAR REGISTER TRANSFER          : 42
 
     LOOP BEGIN: (couple2baroclinic3D.F:930)
@@ -3724,16 +3719,16 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:941)
-    *** Estimated execution cycle                       : 1897
+    *** Estimated execution cycle                       : 1769
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:969)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:969)
-    *** Estimated execution cycle                       : 172
-    *** The number of SCALAR REGISTER TRANSFER          : 45
+    *** Estimated execution cycle                       : 167
+    *** The number of SCALAR REGISTER TRANSFER          : 41
 
     LOOP BEGIN: (couple2baroclinic3D.F:980)
       *** Estimated execution cycle                     : 164
@@ -3750,19 +3745,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:954)
-    *** Estimated execution cycle                       : 1355
+    *** Estimated execution cycle                       : 1227
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 1
             Over basic blocks                           : 1
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:992)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:992)
-    *** Estimated execution cycle                       : 250
-    *** The number of SCALAR REGISTER TRANSFER          : 65
+    *** Estimated execution cycle                       : 249
+    *** The number of SCALAR REGISTER TRANSFER          : 63
 
     LOOP BEGIN: (couple2baroclinic3D.F:1007)
       *** Estimated execution cycle                     : 292
@@ -3779,8 +3774,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
 DIAGNOSTIC LIST
@@ -3824,8 +3819,8 @@ DIAGNOSTIC LIST
    857: opt(1112): Loop fused with previous loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
 FORMAT LIST
@@ -3983,8 +3978,8 @@ FORMAT LIST
    868:                 END SUBROUTINE Update_BC3D_Info
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
 INLINE LIST
@@ -4003,8 +3998,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
 VECTORIZATION LIST
@@ -4225,8 +4220,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:56 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::UPDATE_BC3D_INFO
 CODE GENERATION LIST
@@ -4241,11 +4236,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 10128 bytes
-      Register spill area      :  4224 bytes
+    Total size                 : 10096 bytes
+      Register spill area      :  4208 bytes
       Parameter area           :    64 bytes
       Register save area       :   176 bytes
-      User data area           :  5664 bytes
+      User data area           :  5648 bytes
       Others                   :     0 bytes
 
     Note: Total size of Routine stack does not include
@@ -4293,19 +4288,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:888)
-    *** Estimated execution cycle                       : 1355
+    *** Estimated execution cycle                       : 1227
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 1
             Over basic blocks                           : 1
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 176
-    *** The number of SCALAR REGISTER TRANSFER          : 49
+    *** Estimated execution cycle                       : 172
+    *** The number of SCALAR REGISTER TRANSFER          : 47
 
     LOOP BEGIN: (couple2baroclinic3D.F:913)
       *** Estimated execution cycle                     : 164
@@ -4322,12 +4317,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:921)
-    *** Estimated execution cycle                       : 174
-    *** The number of SCALAR REGISTER TRANSFER          : 46
+    *** Estimated execution cycle                       : 170
+    *** The number of SCALAR REGISTER TRANSFER          : 44
 
     LOOP BEGIN: (couple2baroclinic3D.F:930)
       *** Estimated execution cycle                     : 164
@@ -4344,15 +4339,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:941)
-    *** Estimated execution cycle                       : 1897
+    *** Estimated execution cycle                       : 1769
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:969)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:969)
-    *** Estimated execution cycle                       : 171
+    *** Estimated execution cycle                       : 168
     *** The number of SCALAR REGISTER TRANSFER          : 42
 
     LOOP BEGIN: (couple2baroclinic3D.F:980)
@@ -4370,19 +4365,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:954)
-    *** Estimated execution cycle                       : 1355
+    *** Estimated execution cycle                       : 1227
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 1
             Over basic blocks                           : 1
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:992)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:992)
-    *** Estimated execution cycle                       : 251
-    *** The number of SCALAR REGISTER TRANSFER          : 66
+    *** Estimated execution cycle                       : 249
+    *** The number of SCALAR REGISTER TRANSFER          : 62
 
     LOOP BEGIN: (couple2baroclinic3D.F:1007)
       *** Estimated execution cycle                     : 292
@@ -4427,69 +4422,44 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-   888: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    888: vec( 101): Vectorized loop.
-   895: opt(3014): Moved reference within a conditional branch.
    895: vec( 128): Fused multiply-add operation applied.
    902: opt(1135): Outer loop conditionally executes inner loop.
-   902: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    902: vec( 102): Partially vectorized loop.
-   905: opt(3014): Moved reference within a conditional branch.
-   911: opt(3014): Moved reference within a conditional branch.
    913: opt(1408): Loop interchanged.
-   913: opt(3014): Moved reference within a conditional branch.
    913: vec( 101): Vectorized loop.
    916: vec( 126): Idiom detected.: SUM
-   919: opt(3014): Moved reference within a conditional branch.
-   923: opt(3014): Moved reference within a conditional branch.
-   928: opt(3014): Moved reference within a conditional branch.
    930: opt(1408): Loop interchanged.
-   930: opt(3014): Moved reference within a conditional branch.
    930: vec( 101): Vectorized loop.
    933: vec( 126): Idiom detected.: SUM
-   936: opt(3014): Moved reference within a conditional branch.
    941: vec( 101): Vectorized loop.
    942: vec( 128): Fused multiply-add operation applied.
    946: vec( 128): Fused multiply-add operation applied.
-   954: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    954: vec( 101): Vectorized loop.
-   961: opt(3014): Moved reference within a conditional branch.
    961: vec( 128): Fused multiply-add operation applied.
    969: opt(1135): Outer loop conditionally executes inner loop.
-   969: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    969: vec( 102): Partially vectorized loop.
-   971: opt(3014): Moved reference within a conditional branch.
-   978: opt(3014): Moved reference within a conditional branch.
    980: opt(1408): Loop interchanged.
-   980: opt(3014): Moved reference within a conditional branch.
    980: vec( 101): Vectorized loop.
    983: vec( 126): Idiom detected.: SUM
-   986: opt(3014): Moved reference within a conditional branch.
    992: opt(1135): Outer loop conditionally executes inner loop.
-   992: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    992: vec( 102): Partially vectorized loop.
-   995: opt(3014): Moved reference within a conditional branch.
-   999: opt(3014): Moved reference within a conditional branch.
-  1005: opt(3014): Moved reference within a conditional branch.
   1007: opt(1408): Loop interchanged.
-  1007: opt(3014): Moved reference within a conditional branch.
   1007: vec( 101): Vectorized loop.
   1010: vec( 126): Idiom detected.: SUM
   1011: vec( 126): Idiom detected.: SUM
-  1014: opt(3014): Moved reference within a conditional branch.
-  1015: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
 FORMAT LIST
@@ -4663,8 +4633,8 @@ FORMAT LIST
   1025:                 END SUBROUTINE Put_BC3D_on_ADCIRC_Grid
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
 INLINE LIST
@@ -4672,8 +4642,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
 VECTORIZATION LIST
@@ -4791,8 +4761,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::PUT_BC3D_ON_ADCIRC_GRID
 CODE GENERATION LIST
@@ -4807,30 +4777,30 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 8608 bytes
-      Register spill area      : 4208 bytes
+    Total size                 : 8544 bytes
+      Register spill area      : 4176 bytes
       Parameter area           :    8 bytes
       Register save area       :  176 bytes
-      User data area           : 4208 bytes
+      User data area           : 4176 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (couple2baroclinic3D.F:888)
-    *** Estimated execution cycle                       : 1355
+    *** Estimated execution cycle                       : 1227
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 1
             Over basic blocks                           : 1
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 185
-    *** The number of SCALAR REGISTER TRANSFER          : 46
+    *** Estimated execution cycle                       : 182
+    *** The number of SCALAR REGISTER TRANSFER          : 44
 
     LOOP BEGIN: (couple2baroclinic3D.F:913)
       *** Estimated execution cycle                     : 192
@@ -4847,12 +4817,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:902)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:921)
-    *** Estimated execution cycle                       : 186
-    *** The number of SCALAR REGISTER TRANSFER          : 45
+    *** Estimated execution cycle                       : 183
+    *** The number of SCALAR REGISTER TRANSFER          : 41
 
     LOOP BEGIN: (couple2baroclinic3D.F:930)
       *** Estimated execution cycle                     : 192
@@ -4869,16 +4839,16 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:941)
-    *** Estimated execution cycle                       : 1897
+    *** Estimated execution cycle                       : 1769
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:969)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:969)
-    *** Estimated execution cycle                       : 186
-    *** The number of SCALAR REGISTER TRANSFER          : 45
+    *** Estimated execution cycle                       : 183
+    *** The number of SCALAR REGISTER TRANSFER          : 41
 
     LOOP BEGIN: (couple2baroclinic3D.F:980)
       *** Estimated execution cycle                     : 192
@@ -4895,19 +4865,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:954)
-    *** Estimated execution cycle                       : 1355
+    *** Estimated execution cycle                       : 1227
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 1
             Over basic blocks                           : 1
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:992)
-    *** Estimated execution cycle                       : 62
+    *** Estimated execution cycle                       : 64
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:992)
     *** Estimated execution cycle                       : 260
-    *** The number of SCALAR REGISTER TRANSFER          : 64
+    *** The number of SCALAR REGISTER TRANSFER          : 60
 
     LOOP BEGIN: (couple2baroclinic3D.F:1007)
       *** Estimated execution cycle                     : 322
@@ -4924,8 +4894,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
 DIAGNOSTIC LIST
@@ -4934,7 +4904,6 @@ DIAGNOSTIC LIST
 
   1074: vec( 101): Vectorized loop.
   1075: vec( 101): Vectorized loop.
-  1079: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1079: vec( 101): Vectorized loop.
   1079: vec( 102): Partially vectorized loop.
   1094: vec( 128): Fused multiply-add operation applied.
@@ -4947,21 +4916,14 @@ DIAGNOSTIC LIST
   1142: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: VIDBCPDYOH
   1143: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: VIDBCPDYOH
   1144: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: VIDBCPDYOH
-  1150: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1150: vec( 101): Vectorized loop.
-  1153: opt(3014): Moved reference within a conditional branch.
   1153: vec( 128): Fused multiply-add operation applied.
-  1154: opt(3014): Moved reference within a conditional branch.
   1154: vec( 128): Fused multiply-add operation applied.
-  1155: opt(3014): Moved reference within a conditional branch.
-  1156: opt(3014): Moved reference within a conditional branch.
   1159: opt(1394): Moved invariant if outside of an inner loop.
-  1161: opt(3014): Moved reference within a conditional branch.
-  1164: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
 FORMAT LIST
@@ -5135,8 +5097,8 @@ FORMAT LIST
   1182:                 END SUBROUTINE FBPG_Disp_from_BC3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
 INLINE LIST
@@ -5144,8 +5106,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
 VECTORIZATION LIST
@@ -5229,8 +5191,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::FBPG_DISP_FROM_BC3D
 CODE GENERATION LIST
@@ -5272,7 +5234,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (couple2baroclinic3D.F:1079)
-    *** Estimated execution cycle                       : 329
+    *** Estimated execution cycle                       : 331
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 30
             Across calls                                :  2
@@ -5281,14 +5243,14 @@ CODE GENERATION LIST
           Total                                         : 30
             Across calls                                :  2
             Over basic blocks                           : 28
-    *** The number of SCALAR REGISTER TRANSFER          : 49
+    *** The number of SCALAR REGISTER TRANSFER          : 48
 
     LOOP BEGIN: (couple2baroclinic3D.F:1079)
       *** Estimated execution cycle                     : 3338
     LOOP END
 
     LOOP BEGIN: (couple2baroclinic3D.F:1079)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (couple2baroclinic3D.F:1079)
@@ -5296,7 +5258,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (couple2baroclinic3D.F:1079)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (couple2baroclinic3D.F:1079)
@@ -5316,8 +5278,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE
 DIAGNOSTIC LIST
@@ -5328,8 +5290,8 @@ DIAGNOSTIC LIST
   1217: inl(1212): Source for routine not found.: MESSENGER::MSG_FINI
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE
 FORMAT LIST
@@ -5394,8 +5356,8 @@ FORMAT LIST
   1229:                 END SUBROUTINE BC3DTerminate
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE
 INLINE LIST
@@ -5409,8 +5371,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE
 VECTORIZATION LIST
@@ -5418,8 +5380,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:57 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/couple2baroclinic3D.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:31 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/couple2baroclinic3D.F
 
 PROCEDURE NAME: COUPLE2BC3D::BC3DTERMINATE
 CODE GENERATION LIST

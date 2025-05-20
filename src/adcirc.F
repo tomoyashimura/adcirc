@@ -134,6 +134,9 @@ C******************************************************************************
      &                 initHarmonicParameters
       USE GLOBAL_IO, ONLY : allocateFullDomainIOArrays
       USE WRITE_OUTPUT, ONLY : initOutput2D
+#ifdef C_IHM
+      USE WRITE_OUTPUT_IHM, ONLY : initOutput2D_IHM !T.Shimura
+#endif      
       USE WIND, ONLY : initWindModule, initDynamicWaterLevelCorrection,
      &                 getDynamicWaterLevelCorrections
 #ifdef CMPI
@@ -353,6 +356,9 @@ C...  attached to each node
 C
 C     jgf51.21.24: Initialize output.
       call initOutput2D(timeloc)
+#ifdef C_IHM
+      call initOutput2D_IHM(timeloc) !T.Shimura
+#endif      
 
 C...
 C...************* SET FLAGS AND COEFFICIENTS USED IN TIME STEPPING ***********
@@ -419,6 +425,9 @@ Casey 090302: We need the following information to couple to unstructured SWAN.
      &                       PADCSWAN_RUN
 #endif
       USE WRITE_OUTPUT,ONLY: writeOutput2D
+#ifdef C_IHM
+      USE WRITE_OUTPUT_IHM,ONLY: writeOutput2D_IHM !T.Shimura
+#endif      
       IMPLICIT NONE
 C
       INTEGER, OPTIONAL :: NTIME_STP
@@ -469,7 +478,10 @@ C             to then call the SWAN time-stepping subroutine.
         !...WRITE OUTPUT
         !   zc - moved this here so that output occurs after
         !        the SWAN time step has been completed.
-            CALL writeOutput2D(ITIME,TimeLoc) ! =>see write_output.F
+           CALL writeOutput2D(ITIME,TimeLoc) ! =>see write_output.F
+#ifdef C_IHM
+        CALL writeOutput2D_IHM(ITIME,TimeLoc) ! T.Shimura
+#endif           
         endif
 100   CONTINUE
 C

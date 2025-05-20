@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
-  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/subdomain.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/subdomain.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT015
 DIAGNOSTIC LIST
@@ -203,37 +203,31 @@ DIAGNOSTIC LIST
    151: vec( 101): Vectorized loop.
    152: vec( 101): Vectorized loop.
    152: vec( 126): Idiom detected.: BIT-OP
-   158: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    158: vec( 101): Vectorized loop.
    159: vec( 101): Vectorized loop.
    159: vec( 126): Idiom detected.: BIT-OP
    160: opt(1019): Feedback of scalar value from one loop pass to another.: J
-   160: opt(3014): Moved reference within a conditional branch.
    167: opt(1592): Outer loop unrolled inside inner loop.: I
    167: vec( 101): Vectorized loop.
    168: vec( 101): Vectorized loop.
    168: vec( 126): Idiom detected.: BIT-OP
-   174: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    174: vec( 101): Vectorized loop.
    175: vec( 101): Vectorized loop.
    175: vec( 126): Idiom detected.: BIT-OP
    176: opt(1019): Feedback of scalar value from one loop pass to another.: J
-   176: opt(3014): Moved reference within a conditional branch.
    182: opt(1592): Outer loop unrolled inside inner loop.: I
    182: vec( 101): Vectorized loop.
    183: vec( 101): Vectorized loop.
    183: vec( 126): Idiom detected.: BIT-OP
-   189: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    189: vec( 101): Vectorized loop.
    190: vec( 101): Vectorized loop.
    190: vec( 126): Idiom detected.: BIT-OP
    191: opt(1019): Feedback of scalar value from one loop pass to another.: J
-   191: opt(3014): Moved reference within a conditional branch.
    197: inl(1222): Inlined: SUBDOMAIN::SUBDOMAINTERMINATE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT015
 FORMAT LIST
@@ -401,8 +395,8 @@ FORMAT LIST
    206:                 END SUBROUTINE readFort015
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT015
 INLINE LIST
@@ -453,8 +447,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT015
 VECTORIZATION LIST
@@ -619,8 +613,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT015
 CODE GENERATION LIST
@@ -629,7 +623,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 50 [s0-s12 s15-s16 s18-s20 s22-s37 s48-s63]
+      Scalar registers         : 49 [s0-s12 s15-s16 s18-s20 s22-s36 s48-s63]
       Vector registers         : 64 [v0-v63]
       Vector mask registers    :  4 [vm12-vm15]
       VREG directive           :  0
@@ -646,15 +640,15 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:103)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (subdomain.F:105)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (subdomain.F:112)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (subdomain.F:130)
@@ -778,8 +772,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT065
 DIAGNOSTIC LIST
@@ -791,8 +785,8 @@ DIAGNOSTIC LIST
    252: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT065
 FORMAT LIST
@@ -874,8 +868,8 @@ FORMAT LIST
    268:                 END SUBROUTINE writeFort065
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT065
 INLINE LIST
@@ -883,8 +877,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT065
 VECTORIZATION LIST
@@ -895,8 +889,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT065
 CODE GENERATION LIST
@@ -922,7 +916,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:249)
-    *** Estimated execution cycle                       : 151
+    *** Estimated execution cycle                       : 149
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 7
             Across calls                                : 7
@@ -934,8 +928,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT066
 DIAGNOSTIC LIST
@@ -947,8 +941,8 @@ DIAGNOSTIC LIST
    318: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT066
 FORMAT LIST
@@ -1030,8 +1024,8 @@ FORMAT LIST
    334:                 END SUBROUTINE writeFort066
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT066
 INLINE LIST
@@ -1039,8 +1033,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT066
 VECTORIZATION LIST
@@ -1051,8 +1045,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT066
 CODE GENERATION LIST
@@ -1078,7 +1072,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:315)
-    *** Estimated execution cycle                       : 151
+    *** Estimated execution cycle                       : 149
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 7
             Across calls                                : 7
@@ -1090,8 +1084,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT067
 DIAGNOSTIC LIST
@@ -1103,8 +1097,8 @@ DIAGNOSTIC LIST
    384: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT067
 FORMAT LIST
@@ -1184,8 +1178,8 @@ FORMAT LIST
    398:                 END SUBROUTINE writeFort067
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT067
 INLINE LIST
@@ -1193,8 +1187,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT067
 VECTORIZATION LIST
@@ -1205,8 +1199,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::WRITEFORT067
 CODE GENERATION LIST
@@ -1215,7 +1209,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 38 [s0-s12 s15-s16 s23-s42 s61-s63]
+      Scalar registers         : 39 [s0-s12 s15-s16 s23-s43 s61-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -1232,7 +1226,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:381)
-    *** Estimated execution cycle                       : 61
+    *** Estimated execution cycle                       : 58
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -1243,8 +1237,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019H
 DIAGNOSTIC LIST
@@ -1261,8 +1255,8 @@ DIAGNOSTIC LIST
    446: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019H
 FORMAT LIST
@@ -1334,8 +1328,8 @@ FORMAT LIST
    451:                 END SUBROUTINE openFort019H
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019H
 INLINE LIST
@@ -1354,8 +1348,8 @@ INLINE LIST
       *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019H
 VECTORIZATION LIST
@@ -1380,8 +1374,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019H
 CODE GENERATION LIST
@@ -1428,8 +1422,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019C
 DIAGNOSTIC LIST
@@ -1446,8 +1440,8 @@ DIAGNOSTIC LIST
    499: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019C
 FORMAT LIST
@@ -1519,8 +1513,8 @@ FORMAT LIST
    505:                 END SUBROUTINE openFort019C
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019C
 INLINE LIST
@@ -1539,8 +1533,8 @@ INLINE LIST
       *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019C
 VECTORIZATION LIST
@@ -1565,8 +1559,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::OPENFORT019C
 CODE GENERATION LIST
@@ -1613,8 +1607,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT019
 DIAGNOSTIC LIST
@@ -1631,8 +1625,8 @@ DIAGNOSTIC LIST
    546: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT019
 FORMAT LIST
@@ -1696,8 +1690,8 @@ FORMAT LIST
    550:                 END SUBROUTINE readFort019
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT019
 INLINE LIST
@@ -1707,8 +1701,8 @@ INLINE LIST
      *** Inlining inhibited: SAVEed variables and/or not-inlinable data in routine.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT019
 VECTORIZATION LIST
@@ -1728,8 +1722,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT019
 CODE GENERATION LIST
@@ -1771,8 +1765,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT020
 DIAGNOSTIC LIST
@@ -1787,8 +1781,8 @@ DIAGNOSTIC LIST
    594: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT020
 FORMAT LIST
@@ -1858,8 +1852,8 @@ FORMAT LIST
    603:                 END SUBROUTINE readFort020
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT020
 INLINE LIST
@@ -1867,8 +1861,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT020
 VECTORIZATION LIST
@@ -1884,8 +1878,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT020
 CODE GENERATION LIST
@@ -1928,8 +1922,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT021
 DIAGNOSTIC LIST
@@ -1944,8 +1938,8 @@ DIAGNOSTIC LIST
    643: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT021
 FORMAT LIST
@@ -2008,8 +2002,8 @@ FORMAT LIST
    648:                 END SUBROUTINE readFort021
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT021
 INLINE LIST
@@ -2017,8 +2011,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT021
 VECTORIZATION LIST
@@ -2034,8 +2028,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::READFORT021
 CODE GENERATION LIST
@@ -2077,8 +2071,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEECB
 DIAGNOSTIC LIST
@@ -2088,8 +2082,8 @@ DIAGNOSTIC LIST
    661: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEECB
 FORMAT LIST
@@ -2126,8 +2120,8 @@ FORMAT LIST
    666:                 END SUBROUTINE enforceEcb
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEECB
 INLINE LIST
@@ -2135,8 +2129,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEECB
 VECTORIZATION LIST
@@ -2152,8 +2146,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEECB
 CODE GENERATION LIST
@@ -2179,12 +2173,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:661)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 145
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEOB
 DIAGNOSTIC LIST
@@ -2194,8 +2188,8 @@ DIAGNOSTIC LIST
    680: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEOB
 FORMAT LIST
@@ -2232,8 +2226,8 @@ FORMAT LIST
    685:                 END SUBROUTINE enforceEob
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEOB
 INLINE LIST
@@ -2241,8 +2235,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEOB
 VECTORIZATION LIST
@@ -2258,8 +2252,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEOB
 CODE GENERATION LIST
@@ -2285,12 +2279,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:680)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 145
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVCB
 DIAGNOSTIC LIST
@@ -2300,8 +2294,8 @@ DIAGNOSTIC LIST
    699: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVCB
 FORMAT LIST
@@ -2339,8 +2333,8 @@ FORMAT LIST
    705:                 END SUBROUTINE enforceUVcb
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVCB
 INLINE LIST
@@ -2348,8 +2342,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVCB
 VECTORIZATION LIST
@@ -2366,8 +2360,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVCB
 CODE GENERATION LIST
@@ -2393,12 +2387,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:699)
-    *** Estimated execution cycle                       : 243
+    *** Estimated execution cycle                       : 211
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVOB
 DIAGNOSTIC LIST
@@ -2408,8 +2402,8 @@ DIAGNOSTIC LIST
    719: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVOB
 FORMAT LIST
@@ -2447,8 +2441,8 @@ FORMAT LIST
    725:                 END SUBROUTINE enforceUVob
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVOB
 INLINE LIST
@@ -2456,8 +2450,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVOB
 VECTORIZATION LIST
@@ -2474,8 +2468,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEUVOB
 CODE GENERATION LIST
@@ -2501,12 +2495,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:719)
-    *** Estimated execution cycle                       : 243
+    *** Estimated execution cycle                       : 211
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDCB
 DIAGNOSTIC LIST
@@ -2516,8 +2510,8 @@ DIAGNOSTIC LIST
    738: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDCB
 FORMAT LIST
@@ -2554,8 +2548,8 @@ FORMAT LIST
    743:                 END SUBROUTINE enforceWDcb
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDCB
 INLINE LIST
@@ -2563,8 +2557,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDCB
 VECTORIZATION LIST
@@ -2580,8 +2574,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDCB
 CODE GENERATION LIST
@@ -2607,12 +2601,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:738)
-    *** Estimated execution cycle                       : 181
+    *** Estimated execution cycle                       : 145
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDOB
 DIAGNOSTIC LIST
@@ -2622,8 +2616,8 @@ DIAGNOSTIC LIST
    758: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDOB
 FORMAT LIST
@@ -2660,8 +2654,8 @@ FORMAT LIST
    763:                 END SUBROUTINE enforceWDob
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDOB
 INLINE LIST
@@ -2669,8 +2663,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDOB
 VECTORIZATION LIST
@@ -2686,8 +2680,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEWDOB
 CODE GENERATION LIST
@@ -2713,12 +2707,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:758)
-    *** Estimated execution cycle                       : 181
+    *** Estimated execution cycle                       : 145
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEIB
 DIAGNOSTIC LIST
@@ -2728,8 +2722,8 @@ DIAGNOSTIC LIST
    779: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEIB
 FORMAT LIST
@@ -2766,8 +2760,8 @@ FORMAT LIST
    784:                 END SUBROUTINE enforceEib
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEIB
 INLINE LIST
@@ -2775,8 +2769,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEIB
 VECTORIZATION LIST
@@ -2792,8 +2786,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEEIB
 CODE GENERATION LIST
@@ -2819,28 +2813,26 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:779)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 145
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEGWCELVOB
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-   803: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    803: vec( 101): Vectorized loop.
    806: vec( 101): Vectorized loop.
-   809: opt(3014): Moved reference within a conditional branch.
    809: vec( 126): Idiom detected.: SUM
    809: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEGWCELVOB
 FORMAT LIST
@@ -2889,8 +2881,8 @@ FORMAT LIST
    815:                 END SUBROUTINE enforceGWCELVob
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEGWCELVOB
 INLINE LIST
@@ -2898,8 +2890,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEGWCELVOB
 VECTORIZATION LIST
@@ -2923,8 +2915,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::ENFORCEGWCELVOB
 CODE GENERATION LIST
@@ -2950,7 +2942,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (subdomain.F:803)
-    *** Estimated execution cycle                       : 121
+    *** Estimated execution cycle                       : 122
     *** The number of SCALAR REGISTER TRANSFER          : 19
 
     LOOP BEGIN: (subdomain.F:806)
@@ -2959,12 +2951,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (subdomain.F:803)
-    *** Estimated execution cycle                       : 181
+    *** Estimated execution cycle                       : 145
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::CHECKCHANGE
 DIAGNOSTIC LIST
@@ -2975,8 +2967,8 @@ DIAGNOSTIC LIST
    843: inl(1212): Source for routine not found.: MESSENGER::WETDRYSUM
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::CHECKCHANGE
 FORMAT LIST
@@ -3026,8 +3018,8 @@ FORMAT LIST
    847:                 END SUBROUTINE checkChange
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::CHECKCHANGE
 INLINE LIST
@@ -3037,8 +3029,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::CHECKCHANGE
 VECTORIZATION LIST
@@ -3053,8 +3045,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::CHECKCHANGE
 CODE GENERATION LIST
@@ -3084,8 +3076,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::SUBDOMAINTERMINATE
 DIAGNOSTIC LIST
@@ -3098,8 +3090,8 @@ DIAGNOSTIC LIST
    880: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::SUBDOMAINTERMINATE
 FORMAT LIST
@@ -3151,8 +3143,8 @@ FORMAT LIST
    881:                 END SUBROUTINE subdomainTerminate
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::SUBDOMAINTERMINATE
 INLINE LIST
@@ -3170,8 +3162,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::SUBDOMAINTERMINATE
 VECTORIZATION LIST
@@ -3179,8 +3171,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/subdomain.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/subdomain.F
 
 PROCEDURE NAME: SUBDOMAIN::SUBDOMAINTERMINATE
 CODE GENERATION LIST

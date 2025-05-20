@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/driver.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:57:18 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/driver.F
 
-  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/driver.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/driver.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/driver.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/driver.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/driver.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:57:18 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/driver.F
 
 PROCEDURE NAME: ADCIRC
 DIAGNOSTIC LIST
@@ -185,8 +185,8 @@ DIAGNOSTIC LIST
     59: inl(1212): Source for routine not found.: ADCIRC_MOD::ADCIRC_FINAL
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/driver.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:57:18 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/driver.F
 
 PROCEDURE NAME: ADCIRC
 FORMAT LIST
@@ -246,8 +246,8 @@ FORMAT LIST
     62:                 END PROGRAM ADCIRC
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/driver.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:57:18 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/driver.F
 
 PROCEDURE NAME: ADCIRC
 INLINE LIST
@@ -261,8 +261,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/driver.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:57:18 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/driver.F
 
 PROCEDURE NAME: ADCIRC
 VECTORIZATION LIST
@@ -270,8 +270,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/driver.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:57:18 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/driver.F
 
 PROCEDURE NAME: ADCIRC
 CODE GENERATION LIST

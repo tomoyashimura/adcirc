@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
-  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/sponge_layer.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/sponge_layer.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG_LUMPED
 DIAGNOSTIC LIST
@@ -183,8 +183,8 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG_LUMPED
 FORMAT LIST
@@ -213,8 +213,8 @@ FORMAT LIST
    106:                 END SUBROUTINE  ALLOC_MAINSPG_LUMPED
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG_LUMPED
 INLINE LIST
@@ -222,8 +222,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG_LUMPED
 VECTORIZATION LIST
@@ -231,8 +231,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG_LUMPED
 CODE GENERATION LIST
@@ -258,8 +258,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG
 DIAGNOSTIC LIST
@@ -269,8 +269,8 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG
 FORMAT LIST
@@ -299,8 +299,8 @@ FORMAT LIST
    114:                 END SUBROUTINE  ALLOC_MAINSPG
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG
 INLINE LIST
@@ -308,8 +308,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG
 VECTORIZATION LIST
@@ -317,8 +317,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ALLOC_MAINSPG
 CODE GENERATION LIST
@@ -344,8 +344,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ADJUST_SPONGE_SIGMA
 DIAGNOSTIC LIST
@@ -356,8 +356,8 @@ DIAGNOSTIC LIST
    133: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ADJUST_SPONGE_SIGMA
 FORMAT LIST
@@ -412,8 +412,8 @@ FORMAT LIST
    149:                 END SUBROUTINE Adjust_Sponge_Sigma
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ADJUST_SPONGE_SIGMA
 INLINE LIST
@@ -421,8 +421,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ADJUST_SPONGE_SIGMA
 VECTORIZATION LIST
@@ -454,8 +454,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::ADJUST_SPONGE_SIGMA
 CODE GENERATION LIST
@@ -499,30 +499,23 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_OPSPLIT0
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-   176: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    176: vec( 101): Vectorized loop.
    181: opt(1418): Constant-length loop is expanded.
    187: opt(1418): Constant-length loop is expanded.
    187: vec( 128): Fused multiply-add operation applied.
-   192: opt(3014): Moved reference within a conditional branch.
-   199: opt(3014): Moved reference within a conditional branch.
-   200: opt(3014): Moved reference within a conditional branch.
-   204: opt(3014): Moved reference within a conditional branch.
    204: vec( 128): Fused multiply-add operation applied.
-   205: opt(3014): Moved reference within a conditional branch.
-   206: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_OPSPLIT0
 FORMAT LIST
@@ -602,8 +595,8 @@ FORMAT LIST
    212:                 END SUBROUTINE SPONGE_OPSPLIT0
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_OPSPLIT0
 INLINE LIST
@@ -611,8 +604,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_OPSPLIT0
 VECTORIZATION LIST
@@ -627,8 +620,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_OPSPLIT0
 CODE GENERATION LIST
@@ -659,8 +652,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::FLAGSPONGEELEM
 DIAGNOSTIC LIST
@@ -674,8 +667,8 @@ DIAGNOSTIC LIST
    229: opt(1418): Constant-length loop is expanded.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::FLAGSPONGEELEM
 FORMAT LIST
@@ -723,8 +716,8 @@ FORMAT LIST
    240:                 END SUBROUTINE FLAGSPONGEELEM
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::FLAGSPONGEELEM
 INLINE LIST
@@ -732,8 +725,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::FLAGSPONGEELEM
 VECTORIZATION LIST
@@ -753,8 +746,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::FLAGSPONGEELEM
 CODE GENERATION LIST
@@ -784,13 +777,13 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:226)
-    *** Estimated execution cycle                       : 106
+    *** Estimated execution cycle                       : 100
     *** The number of SCALAR REGISTER TRANSFER          : 16
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::COMPUTESPONGEMSELMMAT
 DIAGNOSTIC LIST
@@ -818,8 +811,8 @@ DIAGNOSTIC LIST
    278: opt(1418): Constant-length loop is expanded.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::COMPUTESPONGEMSELMMAT
 FORMAT LIST
@@ -887,8 +880,8 @@ FORMAT LIST
    287:                 END SUBROUTINE ComputeSpongeMsElmMat
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::COMPUTESPONGEMSELMMAT
 INLINE LIST
@@ -904,8 +897,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::COMPUTESPONGEMSELMMAT
 VECTORIZATION LIST
@@ -954,8 +947,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:26 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::COMPUTESPONGEMSELMMAT
 CODE GENERATION LIST
@@ -964,17 +957,17 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 51 [s0-s4 s8-s12 s15-s16 s18-s34 s42-s63]
+      Scalar registers         : 53 [s0-s4 s8-s12 s15-s16 s18-s34 s40-s63]
       Vector registers         :  4 [v60-v63]
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 768 bytes
-      Register spill area      : 160 bytes
+    Total size                 : 784 bytes
+      Register spill area      : 168 bytes
       Parameter area           :  32 bytes
       Register save area       : 176 bytes
-      User data area           : 400 bytes
+      User data area           : 408 bytes
       Others                   :   0 bytes
 
     Note: Total size of Routine stack does not include
@@ -989,20 +982,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:262)
-    *** Estimated execution cycle                       : 505
+    *** Estimated execution cycle                       : 502
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 13
+          Total                                         : 14
             Across calls                                :  1
-            Over basic blocks                           : 12
+            Over basic blocks                           : 13
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 29
+          Total                                         : 30
             Across calls                                :  1
-            Over basic blocks                           : 28
-    *** The number of SCALAR REGISTER TRANSFER          : 62
+            Over basic blocks                           : 29
+    *** The number of SCALAR REGISTER TRANSFER          : 73
 
     LOOP BEGIN: (sponge_layer.F:276)
-      *** Estimated execution cycle                     : 45
-      *** The number of SCALAR REGISTER TRANSFER        : 15
+      *** Estimated execution cycle                     : 44
+      *** The number of SCALAR REGISTER TRANSFER        : 14
 
       LOOP BEGIN: (sponge_layer.F:276)
         *** Estimated execution cycle                   : 63
@@ -1010,8 +1003,8 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (sponge_layer.F:276)
-      *** Estimated execution cycle                     : 45
-      *** The number of SCALAR REGISTER TRANSFER        : 15
+      *** Estimated execution cycle                     : 44
+      *** The number of SCALAR REGISTER TRANSFER        : 13
 
       LOOP BEGIN: (sponge_layer.F:276)
         *** Estimated execution cycle                   : 63
@@ -1020,8 +1013,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGELAYERRELATEDPREP
 DIAGNOSTIC LIST
@@ -1050,8 +1043,8 @@ DIAGNOSTIC LIST
    385: inl(2238): Inlining inhibited: SAVEed variables and/or not-inlinable data in routine.: SPONGELAYER::READFORT2001
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGELAYERRELATEDPREP
 FORMAT LIST
@@ -1180,8 +1173,8 @@ FORMAT LIST
    395:                 END SUBROUTINE SpongeLayerRelatedPrep
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGELAYERRELATEDPREP
 INLINE LIST
@@ -1195,8 +1188,8 @@ INLINE LIST
      *** Inlining inhibited: SAVEed variables and/or not-inlinable data in routine.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGELAYERRELATEDPREP
 VECTORIZATION LIST
@@ -1270,8 +1263,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGELAYERRELATEDPREP
 CODE GENERATION LIST
@@ -1280,7 +1273,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 51 [s0-s12 s15-s16 s18-s33 s44-s63]
+      Scalar registers         : 54 [s0-s12 s15-s16 s18-s33 s41-s63]
       Vector registers         : 52 [v12-v63]
       Vector mask registers    :  4 [vm12-vm15]
       VREG directive           :  0
@@ -1297,7 +1290,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (sponge_layer.F:316)
-    *** Estimated execution cycle                       : 835
+    *** Estimated execution cycle                       : 836
     *** The number of SCALAR REGISTER TRANSFER          : 38
 
     LOOP BEGIN: (sponge_layer.F:329)
@@ -1305,7 +1298,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (sponge_layer.F:332)
-      *** Estimated execution cycle                     : 1112
+      *** Estimated execution cycle                     : 1080
     LOOP END
   LOOP END
 
@@ -1338,8 +1331,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT53001
 DIAGNOSTIC LIST
@@ -1358,8 +1351,8 @@ DIAGNOSTIC LIST
    476: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT53001
 FORMAT LIST
@@ -1463,8 +1456,8 @@ FORMAT LIST
    483:                 END SUBROUTINE READFORT53001
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT53001
 INLINE LIST
@@ -1472,8 +1465,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT53001
 VECTORIZATION LIST
@@ -1547,8 +1540,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT53001
 CODE GENERATION LIST
@@ -1563,18 +1556,18 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 1856 bytes
-      Register spill area      :   80 bytes
+    Total size                 : 1872 bytes
+      Register spill area      :   88 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 1440 bytes
+      User data area           : 1448 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (sponge_layer.F:415)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:433)
@@ -1647,8 +1640,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT54001
 DIAGNOSTIC LIST
@@ -1669,8 +1662,8 @@ DIAGNOSTIC LIST
    577: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT54001
 FORMAT LIST
@@ -1792,8 +1785,8 @@ FORMAT LIST
    584:                 END SUBROUTINE READFORT54001
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT54001
 INLINE LIST
@@ -1801,8 +1794,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT54001
 VECTORIZATION LIST
@@ -1922,8 +1915,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT54001
 CODE GENERATION LIST
@@ -1938,18 +1931,18 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 1904 bytes
-      Register spill area      :  104 bytes
+    Total size                 : 1920 bytes
+      Register spill area      :  112 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 1464 bytes
+      User data area           : 1472 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (sponge_layer.F:498)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:521)
@@ -1967,13 +1960,11 @@ CODE GENERATION LIST
     *** Estimated execution cycle                       : 99
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
-            Across calls                                : 1
-            Over basic blocks                           : 1
+            Across calls                                : 2
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 6
-            Across calls                                : 1
+            Across calls                                : 2
             Over basic blocks                           : 4
-            Others                                      : 1
     *** The number of SCALAR REGISTER TRANSFER          : 21
 
     LOOP BEGIN: (sponge_layer.F:565)
@@ -2061,8 +2052,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT2001
 DIAGNOSTIC LIST
@@ -2084,8 +2075,8 @@ DIAGNOSTIC LIST
    624: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT2001
 FORMAT LIST
@@ -2151,8 +2142,8 @@ FORMAT LIST
    629:                 END SUBROUTINE READFORT2001
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT2001
 INLINE LIST
@@ -2160,8 +2151,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT2001
 VECTORIZATION LIST
@@ -2239,8 +2230,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::READFORT2001
 CODE GENERATION LIST
@@ -2249,7 +2240,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 40 [s0-s12 s15-s16 s18-s19 s22-s37 s57-s63]
+      Scalar registers         : 39 [s0-s12 s15-s16 s18-s19 s22-s36 s57-s63]
       Vector registers         :  9 [v55-v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -2278,7 +2269,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:597)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:608)
@@ -2322,8 +2313,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::GETABSLAYEREXT
 DIAGNOSTIC LIST
@@ -2363,8 +2354,8 @@ DIAGNOSTIC LIST
    756: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::GETABSLAYEREXT
 FORMAT LIST
@@ -2519,8 +2510,8 @@ FORMAT LIST
    763:                 END SUBROUTINE GETABSLAYEREXT
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::GETABSLAYEREXT
 INLINE LIST
@@ -2528,8 +2519,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::GETABSLAYEREXT
 VECTORIZATION LIST
@@ -2675,8 +2666,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::GETABSLAYEREXT
 CODE GENERATION LIST
@@ -2750,7 +2741,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:676)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 145
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:679)
@@ -2785,44 +2776,44 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:712)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 145
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:713)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 145
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:724)
-    *** Estimated execution cycle                       : 309
+    *** Estimated execution cycle                       : 277
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:726)
-    *** Estimated execution cycle                       : 309
+    *** Estimated execution cycle                       : 277
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:728)
-    *** Estimated execution cycle                       : 309
+    *** Estimated execution cycle                       : 277
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:744)
-    *** Estimated execution cycle                       : 363
+    *** Estimated execution cycle                       : 333
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:747)
-    *** Estimated execution cycle                       : 363
+    *** Estimated execution cycle                       : 333
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:750)
-    *** Estimated execution cycle                       : 363
+    *** Estimated execution cycle                       : 333
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:756)
-    *** Estimated execution cycle                       : 357
+    *** Estimated execution cycle                       : 325
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_SHIFT_SOLN
 DIAGNOSTIC LIST
@@ -2835,8 +2826,8 @@ DIAGNOSTIC LIST
    781: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_SHIFT_SOLN
 FORMAT LIST
@@ -2880,8 +2871,8 @@ FORMAT LIST
    786:                 END SUBROUTINE SPONGE_SHIFT_SOLN
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_SHIFT_SOLN
 INLINE LIST
@@ -2889,8 +2880,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_SHIFT_SOLN
 VECTORIZATION LIST
@@ -2931,8 +2922,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::SPONGE_SHIFT_SOLN
 CODE GENERATION LIST
@@ -2958,43 +2949,39 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (sponge_layer.F:769)
-    *** Estimated execution cycle                       : 235
+    *** Estimated execution cycle                       : 205
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:770)
-    *** Estimated execution cycle                       : 235
+    *** Estimated execution cycle                       : 205
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:777)
-    *** Estimated execution cycle                       : 235
+    *** Estimated execution cycle                       : 205
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:781)
-    *** Estimated execution cycle                       : 235
+    *** Estimated execution cycle                       : 205
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::LAYERSOLTEST1
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-   870: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    870: vec( 101): Vectorized loop.
-   875: opt(3014): Moved reference within a conditional branch.
    878: vec( 101): Vectorized loop.
-   881: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    881: vec( 101): Vectorized loop.
-   887: opt(3014): Moved reference within a conditional branch.
    891: vec( 101): Vectorized loop.
    892: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::LAYERSOLTEST1
 FORMAT LIST
@@ -3070,8 +3057,8 @@ FORMAT LIST
    896:                 END SUBROUTINE LAYERSOLTEST1
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::LAYERSOLTEST1
 INLINE LIST
@@ -3079,8 +3066,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::LAYERSOLTEST1
 VECTORIZATION LIST
@@ -3123,8 +3110,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:53 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/sponge_layer.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/sponge_layer.F
 
 PROCEDURE NAME: SPONGELAYER::LAYERSOLTEST1
 CODE GENERATION LIST
@@ -3150,19 +3137,19 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (sponge_layer.F:870)
-    *** Estimated execution cycle                       : 348
+    *** Estimated execution cycle                       : 316
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:878)
-    *** Estimated execution cycle                       : 211
+    *** Estimated execution cycle                       : 179
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:881)
-    *** Estimated execution cycle                       : 348
+    *** Estimated execution cycle                       : 316
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:891)
-    *** Estimated execution cycle                       : 243
+    *** Estimated execution cycle                       : 209
   LOOP END
 
   LOOP BEGIN: (sponge_layer.F:892)

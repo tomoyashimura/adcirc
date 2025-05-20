@@ -30,7 +30,7 @@ PARALLEL_ADCIRC   := padcirc
 LIBADC            := libadc.a
 $(warning (INFO) Name is $(NAME), Machine is $(MACHINE), Vendor is $(VENDOR), and OS is $(OS).)
 $(warning (INFO) The root directory for the build is $(SRCDIR))
-#$(warning (INFO) The ADCIRC version is $(shell ../scripts/adcirc_version.py --tag --create-version-file --directory $(SRCDIR)))
+$(warning (INFO) The ADCIRC version is $(shell ../scripts/adcirc_version.py --tag --create-version-file --directory $(SRCDIR)))
 include cmplrflags.mk
 #Casey 090302: Include variables/flags from SWAN.
 include ../thirdparty/swan/macros.inc
@@ -109,6 +109,14 @@ ifeq ($(DATETIME),enable)
      FFLAGS3 := $(FFLAGS3) -DDATETIME
      FFLAGS4 := $(FFLAGS4) -DDATETIME
      FFLAGSGSW := $(FFLAGSGSW) -I$(DATETIMEHOME)include
+endif
+ifeq ($(IHM),enable) #IHM T.Shimura
+   PPFC    := $(PPFC) -DC_IHM #adcprep
+   PFC     := $(PFC) -DC_IHM #adcpred
+   FFLAGS1 := $(FFLAGS1) -DC_IHM
+   FFLAGS2 := $(FFLAGS2) -DC_IHM
+   FFLAGS3 := $(FFLAGS3) -DC_IHM
+   FFLAGS4 := $(FFLAGS4) -DC_IHM
 endif
 ####################### Target Specific Rules ###################################
 
@@ -371,6 +379,7 @@ NC_MSRC    =  netcdfio.F
 NCE_MSRC   =  netcdf_error.F90
 GIO_MSRC   =  globalio.F
 WRIT_MSRC  =  write_output.F
+WRIT_IHM_MSRC = write_output_IHM.F90 #T.Shimura
 WRITER_MSRC = writer.F 
 #Casey 090302: Add file for coupling to unstructured SWAN.
 COUP_MSRC  =  couple2swan.F
@@ -395,6 +404,7 @@ SUBP_MOBJ:= $(patsubst %.F, $(O_DIR)%.o, $(SUBP_MSRC) )
 CONT_MOBJ:= $(patsubst %.F, $(O_DIR)%.o, $(CONT_MSRC) )
 XDMF_MOBJ:= $(patsubst %.F, $(O_DIR)%.o, $(XDMF_MSRC) )
 WRIT_MOBJ:= $(patsubst %.F, $(O_DIR)%.o, $(WRIT_MSRC) )
+WRIT_IHM_MOBJ:= $(patsubst %.F90, $(O_DIR)%.o, $(WRIT_IHM_MSRC) ) #T.Shimura
 MESH_MOBJ:= $(patsubst %.F, $(O_DIR)%.o, $(MESH_MSRC) )
 BND_MOBJ:= $(patsubst %.F, $(O_DIR)%.o, $(BND_MSRC) )
 PREP_MOBJ:= $(patsubst %.F, $(O_DIR)%.o, $(PREP_MSRC) )
@@ -494,18 +504,18 @@ $(O_DIR)%.o  : %.c
 	$(COMPILE.c) $< -o $@
 $(O_DIR)%.o  : %.F
 	$(CF) -c $(FFLAGS) -o $@  $<
-	if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi
+#	if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi
+
+# T.Shimura
 $(O_DIR)%.o  : %.F90
 	$(CF) -c $(FFLAGS) -o $@  $<
-	if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi
-
 # Casey 080106: Added the following rules for the unstructured SWAN.
 $(O_DIR)%.o  : %.f
 	$(CF) -c $(FLAGS_OPT) $(FLAGS_MSC) $(FLAGS_SER) $(IMODS) $(O_DIR) -o $@  $<
-	if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi
+#	if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi #T. Shimura
 $(O_DIR)%.o  : %.f90
 	$(CF) -c $(FLAGS_OPT) $(FLAGS90_MSC) $(FLAGS_SER) $(IMODS) $(O_DIR) -o $@  $<
-	if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi
+#	if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi #T.Shimura
 
 ########################## Executable Targets ############################
 
@@ -636,12 +646,12 @@ endif
    adcswan :: $(O_DIR)
    adcswan :: $(ADCSWAN_DEP)
 	$(CF) $(FFLAGS) -o $@ $(wildcard $(O_DIR)*.o) $(LIBS) $(LDFLAGS)
-	if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi
+#  if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi #T.Shimura
 
    padcswan :: $(O_DIR)
    padcswan :: $(NA_MOBJ) $(ADC_MOBJ) $(HASH_MOBJ) $(MESH_MOBJ) $(GL2LOC_MOBJ) $(ITTIDE_MOBJ) $(MSG_MOBJ) $(SWAN_MOBJ) $(KDTREE_MOBJ) $(SPG_MOBJ) $(BC3D_MOBJ) $(WIND_MOBJ) $(ADC_OBJ) $(SWAN_OBJ) $(O_DIR)driver.o
 	$(CF) $(FFLAGS) -o $@ $(wildcard $(O_DIR)*.o) $(LIBS) $(MSGLIBS) $(LDFLAGS)
-	if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi
+#  if [ "`echo *.mod`" != '*.mod' ]; then mv *.mod $(O_DIR); fi #T.Shimura
 
 #ifeq ($(NETCDF),enable)
 #   padcswan ::  $(NC_MOBJ) $(NA_MOBJ) $(MSG_MOBJ) $(SWAN_MOBJ) $(KDTREE_MOBJ) $(ADC_OBJ) $(SWAN_OBJ) $(O_DIR)driver.o
@@ -818,17 +828,22 @@ $(O_DIR)boundaries.o  :  boundaries.F $(O_DIR)sizes.o
 # jgf51.21.24: promoted write_output to a module
 
 ifeq ($(BUILDTYPE),$(filter $(BUILDTYPE),$(LIBADC) $(PARALLEL_ADCIRC) padcswan))
-WRITE_OUTPUT_DEP := write_output.F $(O_DIR)mesh.o $(O_DIR)global.o $(O_DIR)boundaries.o $(O_DIR)writer.o
+   WRITE_OUTPUT_DEP := write_output.F $(O_DIR)mesh.o $(O_DIR)global.o $(O_DIR)boundaries.o $(O_DIR)writer.o
+   WRITE_OUTPUT_IHM_DEP := write_output_IHM.F90 $(O_DIR)mesh.o $(O_DIR)global.o $(O_DIR)boundaries.o $(O_DIR)writer.o $(O_DIR)kdtree2.o #T.Shimura
 else
-WRITE_OUTPUT_DEP := write_output.F $(O_DIR)mesh.o $(O_DIR)global.o $(O_DIR)boundaries.o
+   WRITE_OUTPUT_DEP := write_output.F $(O_DIR)mesh.o $(O_DIR)global.o $(O_DIR)boundaries.o
+   WRITE_OUTPUT_IHM_DEP := write_output_IHM.F90 $(O_DIR)write_output.o $(O_DIR)mesh.o $(O_DIR)global.o $(O_DIR)boundaries.o $(O_DIR)kdtree2.o #T.Shimura
 endif
 ifeq ($(NETCDF),enable)
    WRITE_OUTPUT_DEP := $(WRITE_OUTPUT_DEP) $(O_DIR)netcdfio.o
+   WRITE_OUTPUT_IHM_DEP := $(WRITE_OUTPUT_IHM_DEP) $(O_DIR)netcdfio.o #T.Shimura
 endif
 ifeq ($(XDMF),enable)
    WRITE_OUTPUT_DEP := $(WRITE_OUTPUT_DEP) $(O_DIR)xdmfio.o
+   WRITE_OUTPUT_IHM_DEP := $(WRITE_OUTPUT_DEP) $(O_DIR)xdmfio.o #T.Shimura
 endif
 $(O_DIR)write_output.o : $(WRITE_OUTPUT_DEP)
+$(O_DIR)write_output_IHM.o : $(WRITE_OUTPUT_IHM_DEP) #T.Shimura
 # jgf51.21.28: made xdmf support routines into a module
 $(O_DIR)xdmfio.o      : xdmfio.F $(O_DIR)mesh.o $(O_DIR)global.o $(O_DIR)boundaries.o $(O_DIR)control.o
 $(O_DIR)hashtable.o   : hashtable.F
@@ -853,9 +868,11 @@ $(O_DIR)cstart.o      : cstart.F
 $(O_DIR)hstart.o      : hstart.F
 $(O_DIR)timestep.o    : timestep.F
 ifeq ($(NETCDF),enable)
-$(O_DIR)adcirc.o      : adcirc.F $(ADC_MOBJ) $(HARM_MOBJ) $(KDTREE_MOBJ) $(GWCE_MOBJ) $(MOM_MOBJ) $(WIND_MOBJ)  $(SOLV_MOBJ) $(NA_MOBJ) $(GIO_MOBJ) $(NC_MOBJ) $(COUP_MOBJ) $(WRIT_MOBJ)
+#$(O_DIR)adcirc.o      : adcirc.F $(ADC_MOBJ) $(HARM_MOBJ) $(KDTREE_MOBJ) $(GWCE_MOBJ) $(MOM_MOBJ) $(WIND_MOBJ)  $(SOLV_MOBJ) $(NA_MOBJ) $(GIO_MOBJ) $(NC_MOBJ) $(COUP_MOBJ) $(WRIT_MOBJ)
+$(O_DIR)adcirc.o       : adcirc.F $(ADC_MOBJ) $(HARM_MOBJ) $(KDTREE_MOBJ) $(GWCE_MOBJ) $(MOM_MOBJ) $(WIND_MOBJ)  $(SOLV_MOBJ) $(NA_MOBJ) $(GIO_MOBJ) $(NC_MOBJ) $(COUP_MOBJ) $(WRIT_MOBJ) $(WRIT_IHM_MOBJ) #T.Shimura
 else
-$(O_DIR)adcirc.o      : adcirc.F $(ADC_MOBJ) $(HARM_MOBJ) $(KDTREE_MOBJ) $(GWCE_MOBJ) $(MOM_MOBJ) $(WIND_MOBJ) $(SOLV_MOBJ) $(NA_MOBJ) $(GIO_MOBJ) $(COUP_MOBJ) $(WRIT_MOBJ)
+#$(O_DIR)adcirc.o      : adcirc.F $(ADC_MOBJ) $(HARM_MOBJ) $(KDTREE_MOBJ) $(GWCE_MOBJ) $(MOM_MOBJ) $(WIND_MOBJ) $(SOLV_MOBJ) $(NA_MOBJ) $(GIO_MOBJ) $(COUP_MOBJ) $(WRIT_MOBJ)
+$(O_DIR)adcirc.o       : adcirc.F $(ADC_MOBJ) $(HARM_MOBJ) $(KDTREE_MOBJ) $(GWCE_MOBJ) $(MOM_MOBJ) $(WIND_MOBJ) $(SOLV_MOBJ) $(NA_MOBJ) $(GIO_MOBJ) $(COUP_MOBJ) $(WRIT_MOBJ) $(WRT_IHM_MOBJ) #T.Shimura
 endif
 $(O_DIR)driver.o      : driver.F $(O_DIR)adcirc.o
 

@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
-  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/write_output.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/write_output.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D
 DIAGNOSTIC LIST
@@ -337,8 +337,8 @@ DIAGNOSTIC LIST
   1738: inl(1212): Source for routine not found.: BOUNDARIES::FREEFLUXBOUNDARYARRAYTEMPORARIES
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D
 FORMAT LIST
@@ -1333,7 +1333,7 @@ FORMAT LIST
   1312:                 PrMinDescript % writeFlag             = .false.
   1313:                 PrMinDescript % minmax_timestamp      = .true.
   1314:                 if (nws.ne.0) then
-  1315:                    PrMinDescript % readMaxMin         = .true.
+  1315:                    PrMinDescript % readMaxMin         = .false.
   1316:                 endif
   1317:                 if ( PrMinDescript % specifier .eq. XDMF ) then
   1318:                    PrMinDescript % specifier = ASCII
@@ -1370,7 +1370,7 @@ FORMAT LIST
   1349:                 WVMaxDescript % writeFlag             = .false.
   1350:                 WVMaxDescript % minmax_timestamp      = .true.
   1351:                 if (nws.ne.0) then
-  1352:                    WVMaxDescript % readMaxMin         = .true.
+  1352:                    WVMaxDescript % readMaxMin         = .false.
   1353:                 endif
   1354:                 if ( WVMaxDescript % specifier .eq. XDMF ) then
   1355:                    WVMaxDescript % specifier = ASCII
@@ -1408,7 +1408,7 @@ FORMAT LIST
   1387:                 RSMaxDescript % writeFlag             = .false.
   1388:                 RSMaxDescript % minmax_timestamp      = .true.
   1389:                 if (nrs.ne.0) then
-  1390:                    RSMaxDescript % readMaxMin         = .true.
+  1390:                    RSMaxDescript % readMaxMin         = .false.
   1391:                 endif
   1392:                 if ( RSMaxDescript % specifier .eq. XDMF ) then
   1393:                    RSMaxDescript % specifier = ASCII
@@ -1802,8 +1802,8 @@ FORMAT LIST
   1784:                 end subroutine initOutput2D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D
 INLINE LIST
@@ -1905,8 +1905,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D
 VECTORIZATION LIST
@@ -2507,8 +2507,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D
 CODE GENERATION LIST
@@ -2538,17 +2538,17 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:472)
-    *** Estimated execution cycle                       : 298
+    *** Estimated execution cycle                       : 289
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 3
             Over basic blocks                           : 3
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 9
             Over basic blocks                           : 9
-    *** The number of SCALAR REGISTER TRANSFER          : 42
+    *** The number of SCALAR REGISTER TRANSFER          : 40
 
     LOOP BEGIN: (write_output.F:485)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:488)
@@ -2889,7 +2889,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:1566)
-    *** Estimated execution cycle                       : 719
+    *** Estimated execution cycle                       : 713
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 45
             Across calls                                : 29
@@ -2897,21 +2897,21 @@ CODE GENERATION LIST
             Others                                      : 13
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 105
-            Across calls                                :  43
+            Across calls                                :  45
             Over basic blocks                           :  51
-            Others                                      :  11
+            Others                                      :   9
     *** The number of SCALAR REGISTER TRANSFER          : 75
 
     LOOP BEGIN: (write_output.F:1590)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:1590)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:1590)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:1590)
@@ -2923,15 +2923,15 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (write_output.F:1585)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:1585)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:1585)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:1585)
@@ -2944,7 +2944,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:1601)
-    *** Estimated execution cycle                       : 259
+    *** Estimated execution cycle                       : 258
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 7
             Across calls                                : 3
@@ -2954,14 +2954,14 @@ CODE GENERATION LIST
           Total                                         : 8
             Across calls                                : 3
             Over basic blocks                           : 5
-    *** The number of SCALAR REGISTER TRANSFER          : 32
+    *** The number of SCALAR REGISTER TRANSFER          : 33
 
     LOOP BEGIN: (write_output.F:1606)
       *** Estimated execution cycle                     : 191
     LOOP END
 
     LOOP BEGIN: (write_output.F:1609)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
   LOOP END
 
@@ -2977,7 +2977,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:1691)
-    *** Estimated execution cycle                       : 864
+    *** Estimated execution cycle                       : 854
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 41
             Across calls                                : 36
@@ -2985,31 +2985,31 @@ CODE GENERATION LIST
             Others                                      :  3
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 105
-            Across calls                                :  56
+            Across calls                                :  59
             Over basic blocks                           :  45
-            Others                                      :   4
-    *** The number of SCALAR REGISTER TRANSFER          : 81
+            Others                                      :   1
+    *** The number of SCALAR REGISTER TRANSFER          : 75
 
     LOOP BEGIN: (write_output.F:1694)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:1704)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:1726)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (write_output.F:1713)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::REAL_FIELD_ALLOCATE
 DIAGNOSTIC LIST
@@ -3019,8 +3019,8 @@ DIAGNOSTIC LIST
   1757: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::REAL_FIELD_ALLOCATE
 FORMAT LIST
@@ -3058,8 +3058,8 @@ FORMAT LIST
   1763:                    END SUBROUTINE REAL_FIELD_ALLOCATE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::REAL_FIELD_ALLOCATE
 INLINE LIST
@@ -3067,8 +3067,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::REAL_FIELD_ALLOCATE
 VECTORIZATION LIST
@@ -3083,8 +3083,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::REAL_FIELD_ALLOCATE
 CODE GENERATION LIST
@@ -3093,7 +3093,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 21 [s0-s3 s8-s12 s15-s16 s18 s23-s25 s58-s63]
+      Scalar registers         : 20 [s0-s3 s8-s12 s15-s16 s18 s23-s25 s59-s63]
       Vector registers         :  1 [v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -3110,12 +3110,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:1757)
-    *** Estimated execution cycle                       : 65
+    *** Estimated execution cycle                       : 63
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::INT_FIELD_ALLOCATE
 DIAGNOSTIC LIST
@@ -3125,8 +3125,8 @@ DIAGNOSTIC LIST
   1775: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::INT_FIELD_ALLOCATE
 FORMAT LIST
@@ -3164,8 +3164,8 @@ FORMAT LIST
   1781:                    END SUBROUTINE INT_FIELD_ALLOCATE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::INT_FIELD_ALLOCATE
 INLINE LIST
@@ -3173,8 +3173,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::INT_FIELD_ALLOCATE
 VECTORIZATION LIST
@@ -3189,8 +3189,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT2D::INT_FIELD_ALLOCATE
 CODE GENERATION LIST
@@ -3199,7 +3199,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 22 [s0-s3 s8-s12 s15-s16 s18 s23-s25 s57-s63]
+      Scalar registers         : 20 [s0-s3 s8-s12 s15-s16 s18 s23-s25 s59-s63]
       Vector registers         :  1 [v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -3216,12 +3216,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:1775)
-    *** Estimated execution cycle                       : 65
+    *** Estimated execution cycle                       : 63
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT2D
 DIAGNOSTIC LIST
@@ -3245,8 +3245,8 @@ DIAGNOSTIC LIST
   1966: inl(1822): Inlining inhibited: Data types of arguments do not match.: GLOBAL_IO::PACKONE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT2D
 FORMAT LIST
@@ -3458,8 +3458,8 @@ FORMAT LIST
   1984:                 END SUBROUTINE writeOutput2D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT2D
 INLINE LIST
@@ -3494,8 +3494,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT2D
 VECTORIZATION LIST
@@ -3538,8 +3538,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT2D
 CODE GENERATION LIST
@@ -3565,20 +3565,21 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:1821)
-    *** Estimated execution cycle                       : 1206
+    *** Estimated execution cycle                       : 1195
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 149
-            Across calls                                :   8
-            Over basic blocks                           : 133
-            Others                                      :   8
+          Total                                         : 148
+            Across calls                                :   7
+            Over basic blocks                           : 131
+            Others                                      :  10
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 146
-            Across calls                                :   9
-            Over basic blocks                           : 137
-    *** The number of SCALAR REGISTER TRANSFER          : 116
+          Total                                         : 145
+            Across calls                                :   8
+            Over basic blocks                           : 135
+            Others                                      :   2
+    *** The number of SCALAR REGISTER TRANSFER          : 118
 
     LOOP BEGIN: (write_output.F:2050)
-      *** Estimated execution cycle                     : 2598
+      *** Estimated execution cycle                     : 2502
     LOOP END
 
     LOOP BEGIN: (write_output.F:2050)
@@ -3589,7 +3590,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (write_output.F:2050)
-      *** Estimated execution cycle                     : 2598
+      *** Estimated execution cycle                     : 2502
     LOOP END
 
     LOOP BEGIN: (write_output.F:2050)
@@ -3601,8 +3602,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONDATAINTERP
 DIAGNOSTIC LIST
@@ -3614,8 +3615,8 @@ DIAGNOSTIC LIST
   2008: inl(1235): Inline halted: code size exceeds limit.: WRITE_OUTPUT::STATIONDATAINTERP
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONDATAINTERP
 FORMAT LIST
@@ -3661,8 +3662,8 @@ FORMAT LIST
   2018:                 end subroutine stationDataInterp
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONDATAINTERP
 INLINE LIST
@@ -3681,8 +3682,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONDATAINTERP
 VECTORIZATION LIST
@@ -3704,8 +3705,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONDATAINTERP
 CODE GENERATION LIST
@@ -3731,7 +3732,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:2050)
-    *** Estimated execution cycle                       : 2598
+    *** Estimated execution cycle                       : 2502
   LOOP END
 
   LOOP BEGIN: (write_output.F:2050)
@@ -3742,8 +3743,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONARRAYINTERP
 DIAGNOSTIC LIST
@@ -3751,35 +3752,18 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   2045: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
-  2050: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2050: vec( 102): Partially vectorized loop.
-  2058: opt(3014): Moved reference within a conditional branch.
   2058: vec( 128): Fused multiply-add operation applied.
   2059: vec( 128): Fused multiply-add operation applied.
   2060: vec( 128): Fused multiply-add operation applied.
-  2067: opt(3014): Moved reference within a conditional branch.
   2067: vec( 121): Unvectorizable dependency.
-  2082: opt(3014): Moved reference within a conditional branch.
-  2087: opt(3014): Moved reference within a conditional branch.
-  2100: opt(3014): Moved reference within a conditional branch.
-  2101: opt(3014): Moved reference within a conditional branch.
-  2102: opt(3014): Moved reference within a conditional branch.
   2105: opt(1418): Constant-length loop is expanded.
-  2109: opt(3014): Moved reference within a conditional branch.
-  2113: opt(3014): Moved reference within a conditional branch.
-  2115: opt(3014): Moved reference within a conditional branch.
-  2117: opt(3014): Moved reference within a conditional branch.
   2121: opt(1418): Constant-length loop is expanded.
-  2123: opt(3014): Moved reference within a conditional branch.
-  2124: opt(3014): Moved reference within a conditional branch.
-  2126: opt(3014): Moved reference within a conditional branch.
-  2131: opt(3014): Moved reference within a conditional branch.
-  2134: opt(3014): Moved reference within a conditional branch.
   2146: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONARRAYINTERP
 FORMAT LIST
@@ -3924,8 +3908,8 @@ FORMAT LIST
   2149:                 end subroutine stationArrayInterp
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONARRAYINTERP
 INLINE LIST
@@ -3937,8 +3921,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONARRAYINTERP
 VECTORIZATION LIST
@@ -3960,8 +3944,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::STATIONARRAYINTERP
 CODE GENERATION LIST
@@ -3987,7 +3971,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:2050)
-    *** Estimated execution cycle                       : 2598
+    *** Estimated execution cycle                       : 2502
   LOOP END
 
   LOOP BEGIN: (write_output.F:2050)
@@ -3998,8 +3982,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHARMONICANALYSISOUTPUT
 DIAGNOSTIC LIST
@@ -4052,8 +4036,8 @@ DIAGNOSTIC LIST
   2714: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHARMONICANALYSISOUTPUT
 FORMAT LIST
@@ -4631,8 +4615,8 @@ FORMAT LIST
   2716:                 END SUBROUTINE writeHarmonicAnalysisOutput
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHARMONICANALYSISOUTPUT
 INLINE LIST
@@ -4716,8 +4700,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHARMONICANALYSISOUTPUT
 VECTORIZATION LIST
@@ -4838,8 +4822,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHARMONICANALYSISOUTPUT
 CODE GENERATION LIST
@@ -4848,7 +4832,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 54 [s0-s12 s15-s16 s18-s44 s52-s63]
+      Scalar registers         : 56 [s0-s12 s15-s16 s18-s44 s50-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -4933,7 +4917,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:2673)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2676)
@@ -4961,7 +4945,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:2691)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2694)
@@ -4989,8 +4973,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTHARMONICARRAYS
 DIAGNOSTIC LIST
@@ -5003,30 +4987,24 @@ DIAGNOSTIC LIST
   2765: vec( 103): Unvectorized loop.
   2765: vec( 180): I/O statement obstructs vectorization.
   2766: opt(1118): This I/O statement inhibits optimization of loop.
-  2769: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2771: vec( 103): Unvectorized loop.
   2771: vec( 180): I/O statement obstructs vectorization.
   2773: opt(1118): This I/O statement inhibits optimization of loop.
-  2773: opt(3014): Moved reference within a conditional branch.
-  2778: opt(3014): Moved reference within a conditional branch.
   2787: vec( 103): Unvectorized loop.
   2787: vec( 108): Unvectorizable loop structure.
   2790: vec( 103): Unvectorized loop.
   2790: vec( 180): I/O statement obstructs vectorization.
   2791: opt(1118): This I/O statement inhibits optimization of loop.
-  2794: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2796: vec( 103): Unvectorized loop.
   2796: vec( 180): I/O statement obstructs vectorization.
   2798: opt(1118): This I/O statement inhibits optimization of loop.
-  2798: opt(3014): Moved reference within a conditional branch.
-  2803: opt(3014): Moved reference within a conditional branch.
   2814: inl(1212): Source for routine not found.: NETCDFIO::WRITEOUTARRAYNETCDF
   2827: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
   2838: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTHARMONICARRAYS
 FORMAT LIST
@@ -5161,8 +5139,8 @@ FORMAT LIST
   2840:                 END SUBROUTINE writeOutHarmonicArrays
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTHARMONICARRAYS
 INLINE LIST
@@ -5180,8 +5158,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTHARMONICARRAYS
 VECTORIZATION LIST
@@ -5235,8 +5213,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTHARMONICARRAYS
 CODE GENERATION LIST
@@ -5262,11 +5240,11 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:2762)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2762)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2765)
@@ -5307,11 +5285,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:2787)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2787)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2790)
@@ -5352,8 +5330,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT3D
 DIAGNOSTIC LIST
@@ -5389,8 +5367,8 @@ DIAGNOSTIC LIST
   3023: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT3D
 FORMAT LIST
@@ -5594,8 +5572,8 @@ FORMAT LIST
   3030:                 END SUBROUTINE initOutput3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT3D
 INLINE LIST
@@ -5625,8 +5603,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT3D
 VECTORIZATION LIST
@@ -5674,8 +5652,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:10 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:14 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITOUTPUT3D
 CODE GENERATION LIST
@@ -5701,15 +5679,15 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:2896)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2907)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2922)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2923)
@@ -5718,7 +5696,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:2946)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:2947)
@@ -5727,16 +5705,16 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:2971)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT3D
 DIAGNOSTIC LIST
@@ -5773,14 +5751,10 @@ DIAGNOSTIC LIST
   3436: inl(1212): Source for routine not found.: MESSENGER::MSG_FINI
   3436: opt(1025): Reference to this procedure inhibits optimization.: MESSENGER::MSG_FINI
   3452: opt(1592): Outer loop unrolled inside inner loop.: NN
-  3452: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3452: vec( 101): Vectorized loop.
-  3458: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3458: vec( 101): Vectorized loop.
   3459: vec( 128): Fused multiply-add operation applied.
-  3462: opt(3014): Moved reference within a conditional branch.
   3462: vec( 128): Fused multiply-add operation applied.
-  3467: opt(3014): Moved reference within a conditional branch.
   3467: vec( 128): Fused multiply-add operation applied.
   3480: inl(1212): Source for routine not found.: GLOBAL_IO::COLLECTFULLDOMAINARRAY
   3507: vec( 103): Unvectorized loop.
@@ -6009,8 +5983,8 @@ DIAGNOSTIC LIST
   4341: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT3D
 FORMAT LIST
@@ -7326,8 +7300,8 @@ FORMAT LIST
   4344:                 end subroutine writeOutput3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT3D
 INLINE LIST
@@ -7449,8 +7423,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT3D
 VECTORIZATION LIST
@@ -8273,8 +8247,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTPUT3D
 CODE GENERATION LIST
@@ -8289,11 +8263,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 18256 bytes
-      Register spill area      :  4336 bytes
+    Total size                 : 18384 bytes
+      Register spill area      :  4400 bytes
       Parameter area           :   160 bytes
       Register save area       :   176 bytes
-      User data area           : 13584 bytes
+      User data area           : 13648 bytes
       Others                   :     0 bytes
 
     Note: Total size of Routine stack does not include
@@ -8393,7 +8367,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3452)
-    *** Estimated execution cycle                       : 368
+    *** Estimated execution cycle                       : 336
   LOOP END
 
   LOOP BEGIN: (write_output.F:3452)
@@ -8404,7 +8378,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 2
             Over basic blocks                           : 2
-    *** The number of SCALAR REGISTER TRANSFER          : 24
+    *** The number of SCALAR REGISTER TRANSFER          : 26
 
     LOOP BEGIN: (write_output.F:3458)
       *** Estimated execution cycle                     : 671
@@ -8412,18 +8386,18 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3452)
-    *** Estimated execution cycle                       : 1384
+    *** Estimated execution cycle                       : 1270
   LOOP END
 
   LOOP BEGIN: (write_output.F:3452)
-    *** Estimated execution cycle                       : 440
+    *** Estimated execution cycle                       : 429
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 90
             Over basic blocks                           : 90
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 39
             Over basic blocks                           : 39
-    *** The number of SCALAR REGISTER TRANSFER          : 22
+    *** The number of SCALAR REGISTER TRANSFER          : 26
 
     LOOP BEGIN: (write_output.F:3458)
       *** Estimated execution cycle                     : 2425
@@ -8440,7 +8414,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3597)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3603)
@@ -8462,15 +8436,15 @@ CODE GENERATION LIST
               Across calls                              : 8
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 23
-              Across calls                              :  9
+              Across calls                              : 10
               Over basic blocks                         : 10
-              Others                                    :  4
+              Others                                    :  3
       *** The number of SCALAR REGISTER TRANSFER        : 68
     LOOP END
   LOOP END
 
   LOOP BEGIN: (write_output.F:3507)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3537)
@@ -8560,7 +8534,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3553)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3583)
@@ -8650,12 +8624,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3668)
-    *** Estimated execution cycle                       : 368
+    *** Estimated execution cycle                       : 336
   LOOP END
 
   LOOP BEGIN: (write_output.F:3668)
     *** Estimated execution cycle                       : 84
-    *** The number of SCALAR REGISTER TRANSFER          : 24
+    *** The number of SCALAR REGISTER TRANSFER          : 23
 
     LOOP BEGIN: (write_output.F:3674)
       *** Estimated execution cycle                     : 611
@@ -8663,7 +8637,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3694)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 58
     *** The number of SCALAR REGISTER TRANSFER          : 21
 
     LOOP BEGIN: (write_output.F:3694)
@@ -8672,7 +8646,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3740)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3747)
@@ -8696,7 +8670,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3710)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3713)
@@ -8723,7 +8697,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3726)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3729)
@@ -8750,18 +8724,18 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3785)
-    *** Estimated execution cycle                       : 368
+    *** Estimated execution cycle                       : 336
   LOOP END
 
   LOOP BEGIN: (write_output.F:3785)
-    *** Estimated execution cycle                       : 99
+    *** Estimated execution cycle                       : 98
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 4
             Over basic blocks                           : 4
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 4
             Over basic blocks                           : 4
-    *** The number of SCALAR REGISTER TRANSFER          : 28
+    *** The number of SCALAR REGISTER TRANSFER          : 29
 
     LOOP BEGIN: (write_output.F:3791)
       *** Estimated execution cycle                     : 609
@@ -8769,20 +8743,22 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3785)
-    *** Estimated execution cycle                       : 1384
+    *** Estimated execution cycle                       : 1270
   LOOP END
 
   LOOP BEGIN: (write_output.F:3785)
-    *** Estimated execution cycle                       : 345
+    *** Estimated execution cycle                       : 337
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 50
-            Not enough registers                        :  2
+            Not enough registers                        :  1
             Over basic blocks                           : 48
+            Others                                      :  1
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 35
-            Not enough registers                        :  2
+            Not enough registers                        :  1
             Over basic blocks                           : 33
-    *** The number of SCALAR REGISTER TRANSFER          : 51
+            Others                                      :  1
+    *** The number of SCALAR REGISTER TRANSFER          : 55
 
     LOOP BEGIN: (write_output.F:3791)
       *** Estimated execution cycle                     : 2394
@@ -8799,7 +8775,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3850)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3855)
@@ -8827,7 +8803,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3821)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3824)
@@ -8854,7 +8830,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3836)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3839)
@@ -8881,7 +8857,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4066)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4105)
@@ -8955,7 +8931,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4076)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -8972,11 +8948,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:3942)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3946)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:3949)
@@ -9071,7 +9047,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4004)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4007)
@@ -9080,7 +9056,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4014)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4050)
@@ -9242,7 +9218,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4213)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4218)
@@ -9270,7 +9246,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4185)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4187)
@@ -9297,7 +9273,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4199)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4201)
@@ -9324,7 +9300,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4302)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4307)
@@ -9352,7 +9328,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4274)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4276)
@@ -9379,7 +9355,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4288)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4290)
@@ -9406,8 +9382,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAY
 DIAGNOSTIC LIST
@@ -9426,8 +9402,8 @@ DIAGNOSTIC LIST
   4433: inl(1222): Inlined: WRITE_OUTPUT::TERMINATE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAY
 FORMAT LIST
@@ -9545,8 +9521,8 @@ FORMAT LIST
   4452:                  END SUBROUTINE writeOutArray
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAY
 INLINE LIST
@@ -9591,8 +9567,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAY
 VECTORIZATION LIST
@@ -9603,8 +9579,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAY
 CODE GENERATION LIST
@@ -9630,12 +9606,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:4393)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAYMINMAX
 DIAGNOSTIC LIST
@@ -9653,23 +9629,17 @@ DIAGNOSTIC LIST
   4513: inl(1212): Source for routine not found.: GLOBAL_IO::OPEN_MINMAX_FILE
   4515: vec( 103): Unvectorized loop.
   4515: vec( 108): Unvectorizable loop structure.
-  4518: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   4518: vec( 103): Unvectorized loop.
   4518: vec( 180): I/O statement obstructs vectorization.
   4520: opt(1118): This I/O statement inhibits optimization of loop.
-  4520: opt(3014): Moved reference within a conditional branch.
-  4522: opt(3014): Moved reference within a conditional branch.
   4529: vec( 103): Unvectorized loop.
   4529: vec( 180): I/O statement obstructs vectorization.
   4530: opt(1118): This I/O statement inhibits optimization of loop.
   4540: vec( 103): Unvectorized loop.
   4540: vec( 108): Unvectorizable loop structure.
-  4543: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   4543: vec( 103): Unvectorized loop.
   4543: vec( 180): I/O statement obstructs vectorization.
   4545: opt(1118): This I/O statement inhibits optimization of loop.
-  4545: opt(3014): Moved reference within a conditional branch.
-  4547: opt(3014): Moved reference within a conditional branch.
   4553: vec( 103): Unvectorized loop.
   4553: vec( 180): I/O statement obstructs vectorization.
   4554: opt(1118): This I/O statement inhibits optimization of loop.
@@ -9680,8 +9650,8 @@ DIAGNOSTIC LIST
   4588: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAYMINMAX
 FORMAT LIST
@@ -9836,8 +9806,8 @@ FORMAT LIST
   4595:                  END SUBROUTINE writeOutArrayMinMax
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAYMINMAX
 INLINE LIST
@@ -9867,8 +9837,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAYMINMAX
 VECTORIZATION LIST
@@ -9919,8 +9889,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:16 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:19 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEOUTARRAYMINMAX
 CODE GENERATION LIST
@@ -9929,36 +9899,36 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 41 [s0-s12 s15-s16 s18-s37 s58-s63]
+      Scalar registers         : 41 [s0-s12 s15-s16 s18-s36 s57-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 3840 bytes
-      Register spill area      :  176 bytes
+    Total size                 : 3872 bytes
+      Register spill area      :  192 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 3328 bytes
+      User data area           : 3344 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:4564)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4508)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4515)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4518)
-    *** Estimated execution cycle                       : 142
+    *** Estimated execution cycle                       : 141
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 6
             Across calls                                : 6
@@ -9966,7 +9936,7 @@ CODE GENERATION LIST
           Total                                         : 10
             Across calls                                :  8
             Others                                      :  2
-    *** The number of SCALAR REGISTER TRANSFER          : 23
+    *** The number of SCALAR REGISTER TRANSFER          : 22
   LOOP END
 
   LOOP BEGIN: (write_output.F:4529)
@@ -9982,11 +9952,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4540)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:4543)
-    *** Estimated execution cycle                       : 142
+    *** Estimated execution cycle                       : 141
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 6
             Across calls                                : 6
@@ -9994,7 +9964,7 @@ CODE GENERATION LIST
           Total                                         : 10
             Across calls                                :  8
             Others                                      :  2
-    *** The number of SCALAR REGISTER TRANSFER          : 23
+    *** The number of SCALAR REGISTER TRANSFER          : 22
   LOOP END
 
   LOOP BEGIN: (write_output.F:4553)
@@ -10010,12 +9980,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:4501)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHOTSTART
 DIAGNOSTIC LIST
@@ -10190,8 +10160,8 @@ DIAGNOSTIC LIST
   5511: inl(1212): Source for routine not found.: NETCDFIO::WRITENETCDFHOTSTARTHARMONICMEANSVARIANCES
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHOTSTART
 FORMAT LIST
@@ -11195,8 +11165,8 @@ FORMAT LIST
   5585:                 END SUBROUTINE writeHotstart
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHOTSTART
 INLINE LIST
@@ -11361,8 +11331,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHOTSTART
 VECTORIZATION LIST
@@ -11730,8 +11700,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEHOTSTART
 CODE GENERATION LIST
@@ -11761,11 +11731,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:5366)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5366)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5375)
@@ -11865,11 +11835,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:5430)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5430)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5439)
@@ -11975,90 +11945,90 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:5015)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5015)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5030)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5034)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5038)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5042)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5046)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5051)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5056)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5060)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5067)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5071)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5075)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5079)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5083)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5088)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5093)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
   LOOP BEGIN: (write_output.F:5097)
-    *** Estimated execution cycle                       : 35
+    *** Estimated execution cycle                       : 34
     *** The number of SCALAR REGISTER TRANSFER          : 5
   LOOP END
 
@@ -12279,8 +12249,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEWARNELEV
 DIAGNOSTIC LIST
@@ -12299,19 +12269,16 @@ DIAGNOSTIC LIST
   5658: vec( 108): Unvectorizable loop structure.
   5666: vec( 103): Unvectorized loop.
   5666: vec( 108): Unvectorizable loop structure.
-  5670: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5670: vec( 103): Unvectorized loop.
   5670: vec( 180): I/O statement obstructs vectorization.
   5672: opt(1118): This I/O statement inhibits optimization of loop.
-  5672: opt(3014): Moved reference within a conditional branch.
-  5674: opt(3014): Moved reference within a conditional branch.
   5682: inl(1822): Inlining inhibited: Data types of arguments do not match.: GLOBAL_IO::PACKONE
   5693: inl(1212): Source for routine not found.: MESSENGER::MSG_FINI
   5701: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEWARNELEV
 FORMAT LIST
@@ -12440,8 +12407,8 @@ FORMAT LIST
   5705:                 END SUBROUTINE WriteWarnElev
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEWARNELEV
 INLINE LIST
@@ -12455,8 +12422,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEWARNELEV
 VECTORIZATION LIST
@@ -12516,8 +12483,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::WRITEWARNELEV
 CODE GENERATION LIST
@@ -12526,28 +12493,28 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 56 [s0-s12 s15-s16 s18-s44 s50-s63]
+      Scalar registers         : 53 [s0-s12 s15-s16 s18-s44 s53-s63]
       Vector registers         :  1 [v63]
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 1920 bytes
-      Register spill area      :  216 bytes
+    Total size                 : 1904 bytes
+      Register spill area      :  208 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 1368 bytes
+      User data area           : 1360 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (write_output.F:5625)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5626)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5646)
@@ -12567,15 +12534,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:5657)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5658)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5666)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:5670)
@@ -12584,8 +12551,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::TERMINATE
 DIAGNOSTIC LIST
@@ -12598,8 +12565,8 @@ DIAGNOSTIC LIST
   5737: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::TERMINATE
 FORMAT LIST
@@ -12652,8 +12619,8 @@ FORMAT LIST
   5738:                 END SUBROUTINE terminate
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::TERMINATE
 INLINE LIST
@@ -12671,8 +12638,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::TERMINATE
 VECTORIZATION LIST
@@ -12680,8 +12647,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:20 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::TERMINATE
 CODE GENERATION LIST
@@ -12707,8 +12674,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITINUNDATIONOUTPUT
 DIAGNOSTIC LIST
@@ -12752,8 +12719,8 @@ DIAGNOSTIC LIST
   6298: inl(1822): Inlining inhibited: Data types of arguments do not match.: GLOBAL_IO::PACKONE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITINUNDATIONOUTPUT
 FORMAT LIST
@@ -12904,8 +12871,8 @@ FORMAT LIST
   6306:                 end subroutine initInundationOutput
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITINUNDATIONOUTPUT
 INLINE LIST
@@ -12938,8 +12905,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITINUNDATIONOUTPUT
 VECTORIZATION LIST
@@ -13080,8 +13047,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::INITINUNDATIONOUTPUT
 CODE GENERATION LIST
@@ -13090,7 +13057,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 43 [s0-s6 s8-s12 s15-s16 s18-s20 s23-s35 s51-s63]
+      Scalar registers         : 42 [s0-s6 s8-s12 s15-s16 s18-s20 s23-s35 s52-s63]
       Vector registers         : 13 [v51-v63]
       Vector mask registers    :  1 [vm15]
       VREG directive           :  0
@@ -13167,7 +13134,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:6255)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:6255)
@@ -13179,7 +13146,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:6252)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:6252)
@@ -13191,20 +13158,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (write_output.F:6283)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:6272)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (write_output.F:6267)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTINUNDATIONDATA
 DIAGNOSTIC LIST
@@ -13212,28 +13179,16 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   6324: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
-  6338: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   6338: vec( 101): Vectorized loop.
-  6340: opt(3014): Moved reference within a conditional branch.
-  6341: opt(3014): Moved reference within a conditional branch.
-  6342: opt(3014): Moved reference within a conditional branch.
-  6343: opt(3014): Moved reference within a conditional branch.
-  6350: opt(3014): Moved reference within a conditional branch.
-  6353: opt(3014): Moved reference within a conditional branch.
-  6361: opt(3014): Moved reference within a conditional branch.
-  6362: opt(3014): Moved reference within a conditional branch.
   6369: vec( 101): Vectorized loop.
   6370: vec( 101): Vectorized loop.
   6379: vec( 101): Vectorized loop.
-  6388: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   6388: vec( 101): Vectorized loop.
-  6390: opt(3014): Moved reference within a conditional branch.
-  6393: opt(3014): Moved reference within a conditional branch.
   6400: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTINUNDATIONDATA
 FORMAT LIST
@@ -13343,8 +13298,8 @@ FORMAT LIST
   6402:                 end subroutine collectInundationData
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTINUNDATIONDATA
 INLINE LIST
@@ -13356,8 +13311,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTINUNDATIONDATA
 VECTORIZATION LIST
@@ -13396,8 +13351,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTINUNDATIONDATA
 CODE GENERATION LIST
@@ -13446,8 +13401,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTMINMAXDATA
 DIAGNOSTIC LIST
@@ -13455,33 +13410,19 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   6425: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
-  6432: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   6432: vec( 101): Vectorized loop.
-  6434: opt(3014): Moved reference within a conditional branch.
-  6436: opt(3014): Moved reference within a conditional branch.
-  6442: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   6442: vec( 101): Vectorized loop.
-  6444: opt(3014): Moved reference within a conditional branch.
   6444: vec( 128): Fused multiply-add operation applied.
-  6445: opt(3014): Moved reference within a conditional branch.
-  6447: opt(3014): Moved reference within a conditional branch.
-  6453: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   6453: vec( 101): Vectorized loop.
-  6456: opt(3014): Moved reference within a conditional branch.
   6459: opt(1112): Loop fused with previous loop.: I
   6460: vec( 128): Fused multiply-add operation applied.
-  6462: opt(3014): Moved reference within a conditional branch.
-  6467: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   6467: vec( 101): Vectorized loop.
-  6469: opt(3014): Moved reference within a conditional branch.
   6469: vec( 128): Fused multiply-add operation applied.
-  6470: opt(3014): Moved reference within a conditional branch.
-  6472: opt(3014): Moved reference within a conditional branch.
   6481: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTMINMAXDATA
 FORMAT LIST
@@ -13573,8 +13514,8 @@ FORMAT LIST
   6483:                 end subroutine collectMinMaxData
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTMINMAXDATA
 INLINE LIST
@@ -13586,8 +13527,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTMINMAXDATA
 VECTORIZATION LIST
@@ -13621,8 +13562,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/write_output.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:55:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/write_output.F
 
 PROCEDURE NAME: WRITE_OUTPUT::COLLECTMINMAXDATA
 CODE GENERATION LIST

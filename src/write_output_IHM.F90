@@ -1,0 +1,1182 @@
+! ======================================================================!
+! Module 
+! output mid-files for IHM
+!
+! 2023/11/30 Originated by Tomoya Shimura
+!            mainly based on write_output.F
+!
+! ----------------------------------------------------------------------
+!
+!  Input is read from namelist (nml_path = './IHM.nml')    
+!     &IHM
+!     writeFlag_elev = .true. ! flag for writing elevation .true. or .false. 
+!     writeFlag_vel = .true.  ! flag for writing velocity  .true. or false.
+!     output_nstep = 30 ! mid file output step
+!     coupling_dir = '/home/b/b33749/LARGEgr/ADCIRC/run_IHMtest_20231110_KUb/IHM_adcirc' ! mid file output directory
+!     file_specifer = 1 ! file format. 1:text 2:binary 
+!     nstations = 2 ! station output point
+!     writeFlag_elev_station = .true. ! flag for writing elevation .true. or .false. 
+!     writeFlag_vel_station = .true.  ! flag for writing velocity  .true. or false.
+!     /
+!     &IHM_station_loc ! specify locations
+!     station_lons = 135.367287, 139.859189 ! lon -180 to 180
+!     station_lats = 34.634572,  35.604783  ! lat
+!     /
+!
+!  ---------------------------------------------------------------------
+!
+!  The points need to be considered (2023/12/19)
+!     - The namelist device number is set to 5. Is OK?
+!     - The output files device number is set to 5XX, Is OK?
+!     - 
+!
+!  ---------------------------------------------------------------------
+!
+!  Subroutines
+!     - initOutput2D_IHM
+!           Initialization of write_output_IHM
+!           Call from ADCIRC_Init in adcirc.F
+!           Call CoordinateToElement
+!              Find the element in the process including the designated station data 
+!                 If not in the process by MPI, output is 0
+!           Call ComputeInterpolatingFactors
+!
+!     - writeOutput2D_IHM
+!           Main subroutine for writing output
+!              Call stationDataInterp 
+!              Call sendDataToWriter in writer.F
+!                 Gather the data distributed to the process by MPI
+!              Call  writeOutArray             
+!
+!     - writeOutArray (ported from write_output.F)
+!          Select the output file format
+!              Call writeFullFormat (text)
+!              call writeBinaryFormat (BINARY)
+!
+!     - writeFullFormat (ported from globalio.F)
+!          Output by text
+!              If variables "WRITE_LOCAL_FILES" under MPI, output is done by each process.
+!              write_cmd is link to packOne in globalio.F 
+!
+!     - writeBinaryFormat (ported from globalio.F)
+!           Output by binary
+!              
+!     - stationDataInterp (ported from write_output.F)
+!           Driver for interporation of station data
+!              Call  stationArrayInterp
+!
+!     - stationArrayInterp
+!           The grid data is interpolated to the designated station location
+!              using factors decided by ComputeInterpolatingFactors
+!  
+!     - kdtsearch
+!           Updated algorithm from CoordinateToElement, but it does not work.
+!
+!     - CoordinateToElement   
+!           Find element including the designated station location
+!
+!     - ComputeInterpolatingFactors
+!           Estimate interplation factors by the area of triangle
+!
+!     - terminate
+!           Terminate the Adcirc run
+!
+! ======================================================================!
+MODULE WRITE_OUTPUT_IHM
+   USE GLOBAL, ONLY : OutputDataDescript_t, setMessageSource, unsetMessageSource, DEBUG, &
+      allMessage, screenMessage, ERROR, netcdf_avail, &
+      IFSPROTS, DEG2RAD, a2f, &
+      base_date
+#ifdef DATETIME
+      use datetime_module, only: strptime, datetime, timedelta
+#endif      
+
+   integer, parameter :: numOutputDescript2D = 4
+   integer, save, target :: ncount_elev, ncount_vel
+   integer, save, target :: ncount_elev_sta, ncount_vel_sta
+   integer, save, target :: filepos_elev=0, filepos_vel=0
+   integer, save, target :: filepos_elev_sta=0, filepos_vel_sta=0
+   integer, save  :: output_nstep = 1
+   character(len=256), parameter :: nml_path = './IHM.nml'
+   integer, parameter :: IHM_nml_unit = 5
+   character(len=1024), save :: coupling_dir='./'
+   integer, save :: file_specifer=1
+   logical, save :: writeFlag_elev=.false.
+   logical, save :: writeFlag_vel=.false.
+   logical, save :: writeFlag_elev_station=.false.
+   logical, save :: writeFlag_vel_station=.false.
+   integer, save :: nstations=0
+   integer, save :: num_records=0
+   real(8), allocatable, save, target :: station_lons(:), station_lats(:)
+   real(8), allocatable, save, target :: station_rlons(:), station_rlats(:)
+   real(8), allocatable, save, target :: station_xcoord(:), station_ycoord(:)
+   integer, allocatable, save, target :: station_element(:)
+   real(8), allocatable, save, target :: intp_fac1(:), intp_fac2(:), intp_fac3(:)
+   real(8), allocatable, save, target :: station_elev(:), station_elev_g(:)
+   real(8), allocatable, save, target :: station_uvel(:), station_uvel_g(:)
+   real(8), allocatable, save, target :: station_vvel(:), station_vvel_g(:)
+   integer, allocatable, save, target :: station_imap_local2glob(:)
+ 
+   type descript2D_ptr_t
+      type(OutputDataDescript_t), pointer :: descript2D
+   end type descript2D_ptr_t
+   type(descript2D_ptr_t), allocatable :: ptr(:)
+   !
+   type(OutputDataDescript_t), target :: ElevStaDescript
+   type(OutputDataDescript_t), target :: VelStaDescript
+   type(OutputDataDescript_t), target :: ElevDescript
+   type(OutputDataDescript_t), target :: VelDescript
+
+   ! --- IHM namelist
+   namelist /IHM/ writeFlag_elev, writeFlag_vel, &
+      writeFlag_elev_station, writeFlag_vel_station, &
+      output_nstep, coupling_dir, file_specifer, &
+      nstations, station_lons, station_lats
+   namelist /IHM_station_loc/ station_lons, station_lats
+
+CONTAINS
+
+!----------------------------------------------------------------------
+!       S U B R O U T I N E   I N I T   O U T P U T   2 D
+!----------------------------------------------------------------------
+   SUBROUTINE initOutput2D_IHM(timeloc)
+      USE SIZES, ONLY : INPUTDIR, NBYTE, MNWPROC, MYPROC, MNPROC,&
+         GLOBALDIR, OFF, ASCII, NETCDF3, NETCDF4, XDMF,&
+         numFormats, write_local_files, localdir,&
+         controlFileName
+      USE GLOBAL, ONLY : eta2, &
+         uu2, vv2, &
+         nodes_lg, labels_g, eta2_g, &
+         uu2_g, vv2_g, &
+         np_g, &
+         INFO, scratchMessage, allMessage, &
+         nodecode, noff
+
+      USE MESH, ONLY : NP, NE, DP, NM, ICS, labels, &
+         SLAM0, SFEA0, CYLINDERMAP, DRVSPCOORSROTS !T.Shimura
+      USE NodalAttributes, ONLY : OutputTau0, Tau0Var, LoadEleSlopeLim, elemental_slope_limiter_grad_max,elemental_slope_limiter_active
+      USE GLOBAL_IO, ONLY : readAndMapToSubdomainMaxMin,packOne, collectFullDomainArray,unpackOne
+#ifdef ADCNETCDF
+      USE NETCDFIO, ONLY : initNetCDFOutputFile, readAndMapToSubdomainMaxMinNetCDF
+#endif
+#ifdef ADCXDMF
+      USE XDMFIO, ONLY : initOutputXDMF, writeControlXDMF
+      USE CONTROL, ONLY : readControlFile
+#ifdef CMPI
+      USE WRITER, ONLY : sendInitWriterXDMF
+#endif
+#endif
+      implicit none
+!
+      real(8), intent(in) :: timeloc
+      character(len=20) :: extString ! string version of integer file extension
+      logical :: fileFound = .false. ! .true. if the file exists
+      logical :: nerr
+      integer :: i
+
+      real(8) :: lon_tmp, lat_tmp, rlon_tmp, rlat_tmp, xcoord_tmp,ycoord_tmp
+      integer :: element_tmp
+
+      ! read namelist
+      open(IHM_nml_unit, file=trim(nml_path), status='old')
+      read(IHM_nml_unit, nml=IHM)
+      close(IHM_nml_unit)
+
+      allocate(station_lons(nstations)); allocate(station_lats(nstations))
+      open(IHM_nml_unit, file=trim(nml_path), status='old')
+      read(IHM_nml_unit, nml=IHM_station_loc)
+      close(IHM_nml_unit)
+!
+      call setMessageSource("initOutput2D_IHM")
+      ! jgf52.21.24: Create an array of pointers to all the 2D output
+      ! data structures, which enables us to iterate over them; this
+      ! simplifies the task of setting default values as well as writing
+      ! output
+      allocate(ptr(numOutputDescript2D))
+      ptr(1)%descript2D => ElevDescript
+      ptr(2)%descript2D => VelDescript
+      ptr(3)%descript2D => ElevStaDescript
+      ptr(4)%descript2D => VelStaDescript
+
+      do i=1,numOutputDescript2D
+         ptr(i) % descript2D % specifier = OFF
+         ptr(i) % descript2D % writeFlag = .False.
+         ptr(i) % descript2D % initial_value = 0.d0
+         ptr(i) % descript2D % num_items_per_record = 1
+         ptr(i) % descript2D % num_fd_records = np_g
+         ptr(i) % descript2D % num_records_this = np
+         ptr(i) % descript2D % imap => nodes_lg
+         ptr(i) % descript2D % considerWetDry = .false.
+         ptr(i) % descript2D % alternate_value = -99999.0
+         ptr(i) % descript2D % isStation = .false.
+         ptr(i) % descript2D % divideByDepth = .false.
+         ! jgf52.08.03: initiallydry.63 already initialized and written by now
+         if (trim(ptr(i)%descript2D%field_name).ne.'initiallyDry') then
+            allocate(ptr(i) % descript2D % writerFormats(numFormats))
+         endif
+         ptr(i) % descript2D % writerFormats(:) = -99999
+         ptr(i) % descript2D % useWriter = .false.
+         ptr(i) % descript2D % file_extension = -99999
+         ptr(i) % descript2D % file_basename = 'IHM_adcirc'
+         ptr(i) % descript2D % initialized = .false.
+         ptr(i) % descript2D % minmax_timestamp = .false.
+         ptr(i) % descript2D % readMaxMin = .false.
+         ptr(i) % descript2D % isInteger = .false.
+      end do
+
+      ! fort.563 Elevation
+      ElevDescript % lun                  = 563
+      ElevDescript % writeFlag            = writeFlag_elev
+      ElevDescript % file_basename = 'IHM_adcirc_elev'
+      ElevDescript % specifier            = file_specifer  !1: ASCII, 2: BINARY 3: NETCDF3 5: NETCDF4
+      ElevDescript % outputTimeStepIncrement = output_nstep ! output step increment
+      ElevDescript % spoolCounter            => ncount_elev
+      ElevDescript % filepos                 => filepos_elev
+      ElevDescript % array                => ETA2
+      ElevDescript % array_g              => ETA2_g
+      ElevDescript % ConsiderWetDry       = .TRUE.
+      ElevDescript % field_name           = 'Elev'
+      ElevDescript % writerFormats(1:5)   = (/ 1, 3, 4, 5, 7 /)
+
+      ! fort.564 velocity
+      VelDescript % lun                  = 564
+      VelDescript % writeFlag            = writeflag_vel
+      VelDescript % file_basename = 'IHM_adcirc_vel'
+      VelDescript % specifier            = file_specifer  !1: ASCII, 2: BINARY 3: NETCDF3 5: NETCDF4
+      VelDescript % outputTimeStepIncrement = output_nstep
+      VelDescript % spoolCounter            => ncount_vel
+      VelDescript % filepos                 => filepos_vel
+      VelDescript % num_items_per_record = 2
+      VelDescript % array                => UU2
+      VelDescript % array2               => VV2
+      VelDescript % array_g              => UU2_g
+      VelDescript % array2_g             => VV2_g
+      VelDescript % field_name           = 'Vel'
+      VelDescript % ConsiderWetDry       = .TRUE.
+      VelDescript % writerFormats(1:5)   = (/ 1, 3, 4, 5, 7 /)
+
+      ! --- get station interporation information
+      allocate(station_xcoord(nstations)); allocate(station_ycoord(nstations)); 
+      station_xcoord(:) = 0; station_ycoord(:) = 0;  
+      allocate(station_element(nstations)); station_element(:) = 0;
+      allocate(intp_fac1(nstations)); allocate(intp_fac2(nstations)); allocate(intp_fac3(nstations))
+      intp_fac1(:) = 0; intp_fac2(:) = 0; intp_fac3(:) = 0;
+      allocate(station_elev(nstations)); station_elev(:) = 0;
+      allocate(station_uvel(nstations)); station_uvel(:) = 0;
+      allocate(station_vvel(nstations)); station_vvel(:) = 0;
+      allocate(station_imap_local2glob(nstations)); station_imap_local2glob(:) = 0; 
+      if ( (MNPROC.gt.1) .and. (MyProc.eq.0) ) then
+         allocate(station_elev_g(nstations)); station_elev_g(:) = 0; 
+         allocate(station_uvel_g(nstations)); station_uvel_g(:) = 0;
+         allocate(station_vvel_g(nstations)); station_vvel_g(:) = 0;
+      ENDIF
+      ! allocation done by nstation number (
+      ! ascii data output controll by subroutine storeOne(lun, descript, istart, iend) in globalio
+      ! if num_records is 0, doing nothing
+
+      if(ICS.EQ.1) then
+         write(6,*) '--- ICS should be not 1 (in IHM) ---'
+         call terminate()
+      endif
+
+      do i = 1,nstations
+         lon_tmp=station_lons(i)*DEG2RAD ! deg to radian
+         lat_tmp=station_lats(i)*DEG2RAD
+         if ( IFSPROTS .EQ. 1 ) then      !if coordinate rotation
+            call DRVSPCOORSROTS( rlon_tmp, rlat_tmp,  lon_tmp, lat_tmp )
+         else
+            rlat_tmp = lat_tmp ;  rlon_tmp = lon_tmp;
+         endif
+         call CYLINDERMAP(xcoord_tmp, ycoord_tmp,&
+            rlon_tmp, rlat_tmp, SLAM0, SFEA0, ICS) ;! cylider projection
+         !call kdtsearch(station_xcoord(i), station_ycoord(i), station_element(i),i) ! find element (new subroutine but it not works)
+         call CoordinateToElement(xcoord_tmp, ycoord_tmp, element_tmp,i) ! find element (old subroutine but it works)
+         if (element_tmp .ne. 0) then
+            num_records =  num_records + 1
+            station_xcoord(num_records) = xcoord_tmp
+            station_ycoord(num_records) = ycoord_tmp
+            station_element(num_records) = element_tmp
+            station_imap_local2glob(num_records) = i;
+            call ComputeInterpolatingFactors(xcoord_tmp, ycoord_tmp, &
+            element_tmp, intp_fac1(num_records), intp_fac2(num_records), intp_fac3(num_records)) ! interp factor
+         endif
+      enddo
+      ! ! --------------------------------
+
+      ! fort.561 ! Elevation at station
+      ElevStaDescript % lun                  = 561
+      ElevStaDescript % writeFlag            = writeFlag_elev_station
+      ElevStaDescript % file_basename = 'IHM_adcirc_elev_station'
+      ElevStaDescript % specifier            = file_specifer  !1: ASCII, 2: BINARY 3: NETCDF3 5: NETCDF4
+      ElevStaDescript % num_fd_records       = nstations ! num station in full domain 
+      ElevStaDescript % num_records_this     = num_records ! num station loc inside this parallel daomain
+      ElevStaDescript % imap                 => station_imap_local2glob
+      ElevStaDescript % array                => station_elev
+      ElevStaDescript % array_g              => station_elev_g
+      ElevStaDescript % interped_array       => ETA2
+      ElevStaDescript % ConsiderWetDry       = .TRUE.
+      ElevStaDescript % field_name           = 'ElevSta'
+      ElevStaDescript % isStation            = .true.
+      ElevStaDescript % outputTimeStepIncrement = output_nstep
+      ElevStaDescript % spoolCounter            => ncount_elev_sta
+      ElevStaDescript % filepos                 => filepos_elev_sta
+      ElevStaDescript % elements                => station_element
+      ElevStaDescript % interp_fac1             => intp_fac1
+      ElevStaDescript % interp_fac2             => intp_fac2
+      ElevStaDescript % interp_fac3             => intp_fac3
+      IF (ICS.eq.1) THEN
+         write(6,*) '--- ICS should be not 1 (in IHM) ---'
+         call terminate()
+      ELSE
+         ElevStaDescript % x_coord              => station_xcoord !radians
+         ElevStaDescript % y_coord              => station_ycoord
+      ENDIF
+
+      ! fort.562 ! velocity at station
+      VelStaDescript % lun                  = 562
+      VelStaDescript % writeFlag            = writeFlag_vel_station
+      VelStaDescript % file_basename = 'IHM_adcirc_vel_station'
+      VelStaDescript % specifier            = file_specifer
+      VelStaDescript % num_items_per_record = 2
+      VelStaDescript % num_fd_records       = nstations   ! num station in full domain 
+      VelStaDescript % num_records_this     = num_records ! num station loc inside this parallel daomain
+      VelStaDescript % imap                 => station_imap_local2glob
+      VelStaDescript % array                => station_uvel
+      VelStaDescript % array2               => station_vvel
+      VelStaDescript % array_g              => station_uvel_g
+      VelStaDescript % array2_g             => station_vvel_g
+      VelStaDescript % interped_array       => UU2
+      VelStaDescript % interped_array2      => VV2
+      VelStaDescript % ConsiderWetDry       = .TRUE.
+      VelStaDescript % field_name           = 'VelSta'
+      VelStaDescript % isStation            = .true.
+      VelStaDescript % outputTimeStepIncrement = output_nstep
+      VelStaDescript % spoolCounter            => ncount_vel_sta
+      VelStaDescript % filepos                 => filepos_vel_sta
+      VelStaDescript % elements                => station_element
+      VelStaDescript % interp_fac1             => intp_fac1
+      VelStaDescript % interp_fac2             => intp_fac2
+      VelStaDescript % interp_fac3             => intp_fac3
+      IF (ICS.eq.1) THEN
+         write(6,*) '--- ICS should be not 1 (in IHM) ---'
+         call terminate()
+      ELSE
+         VelStaDescript % x_coord              => station_xcoord ! radians
+         VelStaDescript % y_coord              => station_ycoord
+      ENDIF
+
+   end subroutine initOutput2D_IHM
+! ----------------------------------------------------------------
+
+!----------------------------------------------------------------------
+!  S U B R O U T I N E   W R I T E   O U T P U T   2 D
+!----------------------------------------------------------------------
+   SUBROUTINE writeOutput2D_IHM(IT,TimeLoc)
+      USE SIZES, ONLY : INPUTDIR, NBYTE, MNWPROC, MYPROC, MNPROC, GLOBALDIR, OFF
+      USE GLOBAL, only: nt, noutge, noutgv, noutgw, nws, nrs, inundationOutput
+      USE MESH, ONLY : NP, NE, DP, NM, ICS
+      USE GLOBAL_IO, ONLY: storeOne, storeTwo, packOne, unpackOne, packTwo, unpackTwo
+      USE NodalAttributes, ONLY : LoadEleSlopeLim
+      !USE WRITE_OUTPUT, ONLY : writeOutArray, stationDataInterp, stationArrayInterp, terminate
+#ifdef CMPI
+      USE WRITER, ONLY : sendDataToWriter, flush_writers, writer_init
+#endif
+
+      IMPLICIT NONE
+      INTEGER, intent(in) :: IT
+      REAL(8), intent(in) :: TimeLoc
+      character(len=20) :: extString ! string version of integer file extension
+      INTEGER :: i,j
+      type(datetime)  :: time_output, base_datetime
+
+      call setMessageSource("writeOutput2D_IHM")
+
+#ifdef DATETIME
+      ! Convert base_date to datetime WJP
+      base_datetime = strptime(adjustl(trim(base_date)),"%Y-%m-%d %H:%M")
+#endif
+
+      do i=1,numOutputDescript2D
+
+         ! check write flag
+         if ( ptr(i) % descript2D % writeFlag.eqv..false. ) then
+            cycle
+         endif
+
+         !check  file format
+         if (ptr(i) % descript2D % specifier.eq.OFF) then
+            cycle
+         endif
+
+         ! count + 1 (start is 0)
+         ptr(i) % descript2D % spoolCounter = ptr(i) % descript2D % spoolCounter + 1
+
+         ! now, output step?
+         if (ptr(i) % descript2D % spoolCounter.ne. ptr(i) % descript2D % outputTimeStepIncrement) then
+            cycle
+         ENDIF
+
+         ! create file names
+            !write(extString,'(i0)') nint(timeloc)
+            !ptr(i) % descript2D % file_name = trim(coupling_dir) // '/' // &
+            !   trim(ptr(i) % descript2D % file_basename) // '.' // trim(extString)
+         time_output = base_datetime + timedelta(seconds=nint(timeloc))
+         ptr(i) % descript2D % file_name = trim(coupling_dir) // '/' // &
+            trim(ptr(i) % descript2D % file_basename) // '.' // time_output%isoformat()
+
+         ! if this is station data, compute the solution at the station
+         ! location via spatial interpolation using the three surrrounding
+         ! nodes
+         if ( ptr(i) % descript2D % isStation .eqv. .true. ) then
+            if (ptr(i) % descript2D % elements(1) .ne. 0) then
+               call stationDataInterp(ptr(i) % descript2D)
+            endif
+         endif
+         !
+         ! write out the array based on the specified file format and the
+         ! type of data, using writer processors if appropriate
+         !
+         !  W R I T E   U S I N G   D E D I C A T E D   W R I T E R
+         !
+         if ( ptr(i) % descript2D % useWriter .eqv. .true. ) then
+            if ( ptr(i) % descript2D % num_items_per_record .eq. 1 ) then
+#ifdef CMPI
+               call sendDataToWriter(ptr(i) % descript2D, timeLoc, it, packOne)
+            else
+               call sendDataToWriter(ptr(i) % descript2D, timeLoc, it, packTwo)
+#endif
+            endif
+         else
+            !
+            !  W R I T E   U S I N G   P R O C E S S O R   0
+            !
+            if ( ptr(i) % descript2D % num_items_per_record .eq. 1 ) then
+               call writeOutArray(TimeLoc, IT, ptr(i) % descript2D, packOne, unpackOne)
+            else
+               call writeOutArray(TimeLoc, IT, ptr(i) % descript2D, packTwo, unpackTwo)
+            endif
+         endif
+         !
+         ! set the spool counter back to zero, now that we've written these data
+         ptr(i) % descript2D % spoolCounter = 0
+      end do
+
+#ifdef CMPI
+!sb 02/09/2007
+!...  Communicate writer processors and let them write out what
+!...  they have.
+      !write(6,'(a)') 'DEBUG: Calling flush_writers()'
+      CALL FLUSH_WRITERS()
+#endif
+
+
+#if defined(WRITE_OUTPUT_TRACE) || defined(ALL_TRACE)
+      call allMessage(DEBUG,"Return.")
+#endif
+      call unsetMessageSource()
+
+      RETURN
+
+2120  FORMAT(2X,1pE20.10E3,5X,I10)
+2453  FORMAT(2x, i8, 2x, 1pE20.10E3, 1pE20.10E3, 1pE20.10E3, 1pE20.10E3)
+2454  FORMAT(2X,I8,2(2X,1pE20.10E3))
+!-----------------------------------------------------------------------
+   END SUBROUTINE writeOutput2D_IHM
+!-----------------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!     S U B R O U T I N E   W R I T E  O U T  A R R A Y
+!-----------------------------------------------------------------------
+   SUBROUTINE writeOutArray(TimeLoc, it, descript, pack_cmd, unpack_cmd)
+      USE SIZES
+      USE GLOBAL
+      USE GLOBAL_IO, ONLY : collectFullDomainArray, storeOne, storeTwo !&
+      !writeSparse!,writeFullFormat,writeBinaryFormat
+      USE MESH, ONLY: labels
+
+      IMPLICIT NONE
+      REAL(8), intent(in) :: TimeLoc ! seconds since cold start
+      INTEGER, intent(in) :: it   ! number of time steps since cold start
+      type(OutputDataDescript_t), intent(inout) :: descript !describes output data
+      EXTERNAL :: pack_cmd   ! subroutine used to pack data on subdomain
+      EXTERNAL :: unpack_cmd ! subroutine used to unpack data on proc 0
+      INTEGER :: I           ! loop counter
+
+      call setMessageSource("writeOutArray")
+
+!     collect up the data from subdomains if running in parallel
+      IF ((MNPROC.gt.1).and.(WRITE_LOCAL_FILES.eqv..false.)) THEN
+         CALL collectFullDomainArray(descript, pack_cmd, unpack_cmd)
+      ENDIF
+
+!     write data according to format specifier from fort.15 (e.g., NOUTE)
+      SELECT CASE (ABS(descript % specifier))
+       CASE(OFF)
+         write(scratchMessage,'(a,a,a)')  &
+            'writeOutArray() called for ',trim(descript%file_name), &
+            ' but output for this file is turned off.'
+         call allMessage(INFO, scratchMessage)
+       CASE(ASCII)
+         IF(descript%num_items_per_record.EQ.1)then
+            CALL writeFullFormat(descript,timeLoc,it,storeOne)
+         ELSEIF(descript%num_items_per_record.EQ.2)then
+            CALL writeFullFormat(descript,timeLoc,it,storeTwo)
+         ENDIF
+       CASE(BINARY) ! nonportable
+         CALL writeBinaryFormat(descript,timeLoc,it)
+         !CASE(SPARSE_ASCII)
+         !  if(descript % num_items_per_record.eq.1)then
+         !     CALL writeSparse(descript, timeLoc, it, storeOne)
+         !  elseif(descript % num_items_per_record.eq.2)then
+         !     CALL writeSparse(descript, timeLoc, it, storeTwo)
+         !  endif
+
+       CASE DEFAULT
+         write(scratchMessage,'(a,i0)') 'Invalid output specifier: ', &
+            abs(descript % specifier)
+         call allMessage(ERROR, scratchMessage)
+      END SELECT
+
+      call unsetMessageSource()
+
+2     FORMAT(I2)
+2120  FORMAT(2X,1pE20.10E3,5X,I10)
+2452  FORMAT(2x, i8, 2x, i8, 2x, i8, 2x, i8)
+2453  FORMAT(2x, i8, 2x, 1pE20.10E3, 1pE20.10E3, 1pE20.10E3, 1pE20.10E3)
+2454  FORMAT(2X,I8,2(2X,1pE20.10E3))
+!-----------------------------------------------------------------------
+   END SUBROUTINE writeOutArray
+!-----------------------------------------------------------------------
+
+!--------------------------------------------------------------
+! S U B R O U T I N E  W R I T E   F U L L  F O R M A T
+!--------------------------------------------------------------
+! Subroutine to write full format ASCII output files
+!--------------------------------------------------------------
+   subroutine writeFullFormat(descript, TimeLoc, it, write_cmd)
+      USE SIZES
+      USE GLOBAL
+      implicit none
+      type (OutputDataDescript_t) :: descript
+      real(8), intent(in) :: TimeLoc
+      integer, intent(in) :: it
+      external write_cmd
+#ifdef CMPI
+#ifndef HAVE_MPI_MOD
+      include 'mpif.h'
+#endif
+      integer      :: ierr, status(MPI_STATUS_SIZE), request
+      integer      :: nGWetNodes
+      integer      :: iglobal
+#endif
+      integer      :: nLWetNodes
+      integer      :: num, i, j, k
+      integer, save:: tagbase = 6000
+      integer      :: iproc
+      integer      :: bufsize, ibucket
+      integer      :: istart, iend, tag
+
+      call setMessageSource("writeFullFormat")
+#ifdef GLOBALIO_TRACE
+      call allMessage(DEBUG,"Enter")
+#endif
+
+      ! serial or writing local files
+      if ((mnproc.eq.1).or.(WRITE_LOCAL_FILES)) then
+         open(descript%lun, file=trim(descript%file_name), access='SEQUENTIAL',status='replace')
+         write(descript%lun, 1101) TimeLoc, it
+         call write_cmd(descript % lun, descript, 1, descript % num_records_this)
+         close(descript % lun)
+#ifdef GLOBALIO_TRACE
+         call allMessage(DEBUG,"Return")
+#endif
+         call unsetMessageSource()
+         return
+      else
+#ifdef CMPI
+         if (myproc == 0) then
+            open(descript%lun, file=trim(descript%file_name),access='SEQUENTIAL',status='replace')
+            write(descript%lun, 1101) TimeLoc, it
+         endif
+
+         bufsize = min(BUFSIZE_MAX,descript % num_items_per_record * descript % num_fd_records)
+         num     = bufsize / descript % num_items_per_record
+         iend    = num
+         istart  = 1
+
+         if (tagbase == 5000) then
+            tagbase = 6000
+         else
+            tagbase = 5000
+         endif
+         ibucket = 0
+
+         do while (istart < iend)
+            !------------------------------------------------------------
+            ! Initialize
+            !------------------------------------------------------------
+            buf(:)  = descript % initial_value
+            ibucket = ibucket + 1
+            tag     = tagbase + mod(ibucket, 8)
+
+            call write_cmd(descript%lun, descript, istart, iend)
+            if(descript%isInteger)then
+               call mpi_reduce(integerbuffer, integerresultBuffer, bufsize, mpi_int, MPI_SUM, 0, &
+                  COMM, ierr)
+            else
+               call mpi_reduce(buf, resultBuf, bufsize, float_type, MPI_SUM, 0, COMM, ierr)
+            endif
+            if (myproc == 0) then
+               do i = istart, iend
+                  j = 1 + (i-istart)*descript % num_items_per_record
+
+                  if(descript%isInteger)then
+                     write(descript % lun, 1001) labels_g(i), (integerResultBuffer(k), k = j, j + &
+                        descript % num_items_per_record - 1)
+                  else
+                     write(descript % lun, 1000) labels_g(i), (resultBuf(k), k = j, j + &
+                        descript % num_items_per_record - 1)
+                  endif
+               end do
+            end if
+
+            istart = iend + 1
+            iend   = min(istart + num - 1, descript % num_fd_records)
+            num    = iend - istart + 1
+         end do
+         if (myproc == 0) then
+            close(descript%lun)
+         endif
+#endif
+      endif
+
+#ifdef GLOBALIO_TRACE
+      call allMessage(DEBUG,"Return")
+#endif
+      call unsetMessageSource()
+
+1000  FORMAT(2x, i8, 2x, 1pE20.10E3, 1pE20.10E3, 1pE20.10E3, 1pE20.10E3)
+1001  FORMAT(2x, i8, 2x, i8, 2X, i8, 2X, i8, 2X, i8)
+1100  FORMAT(2x,1pE20.10E3,5X,I10)
+1101  FORMAT(2x,1pE20.10E3,5X,I10,5X,I10,5X,1pE20.10E3)
+!--------------------------------------------------------------
+   end subroutine writeFullFormat
+!--------------------------------------------------------------
+
+!--------------------------------------------------------------
+! S U B R O U T I N E  W R I T E   B I N A R Y F O R M A T
+!--------------------------------------------------------------
+! Subroutine to write binary format output files
+!--------------------------------------------------------------
+   subroutine writeBinaryFormat(descript,timeloc,it)
+      use global
+      use sizes
+      implicit none
+      type(outputdatadescript_t),intent(in) :: descript
+      integer,intent(in)                    :: it
+      real(8)                              :: timeloc
+      integer                               :: i
+
+      IF ( (MNPROC.gt.1).and.(MyProc.eq.0).and.(.not.WRITE_LOCAL_FILES)) THEN
+         OPEN(descript%lun,FILE=trim(descript%file_name),ACCESS='DIRECT',RECL=NBYTE,STATUS='REPLACE')
+         WRITE(descript % lun,REC=descript % filepos+1) TimeLoc
+         WRITE(descript % lun,REC=descript % filepos+2) IT
+         descript%filepos = descript%filepos + 2
+         IF ( descript % num_items_per_record .eq. 1 ) THEN
+            DO I=1, descript % num_fd_records
+               WRITE(descript % lun,REC=descript % filepos+I) descript % array_g(I)
+            END DO
+         ENDIF
+         IF ( descript % num_items_per_record .eq. 2 ) THEN
+            DO I=1, descript % num_fd_records
+               WRITE(descript % lun,REC=descript % filepos+2*I-1) descript % array_g(I)
+               WRITE(descript % lun,REC=descript % filepos+2*I) descript % array2_g(I)
+            END DO
+         ENDIF
+         CLOSE(descript%lun)
+      ENDIF
+
+      IF ((MNPROC.eq.1).or.(WRITE_LOCAL_FILES)) THEN
+         OPEN(descript % lun,FILE=TRIM(descript % file_name), ACCESS='DIRECT',RECL=NBYTE)
+         WRITE(descript % lun,REC=descript % filepos+1) TimeLoc
+         WRITE(descript % lun,REC=descript % filepos+2) IT
+         descript % filepos = descript % filepos + 2
+         IF ( descript % num_items_per_record .eq. 1 ) THEN
+            IF ((trim(descript % field_name) .eq. 'Elev').and.(descript % ConsiderWetDry .EQV. .TRUE.)) THEN
+               DO I=1, descript % num_records_this
+                  if(NODECODE(I).EQ.1) THEN
+                     WRITE(descript % lun,REC=descript % filepos+I) descript % array(I)
+                  ELSE
+                     WRITE(descript % lun,REC=descript % filepos+I) descript % alternate_value !-99999.0 for dry nodes
+                  ENDIF
+               END DO
+            ELSE
+               DO I=1, descript % num_records_this
+                  WRITE(descript % lun,REC=descript % filepos+I) descript % array(I)
+               END DO
+            ENDIF
+         ENDIF
+         IF ( descript % num_items_per_record .eq. 2 ) THEN
+            DO I=1, descript % num_records_this
+               !tcmv48.4618 -- changed from array_g to array
+               WRITE(descript % lun,REC=descript % filepos+2*I-1) descript % array(I)
+               !tcmv48.4618 -- changed from array2_g to array2
+               WRITE(descript % lun,REC=descript % filepos+2*I)   descript % array2(I)
+            END DO
+         ENDIF
+         CLOSE(descript % lun)
+      ENDIF
+      !descript % filepos = descript % filepos + descript % num_records_this
+      descript % filepos = 0
+      return
+!--------------------------------------------------------------
+   end subroutine writeBinaryFormat
+!--------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!      S U B R O U T I N E   S T A T I O N   D A T A   I N T E R P
+!-----------------------------------------------------------------------
+!     jgf51.21.24: Spatially interpolate the solution at a station using
+!     the solution at the three surrounding nodes; performs the
+!     the interpolation on both components for output data that contains
+!     two components.
+!-----------------------------------------------------------------------
+   subroutine stationDataInterp(descript)
+      use global
+      implicit none
+      type(OutputDataDescript_t), intent(inout) :: descript
+
+      call setMessageSource("stationDataInterp")
+#if defined(WRITE_OUTPUT_TRACE) || defined(ALL_TRACE)
+      call allMessage(DEBUG,"Enter.")
+#endif
+
+      call stationArrayInterp(descript, descript % interped_array, descript % array)
+      if ( descript % num_items_per_record .eq. 2 ) then
+         call stationArrayInterp(descript, descript % interped_array2, descript % array2)
+      endif
+
+#if defined(WRITE_OUTPUT_TRACE) || defined(ALL_TRACE)
+      call allMessage(DEBUG,"Return.")
+#endif
+      call unsetMessageSource()
+
+!-----------------------------------------------------------------------
+   end subroutine stationDataInterp
+!-----------------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!      S U B R O U T I N E   S T A T I O N   A R R A Y   I N T E R P
+!-----------------------------------------------------------------------
+!     jgf51.21.24: Performs station interpolations on a single array.
+!-----------------------------------------------------------------------
+   subroutine stationArrayInterp(descript, fromArray, toArray)
+      use global, only : nodecode, OutputDataDescript_t, IFNLFA, ETA2, NOFF, &
+         allMessage, DEBUG, setMessageSource, unsetMessageSource, &
+         StatPartWetFix,How2FixStatPartWet, h0
+      use mesh, only : dp, nm
+      implicit none
+      type(OutputDataDescript_t), intent(inout) :: descript
+      real(8), intent(in) :: fromArray(:)
+      real(8), intent(out) :: toArray(:)
+      integer :: e
+      real(8) :: d1, d2, d3
+      real(8) :: H2N1, H2N2, H2N3
+      real(8) :: tmpwts(3)
+      real(8) :: wlstn,wdstn,dpstn
+      integer :: ilocmaxwt(1)
+      integer :: ncele,ncsum
+      integer :: i, j
+
+      call setMessageSource("stationArrayInterp")
+#if defined(WRITE_OUTPUT_TRACE) || defined(ALL_TRACE)
+      call allMessage(DEBUG,"Enter.")
+#endif
+
+      do j=1, descript % num_records_this
+         e = descript % elements(j)
+         d1 = fromArray(nm(e,1))
+         d2 = fromArray(nm(e,2))
+         d3 = fromArray(nm(e,3))
+         !
+         ! if the value should be divided by the total depth
+         if ( descript % divideByDepth .eqv. .true.) then
+            H2N1=DP(NM(e,1))+IFNLFA*ETA2(nm(e,1))
+            H2N2=DP(NM(e,2))+IFNLFA*ETA2(NM(e,2))
+            H2N3=DP(NM(e,3))+IFNLFA*ETA2(NM(e,3))
+            d1=d1/H2N1
+            d2=d2/H2N2
+            d3=d3/H2N3
+         endif
+         !
+         ! perform spatial interpolation
+         toArray(j) = d1 * descript % interp_fac1(j) + &
+            d2 * descript % interp_fac2(j) + &
+            d3 * descript % interp_fac3(j)
+         !
+         ! if the station output should have a special value in a
+         ! dry element, apply the special value if necessary
+         ! jgf52.04.03: Removed NOFF from consideration when
+         ! determining wet/dry state for station interpolation purposes.
+         if (descript % considerWetDry .eqv..true. ) then
+            ncele = nodecode(nm(e,1)) * nodecode(nm(e,2)) * nodecode(nm(e,3))
+            if ((ncele.eq.0).and.(StatPartWetFix.eqv..false.)) then
+               !every node is not wet, and no special interpolatio
+               ! is to be done, therefore write out the alternate value
+               toArray(j) = descript % alternate_value
+            elseif ( (ncele.eq.0) .and. (StatPartWetFix .eqv. .true.) ) then
+               !every node is not wet, and special interpolation
+               ! has been specified
+
+               !check to see if the nearest neighbor
+               !node is wet, if so then use it
+
+               ncsum = nodecode(nm(e,1)) + nodecode(nm(e,2)) + nodecode(nm(e,3))
+               !if at least one node is wet then proceed
+               if ( ncsum .gt. 0 ) then
+                  tmpwts(1) = descript % interp_fac1(j)
+                  tmpwts(2) = descript % interp_fac2(j)
+                  tmpwts(3) = descript % interp_fac3(j)
+                  if ( How2FixStatPartWet .eq. 0 ) then !Use nearest neighbor value
+                     ilocmaxwt = maxloc(tmpwts) !nearest neighbor location (maximum weight)
+                     wlstn = eta2(nm(e,ilocmaxwt(1)))
+                     dpstn = dp(nm(e,ilocmaxwt(1)))
+                     wdstn = wlstn + dpstn
+                     !if the nearest neighbor is wet, then use that value
+                     if (nodecode(nm(e,ilocmaxwt(1))).gt.0 .and. wdstn.gt.0.8D0*h0) then
+                        toArray(j)=fromArray(nm(e,ilocmaxwt(1)))
+                     else !nearest neighbor is dry
+                        toArray(j) = descript % alternate_value
+                     endif
+                  else !left space for other options later
+                     toArray(j) = descript % alternate_value
+                  endif
+               else  !every node is dry
+                  toArray(j) = descript % alternate_value
+               endif
+            else !ncele.ne.0 means the element is all wet (all nodes wet)
+            endif
+         endif
+      end do
+
+#if defined(WRITE_OUTPUT_TRACE) || defined(ALL_TRACE)
+      call allMessage(DEBUG,"Return.")
+#endif
+      call unsetMessageSource()
+!----------------------------------------------------------------------
+   end subroutine stationArrayInterp
+!----------------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!     S U B R O U T I N E   K D T S E A R C H
+!
+!  Subroutine that uses the KDTREE2 algorithm for finding
+!      which element a point lies in.
+!
+!  Written by:  Chris Massey, USACE-ERDC-CHL, Vicksburg, MS 39056
+!  Added in v49.48.02
+!
+!-----------------------------------------------------------------------
+   SUBROUTINE kdtsearch(InputXCoordinate, InputYCoordinate, OutputElement, StationNumber)
+      use sizes, only : MyProc
+      use global, only : NFOver, NScreen, ScreenUnit, srchdp, tree, &
+         kdresults, DEBUG, screenMessage, allMessage, setMessageSource, &
+         unsetMessageSource
+      use mesh, only : ne, nm, x, y, areas, rmax, bcxy
+      use kdtree2_module
+#ifdef CMPI
+      USE MESSENGER, ONLY : msg_fini
+#endif
+      implicit none
+      REAL(8), intent(in) :: InputXCoordinate                  ! cartesian
+      REAL(8), intent(in) :: InputYCoordinate                  ! cartesian
+      INTEGER, intent(out) :: OutputElement
+      INTEGER, intent(in) :: StationNumber                     ! for err. mesg.
+
+      INTEGER Element         ! element loop counter
+      INTEGER ClosestElement  ! element with closest match
+      INTEGER :: ielm(3),itc,iek
+      REAL(8) X1, X2, X3, X4, Y1, Y2, Y3, Y4,Xsta,Ysta       ! geometry
+      REAL(8) A1, A2, A3, AE, AREASK, AA            ! area
+      real(8) :: elmmin(2),xelm(3),yelm(3),dist
+      LOGICAL ElementFound  ! .true. when a corresponding element is found
+
+      REAL(8), PARAMETER :: Tolerance = 1.0d-5     ! area difference for match
+
+      call setMessageSource("kdtsearch")
+
+      ElementFound = .false.
+
+      Xsta = InputXCoordinate
+      Ysta = InputYCoordinate
+
+      call kdtree2_n_nearest(tp=tree,qv=(/Xsta,Ysta/), nn=srchdp,results=KDRESULTS)
+      !Check to see if the point lies with rmax of any of these elements
+      ITC = 1
+      ClosestElement = KDRESULTS(itc)%idx
+
+      elmmin = minval(sqrt(KDRESULTS(1:srchdp)%dis) - rmax(KDRESULTS(1:srchdp)%idx) )
+
+      if(elmmin(1).le.0.0D0) then  ! Point lies within search radius of an element
+         !loop through the elements in the search list
+         do while ((ElementFound.eqv..false.).and.(itc.le.srchdp))
+            iek = KDRESULTS(itc)%idx  !Current search element number
+            !Get the distance from this point to the barycenter of the
+            !current element
+            dist = sqrt(KDRESULTS(itc)%dis)
+            !If the distance is less than or equal to rmax (rmax=1.5*element radius)
+            !Then the point is near the element and might be in it
+            !Proceed with the weights test
+            if(dist-rmax(iek).le.0.0d0) then
+               !get the shape function for this element
+               ielm(:) = NM(iek,(/1,2,3/))  !element's node numbers
+               xelm(:) = X(ielm(:))      !element's vertex x-values
+               yelm(:) = Y(ielm(:))      !element's vertex y-values
+               X1=xelm(1)
+               X2=xelm(2)
+               X3=xelm(3)
+               Y1=yelm(1)
+               Y2=yelm(2)
+               Y3=yelm(3)
+               A1=(Xsta-X3)*(Y2-Y3)+(X2-X3)*(Y3-Ysta)
+               A2=(Xsta-X1)*(Y3-Y1)-(Ysta-Y1)*(X3-X1)
+               A3=(Ysta-Y1)*(X2-X1)-(Xsta-X1)*(Y2-Y1)
+               AA=ABS(A1)+ABS(A2)+ABS(A3)
+               AREASK=X2*Y3+X1*Y2+X3*Y1-Y1*X2-Y2*X3-Y3*X1
+               AE=ABS(AA-AREASK)/AREASK
+               IF (AE.LT.Tolerance) THEN
+                  ElementFound = .true.
+                  ClosestElement = iek
+                  OutputElement = ClosestElement
+               else !not in this element keep looking
+                  itc = itc + 1
+               endif !End area ratio test
+            else !
+               !point is too far away from the barycenter of the
+               !element to possibly be in the element, so move to
+               !the next element
+               itc = itc + 1
+            endif !end Radius test
+         enddo !end the while loop
+      endif
+      IF (.not. ElementFound ) THEN
+         IF((NScreen.NE.0).AND.(MyProc.EQ.0)) THEN
+            WRITE(ScreenUnit,9892) 'error kdtsearch in IHM', StationNumber
+         ENDIF
+         WRITE(16,9892) 'error kdtsearch in IHM', StationNumber
+         IF(NFOVER.EQ.1) THEN
+            IF(NSCREEN.NE.0.AND.MYPROC.EQ.0) THEN
+               WRITE(ScreenUnit,9890) sqrt(KDRESULTS(1)%dis)
+            ENDIF
+            WRITE(16,9890) sqrt(KDRESULTS(1)%dis)
+            OutputElement = ClosestElement
+         ELSE
+            IF(NSCREEN.NE.0.AND.MYPROC.EQ.0) THEN
+               WRITE(ScreenUnit,9891) sqrt(KDRESULTS(1)%dis)
+            ENDIF
+            WRITE(16,9891) sqrt(KDRESULTS(1)%dis)
+            call terminate()
+         ENDIF
+      ENDIF
+
+9892  FORMAT(///,1X,'!!!!!!!!!!  WARNING - NONFATAL ',&
+         'INPUT ERROR  !!!!!!!!!',// &
+         ,1X,A30,1X,I6,' DOES ',&
+         'NOT LIE WITHIN ANY ELEMENT IN THE DEFINED',&
+         /,1X,'COMPUTATIONAL DOMAIN.   PLEASE CHECK THE ',&
+         'INPUT COORDINATES FOR THIS STATION')
+
+9890  FORMAT(/,1X,'PROGRAM WILL ESTIMATE NEAREST ELEMENT',&
+         /,1X,'DISTANCE TO NEAREST ELEMENT IS ',E15.6,&
+         //,1X,'!!!!!! EXECUTION WILL CONTINUE !!!!!!',//)
+
+9891  FORMAT(/,1X,'PROGRAM WILL NOT CORRECT ERROR ',&
+         'SINCE NON-FATAL ERROR OVERIDE OPTION, NFOVER,',&
+         /,1X,'HAS BEEN SELECTED EQUAL TO 0',&
+         /,1X,'DISTANCE TO NEAREST ELEMENT IS ',E15.6,&
+         //,1X,'!!!!!! EXECUTION WILL NOW BE TERMINATED !!!!!!',&
+         //)
+
+      call unsetMessageSource()
+! --------------------------------------------------------------------
+   END SUBROUTINE KDTSEARCH
+! --------------------------------------------------------------------
+
+!-----------------------------------------------------------------------
+!     S U B R O U T I N E   C O O R D I N A T E  T O  E L E M E N T
+!-----------------------------------------------------------------------
+!
+!     jgf45.12 Subroutine to take an X and Y cartesian coordinate and
+!     find the corresponding element.
+!
+!-----------------------------------------------------------------------
+   SUBROUTINE CoordinateToElement(InputXCoordinate, InputYCoordinate,&
+      OutputElement, StationNumber)
+      USE SIZES, ONLY : MyProc
+      USE GLOBAL, ONLY: NFOver, NScreen, screenMessage, allMessage,&
+         DEBUG, ScreenUnit, setMessageSource, unsetMessageSource
+      USE MESH, ONLY : NE, NM, X, Y, Areas
+
+      IMPLICIT NONE
+
+      REAL(8), intent(in) :: InputXCoordinate                  ! cartesian
+      REAL(8), intent(in) :: InputYCoordinate                  ! cartesian
+      INTEGER, intent(out) :: OutputElement
+      INTEGER, intent(in) :: StationNumber                     ! for err. mesg.
+
+      INTEGER Element         ! element loop counter
+      INTEGER ClosestElement  ! element with closest match
+      REAL(8) X1, X2, X3, X4, Y1, Y2, Y3, Y4       ! geometry
+      REAL(8) A1, A2, A3, AE, AEMIN, AA            ! area
+      LOGICAL ElementFound  ! .true. when a corresponding element is found
+      REAL(8), PARAMETER :: Tolerance = 1.0E-5     ! area difference for match
+
+      call setMessageSource("CoordinateToElement")
+
+      ElementFound = .false.
+      AEMIN=1.0E+25
+      ClosestElement=0
+      DO Element=1,NE
+         X1=X(NM(Element,1))
+         X2=X(NM(Element,2))
+         X3=X(NM(Element,3))
+         X4=InputXCoordinate
+         Y1=Y(NM(Element,1))
+         Y2=Y(NM(Element,2))
+         Y3=Y(NM(Element,3))
+         Y4=InputYCoordinate
+         A1=(X4-X3)*(Y2-Y3)+(X2-X3)*(Y3-Y4)
+         A2=(X4-X1)*(Y3-Y1)-(Y4-Y1)*(X3-X1)
+         A3=(Y4-Y1)*(X2-X1)-(X4-X1)*(Y2-Y1)
+         AA=ABS(A1)+ABS(A2)+ABS(A3)
+         AE=ABS(AA-Areas(Element))/Areas(Element)
+         IF (AE.LT.AEMIN) THEN
+            AEMIN=AE
+            ClosestElement=Element
+         ENDIF
+         IF (AE.LT.Tolerance) THEN
+            ElementFound = .true.
+            OutputElement=Element
+         ENDIF
+      ENDDO
+
+      IF (.not. ElementFound ) THEN
+         IF((NScreen.NE.0).AND.(MyProc.EQ.0)) THEN
+            WRITE(ScreenUnit,593) '--- IHM station', StationNumber
+         ENDIF
+         IF(NFOVER.EQ.1) THEN
+            IF(NSCREEN.NE.0.AND.MYPROC.EQ.0) THEN
+               WRITE(ScreenUnit,9790) AEMIN
+            ENDIF
+            !OutputElement = ClosestElement
+            OutputElement = 0
+         ELSE
+            IF(NSCREEN.NE.0.AND.MYPROC.EQ.0) THEN
+               WRITE(ScreenUnit,9791) AEMIN
+            ENDIF
+            call Terminate()
+         ENDIF
+      ENDIF
+
+593   FORMAT(///,1X,'!!!!!!!!!!  WARNING - NONFATAL ',&
+         'INPUT ERROR  !!!!!!!!!',//&
+         ,1X,A30,1X,I6,' does ',&
+         'not lie within any element in the defined', &
+         /,1X,'computational domain.   PLEASE CHECK THE ',&
+         'INPUT COORDINATES FOR THIS STATION')
+9790  FORMAT(/,1X,'PROGRAM WILL ESTIMATE NEAREST ELEMENT',&
+         /,1X,'PROXIMITY INDEX FOR THIS STATION EQUALS ',E15.6,&
+         //,1X,'!!!!!! EXECUTION WILL CONTINUE !!!!!!',//)
+9791  FORMAT(/,1X,'PROGRAM WILL NOT CORRECT ERROR ',&
+         'SINCE NON-FATAL ERROR OVERIDE OPTION, NFOVER,',&
+         /,1X,'HAS BEEN SELECTED EQUAL TO 0',&
+         /,1X,'PROXIMITY INDEX FOR THIS STATION EQUALS ',E15.6,&
+         //,1X,'!!!!!! EXECUTION WILL NOW BE TERMINATED !!!!!!',&
+         //)
+
+      call unsetMessageSource()
+      RETURN
+      !-----------------------------------------------------------------------
+   END SUBROUTINE CoordinateToElement
+   !-----------------------------------------------------------------------
+
+! -----------------------------------------------------------------------
+!     S U B R O U T I N E
+!     C O M P U T E  I N T E R P O L A T I N G  F A C T O R S
+!
+!     jgf45.12 Subroutine to pre-compute the interpolating factors for a
+!     recording station.
+!
+!-----------------------------------------------------------------------
+   SUBROUTINE ComputeInterpolatingFactors(InputXCoordinate,&
+      InputYCoordinate, InputElement, Factor1, Factor2, Factor3)
+
+      USE GLOBAL, ONLY : DEBUG, screenMessage,&
+         setMessageSource, unsetMessageSource, allMessage
+      USE MESH, ONLY : NM, X, Y, Areas
+      IMPLICIT NONE
+      REAL(8), intent(in) :: InputXCoordinate                  ! cartesian
+      REAL(8), intent(in) :: InputYCoordinate                  ! cartesian
+      INTEGER, intent(in) :: InputElement
+      REAL(8), intent(out):: Factor1, Factor2, Factor3
+
+      REAL(8) X1, X2, X3, X4, Y1, Y2, Y3, Y4                   ! geometry
+      call setMessageSource("ComputeInterpolatingFactors")
+
+      X1=X(NM(InputElement,1))
+      X2=X(NM(InputElement,2))
+      X3=X(NM(InputElement,3))
+      X4=InputXCoordinate
+      Y1=Y(NM(InputElement,1))
+      Y2=Y(NM(InputElement,2))
+      Y3=Y(NM(InputElement,3))
+      Y4=InputYCoordinate
+
+      Factor1=((X4-X3)*(Y2-Y3)+(X2-X3)*(Y3-Y4))/Areas(InputElement)
+      Factor2=((X4-X1)*(Y3-Y1)-(Y4-Y1)*(X3-X1))/Areas(InputElement)
+      Factor3=(-(X4-X1)*(Y2-Y1)+(Y4-Y1)*(X2-X1))/Areas(InputElement)
+
+      call unsetMessageSource()
+      RETURN
+!-----------------------------------------------------------------------
+   END SUBROUTINE ComputeInterpolatingFactors
+!-----------------------------------------------------------------------
+
+!----------------------------------------------------------------------
+   SUBROUTINE terminate(NO_MPI_FINALIZE)
+!----------------------------------------------------------------------
+#ifdef CMPI
+      USE MESSENGER
+#endif
+      USE GLOBAL, ONLY : setMessageSource, unsetMessageSource, &
+         allMessage, DEBUG, ECHO, INFO, WARNING, ERROR
+      IMPLICIT NONE
+      LOGICAL, OPTIONAL :: NO_MPI_FINALIZE
+      call setMessageSource("terminate")
+#if defined(WRITE_OUTPUT_TRACE) || defined(ALL_TRACE)
+      call allMessage(DEBUG,"Enter.")
+#endif
+
+      call allMessage(INFO,"ADCIRC Terminating.")
+
+#ifdef CMPI
+      subdomainFatalError = .true.
+      IF (PRESENT(NO_MPI_FINALIZE)) THEN
+         CALL MSG_FINI(NO_MPI_FINALIZE)
+      ELSE
+         CALL MSG_FINI()
+      ENDIF
+#endif
+      STOP
+#if defined(WRITE_OUTPUT_TRACE) || defined(ALL_TRACE)
+      call allMessage(DEBUG,"Return.") ! should be unreachable
+#endif
+      call unsetMessageSource()
+!-----------------------------------------------------------------
+   END SUBROUTINE terminate
+!-----------------------------------------------------------------
+
+end module write_output_IHM
+!-----------------------------------------------------------------
+
+

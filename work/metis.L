@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:34 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
-  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/metis.o
+  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/metis.o
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:33 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS
 DIAGNOSTIC LIST
@@ -188,14 +188,10 @@ DIAGNOSTIC LIST
     79: vec( 126): Idiom detected.: MAX/MIN
     91: opt(1593): Loop nest collapsed into one loop.: INODE
     91: vec( 101): Vectorized loop.
-    97: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
     98: vec( 101): Vectorized loop.
     99: vec( 126): Idiom detected.: SEARCH
-   100: opt(3014): Moved reference within a conditional branch.
-   106: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    107: vec( 101): Vectorized loop.
    108: vec( 126): Idiom detected.: SEARCH
-   109: opt(3014): Moved reference within a conditional branch.
    120: opt(1592): Outer loop unrolled inside inner loop.
    120: vec( 101): Vectorized loop.
    123: vec( 101): Vectorized loop.
@@ -256,8 +252,8 @@ DIAGNOSTIC LIST
    408: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:34 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS
 FORMAT LIST
@@ -677,8 +673,8 @@ FORMAT LIST
    425:                 END SUBROUTINE METIS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:33 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS
 INLINE LIST
@@ -692,8 +688,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:33 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS
 VECTORIZATION LIST
@@ -992,8 +988,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:33 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS
 CODE GENERATION LIST
@@ -1008,11 +1004,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 3216 bytes
-      Register spill area      :  856 bytes
+    Total size                 : 3248 bytes
+      Register spill area      :  872 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 2024 bytes
+      User data area           : 2040 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
@@ -1023,7 +1019,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (metis.F:72)
-    *** Estimated execution cycle                       : 226
+    *** Estimated execution cycle                       : 162
   LOOP END
 
   LOOP BEGIN: (metis.F:72)
@@ -1039,20 +1035,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (metis.F:97)
-    *** Estimated execution cycle                       : 48
+    *** Estimated execution cycle                       : 50
     *** The number of SCALAR REGISTER TRANSFER          : 10
 
     LOOP BEGIN: (metis.F:98)
-      *** Estimated execution cycle                     : 86
+      *** Estimated execution cycle                     : 88
     LOOP END
   LOOP END
 
   LOOP BEGIN: (metis.F:106)
-    *** Estimated execution cycle                       : 48
+    *** Estimated execution cycle                       : 50
     *** The number of SCALAR REGISTER TRANSFER          : 10
 
     LOOP BEGIN: (metis.F:107)
-      *** Estimated execution cycle                     : 86
+      *** Estimated execution cycle                     : 88
     LOOP END
   LOOP END
 
@@ -1180,17 +1176,17 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (metis.F:271)
-      *** Estimated execution cycle                     : 136
+      *** Estimated execution cycle                     : 140
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 7
               Across calls                              : 7
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 8
               Across calls                              : 8
-      *** The number of SCALAR REGISTER TRANSFER        : 34
+      *** The number of SCALAR REGISTER TRANSFER        : 32
 
       LOOP BEGIN: (metis.F:274)
-        *** Estimated execution cycle                   : 118
+        *** Estimated execution cycle                   : 121
       LOOP END
     LOOP END
   LOOP END
@@ -1204,7 +1200,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (metis.F:304)
-    *** Estimated execution cycle                       : 61
+    *** Estimated execution cycle                       : 60
     *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (metis.F:305)
@@ -1231,11 +1227,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (metis.F:398)
-    *** Estimated execution cycle                       : 190
+    *** Estimated execution cycle                       : 156
   LOOP END
 
   LOOP BEGIN: (metis.F:398)
-    *** Estimated execution cycle                       : 181
+    *** Estimated execution cycle                       : 145
   LOOP END
 
   LOOP BEGIN: (metis.F:401)
@@ -1262,8 +1258,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:34 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS_NPART_FROM_EPART
 DIAGNOSTIC LIST
@@ -1300,8 +1296,8 @@ DIAGNOSTIC LIST
    583: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:34 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS_NPART_FROM_EPART
 FORMAT LIST
@@ -1468,8 +1464,8 @@ FORMAT LIST
    596:                 END SUBROUTINE METIS_NPART_FROM_EPART
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:34 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS_NPART_FROM_EPART
 INLINE LIST
@@ -1479,8 +1475,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:34 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS_NPART_FROM_EPART
 VECTORIZATION LIST
@@ -1648,8 +1644,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:24 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/metis.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:51:34 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/metis.F
 
 PROCEDURE NAME: METIS_PARTITION::METIS_NPART_FROM_EPART
 CODE GENERATION LIST
@@ -1759,7 +1755,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (metis.F:536)
-      *** Estimated execution cycle                     : 73
+      *** Estimated execution cycle                     : 71
     LOOP END
   LOOP END
 
@@ -1768,11 +1764,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (metis.F:571)
-    *** Estimated execution cycle                       : 190
+    *** Estimated execution cycle                       : 156
   LOOP END
 
   LOOP BEGIN: (metis.F:571)
-    *** Estimated execution cycle                       : 181
+    *** Estimated execution cycle                       : 145
   LOOP END
 
   LOOP BEGIN: (metis.F:573)

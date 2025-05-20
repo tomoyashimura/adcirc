@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
-  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/harm.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/harm.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_HA
 DIAGNOSTIC LIST
@@ -184,8 +184,8 @@ DIAGNOSTIC LIST
    293: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_HA
 FORMAT LIST
@@ -241,8 +241,8 @@ FORMAT LIST
    296:                 END SUBROUTINE ALLOC_HA
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_HA
 INLINE LIST
@@ -254,8 +254,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_HA
 VECTORIZATION LIST
@@ -263,8 +263,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_HA
 CODE GENERATION LIST
@@ -290,8 +290,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_MAIN14
 DIAGNOSTIC LIST
@@ -302,8 +302,8 @@ DIAGNOSTIC LIST
    326: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_MAIN14
 FORMAT LIST
@@ -348,8 +348,8 @@ FORMAT LIST
    329:                 END SUBROUTINE ALLOC_MAIN14
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_MAIN14
 INLINE LIST
@@ -361,8 +361,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_MAIN14
 VECTORIZATION LIST
@@ -370,8 +370,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOC_MAIN14
 CODE GENERATION LIST
@@ -397,8 +397,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOCATEFULLDOMAINHAIOARRAYS
 DIAGNOSTIC LIST
@@ -409,8 +409,8 @@ DIAGNOSTIC LIST
    368: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOCATEFULLDOMAINHAIOARRAYS
 FORMAT LIST
@@ -462,8 +462,8 @@ FORMAT LIST
    370:                 END SUBROUTINE allocateFullDomainHAIOArrays
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOCATEFULLDOMAINHAIOARRAYS
 INLINE LIST
@@ -475,8 +475,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOCATEFULLDOMAINHAIOARRAYS
 VECTORIZATION LIST
@@ -484,8 +484,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::ALLOCATEFULLDOMAINHAIOARRAYS
 CODE GENERATION LIST
@@ -511,8 +511,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::WRITEHA
 DIAGNOSTIC LIST
@@ -528,8 +528,8 @@ DIAGNOSTIC LIST
    408: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::WRITEHA
 FORMAT LIST
@@ -584,8 +584,8 @@ FORMAT LIST
    410:                 END SUBROUTINE writeHA
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::WRITEHA
 INLINE LIST
@@ -597,8 +597,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::WRITEHA
 VECTORIZATION LIST
@@ -618,8 +618,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::WRITEHA
 CODE GENERATION LIST
@@ -628,7 +628,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 41 [s0-s12 s15-s16 s18-s19 s23-s42 s60-s63]
+      Scalar registers         : 40 [s0-s12 s15-s16 s18-s19 s23-s42 s61-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -645,7 +645,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (harm.F:390)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (harm.F:394)
@@ -669,8 +669,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHARMONICPARAMETERS
 DIAGNOSTIC LIST
@@ -686,8 +686,8 @@ DIAGNOSTIC LIST
    491: inl(1222): Inlined: HARM::HARMONICTERMINATE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHARMONICPARAMETERS
 FORMAT LIST
@@ -800,8 +800,8 @@ FORMAT LIST
    510:                 END SUBROUTINE checkHarmonicParameters
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHARMONICPARAMETERS
 INLINE LIST
@@ -881,8 +881,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHARMONICPARAMETERS
 VECTORIZATION LIST
@@ -890,8 +890,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:17 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHARMONICPARAMETERS
 CODE GENERATION LIST
@@ -900,7 +900,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 16 [s0-s2 s8-s12 s15-s16 s23-s24 s60-s63]
+      Scalar registers         : 17 [s0-s2 s8-s12 s15-s16 s23-s24 s59-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -917,8 +917,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::INITHARMONICPARAMETERS
 DIAGNOSTIC LIST
@@ -970,8 +970,8 @@ DIAGNOSTIC LIST
    630: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::INITHARMONICPARAMETERS
 FORMAT LIST
@@ -1111,8 +1111,8 @@ FORMAT LIST
    638:                 end subroutine initHarmonicParameters
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::INITHARMONICPARAMETERS
 INLINE LIST
@@ -1143,8 +1143,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::INITHARMONICPARAMETERS
 VECTORIZATION LIST
@@ -1524,8 +1524,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::INITHARMONICPARAMETERS
 CODE GENERATION LIST
@@ -1833,8 +1833,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::UPDATEHARMONICANALYSIS
 DIAGNOSTIC LIST
@@ -1863,8 +1863,8 @@ DIAGNOSTIC LIST
    757: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::UPDATEHARMONICANALYSIS
 FORMAT LIST
@@ -2004,8 +2004,8 @@ FORMAT LIST
    772:                 end subroutine updateHarmonicAnalysis
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::UPDATEHARMONICANALYSIS
 INLINE LIST
@@ -2044,8 +2044,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::UPDATEHARMONICANALYSIS
 VECTORIZATION LIST
@@ -2254,8 +2254,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::UPDATEHARMONICANALYSIS
 CODE GENERATION LIST
@@ -2316,7 +2316,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:701)
-    *** Estimated execution cycle                       : 984
+    *** Estimated execution cycle                       : 856
   LOOP END
 
   LOOP BEGIN: (harm.F:873)
@@ -2324,11 +2324,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:880)
-    *** Estimated execution cycle                       : 164
+    *** Estimated execution cycle                       : 166
   LOOP END
 
   LOOP BEGIN: (harm.F:880)
-    *** Estimated execution cycle                       : 53
+    *** Estimated execution cycle                       : 54
     *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:886)
@@ -2337,11 +2337,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:880)
-    *** Estimated execution cycle                       : 568
+    *** Estimated execution cycle                       : 570
   LOOP END
 
   LOOP BEGIN: (harm.F:880)
-    *** Estimated execution cycle                       : 97
+    *** Estimated execution cycle                       : 98
     *** The number of SCALAR REGISTER TRANSFER          : 32
 
     LOOP BEGIN: (harm.F:886)
@@ -2350,7 +2350,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:713)
-    *** Estimated execution cycle                       : 1412
+    *** Estimated execution cycle                       : 1284
   LOOP END
 
   LOOP BEGIN: (harm.F:929)
@@ -2358,11 +2358,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:937)
-    *** Estimated execution cycle                       : 164
+    *** Estimated execution cycle                       : 166
   LOOP END
 
   LOOP BEGIN: (harm.F:937)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 59
     *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:943)
@@ -2371,11 +2371,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:937)
-    *** Estimated execution cycle                       : 568
+    *** Estimated execution cycle                       : 570
   LOOP END
 
   LOOP BEGIN: (harm.F:937)
-    *** Estimated execution cycle                       : 171
+    *** Estimated execution cycle                       : 172
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 22
             Over basic blocks                           : 22
@@ -2394,11 +2394,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:994)
-    *** Estimated execution cycle                       : 164
+    *** Estimated execution cycle                       : 166
   LOOP END
 
   LOOP BEGIN: (harm.F:994)
-    *** Estimated execution cycle                       : 53
+    *** Estimated execution cycle                       : 54
     *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:1000)
@@ -2407,11 +2407,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:994)
-    *** Estimated execution cycle                       : 568
+    *** Estimated execution cycle                       : 570
   LOOP END
 
   LOOP BEGIN: (harm.F:994)
-    *** Estimated execution cycle                       : 97
+    *** Estimated execution cycle                       : 98
     *** The number of SCALAR REGISTER TRANSFER          : 32
 
     LOOP BEGIN: (harm.F:1000)
@@ -2424,11 +2424,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1053)
-    *** Estimated execution cycle                       : 164
+    *** Estimated execution cycle                       : 166
   LOOP END
 
   LOOP BEGIN: (harm.F:1053)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 59
     *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:1059)
@@ -2437,11 +2437,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1053)
-    *** Estimated execution cycle                       : 568
+    *** Estimated execution cycle                       : 570
   LOOP END
 
   LOOP BEGIN: (harm.F:1053)
-    *** Estimated execution cycle                       : 171
+    *** Estimated execution cycle                       : 172
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 22
             Over basic blocks                           : 22
@@ -2468,8 +2468,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDLHS
 DIAGNOSTIC LIST
@@ -2488,8 +2488,8 @@ DIAGNOSTIC LIST
    841: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDLHS
 FORMAT LIST
@@ -2568,8 +2568,8 @@ FORMAT LIST
    843:                 end subroutine LSQUPDLHS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDLHS
 INLINE LIST
@@ -2581,8 +2581,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDLHS
 VECTORIZATION LIST
@@ -2608,8 +2608,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDLHS
 CODE GENERATION LIST
@@ -2662,8 +2662,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDES
 DIAGNOSTIC LIST
@@ -2680,8 +2680,8 @@ DIAGNOSTIC LIST
    895: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDES
 FORMAT LIST
@@ -2744,8 +2744,8 @@ FORMAT LIST
    897:                 end subroutine LSQUPDES
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDES
 INLINE LIST
@@ -2757,8 +2757,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDES
 VECTORIZATION LIST
@@ -2800,8 +2800,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:11 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDES
 CODE GENERATION LIST
@@ -2831,11 +2831,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:880)
-    *** Estimated execution cycle                       : 164
+    *** Estimated execution cycle                       : 166
   LOOP END
 
   LOOP BEGIN: (harm.F:880)
-    *** Estimated execution cycle                       : 52
+    *** Estimated execution cycle                       : 53
     *** The number of SCALAR REGISTER TRANSFER          : 13
 
     LOOP BEGIN: (harm.F:886)
@@ -2844,15 +2844,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:880)
-    *** Estimated execution cycle                       : 568
+    *** Estimated execution cycle                       : 570
   LOOP END
 
   LOOP BEGIN: (harm.F:880)
     *** Estimated execution cycle                       : 98
-    *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 1
-            Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 35
+    *** The number of SCALAR REGISTER TRANSFER          : 32
 
     LOOP BEGIN: (harm.F:886)
       *** Estimated execution cycle                     : 576
@@ -2860,8 +2857,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVS
 DIAGNOSTIC LIST
@@ -2880,8 +2877,8 @@ DIAGNOSTIC LIST
    954: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVS
 FORMAT LIST
@@ -2947,8 +2944,8 @@ FORMAT LIST
    956:                 end subroutine LSQUPDVS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVS
 INLINE LIST
@@ -2960,8 +2957,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVS
 VECTORIZATION LIST
@@ -3003,8 +3000,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVS
 CODE GENERATION LIST
@@ -3034,11 +3031,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:937)
-    *** Estimated execution cycle                       : 164
+    *** Estimated execution cycle                       : 166
   LOOP END
 
   LOOP BEGIN: (harm.F:937)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 59
     *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:943)
@@ -3047,18 +3044,18 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:937)
-    *** Estimated execution cycle                       : 568
+    *** Estimated execution cycle                       : 570
   LOOP END
 
   LOOP BEGIN: (harm.F:937)
-    *** Estimated execution cycle                       : 166
+    *** Estimated execution cycle                       : 165
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 19
             Over basic blocks                           : 19
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 23
             Over basic blocks                           : 23
-    *** The number of SCALAR REGISTER TRANSFER          : 27
+    *** The number of SCALAR REGISTER TRANSFER          : 25
 
     LOOP BEGIN: (harm.F:943)
       *** Estimated execution cycle                     : 1122
@@ -3066,8 +3063,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDEG
 DIAGNOSTIC LIST
@@ -3084,8 +3081,8 @@ DIAGNOSTIC LIST
   1010: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDEG
 FORMAT LIST
@@ -3149,8 +3146,8 @@ FORMAT LIST
   1012:                 end subroutine LSQUPDEG
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDEG
 INLINE LIST
@@ -3162,8 +3159,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDEG
 VECTORIZATION LIST
@@ -3205,8 +3202,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDEG
 CODE GENERATION LIST
@@ -3236,11 +3233,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:994)
-    *** Estimated execution cycle                       : 164
+    *** Estimated execution cycle                       : 166
   LOOP END
 
   LOOP BEGIN: (harm.F:994)
-    *** Estimated execution cycle                       : 52
+    *** Estimated execution cycle                       : 53
     *** The number of SCALAR REGISTER TRANSFER          : 13
 
     LOOP BEGIN: (harm.F:1000)
@@ -3249,15 +3246,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:994)
-    *** Estimated execution cycle                       : 568
+    *** Estimated execution cycle                       : 570
   LOOP END
 
   LOOP BEGIN: (harm.F:994)
     *** Estimated execution cycle                       : 98
-    *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 1
-            Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 35
+    *** The number of SCALAR REGISTER TRANSFER          : 32
 
     LOOP BEGIN: (harm.F:1000)
       *** Estimated execution cycle                     : 576
@@ -3265,8 +3259,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVG
 DIAGNOSTIC LIST
@@ -3285,8 +3279,8 @@ DIAGNOSTIC LIST
   1071: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVG
 FORMAT LIST
@@ -3353,8 +3347,8 @@ FORMAT LIST
   1073:                 end subroutine LSQUPDVG
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVG
 INLINE LIST
@@ -3366,8 +3360,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVG
 VECTORIZATION LIST
@@ -3409,8 +3403,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:18 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQUPDVG
 CODE GENERATION LIST
@@ -3440,11 +3434,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1053)
-    *** Estimated execution cycle                       : 164
+    *** Estimated execution cycle                       : 166
   LOOP END
 
   LOOP BEGIN: (harm.F:1053)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 59
     *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:1059)
@@ -3453,18 +3447,18 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1053)
-    *** Estimated execution cycle                       : 568
+    *** Estimated execution cycle                       : 570
   LOOP END
 
   LOOP BEGIN: (harm.F:1053)
-    *** Estimated execution cycle                       : 166
+    *** Estimated execution cycle                       : 165
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 19
             Over basic blocks                           : 19
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 23
             Over basic blocks                           : 23
-    *** The number of SCALAR REGISTER TRANSFER          : 27
+    *** The number of SCALAR REGISTER TRANSFER          : 25
 
     LOOP BEGIN: (harm.F:1059)
       *** Estimated execution cycle                     : 1122
@@ -3472,8 +3466,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::SOLVEHARMONICANALYSIS
 DIAGNOSTIC LIST
@@ -3491,8 +3485,8 @@ DIAGNOSTIC LIST
   1125: inl(1222): Inlined: HARM::LSQSOLEG
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::SOLVEHARMONICANALYSIS
 FORMAT LIST
@@ -3567,8 +3561,8 @@ FORMAT LIST
   1135:                 END SUBROUTINE solveHarmonicAnalysis
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::SOLVEHARMONICANALYSIS
 INLINE LIST
@@ -3596,8 +3590,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::SOLVEHARMONICANALYSIS
 VECTORIZATION LIST
@@ -3731,8 +3725,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::SOLVEHARMONICANALYSIS
 CODE GENERATION LIST
@@ -3762,7 +3756,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1169)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 55
     *** The number of SCALAR REGISTER TRANSFER          : 23
 
     LOOP BEGIN: (harm.F:1170)
@@ -3775,7 +3769,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1177)
-    *** Estimated execution cycle                       : 278
+    *** Estimated execution cycle                       : 272
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 18
             Over basic blocks                           : 18
@@ -3789,7 +3783,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1183)
-      *** Estimated execution cycle                     : 93
+      *** Estimated execution cycle                     : 92
       *** The number of SCALAR REGISTER TRANSFER        : 64
 
       LOOP BEGIN: (harm.F:1183)
@@ -3807,7 +3801,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1426)
-    *** Estimated execution cycle                       : 1379
+    *** Estimated execution cycle                       : 1380
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 1
             Over basic blocks                           : 1
@@ -3890,8 +3884,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::FULSOL
 DIAGNOSTIC LIST
@@ -3899,13 +3893,11 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   1158: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
-  1169: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1169: vec( 103): Unvectorized loop.
   1169: vec( 113): Overhead of loop division is too large.
   1170: opt(1315): Iterations peeled from loop in order to avoid dependence.: I
   1170: opt(1409): Alternate code generated.: I
   1170: vec( 103): Unvectorized loop.
-  1171: opt(3014): Moved reference within a conditional branch.
   1171: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: HA
   1177: vec( 108): Unvectorizable loop structure.
   1179: vec( 101): Vectorized loop.
@@ -3916,24 +3908,21 @@ DIAGNOSTIC LIST
   1187: opt(1084): Branch out of the loop inhibits optimization.
   1188: vec( 101): Vectorized loop.
   1196: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
-  1204: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1204: vec( 102): Partially vectorized loop.
   1205: opt(1037): Feedback of array elements.
   1206: vec( 101): Vectorized loop.
   1207: vec( 126): Idiom detected.: SUM
   1207: vec( 128): Fused multiply-add operation applied.
   1213: vec( 101): Vectorized loop.
-  1220: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1220: vec( 103): Unvectorized loop.
   1220: vec( 113): Overhead of loop division is too large.
   1222: vec( 101): Vectorized loop.
   1223: vec( 126): Idiom detected.: SUM
   1223: vec( 128): Fused multiply-add operation applied.
-  1224: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::FULSOL
 FORMAT LIST
@@ -4037,8 +4026,8 @@ FORMAT LIST
   1234:                 end subroutine fulsol
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::FULSOL
 INLINE LIST
@@ -4052,8 +4041,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::FULSOL
 VECTORIZATION LIST
@@ -4160,8 +4149,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::FULSOL
 CODE GENERATION LIST
@@ -4187,7 +4176,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (harm.F:1204)
-    *** Estimated execution cycle                       : 61
+    *** Estimated execution cycle                       : 62
   LOOP END
 
   LOOP BEGIN: (harm.F:1204)
@@ -4213,7 +4202,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1169)
-    *** Estimated execution cycle                       : 53
+    *** Estimated execution cycle                       : 51
     *** The number of SCALAR REGISTER TRANSFER          : 17
 
     LOOP BEGIN: (harm.F:1170)
@@ -4226,21 +4215,21 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1177)
-    *** Estimated execution cycle                       : 244
+    *** Estimated execution cycle                       : 243
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 19
             Over basic blocks                           : 19
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 19
             Over basic blocks                           : 19
-    *** The number of SCALAR REGISTER TRANSFER          : 40
+    *** The number of SCALAR REGISTER TRANSFER          : 43
 
     LOOP BEGIN: (harm.F:1179)
       *** Estimated execution cycle                     : 95
     LOOP END
 
     LOOP BEGIN: (harm.F:1183)
-      *** Estimated execution cycle                     : 93
+      *** Estimated execution cycle                     : 92
       *** The number of SCALAR REGISTER TRANSFER        : 64
 
       LOOP BEGIN: (harm.F:1183)
@@ -4258,8 +4247,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLES
 DIAGNOSTIC LIST
@@ -4273,16 +4262,13 @@ DIAGNOSTIC LIST
   1263: vec( 182): Deallocation obstructs vectorization.
   1264: vec( 101): Vectorized loop.
   1267: inl(1222): Inlined: HARM::FULSOL
-  1271: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1271: vec( 101): Vectorized loop.
-  1273: opt(3014): Moved reference within a conditional branch.
-  1278: opt(3014): Moved reference within a conditional branch.
   1278: vec( 128): Fused multiply-add operation applied.
   1285: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLES
 FORMAT LIST
@@ -4355,8 +4341,8 @@ FORMAT LIST
   1297:                 end subroutine lsqsoles
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLES
 INLINE LIST
@@ -4375,8 +4361,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLES
 VECTORIZATION LIST
@@ -4504,8 +4490,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLES
 CODE GENERATION LIST
@@ -4531,7 +4517,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (harm.F:1153)
-    *** Estimated execution cycle                       : 638
+    *** Estimated execution cycle                       : 641
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 1
             Over basic blocks                           : 1
@@ -4540,9 +4526,9 @@ CODE GENERATION LIST
             Across calls                                :  1
             Over basic blocks                           : 27
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 67
+          Total                                         : 66
             Across calls                                :  1
-            Over basic blocks                           : 66
+            Over basic blocks                           : 65
     *** The number of SCALAR REGISTER TRANSFER          : 88
 
     LOOP BEGIN: (harm.F:1264)
@@ -4550,7 +4536,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 62
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
@@ -4576,7 +4562,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1169)
-      *** Estimated execution cycle                     : 59
+      *** Estimated execution cycle                     : 57
       *** The number of SCALAR REGISTER TRANSFER        : 25
 
       LOOP BEGIN: (harm.F:1170)
@@ -4589,21 +4575,21 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1177)
-      *** Estimated execution cycle                     : 314
+      *** Estimated execution cycle                     : 308
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 26
               Over basic blocks                         : 26
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 25
               Over basic blocks                         : 25
-      *** The number of SCALAR REGISTER TRANSFER        : 60
+      *** The number of SCALAR REGISTER TRANSFER        : 58
 
       LOOP BEGIN: (harm.F:1179)
         *** Estimated execution cycle                   : 95
       LOOP END
 
       LOOP BEGIN: (harm.F:1183)
-        *** Estimated execution cycle                   : 95
+        *** Estimated execution cycle                   : 94
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 2
                 Over basic blocks                       : 2
@@ -4635,8 +4621,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVS
 DIAGNOSTIC LIST
@@ -4653,18 +4639,15 @@ DIAGNOSTIC LIST
   1336: vec( 101): Vectorized loop.
   1339: opt(1112): Loop fused with previous loop.: K
   1342: inl(1222): Inlined: HARM::FULSOL
-  1347: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1347: vec( 101): Vectorized loop.
-  1349: opt(3014): Moved reference within a conditional branch.
-  1356: opt(3014): Moved reference within a conditional branch.
   1356: vec( 128): Fused multiply-add operation applied.
   1357: vec( 128): Fused multiply-add operation applied.
   1369: vec( 128): Fused multiply-add operation applied.
   1372: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVS
 FORMAT LIST
@@ -4759,8 +4742,8 @@ FORMAT LIST
   1383:                 end subroutine lsqsolvs
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVS
 INLINE LIST
@@ -4786,8 +4769,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVS
 VECTORIZATION LIST
@@ -5020,8 +5003,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVS
 CODE GENERATION LIST
@@ -5047,7 +5030,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (harm.F:1153)
-    *** Estimated execution cycle                       : 1236
+    *** Estimated execution cycle                       : 1246
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 1
             Over basic blocks                           : 1
@@ -5060,14 +5043,14 @@ CODE GENERATION LIST
           Total                                         : 153
             Across calls                                :   2
             Over basic blocks                           : 151
-    *** The number of SCALAR REGISTER TRANSFER          : 135
+    *** The number of SCALAR REGISTER TRANSFER          : 136
 
     LOOP BEGIN: (harm.F:1332)
       *** Estimated execution cycle                     : 64
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 62
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
@@ -5093,7 +5076,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1169)
-      *** Estimated execution cycle                     : 59
+      *** Estimated execution cycle                     : 57
       *** The number of SCALAR REGISTER TRANSFER        : 25
 
       LOOP BEGIN: (harm.F:1170)
@@ -5106,21 +5089,21 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1177)
-      *** Estimated execution cycle                     : 313
+      *** Estimated execution cycle                     : 308
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 26
               Over basic blocks                         : 26
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 25
               Over basic blocks                         : 25
-      *** The number of SCALAR REGISTER TRANSFER        : 58
+      *** The number of SCALAR REGISTER TRANSFER        : 59
 
       LOOP BEGIN: (harm.F:1179)
         *** Estimated execution cycle                   : 95
       LOOP END
 
       LOOP BEGIN: (harm.F:1183)
-        *** Estimated execution cycle                   : 95
+        *** Estimated execution cycle                   : 94
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 2
                 Over basic blocks                       : 2
@@ -5148,7 +5131,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 62
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
@@ -5174,7 +5157,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1169)
-      *** Estimated execution cycle                     : 59
+      *** Estimated execution cycle                     : 57
       *** The number of SCALAR REGISTER TRANSFER        : 25
 
       LOOP BEGIN: (harm.F:1170)
@@ -5187,21 +5170,21 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1177)
-      *** Estimated execution cycle                     : 314
+      *** Estimated execution cycle                     : 309
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 26
               Over basic blocks                         : 26
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 25
               Over basic blocks                         : 25
-      *** The number of SCALAR REGISTER TRANSFER        : 58
+      *** The number of SCALAR REGISTER TRANSFER        : 59
 
       LOOP BEGIN: (harm.F:1179)
         *** Estimated execution cycle                   : 95
       LOOP END
 
       LOOP BEGIN: (harm.F:1183)
-        *** Estimated execution cycle                   : 95
+        *** Estimated execution cycle                   : 94
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 2
                 Over basic blocks                       : 2
@@ -5240,8 +5223,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLEG
 DIAGNOSTIC LIST
@@ -5255,16 +5238,10 @@ DIAGNOSTIC LIST
   1426: vec( 182): Deallocation obstructs vectorization.
   1427: vec( 101): Vectorized loop.
   1430: inl(1222): Inlined: HARM::FULSOL
-  1435: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1435: vec( 101): Vectorized loop.
-  1437: opt(3014): Moved reference within a conditional branch.
-  1438: opt(3014): Moved reference within a conditional branch.
-  1443: opt(3014): Moved reference within a conditional branch.
   1443: vec( 128): Fused multiply-add operation applied.
-  1444: opt(3014): Moved reference within a conditional branch.
   1451: vec( 128): Fused multiply-add operation applied.
   1459: opt(1592): Outer loop unrolled inside inner loop.: IT
-  1459: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1459: vec( 102): Partially vectorized loop.
   1459: vec( 113): Overhead of loop division is too large.
   1462: vec( 101): Vectorized loop.
@@ -5275,8 +5252,8 @@ DIAGNOSTIC LIST
   1467: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLEG
 FORMAT LIST
@@ -5428,8 +5405,8 @@ FORMAT LIST
   1527:                 end subroutine lsqsoleg
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLEG
 INLINE LIST
@@ -5448,8 +5425,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLEG
 VECTORIZATION LIST
@@ -5612,8 +5589,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:19 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:12 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLEG
 CODE GENERATION LIST
@@ -5639,7 +5616,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (harm.F:1153)
-    *** Estimated execution cycle                       : 1903
+    *** Estimated execution cycle                       : 1906
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 1
             Over basic blocks                           : 1
@@ -5659,7 +5636,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 62
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
@@ -5685,7 +5662,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1169)
-      *** Estimated execution cycle                     : 59
+      *** Estimated execution cycle                     : 57
       *** The number of SCALAR REGISTER TRANSFER        : 25
 
       LOOP BEGIN: (harm.F:1170)
@@ -5698,21 +5675,21 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1177)
-      *** Estimated execution cycle                     : 314
+      *** Estimated execution cycle                     : 307
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 26
               Over basic blocks                         : 26
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 25
               Over basic blocks                         : 25
-      *** The number of SCALAR REGISTER TRANSFER        : 60
+      *** The number of SCALAR REGISTER TRANSFER        : 57
 
       LOOP BEGIN: (harm.F:1179)
         *** Estimated execution cycle                   : 95
       LOOP END
 
       LOOP BEGIN: (harm.F:1183)
-        *** Estimated execution cycle                   : 95
+        *** Estimated execution cycle                   : 94
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 2
                 Over basic blocks                       : 2
@@ -5800,8 +5777,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVG
 DIAGNOSTIC LIST
@@ -5818,18 +5795,12 @@ DIAGNOSTIC LIST
   1585: vec( 101): Vectorized loop.
   1588: opt(1112): Loop fused with previous loop.: K
   1591: inl(1222): Inlined: HARM::FULSOL
-  1592: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1592: vec( 101): Vectorized loop.
-  1594: opt(3014): Moved reference within a conditional branch.
-  1595: opt(3014): Moved reference within a conditional branch.
-  1603: opt(3014): Moved reference within a conditional branch.
   1603: vec( 128): Fused multiply-add operation applied.
-  1604: opt(3014): Moved reference within a conditional branch.
   1605: vec( 128): Fused multiply-add operation applied.
   1618: vec( 128): Fused multiply-add operation applied.
   1621: vec( 128): Fused multiply-add operation applied.
   1636: opt(1592): Outer loop unrolled inside inner loop.: IT
-  1636: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1636: vec( 102): Partially vectorized loop.
   1636: vec( 113): Overhead of loop division is too large.
   1640: vec( 101): Vectorized loop.
@@ -5845,8 +5816,8 @@ DIAGNOSTIC LIST
   1648: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVG
 FORMAT LIST
@@ -6073,8 +6044,8 @@ FORMAT LIST
   1746:                 end subroutine lsqsolvg
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVG
 INLINE LIST
@@ -6100,8 +6071,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVG
 VECTORIZATION LIST
@@ -6375,8 +6346,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::LSQSOLVG
 CODE GENERATION LIST
@@ -6391,18 +6362,18 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 91360 bytes
-      Register spill area      : 45048 bytes
+    Total size                 : 91376 bytes
+      Register spill area      : 45056 bytes
       Parameter area           :    64 bytes
       Register save area       :   176 bytes
-      User data area           : 46072 bytes
+      User data area           : 46080 bytes
       Others                   :     0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (harm.F:1153)
-    *** Estimated execution cycle                       : 3439
+    *** Estimated execution cycle                       : 3451
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 1
             Over basic blocks                           : 1
@@ -6415,14 +6386,14 @@ CODE GENERATION LIST
           Total                                         : 316
             Across calls                                :   4
             Over basic blocks                           : 312
-    *** The number of SCALAR REGISTER TRANSFER          : 204
+    *** The number of SCALAR REGISTER TRANSFER          : 212
 
     LOOP BEGIN: (harm.F:1581)
       *** Estimated execution cycle                     : 64
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 62
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
@@ -6448,7 +6419,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1169)
-      *** Estimated execution cycle                     : 59
+      *** Estimated execution cycle                     : 57
       *** The number of SCALAR REGISTER TRANSFER        : 25
 
       LOOP BEGIN: (harm.F:1170)
@@ -6461,21 +6432,21 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1177)
-      *** Estimated execution cycle                     : 313
+      *** Estimated execution cycle                     : 306
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 26
               Over basic blocks                         : 26
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 25
               Over basic blocks                         : 25
-      *** The number of SCALAR REGISTER TRANSFER        : 58
+      *** The number of SCALAR REGISTER TRANSFER        : 57
 
       LOOP BEGIN: (harm.F:1179)
         *** Estimated execution cycle                   : 95
       LOOP END
 
       LOOP BEGIN: (harm.F:1183)
-        *** Estimated execution cycle                   : 95
+        *** Estimated execution cycle                   : 94
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 2
                 Over basic blocks                       : 2
@@ -6503,7 +6474,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 62
     LOOP END
 
     LOOP BEGIN: (harm.F:1204)
@@ -6529,7 +6500,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1169)
-      *** Estimated execution cycle                     : 59
+      *** Estimated execution cycle                     : 57
       *** The number of SCALAR REGISTER TRANSFER        : 25
 
       LOOP BEGIN: (harm.F:1170)
@@ -6542,21 +6513,21 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (harm.F:1177)
-      *** Estimated execution cycle                     : 314
+      *** Estimated execution cycle                     : 307
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 26
               Over basic blocks                         : 26
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 25
               Over basic blocks                         : 25
-      *** The number of SCALAR REGISTER TRANSFER        : 58
+      *** The number of SCALAR REGISTER TRANSFER        : 57
 
       LOOP BEGIN: (harm.F:1179)
         *** Estimated execution cycle                   : 95
       LOOP END
 
       LOOP BEGIN: (harm.F:1183)
-        *** Estimated execution cycle                   : 95
+        *** Estimated execution cycle                   : 94
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 2
                 Over basic blocks                       : 2
@@ -6585,13 +6556,13 @@ CODE GENERATION LIST
             Total                                       : 10
               Over basic blocks                         : 10
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 2
-              Across calls                              : 1
-              Not enough registers                      : 1
-      *** The number of SCALAR REGISTER RESTORE
             Total                                       : 3
               Across calls                              : 1
-              Over basic blocks                         : 2
+              Not enough registers                      : 2
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 4
+              Across calls                              : 1
+              Over basic blocks                         : 3
       *** The number of SCALAR REGISTER TRANSFER        : 5
     LOOP END
 
@@ -6653,8 +6624,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::READBINARYHAHOTSTART
 DIAGNOSTIC LIST
@@ -6705,8 +6676,8 @@ DIAGNOSTIC LIST
   1987: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::READBINARYHAHOTSTART
 FORMAT LIST
@@ -6961,8 +6932,8 @@ FORMAT LIST
   1989:                 end subroutine readBinaryHAHotstart
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::READBINARYHAHOTSTART
 INLINE LIST
@@ -6976,8 +6947,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::READBINARYHAHOTSTART
 VECTORIZATION LIST
@@ -7200,8 +7171,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::READBINARYHAHOTSTART
 CODE GENERATION LIST
@@ -7216,11 +7187,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 85488 bytes
-      Register spill area      : 41480 bytes
+    Total size                 : 85456 bytes
+      Register spill area      : 41464 bytes
       Parameter area           :    64 bytes
       Register save area       :   176 bytes
-      User data area           : 43768 bytes
+      User data area           : 43752 bytes
       Others                   :     0 bytes
 
     Note: Total size of Routine stack does not include
@@ -7233,10 +7204,10 @@ CODE GENERATION LIST
             Across calls                                : 3
             Over basic blocks                           : 3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 9
+          Total                                         : 8
             Across calls                                : 4
             Over basic blocks                           : 3
-            Others                                      : 2
+            Others                                      : 1
     *** The number of SCALAR REGISTER TRANSFER          : 35
 
     LOOP BEGIN: (harm.F:1838)
@@ -7261,8 +7232,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1867)
-    *** Estimated execution cycle                       : 45
-    *** The number of SCALAR REGISTER TRANSFER          : 15
+    *** Estimated execution cycle                       : 44
+    *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:1867)
       *** Estimated execution cycle                     : 63
@@ -7270,8 +7241,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1867)
-    *** Estimated execution cycle                       : 45
-    *** The number of SCALAR REGISTER TRANSFER          : 15
+    *** Estimated execution cycle                       : 44
+    *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:1867)
       *** Estimated execution cycle                     : 63
@@ -7299,8 +7270,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1881)
-    *** Estimated execution cycle                       : 45
-    *** The number of SCALAR REGISTER TRANSFER          : 15
+    *** Estimated execution cycle                       : 44
+    *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:1881)
       *** Estimated execution cycle                     : 63
@@ -7308,8 +7279,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1881)
-    *** Estimated execution cycle                       : 45
-    *** The number of SCALAR REGISTER TRANSFER          : 15
+    *** Estimated execution cycle                       : 44
+    *** The number of SCALAR REGISTER TRANSFER          : 14
 
     LOOP BEGIN: (harm.F:1881)
       *** Estimated execution cycle                     : 63
@@ -7367,7 +7338,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1924)
-    *** Estimated execution cycle                       : 51
+    *** Estimated execution cycle                       : 50
     *** The number of SCALAR REGISTER TRANSFER          : 15
 
     LOOP BEGIN: (harm.F:1926)
@@ -7383,7 +7354,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1924)
-    *** Estimated execution cycle                       : 91
+    *** Estimated execution cycle                       : 87
     *** The number of SCALAR REGISTER TRANSFER          : 32
 
     LOOP BEGIN: (harm.F:1926)
@@ -7415,14 +7386,14 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1933)
-    *** Estimated execution cycle                       : 157
+    *** Estimated execution cycle                       : 150
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 8
-            Over basic blocks                           : 8
+          Total                                         : 7
+            Over basic blocks                           : 7
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 8
-            Over basic blocks                           : 8
-    *** The number of SCALAR REGISTER TRANSFER          : 62
+          Total                                         : 7
+            Over basic blocks                           : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 57
 
     LOOP BEGIN: (harm.F:1935)
       *** Estimated execution cycle                     : 384
@@ -7437,7 +7408,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1944)
-    *** Estimated execution cycle                       : 51
+    *** Estimated execution cycle                       : 50
     *** The number of SCALAR REGISTER TRANSFER          : 15
 
     LOOP BEGIN: (harm.F:1946)
@@ -7453,7 +7424,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1944)
-    *** Estimated execution cycle                       : 91
+    *** Estimated execution cycle                       : 87
     *** The number of SCALAR REGISTER TRANSFER          : 32
 
     LOOP BEGIN: (harm.F:1946)
@@ -7485,14 +7456,14 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:1952)
-    *** Estimated execution cycle                       : 156
+    *** Estimated execution cycle                       : 151
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 8
-            Over basic blocks                           : 8
+          Total                                         : 7
+            Over basic blocks                           : 7
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 8
-            Over basic blocks                           : 8
-    *** The number of SCALAR REGISTER TRANSFER          : 61
+          Total                                         : 7
+            Over basic blocks                           : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 58
 
     LOOP BEGIN: (harm.F:1954)
       *** Estimated execution cycle                     : 384
@@ -7508,8 +7479,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHAHOTSTART
 DIAGNOSTIC LIST
@@ -7522,21 +7493,16 @@ DIAGNOSTIC LIST
   2035: vec( 118): Unvectorizable data type.
   2036: opt(1097): This statement prevents loop optimization.
   2065: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
-  2136: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2136: vec( 103): Unvectorized loop.
   2136: vec( 118): Unvectorizable data type.
   2136: vec( 180): I/O statement obstructs vectorization.
   2136: vec( 110): Vectorization obstructive procedure reference.: GLOBAL::ALLMESSAGE
   2137: opt(1097): This statement prevents loop optimization.
-  2138: opt(3014): Moved reference within a conditional branch.
-  2145: opt(3014): Moved reference within a conditional branch.
-  2152: opt(3014): Moved reference within a conditional branch.
-  2159: opt(3014): Moved reference within a conditional branch.
   2166: inl(1222): Inlined: HARM::HARMONICTERMINATE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHAHOTSTART
 FORMAT LIST
@@ -7734,8 +7700,8 @@ FORMAT LIST
   2174:                 end subroutine checkHAHotstart
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHAHOTSTART
 INLINE LIST
@@ -7792,8 +7758,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHAHOTSTART
 VECTORIZATION LIST
@@ -7811,8 +7777,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::CHECKHAHOTSTART
 CODE GENERATION LIST
@@ -7821,7 +7787,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 54 [s0-s5 s8-s12 s15-s16 s18-s36 s42-s63]
+      Scalar registers         : 55 [s0-s5 s8-s12 s15-s16 s18-s36 s41-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -7843,7 +7809,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (harm.F:2136)
-    *** Estimated execution cycle                       : 424
+    *** Estimated execution cycle                       : 425
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 11
             Across calls                                :  7
@@ -7852,12 +7818,12 @@ CODE GENERATION LIST
           Total                                         : 31
             Across calls                                : 11
             Over basic blocks                           : 20
-    *** The number of SCALAR REGISTER TRANSFER          : 52
+    *** The number of SCALAR REGISTER TRANSFER          : 53
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::HARMONICTERMINATE
 DIAGNOSTIC LIST
@@ -7870,8 +7836,8 @@ DIAGNOSTIC LIST
   2202: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::HARMONICTERMINATE
 FORMAT LIST
@@ -7918,8 +7884,8 @@ FORMAT LIST
   2205:                 END SUBROUTINE harmonicTerminate
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::HARMONICTERMINATE
 INLINE LIST
@@ -7935,8 +7901,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::HARMONICTERMINATE
 VECTORIZATION LIST
@@ -7944,8 +7910,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::HARMONICTERMINATE
 CODE GENERATION LIST
@@ -7971,8 +7937,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::BINARYREAD3D
 DIAGNOSTIC LIST
@@ -7986,8 +7952,8 @@ DIAGNOSTIC LIST
   2242: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::BINARYREAD3D
 FORMAT LIST
@@ -8039,8 +8005,8 @@ FORMAT LIST
   2244:                 END SUBROUTINE binaryRead3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::BINARYREAD3D
 INLINE LIST
@@ -8052,8 +8018,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::BINARYREAD3D
 VECTORIZATION LIST
@@ -8068,8 +8034,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:45:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/harm.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:13 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/harm.F
 
 PROCEDURE NAME: HARM::BINARYREAD3D
 CODE GENERATION LIST

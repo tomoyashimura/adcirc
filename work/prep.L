@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
-  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/prep.o
+  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/prep.o
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP10
 DIAGNOSTIC LIST
@@ -204,8 +204,8 @@ DIAGNOSTIC LIST
    161: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP10
 FORMAT LIST
@@ -341,8 +341,8 @@ FORMAT LIST
    164:                 END SUBROUTINE PREP10
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP10
 INLINE LIST
@@ -366,8 +366,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP10
 VECTORIZATION LIST
@@ -419,8 +419,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP10
 CODE GENERATION LIST
@@ -474,7 +474,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 12
 
     LOOP BEGIN: (prep.F:115)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -503,7 +503,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:139)
-    *** Estimated execution cycle                       : 91
+    *** Estimated execution cycle                       : 92
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 8
             Across calls                                : 1
@@ -542,8 +542,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP11
 DIAGNOSTIC LIST
@@ -555,8 +555,7 @@ DIAGNOSTIC LIST
    232: opt(1118): This I/O statement inhibits optimization of loop.
    258: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_ALLOC
    259: vec( 103): Unvectorized loop.
-   259: vec( 118): Unvectorizable data type.
-   266: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
+   259: vec( 118): Unvectorizable data type.: FD2D_MSG
    266: vec( 108): Unvectorizable loop structure.
    268: vec( 180): I/O statement obstructs vectorization.
    268: vec( 108): Unvectorizable loop structure.
@@ -582,19 +581,17 @@ DIAGNOSTIC LIST
    299: vec( 103): Unvectorized loop.
    299: vec( 108): Unvectorizable loop structure.
    300: opt(1118): This I/O statement inhibits optimization of loop.
-   300: opt(3014): Moved reference within a conditional branch.
    308: vec( 103): Unvectorized loop.
    308: vec( 180): I/O statement obstructs vectorization.
    310: opt(1118): This I/O statement inhibits optimization of loop.
-   310: opt(3014): Moved reference within a conditional branch.
    318: vec( 103): Unvectorized loop.
    318: vec( 180): I/O statement obstructs vectorization.
    319: opt(1118): This I/O statement inhibits optimization of loop.
    482: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP11
 FORMAT LIST
@@ -919,8 +916,8 @@ FORMAT LIST
    485:                 END SUBROUTINE PREP11
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP11
 INLINE LIST
@@ -934,8 +931,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP11
 VECTORIZATION LIST
@@ -953,7 +950,7 @@ VECTORIZATION LIST
 
     LOOP BEGIN: (prep.F:259)
       <Unvectorized loop.>
-      *** Unvectorizable data type. (prep.F:259)
+      *** Unvectorizable data type. : FD2D_MSG (prep.F:259)
     LOOP END
   LOOP END
 
@@ -1044,8 +1041,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:20 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP11
 CODE GENERATION LIST
@@ -1097,7 +1094,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 70
             Over basic blocks                           : 70
-    *** The number of SCALAR REGISTER TRANSFER          : 37
+    *** The number of SCALAR REGISTER TRANSFER          : 34
 
     LOOP BEGIN: (prep.F:278)
       *** Estimated execution cycle                     : 13
@@ -1124,23 +1121,23 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:268)
-      *** Estimated execution cycle                     : 178
+      *** Estimated execution cycle                     : 173
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 2
               Over basic blocks                         : 1
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 9
+            Total                                       : 8
               Across calls                              : 2
-              Over basic blocks                         : 7
-      *** The number of SCALAR REGISTER TRANSFER        : 64
+              Over basic blocks                         : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 61
 
       LOOP BEGIN: (prep.F:270)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
 
       LOOP BEGIN: (prep.F:270)
-        *** Estimated execution cycle                   : 16
+        *** Estimated execution cycle                   : 14
       LOOP END
 
       LOOP BEGIN: (prep.F:274)
@@ -1169,7 +1166,7 @@ CODE GENERATION LIST
         *** The number of SCALAR REGISTER TRANSFER      : 4
 
         LOOP BEGIN: (prep.F:308)
-          *** Estimated execution cycle                 : 118
+          *** Estimated execution cycle                 : 117
           *** The number of SCALAR REGISTER SPILL
                 Total                                   : 4
                   Across calls                          : 4
@@ -1182,7 +1179,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:287)
-      *** Estimated execution cycle                     : 194
+      *** Estimated execution cycle                     : 195
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Across calls                              : 4
@@ -1192,18 +1189,17 @@ CODE GENERATION LIST
               Across calls                              : 4
               Over basic blocks                         : 3
               Others                                    : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 48
+      *** The number of SCALAR REGISTER TRANSFER        : 49
 
       LOOP BEGIN: (prep.F:291)
-        *** Estimated execution cycle                   : 224
+        *** Estimated execution cycle                   : 192
       LOOP END
 
       LOOP BEGIN: (prep.F:291)
-        *** Estimated execution cycle                   : 15
-        *** The number of SCALAR REGISTER TRANSFER      : 3
+        *** Estimated execution cycle                   : 11
 
         LOOP BEGIN: (prep.F:292)
-          *** Estimated execution cycle                 : 7
+          *** Estimated execution cycle                 : 6
         LOOP END
       LOOP END
 
@@ -1212,11 +1208,11 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:298)
-        *** Estimated execution cycle                   : 102
-        *** The number of SCALAR REGISTER TRANSFER      : 24
+        *** Estimated execution cycle                   : 95
+        *** The number of SCALAR REGISTER TRANSFER      : 18
 
         LOOP BEGIN: (prep.F:299)
-          *** Estimated execution cycle                 : 7
+          *** Estimated execution cycle                 : 6
         LOOP END
       LOOP END
     LOOP END
@@ -1228,8 +1224,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
 DIAGNOSTIC LIST
@@ -1276,26 +1272,19 @@ DIAGNOSTIC LIST
    651: vec( 102): Partially vectorized loop.
    653: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ITOTPROC
    655: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: IMAP_NOD_GL2
-   669: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    669: vec( 101): Vectorized loop.
    670: vec( 101): Vectorized loop.
-   673: opt(3014): Moved reference within a conditional branch.
    683: vec( 101): Vectorized loop.
-   684: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    684: vec( 102): Partially vectorized loop.
-   687: opt(3014): Moved reference within a conditional branch.
    687: vec( 101): Vectorized loop.
-   692: opt(3014): Moved reference within a conditional branch.
    692: vec( 101): Vectorized loop.
-   699: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    699: vec( 101): Vectorized loop.
    700: vec( 101): Vectorized loop.
-   703: opt(3014): Moved reference within a conditional branch.
    706: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
 FORMAT LIST
@@ -1528,8 +1517,8 @@ FORMAT LIST
    710:                 END SUBROUTINE RELOCALIZE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
 INLINE LIST
@@ -1561,8 +1550,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
 VECTORIZATION LIST
@@ -1734,8 +1723,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: RELOCALIZE
 CODE GENERATION LIST
@@ -1744,17 +1733,17 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 56 [s0-s12 s15-s16 s18-s35 s41-s63]
+      Scalar registers         : 57 [s0-s12 s15-s16 s18-s35 s40-s63]
       Vector registers         : 44 [v20-v63]
       Vector mask registers    :  1 [vm15]
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 1840 bytes
-      Register spill area      :  184 bytes
+    Total size                 : 1888 bytes
+      Register spill area      :  208 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 1320 bytes
+      User data area           : 1344 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
@@ -1834,17 +1823,17 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:628)
-    *** Estimated execution cycle                       : 69
+    *** Estimated execution cycle                       : 68
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 1
             Across calls                                : 1
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 1
             Across calls                                : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 15
+    *** The number of SCALAR REGISTER TRANSFER          : 13
 
     LOOP BEGIN: (prep.F:629)
-      *** Estimated execution cycle                     : 160
+      *** Estimated execution cycle                     : 128
     LOOP END
 
     LOOP BEGIN: (prep.F:629)
@@ -1861,17 +1850,17 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:650)
-    *** Estimated execution cycle                       : 75
+    *** Estimated execution cycle                       : 74
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 1
             Across calls                                : 1
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 1
             Across calls                                : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 20
+    *** The number of SCALAR REGISTER TRANSFER          : 18
 
     LOOP BEGIN: (prep.F:651)
-      *** Estimated execution cycle                     : 224
+      *** Estimated execution cycle                     : 192
     LOOP END
 
     LOOP BEGIN: (prep.F:651)
@@ -1884,11 +1873,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:669)
-    *** Estimated execution cycle                       : 82
-    *** The number of SCALAR REGISTER TRANSFER          : 22
+    *** Estimated execution cycle                       : 81
+    *** The number of SCALAR REGISTER TRANSFER          : 17
 
     LOOP BEGIN: (prep.F:670)
-      *** Estimated execution cycle                     : 459
+      *** Estimated execution cycle                     : 429
     LOOP END
   LOOP END
 
@@ -1897,12 +1886,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:684)
-    *** Estimated execution cycle                       : 61
+    *** Estimated execution cycle                       : 62
   LOOP END
 
   LOOP BEGIN: (prep.F:684)
-    *** Estimated execution cycle                       : 124
-    *** The number of SCALAR REGISTER TRANSFER          : 24
+    *** Estimated execution cycle                       : 129
+    *** The number of SCALAR REGISTER TRANSFER          : 30
 
     LOOP BEGIN: (prep.F:687)
       *** Estimated execution cycle                     : 209
@@ -1927,17 +1916,15 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-   766: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    766: vec( 108): Unvectorizable loop structure.
-   788: opt(3014): Moved reference within a conditional branch.
    797: vec( 103): Unvectorized loop.
    797: vec( 180): I/O statement obstructs vectorization.
    798: opt(1118): This I/O statement inhibits optimization of loop.
@@ -1965,8 +1952,8 @@ DIAGNOSTIC LIST
    877: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13
 FORMAT LIST
@@ -2137,8 +2124,8 @@ FORMAT LIST
    880:                 END SUBROUTINE PREP13
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13
 INLINE LIST
@@ -2158,8 +2145,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13
 VECTORIZATION LIST
@@ -2246,8 +2233,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13
 CODE GENERATION LIST
@@ -2262,28 +2249,28 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 2928 bytes
-      Register spill area      :  640 bytes
+    Total size                 : 2944 bytes
+      Register spill area      :  648 bytes
       Parameter area           :   80 bytes
       Register save area       :  176 bytes
-      User data area           : 2032 bytes
+      User data area           : 2040 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:732)
-    *** Estimated execution cycle                       : 984
+    *** Estimated execution cycle                       : 973
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 75
+          Total                                         : 76
             Across calls                                :  9
-            Over basic blocks                           : 56
+            Over basic blocks                           : 57
             Others                                      : 10
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 107
+          Total                                         : 109
             Across calls                                :  13
-            Over basic blocks                           :  94
-    *** The number of SCALAR REGISTER TRANSFER          : 151
+            Over basic blocks                           :  96
+    *** The number of SCALAR REGISTER TRANSFER          : 138
 
     LOOP BEGIN: (prep.F:797)
       *** Estimated execution cycle                     : 117
@@ -2297,33 +2284,32 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:807)
-      *** Estimated execution cycle                     : 204
+      *** Estimated execution cycle                     : 211
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 11
-              Across calls                              :  6
-              Over basic blocks                         :  5
+            Total                                       : 13
+              Across calls                              :  7
+              Over basic blocks                         :  6
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 25
-              Across calls                              : 11
+            Total                                       : 26
+              Across calls                              : 12
               Over basic blocks                         : 14
       *** The number of SCALAR REGISTER TRANSFER        : 33
 
       LOOP BEGIN: (prep.F:812)
-        *** Estimated execution cycle                   : 290
+        *** Estimated execution cycle                   : 287
         *** The number of SCALAR REGISTER SPILL
-              Total                                     : 11
+              Total                                     : 10
                 Across calls                            :  7
-                Over basic blocks                       :  3
+                Over basic blocks                       :  2
                 Others                                  :  1
         *** The number of SCALAR REGISTER RESTORE
-              Total                                     : 19
-                Across calls                            : 11
-                Over basic blocks                       :  7
-                Others                                  :  1
-        *** The number of SCALAR REGISTER TRANSFER      : 65
+              Total                                     : 20
+                Across calls                            : 12
+                Over basic blocks                       :  8
+        *** The number of SCALAR REGISTER TRANSFER      : 62
 
         LOOP BEGIN: (prep.F:816)
-          *** Estimated execution cycle                 : 8
+          *** Estimated execution cycle                 : 7
         LOOP END
 
         LOOP BEGIN: (prep.F:816)
@@ -2335,7 +2321,7 @@ CODE GENERATION LIST
         LOOP END
 
         LOOP BEGIN: (prep.F:816)
-          *** Estimated execution cycle                 : 7
+          *** Estimated execution cycle                 : 6
         LOOP END
 
         LOOP BEGIN: (prep.F:817)
@@ -2382,15 +2368,14 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-   929: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    934: vec( 103): Unvectorized loop.
    934: vec( 108): Unvectorizable loop structure.
    934: vec( 118): Unvectorizable data type.: NA%ATTRNAME
@@ -2418,23 +2403,19 @@ DIAGNOSTIC LIST
   1008: vec( 118): Unvectorizable data type.: CURATTRNAME
   1008: vec( 118): Unvectorizable data type.
   1009: opt(1118): This I/O statement inhibits optimization of loop.
-  1009: opt(3014): Moved reference within a conditional branch.
   1009: vec( 103): Unvectorized loop.
   1009: vec( 180): I/O statement obstructs vectorization.
-  1012: opt(3014): Moved reference within a conditional branch.
   1026: vec( 103): Unvectorized loop.
   1026: vec( 108): Unvectorizable loop structure.
   1026: vec( 118): Unvectorizable data type.: CURATTRNAME
   1026: vec( 118): Unvectorizable data type.
   1027: opt(1118): This I/O statement inhibits optimization of loop.
-  1027: opt(3014): Moved reference within a conditional branch.
   1027: vec( 103): Unvectorized loop.
   1027: vec( 180): I/O statement obstructs vectorization.
-  1030: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
 FORMAT LIST
@@ -2614,8 +2595,8 @@ FORMAT LIST
   1055:                 END SUBROUTINE ProcessNodalAttr
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
 INLINE LIST
@@ -2623,8 +2604,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
 VECTORIZATION LIST
@@ -2799,8 +2780,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESSNODALATTR
 CODE GENERATION LIST
@@ -2809,38 +2790,38 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 50 [s0-s12 s15-s16 s18-s35 s47-s63]
+      Scalar registers         : 52 [s0-s12 s15-s16 s18-s36 s46-s63]
       Vector registers         :  2 [v62-v63]
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 2816 bytes
-      Register spill area      :  720 bytes
+    Total size                 : 2880 bytes
+      Register spill area      :  752 bytes
       Parameter area           :   64 bytes
       Register save area       :  176 bytes
-      User data area           : 1856 bytes
+      User data area           : 1888 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:898)
-    *** Estimated execution cycle                       : 1049
+    *** Estimated execution cycle                       : 1040
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 82
-            Across calls                                : 10
-            Over basic blocks                           : 70
-            Others                                      :  2
+          Total                                         : 80
+            Across calls                                : 14
+            Over basic blocks                           : 63
+            Others                                      :  3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 125
-            Across calls                                :  11
-            Over basic blocks                           : 111
-            Others                                      :   3
-    *** The number of SCALAR REGISTER TRANSFER          : 246
+          Total                                         : 126
+            Across calls                                :  16
+            Over basic blocks                           : 109
+            Others                                      :   1
+    *** The number of SCALAR REGISTER TRANSFER          : 242
 
     LOOP BEGIN: (prep.F:934)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:934)
@@ -2852,7 +2833,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:934)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:934)
@@ -2869,11 +2850,17 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:947)
-      *** Estimated execution cycle                     : 165
+      *** Estimated execution cycle                     : 168
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 2
+              Across calls                              : 2
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 3
+              Across calls                              : 3
       *** The number of SCALAR REGISTER TRANSFER        : 59
 
       LOOP BEGIN: (prep.F:948)
-        *** Estimated execution cycle                   : 8
+        *** Estimated execution cycle                   : 7
       LOOP END
 
       LOOP BEGIN: (prep.F:948)
@@ -2885,11 +2872,11 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:948)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
 
       LOOP BEGIN: (prep.F:948)
-        *** Estimated execution cycle                   : 8
+        *** Estimated execution cycle                   : 7
       LOOP END
 
       LOOP BEGIN: (prep.F:948)
@@ -2901,7 +2888,7 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:948)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
     LOOP END
 
@@ -2911,18 +2898,17 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:975)
-      *** Estimated execution cycle                     : 821
+      *** Estimated execution cycle                     : 819
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 55
+            Total                                       : 56
               Across calls                              : 24
-              Over basic blocks                         : 29
+              Over basic blocks                         : 30
               Others                                    :  2
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 96
-              Across calls                              : 28
-              Over basic blocks                         : 67
-              Others                                    :  1
-      *** The number of SCALAR REGISTER TRANSFER        : 130
+            Total                                       : 97
+              Across calls                              : 29
+              Over basic blocks                         : 68
+      *** The number of SCALAR REGISTER TRANSFER        : 128
 
       LOOP BEGIN: (prep.F:987)
         *** Estimated execution cycle                   : 63
@@ -2933,7 +2919,7 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:1017)
-        *** Estimated execution cycle                   : 57
+        *** Estimated execution cycle                   : 56
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 6
                 Over basic blocks                       : 6
@@ -2943,17 +2929,17 @@ CODE GENERATION LIST
         *** The number of SCALAR REGISTER TRANSFER      : 9
 
         LOOP BEGIN: (prep.F:1019)
-          *** Estimated execution cycle                 : 201
+          *** Estimated execution cycle                 : 209
           *** The number of SCALAR REGISTER SPILL
                 Total                                   : 2
                   Over basic blocks                     : 2
           *** The number of SCALAR REGISTER RESTORE
-                Total                                   : 6
-                  Over basic blocks                     : 6
-          *** The number of SCALAR REGISTER TRANSFER    : 65
+                Total                                   : 8
+                  Over basic blocks                     : 8
+          *** The number of SCALAR REGISTER TRANSFER    : 73
 
           LOOP BEGIN: (prep.F:1026)
-            *** Estimated execution cycle               : 8
+            *** Estimated execution cycle               : 7
           LOOP END
 
           LOOP BEGIN: (prep.F:1026)
@@ -2965,7 +2951,7 @@ CODE GENERATION LIST
           LOOP END
 
           LOOP BEGIN: (prep.F:1026)
-            *** Estimated execution cycle               : 7
+            *** Estimated execution cycle               : 6
           LOOP END
 
           LOOP BEGIN: (prep.F:1027)
@@ -2976,7 +2962,7 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:1008)
-        *** Estimated execution cycle                   : 8
+        *** Estimated execution cycle                   : 7
       LOOP END
 
       LOOP BEGIN: (prep.F:1008)
@@ -2988,7 +2974,7 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:1008)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
 
       LOOP BEGIN: (prep.F:1009)
@@ -2999,8 +2985,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
 DIAGNOSTIC LIST
@@ -3008,27 +2994,19 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   1088: inl(1222): Inlined: NODALATTRIBUTES::READNODALATTRXDMF
-  1092: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1092: vec( 181): Allocation obstructs vectorization.
   1092: vec( 182): Deallocation obstructs vectorization.
   1096: vec( 101): Vectorized loop.
   1097: vec( 101): Vectorized loop.
-  1104: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1104: vec( 101): Vectorized loop.
   1106: opt(1019): Feedback of scalar value from one loop pass to another.: NONDEFAULTCOUNT
-  1106: opt(3014): Moved reference within a conditional branch.
-  1107: opt(3014): Moved reference within a conditional branch.
-  1113: opt(3014): Moved reference within a conditional branch.
   1113: vec( 101): Vectorized loop.
   1114: vec( 103): Unvectorized loop.
   1114: vec( 113): Overhead of loop division is too large.
   1115: vec( 101): Vectorized loop.
-  1122: opt(3014): Moved reference within a conditional branch.
   1122: vec( 101): Vectorized loop.
   1126: opt(1135): Outer loop conditionally executes inner loop.
-  1126: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1126: vec( 102): Partially vectorized loop.
-  1128: opt(3014): Moved reference within a conditional branch.
   1129: vec( 101): Vectorized loop.
   1146: vec( 110): Vectorization obstructive procedure reference.: IWRITE
   1146: vec( 180): I/O statement obstructs vectorization.
@@ -3069,12 +3047,12 @@ DIAGNOSTIC LIST
   1182: vec( 101): Vectorized loop.
   1185: inl(1214): Expansion routine is too big for automatic expansion.: PROCESSNODALATTR
   1185: opt(3009): Copy-in/out loops have been generated.: NA
-  1185: opt(3009): Copy-in/out loops have been generated.
+  1185: opt(3009): Copy-in/out loops have been generated.: NA
   1185: opt(3011): Copy-out loop has been generated.: NA
   1185: opt(1592): Outer loop unrolled inside inner loop.
   1185: vec( 101): Vectorized loop.
   1190: opt(3009): Copy-in/out loops have been generated.: NA
-  1190: opt(3009): Copy-in/out loops have been generated.
+  1190: opt(3009): Copy-in/out loops have been generated.: NA
   1190: opt(3011): Copy-out loop has been generated.: NA
   1190: opt(1592): Outer loop unrolled inside inner loop.
   1190: vec( 101): Vectorized loop.
@@ -3085,8 +3063,8 @@ DIAGNOSTIC LIST
   1209: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
 FORMAT LIST
@@ -3260,8 +3238,8 @@ FORMAT LIST
   1211:                 end subroutine prep13XDMF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
 INLINE LIST
@@ -3295,8 +3273,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
 VECTORIZATION LIST
@@ -3529,7 +3507,7 @@ VECTORIZATION LIST
       LOOP BEGIN: (prep.F:1185)
         <Unvectorized loop.>
         **  Copied loop. : FOR UNROLLING (prep.F:1185)
-        *** Unvectorizable data type. (prep.F:1185)
+        *** Unvectorizable data type. : NA (prep.F:1185)
       LOOP END
     LOOP END
 
@@ -3539,7 +3517,7 @@ VECTORIZATION LIST
 
       LOOP BEGIN: (prep.F:1185)
         <Unvectorized loop.>
-        *** Unvectorizable data type. (prep.F:1185)
+        *** Unvectorizable data type. : NA (prep.F:1185)
       LOOP END
     LOOP END
 
@@ -3571,7 +3549,7 @@ VECTORIZATION LIST
       LOOP BEGIN: (prep.F:1190)
         <Unvectorized loop.>
         **  Copied loop. : FOR UNROLLING (prep.F:1190)
-        *** Unvectorizable data type. (prep.F:1190)
+        *** Unvectorizable data type. : NA (prep.F:1190)
       LOOP END
     LOOP END
 
@@ -3581,7 +3559,7 @@ VECTORIZATION LIST
 
       LOOP BEGIN: (prep.F:1190)
         <Unvectorized loop.>
-        *** Unvectorizable data type. (prep.F:1190)
+        *** Unvectorizable data type. : NA (prep.F:1190)
       LOOP END
     LOOP END
 
@@ -3607,8 +3585,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:21 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:40 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP13XDMF
 CODE GENERATION LIST
@@ -3623,27 +3601,27 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 4048 bytes
-      Register spill area      : 1072 bytes
+    Total size                 : 4080 bytes
+      Register spill area      : 1088 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 2640 bytes
+      User data area           : 2656 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:1060)
-    *** Estimated execution cycle                       : 755
+    *** Estimated execution cycle                       : 759
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 14
+          Total                                         : 13
             Across calls                                :  1
-            Over basic blocks                           : 13
+            Over basic blocks                           : 12
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 24
             Across calls                                :  1
             Over basic blocks                           : 23
-    *** The number of SCALAR REGISTER TRANSFER          : 105
+    *** The number of SCALAR REGISTER TRANSFER          : 98
 
     LOOP BEGIN: (prep.F:1113)
       *** Estimated execution cycle                     : 63
@@ -3663,12 +3641,12 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1126)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 64
     LOOP END
 
     LOOP BEGIN: (prep.F:1126)
-      *** Estimated execution cycle                     : 56
-      *** The number of SCALAR REGISTER TRANSFER        : 18
+      *** Estimated execution cycle                     : 57
+      *** The number of SCALAR REGISTER TRANSFER        : 20
 
       LOOP BEGIN: (prep.F:1129)
         *** Estimated execution cycle                   : 64
@@ -3693,29 +3671,28 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:1060)
-    *** Estimated execution cycle                       : 1175
+    *** Estimated execution cycle                       : 1122
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 87
+          Total                                         : 85
             Across calls                                :  2
-            Over basic blocks                           : 79
+            Over basic blocks                           : 77
             Others                                      :  6
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 126
+          Total                                         : 125
             Across calls                                :   2
-            Over basic blocks                           : 124
-    *** The number of SCALAR REGISTER TRANSFER          : 126
+            Over basic blocks                           : 123
+    *** The number of SCALAR REGISTER TRANSFER          : 124
 
     LOOP BEGIN: (prep.F:1146)
-      *** Estimated execution cycle                     : 287
+      *** Estimated execution cycle                     : 289
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 13
               Across calls                              : 10
               Over basic blocks                         :  3
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 26
-              Across calls                              : 16
-              Over basic blocks                         :  9
-              Others                                    :  1
+            Total                                       : 27
+              Across calls                              : 17
+              Over basic blocks                         : 10
       *** The number of SCALAR REGISTER TRANSFER        : 30
 
       LOOP BEGIN: (prep.F:1148)
@@ -3723,25 +3700,24 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:1153)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
     LOOP END
 
     LOOP BEGIN: (prep.F:1161)
-      *** Estimated execution cycle                     : 244
+      *** Estimated execution cycle                     : 242
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 17
               Across calls                              :  7
               Over basic blocks                         : 10
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 22
-              Across calls                              : 10
+              Across calls                              : 11
               Over basic blocks                         : 11
-              Others                                    :  1
       *** The number of SCALAR REGISTER TRANSFER        : 40
 
       LOOP BEGIN: (prep.F:1162)
-        *** Estimated execution cycle                   : 8
+        *** Estimated execution cycle                   : 7
       LOOP END
 
       LOOP BEGIN: (prep.F:1162)
@@ -3753,25 +3729,24 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:1162)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
 
       LOOP BEGIN: (prep.F:1165)
-        *** Estimated execution cycle                   : 571
+        *** Estimated execution cycle                   : 566
         *** The number of SCALAR REGISTER SPILL
-              Total                                     : 24
+              Total                                     : 22
                 Across calls                            : 11
-                Over basic blocks                       : 12
+                Over basic blocks                       : 10
                 Others                                  :  1
         *** The number of SCALAR REGISTER RESTORE
-              Total                                     : 44
-                Across calls                            : 20
-                Over basic blocks                       : 21
-                Others                                  :  3
-        *** The number of SCALAR REGISTER TRANSFER      : 107
+              Total                                     : 43
+                Across calls                            : 23
+                Over basic blocks                       : 20
+        *** The number of SCALAR REGISTER TRANSFER      : 111
 
         LOOP BEGIN: (prep.F:1166)
-          *** Estimated execution cycle                 : 8
+          *** Estimated execution cycle                 : 7
         LOOP END
 
         LOOP BEGIN: (prep.F:1166)
@@ -3783,11 +3758,11 @@ CODE GENERATION LIST
         LOOP END
 
         LOOP BEGIN: (prep.F:1166)
-          *** Estimated execution cycle                 : 7
+          *** Estimated execution cycle                 : 6
         LOOP END
 
         LOOP BEGIN: (prep.F:1167)
-          *** Estimated execution cycle                 : 8
+          *** Estimated execution cycle                 : 7
         LOOP END
 
         LOOP BEGIN: (prep.F:1167)
@@ -3799,11 +3774,11 @@ CODE GENERATION LIST
         LOOP END
 
         LOOP BEGIN: (prep.F:1167)
-          *** Estimated execution cycle                 : 7
+          *** Estimated execution cycle                 : 6
         LOOP END
 
         LOOP BEGIN: (prep.F:1169)
-          *** Estimated execution cycle                 : 8
+          *** Estimated execution cycle                 : 7
         LOOP END
 
         LOOP BEGIN: (prep.F:1169)
@@ -3815,7 +3790,7 @@ CODE GENERATION LIST
         LOOP END
 
         LOOP BEGIN: (prep.F:1169)
-          *** Estimated execution cycle                 : 7
+          *** Estimated execution cycle                 : 6
         LOOP END
 
         LOOP BEGIN: (prep.F:1172)
@@ -3919,77 +3894,48 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP14
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  1255: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1258: inl(1212): Source for routine not found.: IWRITE
   1268: opt(1589): Outer loop moved inside inner loop(s).: K
   1268: vec( 101): Vectorized loop.
   1270: opt(1592): Outer loop unrolled inside inner loop.: J
   1270: vec( 101): Vectorized loop.
   1277: opt(1135): Outer loop conditionally executes inner loop.
-  1277: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1277: vec( 103): Unvectorized loop.
   1277: vec( 113): Overhead of loop division is too large.
   1278: vec( 101): Vectorized loop.
   1281: vec( 101): Vectorized loop.
   1286: opt(1019): Feedback of scalar value from one loop pass to another.: NETAP
-  1286: opt(3014): Moved reference within a conditional branch.
   1287: opt(1019): Feedback of scalar value from one loop pass to another.: NVDLLP
-  1287: opt(3014): Moved reference within a conditional branch.
-  1288: opt(3014): Moved reference within a conditional branch.
-  1289: opt(3014): Moved reference within a conditional branch.
   1297: vec( 101): Vectorized loop.
   1311: vec( 101): Vectorized loop.
   1316: vec( 180): I/O statement obstructs vectorization.
-  1326: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1326: vec( 102): Partially vectorized loop.
   1329: opt(1135): Outer loop conditionally executes inner loop.
-  1329: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1329: vec( 102): Partially vectorized loop.
-  1333: opt(3014): Moved reference within a conditional branch.
   1334: vec( 101): Vectorized loop.
-  1339: opt(3014): Moved reference within a conditional branch.
   1340: opt(1019): Feedback of scalar value from one loop pass to another.: NVELLP
-  1340: opt(3014): Moved reference within a conditional branch.
-  1341: opt(3014): Moved reference within a conditional branch.
-  1342: opt(3014): Moved reference within a conditional branch.
-  1343: opt(3014): Moved reference within a conditional branch.
-  1354: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1354: vec( 102): Partially vectorized loop.
   1359: opt(1135): Outer loop conditionally executes inner loop.
-  1359: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1359: vec( 102): Partially vectorized loop.
-  1364: opt(3014): Moved reference within a conditional branch.
   1365: vec( 101): Vectorized loop.
-  1371: opt(3014): Moved reference within a conditional branch.
   1372: opt(1019): Feedback of scalar value from one loop pass to another.: NVELLP
-  1372: opt(3014): Moved reference within a conditional branch.
-  1374: opt(3014): Moved reference within a conditional branch.
-  1375: opt(3014): Moved reference within a conditional branch.
-  1379: opt(3014): Moved reference within a conditional branch.
-  1394: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1394: vec( 101): Vectorized loop.
   1399: vec( 101): Vectorized loop.
-  1409: opt(3014): Moved reference within a conditional branch.
   1412: opt(1019): Feedback of scalar value from one loop pass to another.: NVELLP
-  1412: opt(3014): Moved reference within a conditional branch.
-  1416: opt(3014): Moved reference within a conditional branch.
-  1419: opt(3014): Moved reference within a conditional branch.
   1485: vec( 103): Unvectorized loop.
   1485: vec( 180): I/O statement obstructs vectorization.
   1487: opt(1118): This I/O statement inhibits optimization of loop.
   1502: vec( 101): Vectorized loop.
-  1518: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1518: vec( 103): Unvectorized loop.
   1518: vec( 113): Overhead of loop division is too large.
-  1522: opt(3014): Moved reference within a conditional branch.
   1546: opt(1841): Conditional-index testing optimization.
   1546: opt(1409): Alternate code generated.: I
   1546: vec( 103): Unvectorized loop.
@@ -3997,7 +3943,6 @@ DIAGNOSTIC LIST
   1546: vec( 113): Overhead of loop division is too large.
   1548: opt(1394): Moved invariant if outside of an inner loop.
   1553: opt(1019): Feedback of scalar value from one loop pass to another.: I1
-  1560: opt(3014): Moved reference within a conditional branch.
   1560: vec( 121): Unvectorizable dependency.
   1580: opt(1135): Outer loop conditionally executes inner loop.
   1580: vec( 102): Partially vectorized loop.
@@ -4011,11 +3956,9 @@ DIAGNOSTIC LIST
   1628: opt(1118): This I/O statement inhibits optimization of loop.
   1638: inl(1212): Source for routine not found.: NEWINDEX
   1656: inl(1212): Source for routine not found.: INSERT
-  1658: opt(3014): Moved reference within a conditional branch.
   1659: vec( 103): Unvectorized loop.
   1659: vec( 180): I/O statement obstructs vectorization.
   1660: opt(1118): This I/O statement inhibits optimization of loop.
-  1687: opt(3014): Moved reference within a conditional branch.
   1691: vec( 103): Unvectorized loop.
   1691: vec( 180): I/O statement obstructs vectorization.
   1692: opt(1118): This I/O statement inhibits optimization of loop.
@@ -4037,8 +3980,8 @@ DIAGNOSTIC LIST
   1740: opt(1025): Reference to this procedure inhibits optimization.: IWRITE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP14
 FORMAT LIST
@@ -4598,8 +4541,8 @@ FORMAT LIST
   1753:                 END SUBROUTINE PREP14
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP14
 INLINE LIST
@@ -4623,8 +4566,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP14
 VECTORIZATION LIST
@@ -4876,8 +4819,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:22 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP14
 CODE GENERATION LIST
@@ -4892,28 +4835,28 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 806192 bytes
-      Register spill area      :   2336 bytes
+    Total size                 : 806208 bytes
+      Register spill area      :   2344 bytes
       Parameter area           :    160 bytes
       Register save area       :    176 bytes
-      User data area           : 803520 bytes
+      User data area           : 803528 bytes
       Others                   :      0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:1255)
-    *** Estimated execution cycle                       : 2067
+    *** Estimated execution cycle                       : 2057
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 180
-            Across calls                                :  37
-            Over basic blocks                           : 141
-            Others                                      :   2
+          Total                                         : 181
+            Across calls                                :  38
+            Over basic blocks                           : 142
+            Others                                      :   1
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 262
-            Across calls                                :  47
+            Across calls                                :  48
             Over basic blocks                           : 212
-            Others                                      :   3
+            Others                                      :   2
     *** The number of SCALAR REGISTER TRANSFER          : 287
 
     LOOP BEGIN: (prep.F:1257)
@@ -4943,22 +4886,22 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1277)
-      *** Estimated execution cycle                     : 83
+      *** Estimated execution cycle                     : 81
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 36
+      *** The number of SCALAR REGISTER TRANSFER        : 35
 
       LOOP BEGIN: (prep.F:1278)
-        *** Estimated execution cycle                   : 218
+        *** Estimated execution cycle                   : 156
       LOOP END
 
       LOOP BEGIN: (prep.F:1278)
-        *** Estimated execution cycle                   : 67
-        *** The number of SCALAR REGISTER TRANSFER      : 18
+        *** Estimated execution cycle                   : 65
+        *** The number of SCALAR REGISTER TRANSFER      : 15
 
         LOOP BEGIN: (prep.F:1281)
           *** Estimated execution cycle                 : 267
@@ -4975,25 +4918,25 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1316)
-      *** Estimated execution cycle                     : 957
+      *** Estimated execution cycle                     : 961
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 74
-              Across calls                              : 18
+            Total                                       : 77
+              Across calls                              : 21
               Over basic blocks                         : 51
               Others                                    :  5
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 117
-              Across calls                              :  18
+            Total                                       : 120
+              Across calls                              :  21
               Over basic blocks                         :  99
-      *** The number of SCALAR REGISTER TRANSFER        : 144
+      *** The number of SCALAR REGISTER TRANSFER        : 141
 
       LOOP BEGIN: (prep.F:1394)
-        *** Estimated execution cycle                   : 218
+        *** Estimated execution cycle                   : 156
       LOOP END
 
       LOOP BEGIN: (prep.F:1394)
-        *** Estimated execution cycle                   : 57
-        *** The number of SCALAR REGISTER TRANSFER      : 7
+        *** Estimated execution cycle                   : 60
+        *** The number of SCALAR REGISTER TRANSFER      : 8
 
         LOOP BEGIN: (prep.F:1399)
           *** Estimated execution cycle                 : 291
@@ -5001,7 +4944,7 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:1354)
-        *** Estimated execution cycle                   : 252
+        *** Estimated execution cycle                   : 218
       LOOP END
 
       LOOP BEGIN: (prep.F:1354)
@@ -5021,7 +4964,7 @@ CODE GENERATION LIST
         LOOP END
 
         LOOP BEGIN: (prep.F:1359)
-          *** Estimated execution cycle                 : 59
+          *** Estimated execution cycle                 : 60
           *** The number of SCALAR REGISTER TRANSFER    : 11
 
           LOOP BEGIN: (prep.F:1365)
@@ -5031,25 +4974,25 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:1326)
-        *** Estimated execution cycle                   : 250
+        *** Estimated execution cycle                   : 218
       LOOP END
 
       LOOP BEGIN: (prep.F:1326)
-        *** Estimated execution cycle                   : 95
+        *** Estimated execution cycle                   : 96
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 1
                 Across calls                            : 1
         *** The number of SCALAR REGISTER RESTORE
               Total                                     : 1
                 Across calls                            : 1
-        *** The number of SCALAR REGISTER TRANSFER      : 15
+        *** The number of SCALAR REGISTER TRANSFER      : 16
 
         LOOP BEGIN: (prep.F:1329)
           *** Estimated execution cycle                 : 96
         LOOP END
 
         LOOP BEGIN: (prep.F:1329)
-          *** Estimated execution cycle                 : 59
+          *** Estimated execution cycle                 : 60
           *** The number of SCALAR REGISTER TRANSFER    : 11
 
           LOOP BEGIN: (prep.F:1334)
@@ -5077,8 +5020,8 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1518)
-      *** Estimated execution cycle                     : 131
-      *** The number of SCALAR REGISTER TRANSFER        : 20
+      *** Estimated execution cycle                     : 124
+      *** The number of SCALAR REGISTER TRANSFER        : 17
 
       LOOP BEGIN: (prep.F:1546)
         *** Estimated execution cycle                   : 4
@@ -5091,7 +5034,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1580)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 62
     LOOP END
 
     LOOP BEGIN: (prep.F:1580)
@@ -5108,7 +5051,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1620)
-      *** Estimated execution cycle                     : 142
+      *** Estimated execution cycle                     : 141
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 11
               Across calls                              :  8
@@ -5172,9 +5115,8 @@ CODE GENERATION LIST
                 Across calls                            : 9
         *** The number of SCALAR REGISTER RESTORE
               Total                                     : 17
-                Across calls                            :  9
+                Across calls                            : 10
                 Over basic blocks                       :  7
-                Others                                  :  1
         *** The number of SCALAR REGISTER TRANSFER      : 14
       LOOP END
 
@@ -5250,8 +5192,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15
 DIAGNOSTIC LIST
@@ -5259,23 +5201,14 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   1790: vec( 101): Vectorized loop.
-  1792: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1795: vec( 103): Unvectorized loop.
   1795: vec( 118): Unvectorizable data type.: LOCFN
   1796: inl(1212): Source for routine not found.: IWRITE
   1797: vec( 103): Unvectorized loop.
   1797: vec( 108): Unvectorizable loop structure.
-  1810: opt(3014): Moved reference within a conditional branch.
   1818: vec( 103): Unvectorized loop.
   1818: vec( 180): I/O statement obstructs vectorization.
   1819: opt(1118): This I/O statement inhibits optimization of loop.
-  1828: opt(3014): Moved reference within a conditional branch.
-  1836: opt(3014): Moved reference within a conditional branch.
-  1844: opt(3014): Moved reference within a conditional branch.
-  1845: opt(3014): Moved reference within a conditional branch.
-  1865: opt(3014): Moved reference within a conditional branch.
-  1868: opt(3014): Moved reference within a conditional branch.
-  1869: opt(3014): Moved reference within a conditional branch.
   1881: vec( 103): Unvectorized loop.
   1881: vec( 180): I/O statement obstructs vectorization.
   1882: opt(1118): This I/O statement inhibits optimization of loop.
@@ -5285,20 +5218,15 @@ DIAGNOSTIC LIST
   1893: vec( 103): Unvectorized loop.
   1893: vec( 180): I/O statement obstructs vectorization.
   1894: opt(1118): This I/O statement inhibits optimization of loop.
-  1908: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1908: vec( 101): Vectorized loop.
-  1910: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1910: vec( 101): Vectorized loop.
   1913: opt(1019): Feedback of scalar value from one loop pass to another.: NFLBNP
-  1914: opt(3014): Moved reference within a conditional branch.
-  1919: opt(3014): Moved reference within a conditional branch.
   1921: vec( 103): Unvectorized loop.
   1921: vec( 180): I/O statement obstructs vectorization.
   1922: opt(1118): This I/O statement inhibits optimization of loop.
   1927: vec( 103): Unvectorized loop.
   1927: vec( 180): I/O statement obstructs vectorization.
   1928: opt(1118): This I/O statement inhibits optimization of loop.
-  1944: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1944: vec( 102): Partially vectorized loop.
   1946: vec( 101): Vectorized loop.
   1955: vec( 103): Unvectorized loop.
@@ -5315,75 +5243,35 @@ DIAGNOSTIC LIST
   1966: vec( 108): Unvectorizable loop structure.
   1966: vec( 118): Unvectorizable data type.: TIMEVARYINGWEIRMSSG
   1966: vec( 118): Unvectorizable data type.
-  1987: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1988: vec( 101): Vectorized loop.
   1990: vec( 126): Idiom detected.: SEARCH
   1991: opt(1019): Feedback of scalar value from one loop pass to another.: NSTAEP
-  1991: opt(3014): Moved reference within a conditional branch.
-  1993: opt(3014): Moved reference within a conditional branch.
   1994: opt(1019): Feedback of scalar value from one loop pass to another.: KK
-  1994: opt(3014): Moved reference within a conditional branch.
-  1995: opt(3014): Moved reference within a conditional branch.
   2006: inl(1212): Source for routine not found.: INSERT
-  2007: opt(3014): Moved reference within a conditional branch.
-  2014: opt(3014): Moved reference within a conditional branch.
-  2017: opt(3014): Moved reference within a conditional branch.
   2021: vec( 103): Unvectorized loop.
   2021: vec( 180): I/O statement obstructs vectorization.
   2024: opt(1118): This I/O statement inhibits optimization of loop.
-  2024: opt(3014): Moved reference within a conditional branch.
-  2026: opt(3014): Moved reference within a conditional branch.
-  2037: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2038: vec( 101): Vectorized loop.
   2040: vec( 126): Idiom detected.: SEARCH
   2041: opt(1019): Feedback of scalar value from one loop pass to another.: NSTAVP
-  2041: opt(3014): Moved reference within a conditional branch.
-  2043: opt(3014): Moved reference within a conditional branch.
   2044: opt(1019): Feedback of scalar value from one loop pass to another.: KK
-  2044: opt(3014): Moved reference within a conditional branch.
-  2045: opt(3014): Moved reference within a conditional branch.
-  2055: opt(3014): Moved reference within a conditional branch.
-  2062: opt(3014): Moved reference within a conditional branch.
-  2065: opt(3014): Moved reference within a conditional branch.
   2069: vec( 103): Unvectorized loop.
   2069: vec( 180): I/O statement obstructs vectorization.
   2072: opt(1118): This I/O statement inhibits optimization of loop.
-  2072: opt(3014): Moved reference within a conditional branch.
-  2074: opt(3014): Moved reference within a conditional branch.
-  2088: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2089: vec( 101): Vectorized loop.
   2091: vec( 126): Idiom detected.: SEARCH
   2092: opt(1019): Feedback of scalar value from one loop pass to another.: NSTACP
-  2092: opt(3014): Moved reference within a conditional branch.
-  2094: opt(3014): Moved reference within a conditional branch.
   2095: opt(1019): Feedback of scalar value from one loop pass to another.: KK
-  2095: opt(3014): Moved reference within a conditional branch.
-  2096: opt(3014): Moved reference within a conditional branch.
-  2107: opt(3014): Moved reference within a conditional branch.
-  2114: opt(3014): Moved reference within a conditional branch.
-  2117: opt(3014): Moved reference within a conditional branch.
   2120: vec( 103): Unvectorized loop.
   2120: vec( 180): I/O statement obstructs vectorization.
   2123: opt(1118): This I/O statement inhibits optimization of loop.
-  2123: opt(3014): Moved reference within a conditional branch.
-  2125: opt(3014): Moved reference within a conditional branch.
-  2138: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2139: vec( 101): Vectorized loop.
   2141: vec( 126): Idiom detected.: SEARCH
   2142: opt(1019): Feedback of scalar value from one loop pass to another.: NSTAMP
-  2142: opt(3014): Moved reference within a conditional branch.
-  2144: opt(3014): Moved reference within a conditional branch.
   2145: opt(1019): Feedback of scalar value from one loop pass to another.: KK
-  2145: opt(3014): Moved reference within a conditional branch.
-  2146: opt(3014): Moved reference within a conditional branch.
-  2157: opt(3014): Moved reference within a conditional branch.
-  2164: opt(3014): Moved reference within a conditional branch.
-  2167: opt(3014): Moved reference within a conditional branch.
   2171: vec( 103): Unvectorized loop.
   2171: vec( 180): I/O statement obstructs vectorization.
   2174: opt(1118): This I/O statement inhibits optimization of loop.
-  2174: opt(3014): Moved reference within a conditional branch.
-  2176: opt(3014): Moved reference within a conditional branch.
   2206: vec( 103): Unvectorized loop.
   2206: vec( 180): I/O statement obstructs vectorization.
   2207: opt(1118): This I/O statement inhibits optimization of loop.
@@ -5461,8 +5349,8 @@ DIAGNOSTIC LIST
   2432: opt(1025): Reference to this procedure inhibits optimization.: IWRITE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15
 FORMAT LIST
@@ -6159,8 +6047,8 @@ FORMAT LIST
   2440:                 END SUBROUTINE PREP15
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15
 INLINE LIST
@@ -6209,8 +6097,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15
 VECTORIZATION LIST
@@ -6886,8 +6774,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15
 CODE GENERATION LIST
@@ -6902,11 +6790,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 14016 bytes
-      Register spill area      :  5632 bytes
+    Total size                 : 14048 bytes
+      Register spill area      :  5648 bytes
       Parameter area           :   160 bytes
       Register save area       :   176 bytes
-      User data area           :  8048 bytes
+      User data area           :  8064 bytes
       Others                   :     0 bytes
 
     Note: Total size of Routine stack does not include
@@ -6917,18 +6805,18 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:1792)
-    *** Estimated execution cycle                       : 13331
+    *** Estimated execution cycle                       : 13344
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 619
-            Across calls                                : 257
-            Over basic blocks                           : 355
+          Total                                         : 625
+            Across calls                                : 259
+            Over basic blocks                           : 359
             Others                                      :   7
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 1982
-            Across calls                                :  378
-            Over basic blocks                           : 1577
-            Others                                      :   27
-    *** The number of SCALAR REGISTER TRANSFER          : 1678
+          Total                                         : 2011
+            Across calls                                :  409
+            Over basic blocks                           : 1598
+            Others                                      :    4
+    *** The number of SCALAR REGISTER TRANSFER          : 1675
 
     LOOP BEGIN: (prep.F:1795)
       *** Estimated execution cycle                     : 7
@@ -6939,7 +6827,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1797)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:1818)
@@ -6949,9 +6837,8 @@ CODE GENERATION LIST
               Across calls                              : 4
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 7
-              Across calls                              : 4
+              Across calls                              : 5
               Over basic blocks                         : 2
-              Others                                    : 1
       *** The number of SCALAR REGISTER TRANSFER        : 10
     LOOP END
 
@@ -7008,11 +6895,11 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1908)
-      *** Estimated execution cycle                     : 220
+      *** Estimated execution cycle                     : 156
     LOOP END
 
     LOOP BEGIN: (prep.F:1908)
-      *** Estimated execution cycle                     : 53
+      *** Estimated execution cycle                     : 51
       *** The number of SCALAR REGISTER TRANSFER        : 2
 
       LOOP BEGIN: (prep.F:1910)
@@ -7061,7 +6948,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1944)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 64
     LOOP END
 
     LOOP BEGIN: (prep.F:1944)
@@ -7074,7 +6961,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1955)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:1955)
@@ -7086,21 +6973,21 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:1957)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:1962)
-      *** Estimated execution cycle                     : 40
+      *** Estimated execution cycle                     : 39
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Over basic blocks                         : 3
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 3
               Over basic blocks                         : 3
-      *** The number of SCALAR REGISTER TRANSFER        : 12
+      *** The number of SCALAR REGISTER TRANSFER        : 10
 
       LOOP BEGIN: (prep.F:1964)
-        *** Estimated execution cycle                   : 166
+        *** Estimated execution cycle                   : 169
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 6
                 Across calls                            : 3
@@ -7109,10 +6996,10 @@ CODE GENERATION LIST
               Total                                     : 10
                 Across calls                            :  3
                 Over basic blocks                       :  7
-        *** The number of SCALAR REGISTER TRANSFER      : 34
+        *** The number of SCALAR REGISTER TRANSFER      : 41
 
         LOOP BEGIN: (prep.F:1966)
-          *** Estimated execution cycle                 : 8
+          *** Estimated execution cycle                 : 7
         LOOP END
 
         LOOP BEGIN: (prep.F:1966)
@@ -7124,17 +7011,17 @@ CODE GENERATION LIST
         LOOP END
 
         LOOP BEGIN: (prep.F:1966)
-          *** Estimated execution cycle                 : 7
+          *** Estimated execution cycle                 : 6
         LOOP END
       LOOP END
     LOOP END
 
     LOOP BEGIN: (prep.F:1987)
-      *** Estimated execution cycle                     : 55
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** Estimated execution cycle                     : 58
+      *** The number of SCALAR REGISTER TRANSFER        : 13
 
       LOOP BEGIN: (prep.F:1988)
-        *** Estimated execution cycle                   : 182
+        *** Estimated execution cycle                   : 185
       LOOP END
     LOOP END
 
@@ -7146,21 +7033,19 @@ CODE GENERATION LIST
       *** Estimated execution cycle                     : 139
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
-              Across calls                              : 6
-              Others                                    : 2
+              Across calls                              : 8
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 8
-              Across calls                              : 6
-              Others                                    : 2
+              Across calls                              : 8
       *** The number of SCALAR REGISTER TRANSFER        : 31
     LOOP END
 
     LOOP BEGIN: (prep.F:2037)
-      *** Estimated execution cycle                     : 55
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** Estimated execution cycle                     : 58
+      *** The number of SCALAR REGISTER TRANSFER        : 13
 
       LOOP BEGIN: (prep.F:2038)
-        *** Estimated execution cycle                   : 182
+        *** Estimated execution cycle                   : 185
       LOOP END
     LOOP END
 
@@ -7172,21 +7057,19 @@ CODE GENERATION LIST
       *** Estimated execution cycle                     : 139
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
-              Across calls                              : 6
-              Others                                    : 2
+              Across calls                              : 8
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 8
-              Across calls                              : 6
-              Others                                    : 2
+              Across calls                              : 8
       *** The number of SCALAR REGISTER TRANSFER        : 31
     LOOP END
 
     LOOP BEGIN: (prep.F:2088)
-      *** Estimated execution cycle                     : 55
+      *** Estimated execution cycle                     : 58
       *** The number of SCALAR REGISTER TRANSFER        : 13
 
       LOOP BEGIN: (prep.F:2089)
-        *** Estimated execution cycle                   : 182
+        *** Estimated execution cycle                   : 185
       LOOP END
     LOOP END
 
@@ -7198,21 +7081,19 @@ CODE GENERATION LIST
       *** Estimated execution cycle                     : 139
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
-              Across calls                              : 6
-              Others                                    : 2
+              Across calls                              : 8
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 8
-              Across calls                              : 6
-              Others                                    : 2
+              Across calls                              : 8
       *** The number of SCALAR REGISTER TRANSFER        : 31
     LOOP END
 
     LOOP BEGIN: (prep.F:2138)
-      *** Estimated execution cycle                     : 55
+      *** Estimated execution cycle                     : 58
       *** The number of SCALAR REGISTER TRANSFER        : 13
 
       LOOP BEGIN: (prep.F:2139)
-        *** Estimated execution cycle                   : 182
+        *** Estimated execution cycle                   : 185
       LOOP END
     LOOP END
 
@@ -7224,12 +7105,10 @@ CODE GENERATION LIST
       *** Estimated execution cycle                     : 149
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 10
-              Across calls                              :  8
-              Others                                    :  2
+              Across calls                              : 10
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 10
-              Across calls                              :  8
-              Others                                    :  2
+              Across calls                              : 10
       *** The number of SCALAR REGISTER TRANSFER        : 33
     LOOP END
 
@@ -7253,9 +7132,8 @@ CODE GENERATION LIST
               Across calls                              : 7
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 15
-              Across calls                              :  9
+              Across calls                              : 10
               Over basic blocks                         :  5
-              Others                                    :  1
       *** The number of SCALAR REGISTER TRANSFER        : 9
     LOOP END
 
@@ -7266,9 +7144,8 @@ CODE GENERATION LIST
               Across calls                              : 7
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 15
-              Across calls                              :  9
+              Across calls                              : 10
               Over basic blocks                         :  5
-              Others                                    :  1
       *** The number of SCALAR REGISTER TRANSFER        : 9
     LOOP END
 
@@ -7282,17 +7159,15 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2506)
-      *** Estimated execution cycle                     : 98
+      *** Estimated execution cycle                     : 97
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 9
-              Across calls                              : 6
+              Across calls                              : 7
               Over basic blocks                         : 2
-              Others                                    : 1
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 15
-              Across calls                              :  8
+              Across calls                              :  9
               Over basic blocks                         :  6
-              Others                                    :  1
       *** The number of SCALAR REGISTER TRANSFER        : 10
     LOOP END
 
@@ -7306,17 +7181,15 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2532)
-      *** Estimated execution cycle                     : 98
+      *** Estimated execution cycle                     : 97
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 9
-              Across calls                              : 6
+              Across calls                              : 7
               Over basic blocks                         : 2
-              Others                                    : 1
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 15
-              Across calls                              :  8
+              Across calls                              :  9
               Over basic blocks                         :  6
-              Others                                    :  1
       *** The number of SCALAR REGISTER TRANSFER        : 10
     LOOP END
 
@@ -7330,17 +7203,15 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2558)
-      *** Estimated execution cycle                     : 98
+      *** Estimated execution cycle                     : 97
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 9
-              Across calls                              : 6
+              Across calls                              : 7
               Over basic blocks                         : 2
-              Others                                    : 1
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 15
-              Across calls                              :  8
+              Across calls                              :  9
               Over basic blocks                         :  6
-              Others                                    :  1
       *** The number of SCALAR REGISTER TRANSFER        : 10
     LOOP END
 
@@ -7349,7 +7220,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2234)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2234)
@@ -7361,11 +7232,11 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2234)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2235)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2235)
@@ -7377,43 +7248,43 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2235)
-      *** Estimated execution cycle                     : 7
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2236)
-      *** Estimated execution cycle                     : 8
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2236)
       *** Estimated execution cycle                     : 6
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2236)
-      *** Estimated execution cycle                     : 5
     LOOP END
 
     LOOP BEGIN: (prep.F:2236)
       *** Estimated execution cycle                     : 7
     LOOP END
 
-    LOOP BEGIN: (prep.F:2237)
-      *** Estimated execution cycle                     : 8
+    LOOP BEGIN: (prep.F:2236)
+      *** Estimated execution cycle                     : 6
     LOOP END
 
-    LOOP BEGIN: (prep.F:2237)
+    LOOP BEGIN: (prep.F:2236)
+      *** Estimated execution cycle                     : 5
+    LOOP END
+
+    LOOP BEGIN: (prep.F:2236)
       *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2237)
+      *** Estimated execution cycle                     : 7
+    LOOP END
+
+    LOOP BEGIN: (prep.F:2237)
+      *** Estimated execution cycle                     : 6
+    LOOP END
+
+    LOOP BEGIN: (prep.F:2237)
       *** Estimated execution cycle                     : 5
     LOOP END
 
     LOOP BEGIN: (prep.F:2237)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2238)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2238)
@@ -7425,27 +7296,27 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2238)
-      *** Estimated execution cycle                     : 7
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2239)
-      *** Estimated execution cycle                     : 8
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2239)
       *** Estimated execution cycle                     : 6
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2239)
-      *** Estimated execution cycle                     : 5
     LOOP END
 
     LOOP BEGIN: (prep.F:2239)
       *** Estimated execution cycle                     : 7
     LOOP END
 
+    LOOP BEGIN: (prep.F:2239)
+      *** Estimated execution cycle                     : 6
+    LOOP END
+
+    LOOP BEGIN: (prep.F:2239)
+      *** Estimated execution cycle                     : 5
+    LOOP END
+
+    LOOP BEGIN: (prep.F:2239)
+      *** Estimated execution cycle                     : 6
+    LOOP END
+
     LOOP BEGIN: (prep.F:2240)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2240)
@@ -7457,11 +7328,11 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2240)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2241)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2241)
@@ -7473,11 +7344,11 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2241)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2242)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2242)
@@ -7489,11 +7360,11 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2242)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2243)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2243)
@@ -7505,31 +7376,31 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2243)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2274)
-      *** Estimated execution cycle                     : 7
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2288)
-      *** Estimated execution cycle                     : 8
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2288)
       *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2288)
+      *** Estimated execution cycle                     : 7
+    LOOP END
+
+    LOOP BEGIN: (prep.F:2288)
+      *** Estimated execution cycle                     : 6
+    LOOP END
+
+    LOOP BEGIN: (prep.F:2288)
       *** Estimated execution cycle                     : 5
     LOOP END
 
     LOOP BEGIN: (prep.F:2288)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
@@ -7541,11 +7412,11 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
@@ -7557,11 +7428,11 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
@@ -7573,11 +7444,11 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
@@ -7589,27 +7460,27 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2307)
-      *** Estimated execution cycle                     : 7
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2333)
-      *** Estimated execution cycle                     : 8
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2333)
       *** Estimated execution cycle                     : 6
-    LOOP END
-
-    LOOP BEGIN: (prep.F:2333)
-      *** Estimated execution cycle                     : 5
     LOOP END
 
     LOOP BEGIN: (prep.F:2333)
       *** Estimated execution cycle                     : 7
     LOOP END
 
+    LOOP BEGIN: (prep.F:2333)
+      *** Estimated execution cycle                     : 6
+    LOOP END
+
+    LOOP BEGIN: (prep.F:2333)
+      *** Estimated execution cycle                     : 5
+    LOOP END
+
+    LOOP BEGIN: (prep.F:2333)
+      *** Estimated execution cycle                     : 6
+    LOOP END
+
     LOOP BEGIN: (prep.F:2370)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2370)
@@ -7621,23 +7492,23 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2370)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2370)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2404)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2406)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2408)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
   LOOP END
 
@@ -7656,8 +7527,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
 DIAGNOSTIC LIST
@@ -7670,34 +7541,25 @@ DIAGNOSTIC LIST
   2482: vec( 103): Unvectorized loop.
   2482: vec( 180): I/O statement obstructs vectorization.
   2483: opt(1118): This I/O statement inhibits optimization of loop.
-  2496: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2497: vec( 101): Vectorized loop.
   2500: opt(1019): Feedback of scalar value from one loop pass to another.: NNSTA3DDP
-  2500: opt(3014): Moved reference within a conditional branch.
-  2501: opt(3014): Moved reference within a conditional branch.
   2506: vec( 103): Unvectorized loop.
   2506: vec( 180): I/O statement obstructs vectorization.
   2508: opt(1118): This I/O statement inhibits optimization of loop.
-  2522: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2523: vec( 101): Vectorized loop.
   2526: opt(1019): Feedback of scalar value from one loop pass to another.: NNSTA3DVP
-  2526: opt(3014): Moved reference within a conditional branch.
-  2527: opt(3014): Moved reference within a conditional branch.
   2532: vec( 103): Unvectorized loop.
   2532: vec( 180): I/O statement obstructs vectorization.
   2534: opt(1118): This I/O statement inhibits optimization of loop.
-  2548: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2549: vec( 101): Vectorized loop.
   2552: opt(1019): Feedback of scalar value from one loop pass to another.: NNSTA3DTP
-  2552: opt(3014): Moved reference within a conditional branch.
-  2553: opt(3014): Moved reference within a conditional branch.
   2558: vec( 103): Unvectorized loop.
   2558: vec( 180): I/O statement obstructs vectorization.
   2560: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
 FORMAT LIST
@@ -7874,8 +7736,8 @@ FORMAT LIST
   2609:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
 INLINE LIST
@@ -7883,8 +7745,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
 VECTORIZATION LIST
@@ -7954,8 +7816,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP15_3DVS
 CODE GENERATION LIST
@@ -7964,17 +7826,17 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 52 [s0-s12 s15-s16 s18-s21 s23-s38 s47-s63]
+      Scalar registers         : 51 [s0-s12 s15-s16 s18-s21 s23-s37 s47-s63]
       Vector registers         : 18 [v46-v63]
       Vector mask registers    :  1 [vm15]
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 1328 bytes
-      Register spill area      :   32 bytes
+    Total size                 : 1392 bytes
+      Register spill area      :   64 bytes
       Parameter area           :   64 bytes
       Register save area       :  176 bytes
-      User data area           : 1056 bytes
+      User data area           : 1088 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
@@ -8000,15 +7862,14 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:2506)
-    *** Estimated execution cycle                       : 59
+    *** Estimated execution cycle                       : 55
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 3
+          Total                                         : 2
             Across calls                                : 2
-            Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 8
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:2522)
@@ -8021,15 +7882,14 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:2532)
-    *** Estimated execution cycle                       : 59
+    *** Estimated execution cycle                       : 55
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 3
+          Total                                         : 2
             Across calls                                : 2
-            Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 8
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:2548)
@@ -8042,20 +7902,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:2558)
-    *** Estimated execution cycle                       : 59
+    *** Estimated execution cycle                       : 55
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 3
+          Total                                         : 2
             Across calls                                : 2
-            Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 8
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP18
 DIAGNOSTIC LIST
@@ -8063,7 +7922,6 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   2642: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_ALLOC
-  2646: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2649: inl(1212): Source for routine not found.: IWRITE
   2659: vec( 103): Unvectorized loop.
   2659: vec( 180): I/O statement obstructs vectorization.
@@ -8087,38 +7945,28 @@ DIAGNOSTIC LIST
   2730: vec( 180): I/O statement obstructs vectorization.
   2732: opt(1118): This I/O statement inhibits optimization of loop.
   2751: vec( 180): I/O statement obstructs vectorization.
-  2760: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2760: vec( 101): Vectorized loop.
   2768: opt(1019): Feedback of scalar value from one loop pass to another.: IRECV_TOT
-  2768: opt(3014): Moved reference within a conditional branch.
-  2771: opt(3014): Moved reference within a conditional branch.
   2776: opt(1118): This I/O statement inhibits optimization of loop.
   2783: vec( 180): I/O statement obstructs vectorization.
-  2789: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2789: vec( 101): Vectorized loop.
   2796: opt(1019): Feedback of scalar value from one loop pass to another.: ISEND_TOT
-  2796: opt(3014): Moved reference within a conditional branch.
-  2799: opt(3014): Moved reference within a conditional branch.
   2804: opt(1118): This I/O statement inhibits optimization of loop.
-  2815: opt(3014): Moved reference within a conditional branch.
   2815: vec( 101): Vectorized loop.
   2815: vec( 126): Idiom detected.: MAX/MIN
   2816: vec( 103): Unvectorized loop.
   2816: vec( 180): I/O statement obstructs vectorization.
   2817: opt(1118): This I/O statement inhibits optimization of loop.
-  2820: opt(3014): Moved reference within a conditional branch.
   2820: vec( 101): Vectorized loop.
   2820: vec( 126): Idiom detected.: MAX/MIN
   2821: vec( 103): Unvectorized loop.
   2821: vec( 180): I/O statement obstructs vectorization.
   2822: opt(1118): This I/O statement inhibits optimization of loop.
-  2825: opt(3014): Moved reference within a conditional branch.
   2825: vec( 101): Vectorized loop.
   2825: vec( 126): Idiom detected.: MAX/MIN
   2826: vec( 103): Unvectorized loop.
   2826: vec( 180): I/O statement obstructs vectorization.
   2827: opt(1118): This I/O statement inhibits optimization of loop.
-  2837: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2837: vec( 101): Vectorized loop.
   2839: vec( 101): Vectorized loop.
   2840: vec( 126): Idiom detected.: SUM
@@ -8130,8 +7978,8 @@ DIAGNOSTIC LIST
   2859: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP18
 FORMAT LIST
@@ -8421,8 +8269,8 @@ FORMAT LIST
   2882:                 END SUBROUTINE PREP18
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP18
 INLINE LIST
@@ -8440,8 +8288,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP18
 VECTORIZATION LIST
@@ -8578,8 +8426,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP18
 CODE GENERATION LIST
@@ -8594,43 +8442,43 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 3984 bytes
-      Register spill area      : 1288 bytes
+    Total size                 : 4000 bytes
+      Register spill area      : 1296 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 2360 bytes
+      User data area           : 2368 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:2646)
-    *** Estimated execution cycle                       : 1994
+    *** Estimated execution cycle                       : 2007
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 123
+          Total                                         : 127
             Across calls                                :  60
-            Over basic blocks                           :  60
+            Over basic blocks                           :  64
             Others                                      :   3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 206
+          Total                                         : 210
             Across calls                                :  69
-            Over basic blocks                           : 129
+            Over basic blocks                           : 133
             Others                                      :   8
-    *** The number of SCALAR REGISTER TRANSFER          : 233
+    *** The number of SCALAR REGISTER TRANSFER          : 231
 
     LOOP BEGIN: (prep.F:2648)
       *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2659)
-      *** Estimated execution cycle                     : 44
+      *** Estimated execution cycle                     : 41
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 8
+      *** The number of SCALAR REGISTER TRANSFER        : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:2670)
@@ -8645,18 +8493,18 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2690)
-      *** Estimated execution cycle                     : 48
+      *** Estimated execution cycle                     : 46
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 2
               Across calls                              : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 9
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:2700)
-      *** Estimated execution cycle                     : 51
+      *** Estimated execution cycle                     : 50
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -8667,7 +8515,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2710)
-      *** Estimated execution cycle                     : 56
+      *** Estimated execution cycle                     : 55
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 4
               Across calls                              : 3
@@ -8680,7 +8528,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2720)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 60
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Across calls                              : 3
@@ -8693,7 +8541,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:2730)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 60
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Across calls                              : 3
@@ -8718,24 +8566,24 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 37
 
       LOOP BEGIN: (prep.F:2760)
-        *** Estimated execution cycle                   : 379
+        *** Estimated execution cycle                   : 347
       LOOP END
     LOOP END
 
     LOOP BEGIN: (prep.F:2783)
-      *** Estimated execution cycle                     : 256
+      *** Estimated execution cycle                     : 254
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 9
               Across calls                              : 9
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 19
+            Total                                       : 18
               Across calls                              : 11
-              Over basic blocks                         :  7
+              Over basic blocks                         :  6
               Others                                    :  1
-      *** The number of SCALAR REGISTER TRANSFER        : 37
+      *** The number of SCALAR REGISTER TRANSFER        : 38
 
       LOOP BEGIN: (prep.F:2789)
-        *** Estimated execution cycle                   : 441
+        *** Estimated execution cycle                   : 409
       LOOP END
     LOOP END
 
@@ -8750,9 +8598,8 @@ CODE GENERATION LIST
               Across calls                              : 5
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 9
-              Across calls                              : 5
+              Across calls                              : 6
               Over basic blocks                         : 3
-              Others                                    : 1
       *** The number of SCALAR REGISTER TRANSFER        : 10
     LOOP END
 
@@ -8767,9 +8614,8 @@ CODE GENERATION LIST
               Across calls                              : 4
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 7
-              Across calls                              : 4
+              Across calls                              : 5
               Over basic blocks                         : 2
-              Others                                    : 1
       *** The number of SCALAR REGISTER TRANSFER        : 10
     LOOP END
 
@@ -8784,9 +8630,8 @@ CODE GENERATION LIST
               Across calls                              : 4
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 7
-              Across calls                              : 4
+              Across calls                              : 5
               Over basic blocks                         : 2
-              Others                                    : 1
       *** The number of SCALAR REGISTER TRANSFER        : 10
     LOOP END
   LOOP END
@@ -8819,8 +8664,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP19
 DIAGNOSTIC LIST
@@ -8831,12 +8676,10 @@ DIAGNOSTIC LIST
   2929: vec( 103): Unvectorized loop.
   2929: vec( 180): I/O statement obstructs vectorization.
   2930: opt(1118): This I/O statement inhibits optimization of loop.
-  2935: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2935: vec( 108): Unvectorizable loop structure.
   2936: vec( 103): Unvectorized loop.
   2936: vec( 180): I/O statement obstructs vectorization.
   2937: opt(1118): This I/O statement inhibits optimization of loop.
-  2937: opt(3014): Moved reference within a conditional branch.
   2944: vec( 180): I/O statement obstructs vectorization.
   2946: opt(1118): This I/O statement inhibits optimization of loop.
   2955: vec( 103): Unvectorized loop.
@@ -8846,8 +8689,8 @@ DIAGNOSTIC LIST
   2962: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP19
 FORMAT LIST
@@ -8950,8 +8793,8 @@ FORMAT LIST
   2965:                 END SUBROUTINE PREP19
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP19
 INLINE LIST
@@ -8965,8 +8808,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP19
 VECTORIZATION LIST
@@ -9007,8 +8850,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP19
 CODE GENERATION LIST
@@ -9080,8 +8923,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP20
 DIAGNOSTIC LIST
@@ -9107,8 +8950,8 @@ DIAGNOSTIC LIST
   3058: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP20
 FORMAT LIST
@@ -9211,8 +9054,8 @@ FORMAT LIST
   3062:                 END SUBROUTINE PREP20
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP20
 INLINE LIST
@@ -9224,8 +9067,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP20
 VECTORIZATION LIST
@@ -9267,8 +9110,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP20
 CODE GENERATION LIST
@@ -9277,7 +9120,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 39 [s0-s12 s15-s16 s18-s33 s56-s63]
+      Scalar registers         : 41 [s0-s12 s15-s16 s18-s33 s54-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -9309,25 +9152,25 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 5
 
     LOOP BEGIN: (prep.F:3029)
-      *** Estimated execution cycle                     : 136
+      *** Estimated execution cycle                     : 134
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
               Over basic blocks                         : 8
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 10
               Over basic blocks                         : 10
-      *** The number of SCALAR REGISTER TRANSFER        : 39
+      *** The number of SCALAR REGISTER TRANSFER        : 40
 
       LOOP BEGIN: (prep.F:3037)
-        *** Estimated execution cycle                   : 34
-        *** The number of SCALAR REGISTER TRANSFER      : 10
+        *** Estimated execution cycle                   : 35
+        *** The number of SCALAR REGISTER TRANSFER      : 11
 
         LOOP BEGIN: (prep.F:3039)
-          *** Estimated execution cycle                 : 54
-          *** The number of SCALAR REGISTER TRANSFER    : 16
+          *** Estimated execution cycle                 : 56
+          *** The number of SCALAR REGISTER TRANSFER    : 20
 
           LOOP BEGIN: (prep.F:3042)
-            *** Estimated execution cycle               : 7
+            *** Estimated execution cycle               : 6
           LOOP END
         LOOP END
       LOOP END
@@ -9340,8 +9183,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP22
 DIAGNOSTIC LIST
@@ -9378,8 +9221,8 @@ DIAGNOSTIC LIST
   3339: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP22
 FORMAT LIST
@@ -9576,8 +9419,8 @@ FORMAT LIST
   3349:                 END SUBROUTINE PREP22
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP22
 INLINE LIST
@@ -9597,8 +9440,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP22
 VECTORIZATION LIST
@@ -9683,8 +9526,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP22
 CODE GENERATION LIST
@@ -9693,31 +9536,31 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 54 [s0-s12 s15-s16 s18-s37 s45-s63]
+      Scalar registers         : 53 [s0-s12 s15-s16 s18-s36 s45-s63]
       Vector registers         : 14 [v50-v63]
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 3680 bytes
-      Register spill area      :  616 bytes
+    Total size                 : 3696 bytes
+      Register spill area      :  624 bytes
       Parameter area           :   72 bytes
       Register save area       :  176 bytes
-      User data area           : 2808 bytes
+      User data area           : 2816 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:3217)
-    *** Estimated execution cycle                       : 254
+    *** Estimated execution cycle                       : 252
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 35
             Over basic blocks                           : 35
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 40
             Over basic blocks                           : 40
-    *** The number of SCALAR REGISTER TRANSFER          : 31
+    *** The number of SCALAR REGISTER TRANSFER          : 30
 
     LOOP BEGIN: (prep.F:3296)
       *** Estimated execution cycle                     : 94
@@ -9726,14 +9569,14 @@ CODE GENERATION LIST
               Across calls                              :  2
               Over basic blocks                         : 10
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 17
+            Total                                       : 16
               Across calls                              :  2
-              Over basic blocks                         : 14
+              Over basic blocks                         : 13
               Others                                    :  1
       *** The number of SCALAR REGISTER TRANSFER        : 27
 
       LOOP BEGIN: (prep.F:3300)
-        *** Estimated execution cycle                   : 103
+        *** Estimated execution cycle                   : 104
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 3
                 Over basic blocks                       : 3
@@ -9754,7 +9597,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:3268)
-      *** Estimated execution cycle                     : 166
+      *** Estimated execution cycle                     : 164
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 4
               Over basic blocks                         : 3
@@ -9765,15 +9608,14 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 43
 
       LOOP BEGIN: (prep.F:3280)
-        *** Estimated execution cycle                   : 72
+        *** Estimated execution cycle                   : 75
         *** The number of SCALAR REGISTER SPILL
-              Total                                     : 2
-                Across calls                            : 2
-        *** The number of SCALAR REGISTER RESTORE
               Total                                     : 3
-                Across calls                            : 2
-                Over basic blocks                       : 1
-        *** The number of SCALAR REGISTER TRANSFER      : 14
+                Across calls                            : 3
+        *** The number of SCALAR REGISTER RESTORE
+              Total                                     : 4
+                Across calls                            : 4
+        *** The number of SCALAR REGISTER TRANSFER      : 15
       LOOP END
 
       LOOP BEGIN: (prep.F:3271)
@@ -9783,7 +9625,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:3242)
-      *** Estimated execution cycle                     : 142
+      *** Estimated execution cycle                     : 140
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 12
               Over basic blocks                         : 12
@@ -9798,7 +9640,7 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:3245)
-        *** Estimated execution cycle                   : 107
+        *** Estimated execution cycle                   : 108
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 3
                 Over basic blocks                       : 3
@@ -9825,8 +9667,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP23
 DIAGNOSTIC LIST
@@ -9845,8 +9687,8 @@ DIAGNOSTIC LIST
   3418: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP23
 FORMAT LIST
@@ -9940,8 +9782,8 @@ FORMAT LIST
   3425:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP23
 INLINE LIST
@@ -9949,8 +9791,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP23
 VECTORIZATION LIST
@@ -9976,8 +9818,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP23
 CODE GENERATION LIST
@@ -9986,43 +9828,43 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 43 [s0-s12 s15-s16 s18-s41 s60-s63]
+      Scalar registers         : 42 [s0-s12 s15-s16 s18-s40 s60-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 2672 bytes
-      Register spill area      :  120 bytes
+    Total size                 : 2688 bytes
+      Register spill area      :  128 bytes
       Parameter area           :   72 bytes
       Register save area       :  176 bytes
-      User data area           : 2296 bytes
+      User data area           : 2304 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:3394)
-    *** Estimated execution cycle                       : 187
+    *** Estimated execution cycle                       : 183
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 5
             Over basic blocks                           : 5
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 10
             Over basic blocks                           : 10
-    *** The number of SCALAR REGISTER TRANSFER          : 48
+    *** The number of SCALAR REGISTER TRANSFER          : 44
 
     LOOP BEGIN: (prep.F:3407)
       *** Estimated execution cycle                     : 78
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 4
-              Across calls                              : 3
+            Total                                       : 5
+              Across calls                              : 4
               Over basic blocks                         : 1
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 6
-              Across calls                              : 3
-              Over basic blocks                         : 3
-      *** The number of SCALAR REGISTER TRANSFER        : 13
+              Across calls                              : 4
+              Over basic blocks                         : 2
+      *** The number of SCALAR REGISTER TRANSFER        : 14
     LOOP END
 
     LOOP BEGIN: (prep.F:3397)
@@ -10037,18 +9879,16 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP24
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  3474: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3474: vec( 108): Unvectorizable loop structure.
   3491: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_ALLOC
-  3504: opt(3014): Moved reference within a conditional branch.
   3513: vec( 103): Unvectorized loop.
   3513: vec( 180): I/O statement obstructs vectorization.
   3514: opt(1118): This I/O statement inhibits optimization of loop.
@@ -10065,8 +9905,8 @@ DIAGNOSTIC LIST
   3547: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP24
 FORMAT LIST
@@ -10202,8 +10042,8 @@ FORMAT LIST
   3550:                 END SUBROUTINE PREP24
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP24
 INLINE LIST
@@ -10217,8 +10057,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP24
 VECTORIZATION LIST
@@ -10257,8 +10097,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:26 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:45 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP24
 CODE GENERATION LIST
@@ -10267,7 +10107,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 56 [s0-s12 s15-s16 s18-s44 s50-s63]
+      Scalar registers         : 55 [s0-s12 s15-s16 s18-s44 s51-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -10284,20 +10124,20 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:3437)
-    *** Estimated execution cycle                       : 404
+    *** Estimated execution cycle                       : 392
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 46
+          Total                                         : 44
             Across calls                                :  1
-            Over basic blocks                           : 40
+            Over basic blocks                           : 38
             Others                                      :  5
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 55
+          Total                                         : 53
             Across calls                                :  1
-            Over basic blocks                           : 54
-    *** The number of SCALAR REGISTER TRANSFER          : 46
+            Over basic blocks                           : 52
+    *** The number of SCALAR REGISTER TRANSFER          : 47
 
     LOOP BEGIN: (prep.F:3495)
-      *** Estimated execution cycle                     : 504
+      *** Estimated execution cycle                     : 501
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 51
               Across calls                              : 15
@@ -10308,7 +10148,7 @@ CODE GENERATION LIST
               Across calls                              : 20
               Over basic blocks                         : 61
               Others                                    :  1
-      *** The number of SCALAR REGISTER TRANSFER        : 72
+      *** The number of SCALAR REGISTER TRANSFER        : 71
 
       LOOP BEGIN: (prep.F:3513)
         *** Estimated execution cycle                   : 180
@@ -10339,7 +10179,7 @@ CODE GENERATION LIST
         *** The number of SCALAR REGISTER TRANSFER      : 7
 
         LOOP BEGIN: (prep.F:3527)
-          *** Estimated execution cycle                 : 67
+          *** Estimated execution cycle                 : 66
           *** The number of SCALAR REGISTER SPILL
                 Total                                   : 3
                   Across calls                          : 3
@@ -10364,8 +10204,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP5354
 DIAGNOSTIC LIST
@@ -10398,8 +10238,8 @@ DIAGNOSTIC LIST
   3707: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP5354
 FORMAT LIST
@@ -10567,8 +10407,8 @@ FORMAT LIST
   3710:                 END SUBROUTINE PREP5354
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP5354
 INLINE LIST
@@ -10584,8 +10424,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP5354
 VECTORIZATION LIST
@@ -10730,8 +10570,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP5354
 CODE GENERATION LIST
@@ -10740,7 +10580,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 60 [s0-s12 s15-s16 s18-s44 s46-s63]
+      Scalar registers         : 59 [s0-s12 s15-s16 s18-s44 s47-s63]
       Vector registers         : 23 [v41-v63]
       Vector mask registers    :  1 [vm15]
       VREG directive           :  0
@@ -10757,7 +10597,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:3565)
-    *** Estimated execution cycle                       : 680
+    *** Estimated execution cycle                       : 673
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 77
             Across calls                                :  6
@@ -10767,7 +10607,7 @@ CODE GENERATION LIST
           Total                                         : 80
             Across calls                                :  7
             Over basic blocks                           : 73
-    *** The number of SCALAR REGISTER TRANSFER          : 61
+    *** The number of SCALAR REGISTER TRANSFER          : 57
 
     LOOP BEGIN: (prep.F:3652)
       *** Estimated execution cycle                     : 78
@@ -10793,7 +10633,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 11
 
       LOOP BEGIN: (prep.F:3661)
-        *** Estimated execution cycle                   : 195
+        *** Estimated execution cycle                   : 194
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 18
                 Across calls                            : 16
@@ -10806,7 +10646,7 @@ CODE GENERATION LIST
         *** The number of SCALAR REGISTER TRANSFER      : 18
 
         LOOP BEGIN: (prep.F:3662)
-          *** Estimated execution cycle                 : 7
+          *** Estimated execution cycle                 : 6
         LOOP END
       LOOP END
     LOOP END
@@ -10816,31 +10656,31 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:3744)
-      *** Estimated execution cycle                     : 142
+      *** Estimated execution cycle                     : 146
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 26
+            Total                                       : 27
               Across calls                              :  2
-              Over basic blocks                         : 24
+              Over basic blocks                         : 25
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 23
+            Total                                       : 24
               Across calls                              :  2
-              Over basic blocks                         : 21
+              Over basic blocks                         : 22
       *** The number of SCALAR REGISTER TRANSFER        : 12
 
       LOOP BEGIN: (prep.F:3754)
-        *** Estimated execution cycle                   : 222
+        *** Estimated execution cycle                   : 218
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 14
                 Across calls                            :  3
                 Over basic blocks                       : 11
         *** The number of SCALAR REGISTER RESTORE
-              Total                                     : 33
+              Total                                     : 32
                 Across calls                            :  3
-                Over basic blocks                       : 30
-        *** The number of SCALAR REGISTER TRANSFER      : 33
+                Over basic blocks                       : 29
+        *** The number of SCALAR REGISTER TRANSFER      : 30
 
         LOOP BEGIN: (prep.F:3757)
-          *** Estimated execution cycle                 : 90
+          *** Estimated execution cycle                 : 91
           *** The number of SCALAR REGISTER SPILL
                 Total                                   : 1
                   Across calls                          : 1
@@ -10857,7 +10697,7 @@ CODE GENERATION LIST
 
         LOOP BEGIN: (prep.F:3786)
           *** Estimated execution cycle                 : 68
-          *** The number of SCALAR REGISTER TRANSFER    : 3
+          *** The number of SCALAR REGISTER TRANSFER    : 6
 
           LOOP BEGIN: (prep.F:3789)
             *** Estimated execution cycle               : 166
@@ -10869,7 +10709,7 @@ CODE GENERATION LIST
 
         LOOP BEGIN: (prep.F:3786)
           *** Estimated execution cycle                 : 169
-          *** The number of SCALAR REGISTER TRANSFER    : 8
+          *** The number of SCALAR REGISTER TRANSFER    : 5
 
           LOOP BEGIN: (prep.F:3789)
             *** Estimated execution cycle               : 455
@@ -10894,7 +10734,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:3744)
-      *** Estimated execution cycle                     : 167
+      *** Estimated execution cycle                     : 166
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 17
               Across calls                              :  5
@@ -10919,20 +10759,20 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:3754)
-        *** Estimated execution cycle                   : 321
+        *** Estimated execution cycle                   : 325
         *** The number of SCALAR REGISTER SPILL
-              Total                                     : 37
+              Total                                     : 38
                 Across calls                            :  5
-                Over basic blocks                       : 30
+                Over basic blocks                       : 31
                 Others                                  :  2
         *** The number of SCALAR REGISTER RESTORE
-              Total                                     : 65
+              Total                                     : 66
                 Across calls                            :  7
-                Over basic blocks                       : 58
+                Over basic blocks                       : 59
         *** The number of SCALAR REGISTER TRANSFER      : 32
 
         LOOP BEGIN: (prep.F:3757)
-          *** Estimated execution cycle                 : 95
+          *** Estimated execution cycle                 : 96
           *** The number of SCALAR REGISTER SPILL
                 Total                                   : 2
                   Across calls                          : 2
@@ -10948,7 +10788,7 @@ CODE GENERATION LIST
         LOOP END
 
         LOOP BEGIN: (prep.F:3786)
-          *** Estimated execution cycle                 : 66
+          *** Estimated execution cycle                 : 65
           *** The number of SCALAR REGISTER SPILL
                 Total                                   : 8
                   Over basic blocks                     : 8
@@ -11008,8 +10848,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
 DIAGNOSTIC LIST
@@ -11030,8 +10870,8 @@ DIAGNOSTIC LIST
   3799: vec( 180): I/O statement obstructs vectorization.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
 FORMAT LIST
@@ -11159,8 +10999,8 @@ FORMAT LIST
   3818:                 END SUBROUTINE Process5354
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
 INLINE LIST
@@ -11168,8 +11008,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
 VECTORIZATION LIST
@@ -11228,8 +11068,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PROCESS5354
 CODE GENERATION LIST
@@ -11238,7 +11078,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 51 [s0-s12 s15-s16 s18-s43 s54-s63]
+      Scalar registers         : 52 [s0-s12 s15-s16 s18-s44 s54-s63]
       Vector registers         :  1 [v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -11255,10 +11095,10 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:3744)
-    *** Estimated execution cycle                       : 195
+    *** Estimated execution cycle                       : 192
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 18
-            Over basic blocks                           : 18
+          Total                                         : 17
+            Over basic blocks                           : 17
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 22
             Over basic blocks                           : 22
@@ -11277,20 +11117,20 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:3754)
-      *** Estimated execution cycle                     : 350
+      *** Estimated execution cycle                     : 352
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 41
+            Total                                       : 42
               Across calls                              :  6
-              Over basic blocks                         : 32
+              Over basic blocks                         : 33
               Others                                    :  3
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 66
+            Total                                       : 67
               Across calls                              :  6
-              Over basic blocks                         : 60
+              Over basic blocks                         : 61
       *** The number of SCALAR REGISTER TRANSFER        : 37
 
       LOOP BEGIN: (prep.F:3757)
-        *** Estimated execution cycle                   : 101
+        *** Estimated execution cycle                   : 102
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 3
                 Across calls                            : 3
@@ -11306,7 +11146,7 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:3786)
-        *** Estimated execution cycle                   : 58
+        *** Estimated execution cycle                   : 57
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 6
                 Over basic blocks                       : 6
@@ -11366,8 +11206,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP141
 DIAGNOSTIC LIST
@@ -11375,7 +11215,6 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   3866: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_ALLOC
-  3876: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3876: vec( 108): Unvectorizable loop structure.
   3901: vec( 108): Unvectorizable loop structure.
   3902: opt(1118): This I/O statement inhibits optimization of loop.
@@ -11393,7 +11232,6 @@ DIAGNOSTIC LIST
   3942: vec( 103): Unvectorized loop.
   3942: vec( 180): I/O statement obstructs vectorization.
   3947: opt(1118): This I/O statement inhibits optimization of loop.
-  3947: opt(3014): Moved reference within a conditional branch.
   3966: vec( 103): Unvectorized loop.
   3966: vec( 180): I/O statement obstructs vectorization.
   3967: opt(1118): This I/O statement inhibits optimization of loop.
@@ -11401,8 +11239,8 @@ DIAGNOSTIC LIST
   3979: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP141
 FORMAT LIST
@@ -11575,8 +11413,8 @@ FORMAT LIST
   3989:                 END SUBROUTINE PREP141
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP141
 INLINE LIST
@@ -11594,8 +11432,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP141
 VECTORIZATION LIST
@@ -11661,8 +11499,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP141
 CODE GENERATION LIST
@@ -11677,18 +11515,18 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 3264 bytes
-      Register spill area      :  416 bytes
+    Total size                 : 3280 bytes
+      Register spill area      :  424 bytes
       Parameter area           :   72 bytes
       Register save area       :  176 bytes
-      User data area           : 2592 bytes
+      User data area           : 2600 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:3876)
-    *** Estimated execution cycle                       : 357
+    *** Estimated execution cycle                       : 356
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 46
             Across calls                                :  7
@@ -11700,21 +11538,21 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 44
 
     LOOP BEGIN: (prep.F:3930)
-      *** Estimated execution cycle                     : 162
+      *** Estimated execution cycle                     : 171
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 4
-              Over basic blocks                         : 4
+            Total                                       : 6
+              Over basic blocks                         : 6
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 7
-              Over basic blocks                         : 7
-      *** The number of SCALAR REGISTER TRANSFER        : 53
+            Total                                       : 9
+              Over basic blocks                         : 9
+      *** The number of SCALAR REGISTER TRANSFER        : 56
 
       LOOP BEGIN: (prep.F:3931)
         *** Estimated execution cycle                   : 5
       LOOP END
 
       LOOP BEGIN: (prep.F:3942)
-        *** Estimated execution cycle                   : 83
+        *** Estimated execution cycle                   : 82
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 2
                 Across calls                            : 2
@@ -11731,7 +11569,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:3901)
-      *** Estimated execution cycle                     : 71
+      *** Estimated execution cycle                     : 70
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Over basic blocks                         : 2
@@ -11746,7 +11584,7 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (prep.F:3904)
-        *** Estimated execution cycle                   : 86
+        *** Estimated execution cycle                   : 87
         *** The number of SCALAR REGISTER TRANSFER      : 22
 
         LOOP BEGIN: (prep.F:3905)
@@ -11767,8 +11605,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP35
 DIAGNOSTIC LIST
@@ -11776,16 +11614,13 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   4039: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_ALLOC
-  4044: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   4044: vec( 108): Unvectorizable loop structure.
-  4045: opt(3014): Moved reference within a conditional branch.
   4046: vec( 103): Unvectorized loop.
   4046: vec( 180): I/O statement obstructs vectorization.
   4047: opt(1118): This I/O statement inhibits optimization of loop.
   4049: vec( 103): Unvectorized loop.
   4049: vec( 180): I/O statement obstructs vectorization.
   4050: opt(1118): This I/O statement inhibits optimization of loop.
-  4050: opt(3014): Moved reference within a conditional branch.
   4054: vec( 180): I/O statement obstructs vectorization.
   4056: opt(1118): This I/O statement inhibits optimization of loop.
   4065: vec( 103): Unvectorized loop.
@@ -11795,8 +11630,8 @@ DIAGNOSTIC LIST
   4072: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP35
 FORMAT LIST
@@ -11896,8 +11731,8 @@ FORMAT LIST
   4077:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP35
 INLINE LIST
@@ -11911,8 +11746,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP35
 VECTORIZATION LIST
@@ -11953,8 +11788,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP35
 CODE GENERATION LIST
@@ -12020,8 +11855,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP36
 DIAGNOSTIC LIST
@@ -12029,9 +11864,7 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   4122: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_ALLOC
-  4126: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   4126: vec( 108): Unvectorizable loop structure.
-  4127: opt(3014): Moved reference within a conditional branch.
   4128: vec( 103): Unvectorized loop.
   4128: vec( 180): I/O statement obstructs vectorization.
   4129: opt(1118): This I/O statement inhibits optimization of loop.
@@ -12049,8 +11882,8 @@ DIAGNOSTIC LIST
   4158: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP36
 FORMAT LIST
@@ -12157,8 +11990,8 @@ FORMAT LIST
   4163:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP36
 INLINE LIST
@@ -12172,8 +12005,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP36
 VECTORIZATION LIST
@@ -12222,8 +12055,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP36
 CODE GENERATION LIST
@@ -12232,7 +12065,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 42 [s0-s12 s15-s16 s18-s33 s53-s63]
+      Scalar registers         : 43 [s0-s12 s15-s16 s18-s34 s53-s63]
       Vector registers         :  1 [v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -12284,7 +12117,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 6
 
       LOOP BEGIN: (prep.F:4137)
-        *** Estimated execution cycle                   : 113
+        *** Estimated execution cycle                   : 114
         *** The number of SCALAR REGISTER TRANSFER      : 26
 
         LOOP BEGIN: (prep.F:4139)
@@ -12300,8 +12133,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP37
 DIAGNOSTIC LIST
@@ -12309,9 +12142,7 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   4207: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_ALLOC
-  4212: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   4212: vec( 108): Unvectorizable loop structure.
-  4213: opt(3014): Moved reference within a conditional branch.
   4214: vec( 103): Unvectorized loop.
   4214: vec( 180): I/O statement obstructs vectorization.
   4215: opt(1118): This I/O statement inhibits optimization of loop.
@@ -12329,8 +12160,8 @@ DIAGNOSTIC LIST
   4244: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP37
 FORMAT LIST
@@ -12437,8 +12268,8 @@ FORMAT LIST
   4249:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP37
 INLINE LIST
@@ -12452,8 +12283,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP37
 VECTORIZATION LIST
@@ -12502,8 +12333,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP37
 CODE GENERATION LIST
@@ -12512,7 +12343,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 42 [s0-s12 s15-s16 s18-s33 s53-s63]
+      Scalar registers         : 43 [s0-s12 s15-s16 s18-s34 s53-s63]
       Vector registers         :  1 [v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -12564,7 +12395,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 6
 
       LOOP BEGIN: (prep.F:4223)
-        *** Estimated execution cycle                   : 113
+        *** Estimated execution cycle                   : 114
         *** The number of SCALAR REGISTER TRANSFER      : 26
 
         LOOP BEGIN: (prep.F:4225)
@@ -12580,8 +12411,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP38
 DIAGNOSTIC LIST
@@ -12605,8 +12436,8 @@ DIAGNOSTIC LIST
   4337: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP38
 FORMAT LIST
@@ -12720,8 +12551,8 @@ FORMAT LIST
   4342:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP38
 INLINE LIST
@@ -12735,8 +12566,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP38
 VECTORIZATION LIST
@@ -12784,8 +12615,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP38
 CODE GENERATION LIST
@@ -12794,7 +12625,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 45 [s0-s12 s15-s16 s18-s36 s53-s63]
+      Scalar registers         : 46 [s0-s12 s15-s16 s18-s37 s53-s63]
       Vector registers         :  1 [v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -12841,8 +12672,8 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 5
 
       LOOP BEGIN: (prep.F:4316)
-        *** Estimated execution cycle                   : 112
-        *** The number of SCALAR REGISTER TRANSFER      : 41
+        *** Estimated execution cycle                   : 113
+        *** The number of SCALAR REGISTER TRANSFER      : 42
 
         LOOP BEGIN: (prep.F:4318)
           *** Estimated execution cycle                 : 63
@@ -12862,8 +12693,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP39
 DIAGNOSTIC LIST
@@ -12876,7 +12707,6 @@ DIAGNOSTIC LIST
   4412: vec( 103): Unvectorized loop.
   4412: vec( 180): I/O statement obstructs vectorization.
   4414: opt(1118): This I/O statement inhibits optimization of loop.
-  4423: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   4423: vec( 108): Unvectorizable loop structure.
   4425: vec( 108): Unvectorizable loop structure.
   4432: opt(1118): This I/O statement inhibits optimization of loop.
@@ -12888,9 +12718,7 @@ DIAGNOSTIC LIST
   4443: opt(1135): Outer loop conditionally executes inner loop.
   4443: vec( 180): I/O statement obstructs vectorization.
   4448: vec( 101): Vectorized loop.
-  4451: opt(3014): Moved reference within a conditional branch.
   4453: vec( 101): Vectorized loop.
-  4456: opt(3014): Moved reference within a conditional branch.
   4467: vec( 103): Unvectorized loop.
   4467: vec( 180): I/O statement obstructs vectorization.
   4468: opt(1118): This I/O statement inhibits optimization of loop.
@@ -12898,8 +12726,8 @@ DIAGNOSTIC LIST
   4476: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP39
 FORMAT LIST
@@ -13058,8 +12886,8 @@ FORMAT LIST
   4480:                 END SUBROUTINE PREP39
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP39
 INLINE LIST
@@ -13071,8 +12899,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP39
 VECTORIZATION LIST
@@ -13165,8 +12993,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:27 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP39
 CODE GENERATION LIST
@@ -13175,17 +13003,17 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 56 [s0-s12 s15-s16 s18-s37 s43-s63]
+      Scalar registers         : 55 [s0-s12 s15-s16 s18-s36 s43-s63]
       Vector registers         :  5 [v59-v63]
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 2080 bytes
-      Register spill area      :  328 bytes
+    Total size                 : 2064 bytes
+      Register spill area      :  320 bytes
       Parameter area           :   72 bytes
       Register save area       :  176 bytes
-      User data area           : 1496 bytes
+      User data area           : 1488 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
@@ -13250,7 +13078,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:4439)
-      *** Estimated execution cycle                     : 53
+      *** Estimated execution cycle                     : 52
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Over basic blocks                         : 5
@@ -13270,7 +13098,7 @@ CODE GENERATION LIST
         *** The number of SCALAR REGISTER TRANSFER      : 8
 
         LOOP BEGIN: (prep.F:4443)
-          *** Estimated execution cycle                 : 174
+          *** Estimated execution cycle                 : 176
           *** The number of SCALAR REGISTER TRANSFER    : 41
 
           LOOP BEGIN: (prep.F:4453)
@@ -13291,8 +13119,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:28 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
 DIAGNOSTIC LIST
@@ -13354,8 +13182,8 @@ DIAGNOSTIC LIST
   4912: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
 FORMAT LIST
@@ -13814,8 +13642,8 @@ FORMAT LIST
   4921:                 END SUBROUTINE HOTINITCOND
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:28 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
 INLINE LIST
@@ -13842,8 +13670,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:28 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
 VECTORIZATION LIST
@@ -14039,8 +13867,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:28 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:46 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTINITCOND
 CODE GENERATION LIST
@@ -14118,20 +13946,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:4800)
-    *** Estimated execution cycle                       : 1326
+    *** Estimated execution cycle                       : 1352
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 120
+          Total                                         : 126
             Across calls                                :  13
-            Over basic blocks                           : 105
+            Over basic blocks                           : 111
             Others                                      :   2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 277
+          Total                                         : 283
             Across calls                                :  63
-            Over basic blocks                           : 214
-    *** The number of SCALAR REGISTER TRANSFER          : 163
+            Over basic blocks                           : 220
+    *** The number of SCALAR REGISTER TRANSFER          : 160
 
     LOOP BEGIN: (prep.F:4810)
-      *** Estimated execution cycle                     : 96
+      *** Estimated execution cycle                     : 94
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 9
               Across calls                              : 6
@@ -14144,7 +13972,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:4815)
-      *** Estimated execution cycle                     : 96
+      *** Estimated execution cycle                     : 94
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 9
               Across calls                              : 6
@@ -14157,7 +13985,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:4820)
-      *** Estimated execution cycle                     : 93
+      *** Estimated execution cycle                     : 91
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
               Across calls                              : 6
@@ -14170,7 +13998,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:4825)
-      *** Estimated execution cycle                     : 80
+      *** Estimated execution cycle                     : 78
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 4
@@ -14183,7 +14011,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:4831)
-      *** Estimated execution cycle                     : 82
+      *** Estimated execution cycle                     : 80
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 7
               Across calls                              : 5
@@ -14196,7 +14024,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:4837)
-      *** Estimated execution cycle                     : 74
+      *** Estimated execution cycle                     : 73
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Across calls                              : 2
@@ -14209,7 +14037,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:4842)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 66
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Across calls                              : 2
@@ -14222,7 +14050,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:6809)
-      *** Estimated execution cycle                     : 75
+      *** Estimated execution cycle                     : 74
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Across calls                              : 3
@@ -14258,7 +14086,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 6
 
       LOOP BEGIN: (prep.F:6820)
-        *** Estimated execution cycle                   : 67
+        *** Estimated execution cycle                   : 66
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 2
                 Across calls                            : 2
@@ -14278,7 +14106,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 10
 
       LOOP BEGIN: (prep.F:6826)
-        *** Estimated execution cycle                   : 79
+        *** Estimated execution cycle                   : 78
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 4
                 Across calls                            : 4
@@ -14291,14 +14119,14 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:6831)
-      *** Estimated execution cycle                     : 30
+      *** Estimated execution cycle                     : 29
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 3
               Over basic blocks                         : 3
-      *** The number of SCALAR REGISTER TRANSFER        : 8
+      *** The number of SCALAR REGISTER TRANSFER        : 7
 
       LOOP BEGIN: (prep.F:6832)
-        *** Estimated execution cycle                   : 84
+        *** Estimated execution cycle                   : 83
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 5
                 Across calls                            : 5
@@ -14318,7 +14146,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 7
 
       LOOP BEGIN: (prep.F:6838)
-        *** Estimated execution cycle                   : 89
+        *** Estimated execution cycle                   : 88
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 6
                 Across calls                            : 5
@@ -14332,14 +14160,14 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:6843)
-      *** Estimated execution cycle                     : 29
+      *** Estimated execution cycle                     : 27
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 4
               Over basic blocks                         : 4
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 4
 
       LOOP BEGIN: (prep.F:6844)
-        *** Estimated execution cycle                   : 93
+        *** Estimated execution cycle                   : 92
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 7
                 Across calls                            : 6
@@ -14360,7 +14188,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 8
 
       LOOP BEGIN: (prep.F:6851)
-        *** Estimated execution cycle                   : 98
+        *** Estimated execution cycle                   : 97
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 8
                 Across calls                            : 6
@@ -14374,14 +14202,14 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:6858)
-      *** Estimated execution cycle                     : 34
+      *** Estimated execution cycle                     : 35
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 6
               Over basic blocks                         : 6
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
 
       LOOP BEGIN: (prep.F:6859)
-        *** Estimated execution cycle                   : 103
+        *** Estimated execution cycle                   : 102
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 9
                 Across calls                            : 6
@@ -14402,7 +14230,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 7
 
       LOOP BEGIN: (prep.F:6867)
-        *** Estimated execution cycle                   : 103
+        *** Estimated execution cycle                   : 102
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 9
                 Across calls                            : 6
@@ -14423,7 +14251,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 4
 
       LOOP BEGIN: (prep.F:6875)
-        *** Estimated execution cycle                   : 103
+        *** Estimated execution cycle                   : 102
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 9
                 Across calls                            : 6
@@ -14444,7 +14272,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER TRANSFER        : 6
 
       LOOP BEGIN: (prep.F:6881)
-        *** Estimated execution cycle                   : 103
+        *** Estimated execution cycle                   : 102
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 9
                 Across calls                            : 6
@@ -14464,8 +14292,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
 DIAGNOSTIC LIST
@@ -14534,8 +14362,8 @@ DIAGNOSTIC LIST
   5471: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
 FORMAT LIST
@@ -15114,8 +14942,8 @@ FORMAT LIST
   5480:                 END SUBROUTINE HOTLOCALIZE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
 INLINE LIST
@@ -15159,8 +14987,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
 VECTORIZATION LIST
@@ -15276,8 +15104,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTLOCALIZE
 CODE GENERATION LIST
@@ -15292,11 +15120,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 5824 bytes
-      Register spill area      : 1696 bytes
+    Total size                 : 5840 bytes
+      Register spill area      : 1704 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 3792 bytes
+      User data area           : 3800 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
@@ -15312,32 +15140,32 @@ CODE GENERATION LIST
 
   LOOP BEGIN: (prep.F:5062)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5065)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5068)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5071)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5074)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5078)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5082)
@@ -15348,12 +15176,12 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 1
             Across calls                                : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5086)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5261)
@@ -15374,7 +15202,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:5270)
-    *** Estimated execution cycle                       : 1432
+    *** Estimated execution cycle                       : 1431
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 48
             Across calls                                : 26
@@ -15386,7 +15214,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 159
 
     LOOP BEGIN: (prep.F:5289)
-      *** Estimated execution cycle                     : 61
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -15394,11 +15222,11 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 9
+      *** The number of SCALAR REGISTER TRANSFER        : 10
     LOOP END
 
     LOOP BEGIN: (prep.F:5295)
-      *** Estimated execution cycle                     : 73
+      *** Estimated execution cycle                     : 71
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Across calls                              : 5
@@ -15406,11 +15234,11 @@ CODE GENERATION LIST
             Total                                       : 9
               Across calls                              : 5
               Over basic blocks                         : 4
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
 
     LOOP BEGIN: (prep.F:5301)
-      *** Estimated execution cycle                     : 75
+      *** Estimated execution cycle                     : 73
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -15418,11 +15246,11 @@ CODE GENERATION LIST
             Total                                       : 10
               Across calls                              :  6
               Over basic blocks                         :  4
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
 
     LOOP BEGIN: (prep.F:5307)
-      *** Estimated execution cycle                     : 80
+      *** Estimated execution cycle                     : 78
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 7
               Across calls                              : 6
@@ -15431,11 +15259,11 @@ CODE GENERATION LIST
             Total                                       : 11
               Across calls                              :  6
               Over basic blocks                         :  5
-      *** The number of SCALAR REGISTER TRANSFER        : 11
+      *** The number of SCALAR REGISTER TRANSFER        : 12
     LOOP END
 
     LOOP BEGIN: (prep.F:5313)
-      *** Estimated execution cycle                     : 85
+      *** Estimated execution cycle                     : 83
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
               Across calls                              : 7
@@ -15444,11 +15272,11 @@ CODE GENERATION LIST
             Total                                       : 12
               Across calls                              :  7
               Over basic blocks                         :  5
-      *** The number of SCALAR REGISTER TRANSFER        : 12
+      *** The number of SCALAR REGISTER TRANSFER        : 13
     LOOP END
 
     LOOP BEGIN: (prep.F:5320)
-      *** Estimated execution cycle                     : 95
+      *** Estimated execution cycle                     : 93
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 10
               Across calls                              :  7
@@ -15457,11 +15285,11 @@ CODE GENERATION LIST
             Total                                       : 14
               Across calls                              :  7
               Over basic blocks                         :  7
-      *** The number of SCALAR REGISTER TRANSFER        : 14
+      *** The number of SCALAR REGISTER TRANSFER        : 15
     LOOP END
 
     LOOP BEGIN: (prep.F:5327)
-      *** Estimated execution cycle                     : 92
+      *** Estimated execution cycle                     : 91
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 9
               Across calls                              : 7
@@ -15470,11 +15298,11 @@ CODE GENERATION LIST
             Total                                       : 13
               Across calls                              :  7
               Over basic blocks                         :  6
-      *** The number of SCALAR REGISTER TRANSFER        : 13
+      *** The number of SCALAR REGISTER TRANSFER        : 14
     LOOP END
 
     LOOP BEGIN: (prep.F:5333)
-      *** Estimated execution cycle                     : 95
+      *** Estimated execution cycle                     : 93
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 10
               Across calls                              :  7
@@ -15483,7 +15311,7 @@ CODE GENERATION LIST
             Total                                       : 14
               Across calls                              :  7
               Over basic blocks                         :  7
-      *** The number of SCALAR REGISTER TRANSFER        : 14
+      *** The number of SCALAR REGISTER TRANSFER        : 15
     LOOP END
   LOOP END
 
@@ -15493,21 +15321,18 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  5543: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5543: vec( 110): Vectorization obstructive procedure reference.: IWRITE
   5543: vec( 180): I/O statement obstructs vectorization.
   5543: vec( 109): Vectorization obstructive statement.
   5546: inl(1212): Source for routine not found.: IWRITE
-  5549: opt(3014): Moved reference within a conditional branch.
-  5552: opt(3014): Moved reference within a conditional branch.
   5563: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_ALLOC
   5629: vec( 103): Unvectorized loop.
   5629: vec( 180): I/O statement obstructs vectorization.
@@ -15565,8 +15390,8 @@ DIAGNOSTIC LIST
   5990: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
 FORMAT LIST
@@ -16105,8 +15930,8 @@ FORMAT LIST
   5999:                 END SUBROUTINE HOTGLOBALIZE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
 INLINE LIST
@@ -16134,8 +15959,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
 VECTORIZATION LIST
@@ -16252,8 +16077,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: HOTGLOBALIZE
 CODE GENERATION LIST
@@ -16268,11 +16093,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 4272 bytes
-      Register spill area      : 1352 bytes
+    Total size                 : 4288 bytes
+      Register spill area      : 1360 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 2584 bytes
+      User data area           : 2592 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
@@ -16304,19 +16129,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:5610)
-    *** Estimated execution cycle                       : 1361
+    *** Estimated execution cycle                       : 1357
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 55
+          Total                                         : 54
             Across calls                                : 26
-            Over basic blocks                           : 29
+            Over basic blocks                           : 28
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 158
+          Total                                         : 157
             Across calls                                :  75
-            Over basic blocks                           :  83
-    *** The number of SCALAR REGISTER TRANSFER          : 158
+            Over basic blocks                           :  82
+    *** The number of SCALAR REGISTER TRANSFER          : 160
 
     LOOP BEGIN: (prep.F:5629)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 58
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -16324,11 +16149,11 @@ CODE GENERATION LIST
             Total                                       : 6
               Across calls                              : 3
               Over basic blocks                         : 3
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
 
     LOOP BEGIN: (prep.F:5636)
-      *** Estimated execution cycle                     : 66
+      *** Estimated execution cycle                     : 64
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 4
               Across calls                              : 4
@@ -16336,11 +16161,11 @@ CODE GENERATION LIST
             Total                                       : 7
               Across calls                              : 4
               Over basic blocks                         : 3
-      *** The number of SCALAR REGISTER TRANSFER        : 8
+      *** The number of SCALAR REGISTER TRANSFER        : 9
     LOOP END
 
     LOOP BEGIN: (prep.F:5643)
-      *** Estimated execution cycle                     : 72
+      *** Estimated execution cycle                     : 71
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Across calls                              : 5
@@ -16348,11 +16173,11 @@ CODE GENERATION LIST
             Total                                       : 9
               Across calls                              : 5
               Over basic blocks                         : 4
-      *** The number of SCALAR REGISTER TRANSFER        : 8
+      *** The number of SCALAR REGISTER TRANSFER        : 9
     LOOP END
 
     LOOP BEGIN: (prep.F:5650)
-      *** Estimated execution cycle                     : 77
+      *** Estimated execution cycle                     : 76
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 5
@@ -16361,11 +16186,11 @@ CODE GENERATION LIST
             Total                                       : 10
               Across calls                              :  5
               Over basic blocks                         :  5
-      *** The number of SCALAR REGISTER TRANSFER        : 9
+      *** The number of SCALAR REGISTER TRANSFER        : 10
     LOOP END
 
     LOOP BEGIN: (prep.F:5657)
-      *** Estimated execution cycle                     : 81
+      *** Estimated execution cycle                     : 80
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 7
               Across calls                              : 5
@@ -16374,24 +16199,24 @@ CODE GENERATION LIST
             Total                                       : 11
               Across calls                              :  5
               Over basic blocks                         :  6
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
 
     LOOP BEGIN: (prep.F:5665)
-      *** Estimated execution cycle                     : 85
+      *** Estimated execution cycle                     : 90
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 8
-              Across calls                              : 4
+            Total                                       : 9
+              Across calls                              : 5
               Over basic blocks                         : 4
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 11
-              Across calls                              :  4
-              Over basic blocks                         :  7
-      *** The number of SCALAR REGISTER TRANSFER        : 12
+            Total                                       : 13
+              Across calls                              :  5
+              Over basic blocks                         :  8
+      *** The number of SCALAR REGISTER TRANSFER        : 13
     LOOP END
 
     LOOP BEGIN: (prep.F:5673)
-      *** Estimated execution cycle                     : 88
+      *** Estimated execution cycle                     : 87
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
               Across calls                              : 5
@@ -16400,70 +16225,70 @@ CODE GENERATION LIST
             Total                                       : 12
               Across calls                              :  5
               Over basic blocks                         :  7
-      *** The number of SCALAR REGISTER TRANSFER        : 11
+      *** The number of SCALAR REGISTER TRANSFER        : 12
     LOOP END
 
     LOOP BEGIN: (prep.F:5680)
-      *** Estimated execution cycle                     : 85
+      *** Estimated execution cycle                     : 90
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 8
-              Across calls                              : 4
+            Total                                       : 9
+              Across calls                              : 5
               Over basic blocks                         : 4
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 11
-              Across calls                              :  4
-              Over basic blocks                         :  7
-      *** The number of SCALAR REGISTER TRANSFER        : 12
+            Total                                       : 13
+              Across calls                              :  5
+              Over basic blocks                         :  8
+      *** The number of SCALAR REGISTER TRANSFER        : 13
     LOOP END
   LOOP END
 
   LOOP BEGIN: (prep.F:5767)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:5780)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5784)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5788)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5792)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5796)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5801)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:5806)
     *** Estimated execution cycle                       : 31
-    *** The number of SCALAR REGISTER TRANSFER          : 5
+    *** The number of SCALAR REGISTER TRANSFER          : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:5810)
     *** Estimated execution cycle                       : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
 DIAGNOSTIC LIST
@@ -16523,8 +16348,8 @@ DIAGNOSTIC LIST
   6155: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
 FORMAT LIST
@@ -16696,8 +16521,8 @@ FORMAT LIST
   6163:                 END SUBROUTINE ReadHotStart3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
 INLINE LIST
@@ -16705,8 +16530,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
 VECTORIZATION LIST
@@ -16837,8 +16662,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3D
 CODE GENERATION LIST
@@ -16865,37 +16690,37 @@ CODE GENERATION LIST
 
   LOOP BEGIN: (prep.F:6063)
     *** Estimated execution cycle                       : 31
-    *** The number of SCALAR REGISTER TRANSFER          : 5
+    *** The number of SCALAR REGISTER TRANSFER          : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:6067)
     *** Estimated execution cycle                       : 31
-    *** The number of SCALAR REGISTER TRANSFER          : 5
+    *** The number of SCALAR REGISTER TRANSFER          : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:6071)
     *** Estimated execution cycle                       : 31
-    *** The number of SCALAR REGISTER TRANSFER          : 5
+    *** The number of SCALAR REGISTER TRANSFER          : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:6075)
     *** Estimated execution cycle                       : 31
-    *** The number of SCALAR REGISTER TRANSFER          : 5
+    *** The number of SCALAR REGISTER TRANSFER          : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:6079)
     *** Estimated execution cycle                       : 31
-    *** The number of SCALAR REGISTER TRANSFER          : 5
+    *** The number of SCALAR REGISTER TRANSFER          : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:6083)
     *** Estimated execution cycle                       : 31
-    *** The number of SCALAR REGISTER TRANSFER          : 5
+    *** The number of SCALAR REGISTER TRANSFER          : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:6087)
     *** Estimated execution cycle                       : 31
-    *** The number of SCALAR REGISTER TRANSFER          : 5
+    *** The number of SCALAR REGISTER TRANSFER          : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:6092)
@@ -16910,7 +16735,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
@@ -16926,7 +16751,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
@@ -16942,7 +16767,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
@@ -16958,7 +16783,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
@@ -16974,7 +16799,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
@@ -16990,7 +16815,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
@@ -17006,7 +16831,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
@@ -17022,7 +16847,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
@@ -17038,7 +16863,7 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
@@ -17054,13 +16879,13 @@ CODE GENERATION LIST
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 1
               Across calls                              : 1
-      *** The number of SCALAR REGISTER TRANSFER        : 6
+      *** The number of SCALAR REGISTER TRANSFER        : 7
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
 DIAGNOSTIC LIST
@@ -17120,8 +16945,8 @@ DIAGNOSTIC LIST
   6317: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
 FORMAT LIST
@@ -17294,8 +17119,8 @@ FORMAT LIST
   6325:                 END SUBROUTINE WriteHotStart3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
 INLINE LIST
@@ -17303,8 +17128,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
 VECTORIZATION LIST
@@ -17435,8 +17260,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3D
 CODE GENERATION LIST
@@ -17445,7 +17270,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 44 [s0-s12 s15-s16 s18-s42 s60-s63]
+      Scalar registers         : 43 [s0-s12 s15-s16 s18-s41 s60-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -17462,7 +17287,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:6203)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -17470,11 +17295,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6208)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -17482,11 +17307,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6213)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -17494,11 +17319,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6218)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -17506,11 +17331,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6223)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -17518,11 +17343,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6228)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -17530,11 +17355,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6233)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -17542,7 +17367,7 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6239)
@@ -17556,7 +17381,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6240)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17564,7 +17389,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -17579,7 +17404,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6248)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17587,7 +17412,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -17602,7 +17427,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6256)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17610,7 +17435,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -17625,7 +17450,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6264)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17633,7 +17458,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -17648,7 +17473,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6272)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17656,7 +17481,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -17671,7 +17496,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6281)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17679,7 +17504,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -17694,7 +17519,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6290)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17702,7 +17527,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -17717,7 +17542,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6299)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17725,7 +17550,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -17740,7 +17565,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6308)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17748,7 +17573,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -17763,7 +17588,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6315)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -17771,13 +17596,13 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
 DIAGNOSTIC LIST
@@ -17837,8 +17662,8 @@ DIAGNOSTIC LIST
   6512: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
 FORMAT LIST
@@ -18045,8 +17870,8 @@ FORMAT LIST
   6521:                 END SUBROUTINE ReadHotStart3DGlobal
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
 INLINE LIST
@@ -18054,8 +17879,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
 VECTORIZATION LIST
@@ -18186,8 +18011,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:47 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READHOTSTART3DGLOBAL
 CODE GENERATION LIST
@@ -18202,18 +18027,18 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 2320 bytes
-      Register spill area      :  512 bytes
+    Total size                 : 2336 bytes
+      Register spill area      :  520 bytes
       Parameter area           :   72 bytes
       Register save area       :  176 bytes
-      User data area           : 1552 bytes
+      User data area           : 1560 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:6387)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18221,11 +18046,11 @@ CODE GENERATION LIST
           Total                                         : 4
             Across calls                                : 2
             Over basic blocks                           : 2
-    *** The number of SCALAR REGISTER TRANSFER          : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 8
   LOOP END
 
   LOOP BEGIN: (prep.F:6393)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18233,11 +18058,11 @@ CODE GENERATION LIST
           Total                                         : 4
             Across calls                                : 2
             Over basic blocks                           : 2
-    *** The number of SCALAR REGISTER TRANSFER          : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 8
   LOOP END
 
   LOOP BEGIN: (prep.F:6399)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18245,11 +18070,11 @@ CODE GENERATION LIST
           Total                                         : 4
             Across calls                                : 2
             Over basic blocks                           : 2
-    *** The number of SCALAR REGISTER TRANSFER          : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 8
   LOOP END
 
   LOOP BEGIN: (prep.F:6405)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18257,11 +18082,11 @@ CODE GENERATION LIST
           Total                                         : 4
             Across calls                                : 2
             Over basic blocks                           : 2
-    *** The number of SCALAR REGISTER TRANSFER          : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 8
   LOOP END
 
   LOOP BEGIN: (prep.F:6411)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18269,11 +18094,11 @@ CODE GENERATION LIST
           Total                                         : 4
             Across calls                                : 2
             Over basic blocks                           : 2
-    *** The number of SCALAR REGISTER TRANSFER          : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 8
   LOOP END
 
   LOOP BEGIN: (prep.F:6417)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18281,11 +18106,11 @@ CODE GENERATION LIST
           Total                                         : 4
             Across calls                                : 2
             Over basic blocks                           : 2
-    *** The number of SCALAR REGISTER TRANSFER          : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 8
   LOOP END
 
   LOOP BEGIN: (prep.F:6423)
-    *** Estimated execution cycle                       : 57
+    *** Estimated execution cycle                       : 56
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18293,7 +18118,7 @@ CODE GENERATION LIST
           Total                                         : 4
             Across calls                                : 2
             Over basic blocks                           : 2
-    *** The number of SCALAR REGISTER TRANSFER          : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 8
   LOOP END
 
   LOOP BEGIN: (prep.F:6430)
@@ -18307,7 +18132,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 5
 
     LOOP BEGIN: (prep.F:6431)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18315,7 +18140,7 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
@@ -18330,7 +18155,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6439)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18338,7 +18163,7 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
@@ -18353,7 +18178,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6447)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18361,7 +18186,7 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
@@ -18376,7 +18201,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6455)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18384,7 +18209,7 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
@@ -18399,7 +18224,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6463)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18407,7 +18232,7 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
@@ -18422,7 +18247,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6472)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18430,7 +18255,7 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
@@ -18445,7 +18270,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6482)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18453,7 +18278,7 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
@@ -18468,7 +18293,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6492)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18476,7 +18301,7 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
@@ -18491,7 +18316,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6502)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18499,7 +18324,7 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
@@ -18514,7 +18339,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6510)
-      *** Estimated execution cycle                     : 62
+      *** Estimated execution cycle                     : 61
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 2
               Across calls                              : 2
@@ -18522,13 +18347,13 @@ CODE GENERATION LIST
             Total                                       : 4
               Across calls                              : 2
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 7
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
 DIAGNOSTIC LIST
@@ -18588,8 +18413,8 @@ DIAGNOSTIC LIST
   6670: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
 FORMAT LIST
@@ -18758,8 +18583,8 @@ FORMAT LIST
   6679:                 END SUBROUTINE WriteHotStart3DGLOBAL
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
 INLINE LIST
@@ -18767,8 +18592,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
 VECTORIZATION LIST
@@ -18899,8 +18724,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:29 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEHOTSTART3DGLOBAL
 CODE GENERATION LIST
@@ -18909,7 +18734,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 44 [s0-s12 s15-s16 s18-s42 s60-s63]
+      Scalar registers         : 43 [s0-s12 s15-s16 s18-s41 s60-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -18926,7 +18751,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:6561)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 55
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18934,11 +18759,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 9
   LOOP END
 
   LOOP BEGIN: (prep.F:6566)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18946,11 +18771,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6571)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18958,11 +18783,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6576)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18970,11 +18795,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6581)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18982,11 +18807,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6586)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -18994,11 +18819,11 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6591)
-    *** Estimated execution cycle                       : 58
+    *** Estimated execution cycle                       : 57
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
@@ -19006,7 +18831,7 @@ CODE GENERATION LIST
           Total                                         : 3
             Across calls                                : 2
             Over basic blocks                           : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 10
+    *** The number of SCALAR REGISTER TRANSFER          : 11
   LOOP END
 
   LOOP BEGIN: (prep.F:6597)
@@ -19020,7 +18845,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6598)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19028,7 +18853,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -19043,7 +18868,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6605)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19051,7 +18876,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -19066,7 +18891,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6612)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19074,7 +18899,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -19089,7 +18914,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6619)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19097,7 +18922,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -19112,7 +18937,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6626)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19120,7 +18945,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -19135,7 +18960,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6634)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19143,7 +18968,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -19158,7 +18983,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6643)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19166,7 +18991,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -19181,7 +19006,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6652)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19189,7 +19014,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -19204,7 +19029,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6661)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19212,7 +19037,7 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
@@ -19227,7 +19052,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (prep.F:6668)
-      *** Estimated execution cycle                     : 68
+      *** Estimated execution cycle                     : 67
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 3
               Across calls                              : 3
@@ -19235,13 +19060,13 @@ CODE GENERATION LIST
             Total                                       : 5
               Across calls                              : 3
               Over basic blocks                         : 2
-      *** The number of SCALAR REGISTER TRANSFER        : 10
+      *** The number of SCALAR REGISTER TRANSFER        : 11
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
 DIAGNOSTIC LIST
@@ -19286,8 +19111,8 @@ DIAGNOSTIC LIST
   6776: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
 FORMAT LIST
@@ -19402,8 +19227,8 @@ FORMAT LIST
   6783:                 END SUBROUTINE ReadInitCond3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
 INLINE LIST
@@ -19411,8 +19236,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
 VECTORIZATION LIST
@@ -19518,8 +19343,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: READINITCOND3D
 CODE GENERATION LIST
@@ -19655,8 +19480,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
 DIAGNOSTIC LIST
@@ -19701,8 +19526,8 @@ DIAGNOSTIC LIST
   6883: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
 FORMAT LIST
@@ -19820,8 +19645,8 @@ FORMAT LIST
   6890:                 END SUBROUTINE WriteInitCond3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
 INLINE LIST
@@ -19829,8 +19654,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
 VECTORIZATION LIST
@@ -19936,8 +19761,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: WRITEINITCOND3D
 CODE GENERATION LIST
@@ -19946,7 +19771,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 41 [s0-s12 s15-s16 s18-s39 s60-s63]
+      Scalar registers         : 40 [s0-s12 s15-s16 s18-s38 s60-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -19963,12 +19788,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:6809)
-    *** Estimated execution cycle                       : 49
+    *** Estimated execution cycle                       : 48
     *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:6814)
-    *** Estimated execution cycle                       : 49
+    *** Estimated execution cycle                       : 48
     *** The number of SCALAR REGISTER TRANSFER          : 7
   LOOP END
 
@@ -19983,7 +19808,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6820)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20005,7 +19830,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6826)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20027,7 +19852,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6832)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20049,7 +19874,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6838)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20071,7 +19896,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6844)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20093,7 +19918,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6851)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20115,7 +19940,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6859)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20137,7 +19962,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6867)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20159,7 +19984,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6875)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20181,7 +20006,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (prep.F:6881)
-      *** Estimated execution cycle                     : 60
+      *** Estimated execution cycle                     : 59
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Across calls                              : 1
@@ -20193,36 +20018,30 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  6922: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   6922: vec( 180): I/O statement obstructs vectorization.
   6922: vec( 181): Allocation obstructs vectorization.
   6922: vec( 182): Deallocation obstructs vectorization.
   6922: vec( 118): Unvectorizable data type.
   6922: vec( 108): Unvectorizable loop structure.
-  6928: opt(3014): Moved reference within a conditional branch.
-  6929: opt(3014): Moved reference within a conditional branch.
-  6930: opt(3014): Moved reference within a conditional branch.
   6932: vec( 103): Unvectorized loop.
   6932: vec( 108): Unvectorizable loop structure.
   6932: vec( 118): Unvectorizable data type.: FILENAME
-  6940: opt(3014): Moved reference within a conditional branch.
   6940: vec( 103): Unvectorized loop.
   6940: vec( 108): Unvectorizable loop structure.
-  6953: opt(3014): Moved reference within a conditional branch.
   6953: vec( 103): Unvectorized loop.
   6953: vec( 108): Unvectorizable loop structure.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
 FORMAT LIST
@@ -20310,8 +20129,8 @@ FORMAT LIST
   6966:                 END SUBROUTINE OpenFullDomainFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
 INLINE LIST
@@ -20319,8 +20138,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
 VECTORIZATION LIST
@@ -20365,8 +20184,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENFULLDOMAINFILE
 CODE GENERATION LIST
@@ -20381,11 +20200,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 3088 bytes
-      Register spill area      :  296 bytes
+    Total size                 : 3104 bytes
+      Register spill area      :  304 bytes
       Parameter area           :  160 bytes
       Register save area       :  176 bytes
-      User data area           : 2456 bytes
+      User data area           : 2464 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
@@ -20399,14 +20218,13 @@ CODE GENERATION LIST
             Over basic blocks                           :  6
             Others                                      :  2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 51
-            Across calls                                : 14
-            Over basic blocks                           : 34
-            Others                                      :  3
+          Total                                         : 52
+            Across calls                                : 17
+            Over basic blocks                           : 35
     *** The number of SCALAR REGISTER TRANSFER          : 97
 
     LOOP BEGIN: (prep.F:6932)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:6932)
@@ -20422,17 +20240,17 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:6953)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:6940)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
 DIAGNOSTIC LIST
@@ -20442,8 +20260,8 @@ DIAGNOSTIC LIST
   7005: inl(1212): Source for routine not found.: IWRITE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
 FORMAT LIST
@@ -20506,8 +20324,8 @@ FORMAT LIST
   7018:                 END SUBROUTINE OpenSubDomainFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
 INLINE LIST
@@ -20517,8 +20335,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
 VECTORIZATION LIST
@@ -20526,8 +20344,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENSUBDOMAINFILE
 CODE GENERATION LIST
@@ -20553,8 +20371,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
 DIAGNOSTIC LIST
@@ -20590,8 +20408,8 @@ DIAGNOSTIC LIST
   7128: opt(1084): Branch out of the loop inhibits optimization.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
 FORMAT LIST
@@ -20723,8 +20541,8 @@ FORMAT LIST
   7142:                 END SUBROUTINE OpenPrepFiles
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
 INLINE LIST
@@ -20734,8 +20552,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
 VECTORIZATION LIST
@@ -20874,8 +20692,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: OPENPREPFILES
 CODE GENERATION LIST
@@ -20905,7 +20723,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:7066)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:7066)
@@ -20917,11 +20735,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:7066)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7066)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (prep.F:7066)
@@ -20933,7 +20751,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:7066)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7066)
@@ -20945,7 +20763,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:7071)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7071)
@@ -20957,7 +20775,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:7078)
-    *** Estimated execution cycle                       : 270
+    *** Estimated execution cycle                       : 269
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 1
@@ -20967,10 +20785,10 @@ CODE GENERATION LIST
             Across calls                                : 3
             Over basic blocks                           : 1
             Others                                      : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 47
+    *** The number of SCALAR REGISTER TRANSFER          : 48
 
     LOOP BEGIN: (prep.F:7082)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:7082)
@@ -20983,24 +20801,23 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:7113)
-    *** Estimated execution cycle                       : 393
+    *** Estimated execution cycle                       : 392
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 32
+          Total                                         : 31
             Across calls                                :  3
-            Over basic blocks                           : 29
+            Over basic blocks                           : 28
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 38
-            Across calls                                :  4
+            Across calls                                :  5
             Over basic blocks                           : 33
-            Others                                      :  1
-    *** The number of SCALAR REGISTER TRANSFER          : 69
+    *** The number of SCALAR REGISTER TRANSFER          : 74
 
     LOOP BEGIN: (prep.F:7114)
       *** Estimated execution cycle                     : 5
     LOOP END
 
     LOOP BEGIN: (prep.F:7118)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (prep.F:7118)
@@ -21016,13 +20833,13 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (prep.F:7123)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP80
 DIAGNOSTIC LIST
@@ -21061,8 +20878,8 @@ DIAGNOSTIC LIST
   7472: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP80
 FORMAT LIST
@@ -21261,8 +21078,8 @@ FORMAT LIST
   7496:                 END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP80
 INLINE LIST
@@ -21270,8 +21087,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP80
 VECTORIZATION LIST
@@ -21355,8 +21172,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREP80
 CODE GENERATION LIST
@@ -21530,8 +21347,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
 DIAGNOSTIC LIST
@@ -21581,8 +21398,8 @@ DIAGNOSTIC LIST
   7639: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
 FORMAT LIST
@@ -21740,8 +21557,8 @@ FORMAT LIST
   7648:                 END SUBROUTINE prepUnSWAN
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
 INLINE LIST
@@ -21751,8 +21568,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
 VECTORIZATION LIST
@@ -21844,8 +21661,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:30 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:48 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPUNSWAN
 CODE GENERATION LIST
@@ -21854,7 +21671,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 50 [s0-s12 s15-s16 s18-s41 s53-s63]
+      Scalar registers         : 48 [s0-s12 s15-s16 s18-s41 s55-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -21871,35 +21688,35 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:7599)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7602)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7563)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7574)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7585)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7576)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7578)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7581)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:7614)
@@ -21911,17 +21728,16 @@ CODE GENERATION LIST
             Others                                      :  1
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 19
-            Across calls                                :  8
+            Across calls                                :  9
             Over basic blocks                           : 10
-            Others                                      :  1
-    *** The number of SCALAR REGISTER TRANSFER          : 21
+    *** The number of SCALAR REGISTER TRANSFER          : 24
 
     LOOP BEGIN: (prep.F:7616)
       *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (prep.F:7618)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
   LOOP END
 
@@ -21930,11 +21746,11 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (prep.F:7630)
-      *** Estimated execution cycle                     : 52
-      *** The number of SCALAR REGISTER TRANSFER        : 13
+      *** Estimated execution cycle                     : 51
+      *** The number of SCALAR REGISTER TRANSFER        : 14
 
       LOOP BEGIN: (prep.F:7631)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
     LOOP END
   LOOP END
@@ -21945,12 +21761,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:7620)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
 DIAGNOSTIC LIST
@@ -22120,8 +21936,8 @@ DIAGNOSTIC LIST
   9088: inl(1212): Source for routine not found.: NETCDFIO::FREENETCDFCOORD
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
 FORMAT LIST
@@ -23574,8 +23390,8 @@ FORMAT LIST
   9091:                 END SUBROUTINE prepNetCDF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
 INLINE LIST
@@ -23757,8 +23573,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
 VECTORIZATION LIST
@@ -25629,8 +25445,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: PREPNETCDF
 CODE GENERATION LIST
@@ -25645,11 +25461,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 121792 bytes
-      Register spill area      :   4912 bytes
+    Total size                 : 121824 bytes
+      Register spill area      :   4928 bytes
       Parameter area           :    992 bytes
       Register save area       :    176 bytes
-      User data area           : 115712 bytes
+      User data area           : 115728 bytes
       Others                   :      0 bytes
 
     Note: Total size of Routine stack does not include
@@ -25664,11 +25480,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25688,11 +25504,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25712,11 +25528,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25736,11 +25552,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25760,11 +25576,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25784,11 +25600,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25808,11 +25624,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25832,11 +25648,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25856,11 +25672,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25880,11 +25696,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25904,11 +25720,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25928,11 +25744,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25956,11 +25772,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -25980,11 +25796,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26004,11 +25820,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26028,11 +25844,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26052,11 +25868,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26076,11 +25892,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26100,11 +25916,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26124,11 +25940,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26148,11 +25964,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26176,11 +25992,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26204,11 +26020,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26232,11 +26048,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26260,11 +26076,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26288,11 +26104,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26316,11 +26132,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26340,11 +26156,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26372,11 +26188,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26396,11 +26212,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26428,11 +26244,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26464,11 +26280,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26496,11 +26312,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26532,11 +26348,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26564,11 +26380,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26600,11 +26416,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26632,11 +26448,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26668,11 +26484,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26700,11 +26516,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26736,11 +26552,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26768,11 +26584,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26804,11 +26620,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26844,11 +26660,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26880,11 +26696,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26904,11 +26720,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26936,11 +26752,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -26972,11 +26788,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -27008,11 +26824,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -27040,11 +26856,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -27076,11 +26892,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -27104,11 +26920,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -27124,11 +26940,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
@@ -27148,8 +26964,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME
 DIAGNOSTIC LIST
@@ -27161,8 +26977,8 @@ DIAGNOSTIC LIST
   9108: vec( 118): Unvectorizable data type.: FILE_NAME
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME
 FORMAT LIST
@@ -27195,8 +27011,8 @@ FORMAT LIST
   9111:                 end subroutine makeFileName
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME
 INLINE LIST
@@ -27204,8 +27020,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME
 VECTORIZATION LIST
@@ -27231,8 +27047,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:34 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/prep.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:53 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/prep.F
 
 PROCEDURE NAME: MAKEFILENAME
 CODE GENERATION LIST
@@ -27258,11 +27074,11 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (prep.F:9108)

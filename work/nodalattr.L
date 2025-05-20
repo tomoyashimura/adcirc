@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
-  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/nodalattr.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/nodalattr.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNAMODULE
 DIAGNOSTIC LIST
@@ -192,8 +192,8 @@ DIAGNOSTIC LIST
    524: opt(1418): Constant-length loop is expanded.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNAMODULE
 FORMAT LIST
@@ -358,8 +358,8 @@ FORMAT LIST
    541:                 END SUBROUTINE InitNAModule
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNAMODULE
 INLINE LIST
@@ -367,8 +367,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNAMODULE
 VECTORIZATION LIST
@@ -394,8 +394,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNAMODULE
 CODE GENERATION LIST
@@ -429,8 +429,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTRXDMF
 DIAGNOSTIC LIST
@@ -443,8 +443,8 @@ DIAGNOSTIC LIST
   3122: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTRXDMF
 FORMAT LIST
@@ -785,8 +785,8 @@ FORMAT LIST
    867:                 end subroutine readNodalAttrXDMF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTRXDMF
 INLINE LIST
@@ -809,8 +809,8 @@ INLINE LIST
       *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTRXDMF
 VECTORIZATION LIST
@@ -818,8 +818,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTRXDMF
 CODE GENERATION LIST
@@ -845,8 +845,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CHECKFORMISSINGNODALATTRIBUTES
 DIAGNOSTIC LIST
@@ -859,8 +859,8 @@ DIAGNOSTIC LIST
   3122: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CHECKFORMISSINGNODALATTRIBUTES
 FORMAT LIST
@@ -928,8 +928,8 @@ FORMAT LIST
    923:                 end subroutine checkForMissingNodalAttributes
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CHECKFORMISSINGNODALATTRIBUTES
 INLINE LIST
@@ -950,8 +950,8 @@ INLINE LIST
       *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CHECKFORMISSINGNODALATTRIBUTES
 VECTORIZATION LIST
@@ -959,8 +959,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CHECKFORMISSINGNODALATTRIBUTES
 CODE GENERATION LIST
@@ -986,8 +986,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ALLOCATENODALATTRIBUTES
 DIAGNOSTIC LIST
@@ -999,8 +999,8 @@ DIAGNOSTIC LIST
    967: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ALLOCATENODALATTRIBUTES
 FORMAT LIST
@@ -1068,8 +1068,8 @@ FORMAT LIST
    976:                 end subroutine allocateNodalAttributes
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ALLOCATENODALATTRIBUTES
 INLINE LIST
@@ -1077,8 +1077,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ALLOCATENODALATTRIBUTES
 VECTORIZATION LIST
@@ -1105,8 +1105,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:45 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:21 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ALLOCATENODALATTRIBUTES
 CODE GENERATION LIST
@@ -1144,41 +1144,30 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTR
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  1041: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1041: vec( 103): Unvectorized loop.
   1041: vec( 180): I/O statement obstructs vectorization.
   1041: vec( 118): Unvectorizable data type.
   1042: opt(1118): This I/O statement inhibits optimization of loop.
-  1097: opt(3014): Moved reference within a conditional branch.
-  1098: opt(3014): Moved reference within a conditional branch.
-  1100: opt(3014): Moved reference within a conditional branch.
-  1101: opt(3014): Moved reference within a conditional branch.
   1113: inl(1222): Inlined: NODALATTRIBUTES::READNODALATTRXDMF
   1120: vec( 103): Unvectorized loop.
   1120: vec( 108): Unvectorizable loop structure.
   1138: vec( 103): Unvectorized loop.
   1138: vec( 108): Unvectorizable loop structure.
   1168: inl(1222): Inlined: NODALATTRIBUTES::NA_TERMINATE
-  1177: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1177: vec( 103): Unvectorized loop.
   1177: vec( 180): I/O statement obstructs vectorization.
   1177: vec( 118): Unvectorizable data type.
   1178: opt(1118): This I/O statement inhibits optimization of loop.
-  1304: opt(3014): Moved reference within a conditional branch.
-  1305: opt(3014): Moved reference within a conditional branch.
-  1307: opt(3014): Moved reference within a conditional branch.
-  1308: opt(3014): Moved reference within a conditional branch.
   1318: inl(1222): Inlined: NODALATTRIBUTES::CHECKFORMISSINGNODALATTRIBUTES
   1321: inl(1214): Expansion routine is too big for automatic expansion.: NODALATTRIBUTES::ALLOCATENODALATTRIBUTES
-  1327: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1336: inl(1222): Inlined: NODALATTRIBUTES::LOADATTRVEC
   1343: inl(1222): Inlined: NODALATTRIBUTES::LOADATTRVEC
   1350: inl(1222): Inlined: NODALATTRIBUTES::LOADATTRVEC
@@ -1213,17 +1202,13 @@ DIAGNOSTIC LIST
   1509: opt(3009): Copy-in/out loops have been generated.: ABSORBLAYER_SIGMA
   1509: opt(3011): Copy-out loop has been generated.: ABSORBLAYER_SIGMA
   1509: vec( 101): Vectorized loop.
-  1539: opt(3014): Moved reference within a conditional branch.
-  1540: opt(3014): Moved reference within a conditional branch.
-  1542: opt(3014): Moved reference within a conditional branch.
-  1543: opt(3014): Moved reference within a conditional branch.
   1547: vec( 103): Unvectorized loop.
   1547: vec( 180): I/O statement obstructs vectorization.
   1548: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTR
 FORMAT LIST
@@ -1830,8 +1815,8 @@ FORMAT LIST
   1570:                 END SUBROUTINE ReadNodalAttr
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTR
 INLINE LIST
@@ -1952,8 +1937,8 @@ INLINE LIST
       *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTR
 VECTORIZATION LIST
@@ -2379,8 +2364,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READNODALATTR
 CODE GENERATION LIST
@@ -2414,15 +2399,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:1120)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:1138)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:1177)
-    *** Estimated execution cycle                       : 2760
+    *** Estimated execution cycle                       : 2746
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 4
             Across calls                                : 3
@@ -2435,17 +2420,17 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:1327)
-    *** Estimated execution cycle                       : 8527
+    *** Estimated execution cycle                       : 8497
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 457
-            Across calls                                : 143
+          Total                                         : 458
+            Across calls                                : 144
             Over basic blocks                           : 284
             Others                                      :  30
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 1678
-            Across calls                                :  151
+          Total                                         : 1679
+            Across calls                                :  152
             Over basic blocks                           : 1527
-    *** The number of SCALAR REGISTER TRANSFER          : 801
+    *** The number of SCALAR REGISTER TRANSFER          : 802
 
     LOOP BEGIN: (nodalattr.F:1509)
       *** Estimated execution cycle                     : 46
@@ -2466,7 +2451,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1663)
-      *** Estimated execution cycle                     : 238
+      *** Estimated execution cycle                     : 235
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 9
               Across calls                              : 7
@@ -2496,8 +2481,8 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1509)
-      *** Estimated execution cycle                     : 46
-      *** The number of SCALAR REGISTER TRANSFER        : 18
+      *** Estimated execution cycle                     : 47
+      *** The number of SCALAR REGISTER TRANSFER        : 19
 
       LOOP BEGIN: (nodalattr.F:1509)
         *** Estimated execution cycle                   : 63
@@ -2514,7 +2499,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1663)
-      *** Estimated execution cycle                     : 213
+      *** Estimated execution cycle                     : 210
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
               Across calls                              : 6
@@ -2548,7 +2533,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2569,7 +2554,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1663)
-      *** Estimated execution cycle                     : 213
+      *** Estimated execution cycle                     : 210
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
               Across calls                              : 6
@@ -2603,7 +2588,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2619,7 +2604,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2640,7 +2625,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1727)
-      *** Estimated execution cycle                     : 314
+      *** Estimated execution cycle                     : 311
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 20
               Across calls                              :  9
@@ -2650,7 +2635,7 @@ CODE GENERATION LIST
             Total                                       : 49
               Across calls                              : 20
               Over basic blocks                         : 29
-      *** The number of SCALAR REGISTER TRANSFER        : 59
+      *** The number of SCALAR REGISTER TRANSFER        : 60
 
       LOOP BEGIN: (nodalattr.F:1730)
         *** Estimated execution cycle                   : 44
@@ -2688,7 +2673,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2704,7 +2689,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2725,7 +2710,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1663)
-      *** Estimated execution cycle                     : 212
+      *** Estimated execution cycle                     : 210
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
               Across calls                              : 6
@@ -2734,7 +2719,7 @@ CODE GENERATION LIST
             Total                                       : 32
               Across calls                              : 15
               Over basic blocks                         : 17
-      *** The number of SCALAR REGISTER TRANSFER        : 17
+      *** The number of SCALAR REGISTER TRANSFER        : 18
 
       LOOP BEGIN: (nodalattr.F:1669)
         *** Estimated execution cycle                   : 63
@@ -2759,7 +2744,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2775,7 +2760,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2791,7 +2776,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2807,7 +2792,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2823,7 +2808,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2839,7 +2824,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2860,7 +2845,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1663)
-      *** Estimated execution cycle                     : 212
+      *** Estimated execution cycle                     : 209
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
               Across calls                              : 6
@@ -2894,7 +2879,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2914,7 +2899,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1663)
-      *** Estimated execution cycle                     : 235
+      *** Estimated execution cycle                     : 234
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 15
               Across calls                              :  6
@@ -2923,7 +2908,7 @@ CODE GENERATION LIST
             Total                                       : 35
               Across calls                              : 15
               Over basic blocks                         : 20
-      *** The number of SCALAR REGISTER TRANSFER        : 22
+      *** The number of SCALAR REGISTER TRANSFER        : 24
 
       LOOP BEGIN: (nodalattr.F:1669)
         *** Estimated execution cycle                   : 63
@@ -2940,7 +2925,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2960,7 +2945,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 127
+      *** Estimated execution cycle                     : 126
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
@@ -2976,7 +2961,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:1606)
-      *** Estimated execution cycle                     : 105
+      *** Estimated execution cycle                     : 104
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 4
               Across calls                              : 4
@@ -2994,8 +2979,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRVEC
 DIAGNOSTIC LIST
@@ -3003,17 +2988,15 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   1601: vec( 101): Vectorized loop.
-  1606: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1606: vec( 103): Unvectorized loop.
   1606: vec( 180): I/O statement obstructs vectorization.
   1606: vec( 110): Vectorization obstructive procedure reference.: HASHTABLE::FIND
   1607: opt(1118): This I/O statement inhibits optimization of loop.
   1608: inl(1212): Source for routine not found.: HASHTABLE::FIND
-  1611: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRVEC
 FORMAT LIST
@@ -3072,8 +3055,8 @@ FORMAT LIST
   1621:                 END SUBROUTINE LoadAttrVec
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRVEC
 INLINE LIST
@@ -3083,8 +3066,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRVEC
 VECTORIZATION LIST
@@ -3105,8 +3088,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRVEC
 CODE GENERATION LIST
@@ -3136,13 +3119,13 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:1606)
-    *** Estimated execution cycle                       : 80
+    *** Estimated execution cycle                       : 79
     *** The number of SCALAR REGISTER TRANSFER          : 17
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMAT
 DIAGNOSTIC LIST
@@ -3152,18 +3135,15 @@ DIAGNOSTIC LIST
   1655: opt(1408): Loop interchanged.
   1655: vec( 101): Vectorized loop.
   1662: opt(1418): Constant-length loop is expanded.
-  1663: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1665: inl(1212): Source for routine not found.: HASHTABLE::FIND
-  1667: opt(3014): Moved reference within a conditional branch.
   1669: vec( 101): Vectorized loop.
   1670: opt(1118): This I/O statement inhibits optimization of loop.
-  1670: opt(3014): Moved reference within a conditional branch.
   1670: vec( 103): Unvectorized loop.
   1670: vec( 180): I/O statement obstructs vectorization.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMAT
 FORMAT LIST
@@ -3234,8 +3214,8 @@ FORMAT LIST
   1682:                 END SUBROUTINE LoadAttrMat
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMAT
 INLINE LIST
@@ -3245,8 +3225,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMAT
 VECTORIZATION LIST
@@ -3280,8 +3260,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMAT
 CODE GENERATION LIST
@@ -3323,7 +3303,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 11
             Over basic blocks                           : 11
-    *** The number of SCALAR REGISTER TRANSFER          : 36
+    *** The number of SCALAR REGISTER TRANSFER          : 39
 
     LOOP BEGIN: (nodalattr.F:1669)
       *** Estimated execution cycle                     : 63
@@ -3336,8 +3316,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMATNODENO
 DIAGNOSTIC LIST
@@ -3347,21 +3327,18 @@ DIAGNOSTIC LIST
   1719: opt(1408): Loop interchanged.
   1719: vec( 101): Vectorized loop.
   1726: opt(1418): Constant-length loop is expanded.
-  1727: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1729: inl(1212): Source for routine not found.: HASHTABLE::FIND
   1730: vec( 103): Unvectorized loop.
   1730: vec( 110): Vectorization obstructive procedure reference.: HASHTABLE::FIND
   1731: opt(1025): Reference to this procedure inhibits optimization.: HASHTABLE::FIND
-  1734: opt(3014): Moved reference within a conditional branch.
   1736: vec( 101): Vectorized loop.
   1737: opt(1118): This I/O statement inhibits optimization of loop.
-  1737: opt(3014): Moved reference within a conditional branch.
   1737: vec( 103): Unvectorized loop.
   1737: vec( 180): I/O statement obstructs vectorization.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMATNODENO
 FORMAT LIST
@@ -3435,8 +3412,8 @@ FORMAT LIST
   1749:                 END SUBROUTINE LoadAttrMatNODENO
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMATNODENO
 INLINE LIST
@@ -3448,8 +3425,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMATNODENO
 VECTORIZATION LIST
@@ -3488,8 +3465,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::LOADATTRMATNODENO
 CODE GENERATION LIST
@@ -3524,7 +3501,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:1727)
-    *** Estimated execution cycle                       : 238
+    *** Estimated execution cycle                       : 233
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 7
             Over basic blocks                           : 6
@@ -3532,7 +3509,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 14
             Over basic blocks                           : 14
-    *** The number of SCALAR REGISTER TRANSFER          : 63
+    *** The number of SCALAR REGISTER TRANSFER          : 62
 
     LOOP BEGIN: (nodalattr.F:1730)
       *** Estimated execution cycle                     : 21
@@ -3550,8 +3527,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNODALATTR
 DIAGNOSTIC LIST
@@ -3567,12 +3544,10 @@ DIAGNOSTIC LIST
   1880: vec( 101): Vectorized loop.
   1880: vec( 113): Overhead of loop division is too large.
   1881: inl(1222): Inlined: NODALATTRIBUTES::TAU0NODALVALUE
-  1910: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1910: vec( 103): Unvectorized loop.
   1910: vec( 101): Vectorized loop.
   1910: vec( 113): Overhead of loop division is too large.
   1912: inl(1222): Inlined: NODALATTRIBUTES::TAU0NODALVALUE
-  1912: opt(3014): Moved reference within a conditional branch.
   1926: vec( 101): Vectorized loop.
   1937: vec( 101): Vectorized loop.
   1974: vec( 101): Vectorized loop.
@@ -3586,8 +3561,8 @@ DIAGNOSTIC LIST
   2073: opt(1418): Constant-length loop is expanded.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNODALATTR
 FORMAT LIST
@@ -3926,8 +3901,8 @@ FORMAT LIST
   2078:                 END SUBROUTINE InitNodalAttr
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNODALATTR
 INLINE LIST
@@ -3939,8 +3914,8 @@ INLINE LIST
   -> INLINE: NODALATTRIBUTES::TAU0NODALVALUE (nodalattr.F:1912)
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNODALATTR
 VECTORIZATION LIST
@@ -4058,8 +4033,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITNODALATTR
 CODE GENERATION LIST
@@ -4085,7 +4060,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (nodalattr.F:1836)
-    *** Estimated execution cycle                       : 274
+    *** Estimated execution cycle                       : 277
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:1854)
@@ -4162,8 +4137,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::TAU0NODALVALUE
 DIAGNOSTIC LIST
@@ -4173,8 +4148,8 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::TAU0NODALVALUE
 FORMAT LIST
@@ -4215,8 +4190,8 @@ FORMAT LIST
   2108:                 END FUNCTION Tau0NodalValue
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::TAU0NODALVALUE
 INLINE LIST
@@ -4224,8 +4199,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::TAU0NODALVALUE
 VECTORIZATION LIST
@@ -4233,8 +4208,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::TAU0NODALVALUE
 CODE GENERATION LIST
@@ -4260,8 +4235,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CALCULATETIMEVARYINGTAU0
 DIAGNOSTIC LIST
@@ -4270,13 +4245,9 @@ DIAGNOSTIC LIST
 
   2135: vec( 101): Vectorized loop.
   2136: vec( 128): Fused multiply-add operation applied.
-  2146: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2146: vec( 101): Vectorized loop.
-  2148: opt(3014): Moved reference within a conditional branch.
-  2150: opt(3014): Moved reference within a conditional branch.
   2150: vec( 128): Fused multiply-add operation applied.
   2156: opt(1135): Outer loop conditionally executes inner loop.
-  2156: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2156: vec( 102): Partially vectorized loop.
   2158: vec( 101): Vectorized loop.
   2159: vec( 126): Idiom detected.: SUM
@@ -4286,8 +4257,8 @@ DIAGNOSTIC LIST
   2175: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CALCULATETIMEVARYINGTAU0
 FORMAT LIST
@@ -4368,8 +4339,8 @@ FORMAT LIST
   2181:                 END SUBROUTINE CalculateTimeVaryingTau0
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CALCULATETIMEVARYINGTAU0
 INLINE LIST
@@ -4377,8 +4348,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CALCULATETIMEVARYINGTAU0
 VECTORIZATION LIST
@@ -4425,8 +4396,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::CALCULATETIMEVARYINGTAU0
 CODE GENERATION LIST
@@ -4435,17 +4406,17 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 46 [s0-s6 s8-s12 s15-s16 s18 s23-s26 s37-s63]
+      Scalar registers         : 47 [s0-s12 s15-s16 s18 s23-s26 s37-s63]
       Vector registers         : 33 [v31-v63]
       Vector mask registers    :  2 [vm14-vm15]
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 4464 bytes
-      Register spill area      : 2064 bytes
+    Total size                 : 4448 bytes
+      Register spill area      : 2056 bytes
       Parameter area           :   16 bytes
       Register save area       :  176 bytes
-      User data area           : 2208 bytes
+      User data area           : 2200 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
@@ -4464,10 +4435,10 @@ CODE GENERATION LIST
 
   LOOP BEGIN: (nodalattr.F:2156)
     *** Estimated execution cycle                       : 117
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** The number of SCALAR REGISTER TRANSFER          : 11
 
     LOOP BEGIN: (nodalattr.F:2158)
-      *** Estimated execution cycle                     : 218
+      *** Estimated execution cycle                     : 186
     LOOP END
   LOOP END
 
@@ -4484,8 +4455,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITVEW1DCHANNELWETPERIMETER
 DIAGNOSTIC LIST
@@ -4507,8 +4478,8 @@ DIAGNOSTIC LIST
   2253: vec( 108): Unvectorizable loop structure.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITVEW1DCHANNELWETPERIMETER
 FORMAT LIST
@@ -4593,8 +4564,8 @@ FORMAT LIST
   2257:                 END SUBROUTINE InitVEW1DChannelWetPerimeter
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITVEW1DCHANNELWETPERIMETER
 INLINE LIST
@@ -4606,8 +4577,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITVEW1DCHANNELWETPERIMETER
 VECTORIZATION LIST
@@ -4646,8 +4617,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::INITVEW1DCHANNELWETPERIMETER
 CODE GENERATION LIST
@@ -4656,17 +4627,17 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 42 [s0-s4 s8-s12 s15-s16 s18-s37 s54-s63]
+      Scalar registers         : 41 [s0-s4 s8-s12 s15-s16 s18-s36 s54-s63]
       Vector registers         :  2 [v62-v63]
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 3776 bytes
-      Register spill area      :  224 bytes
+    Total size                 : 3792 bytes
+      Register spill area      :  232 bytes
       Parameter area           :   40 bytes
       Register save area       :  176 bytes
-      User data area           : 3328 bytes
+      User data area           : 3336 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
@@ -4681,60 +4652,44 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:2208)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:2210)
-    *** Estimated execution cycle                       : 408
+    *** Estimated execution cycle                       : 409
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 6
-            Across calls                                : 4
+          Total                                         : 5
+            Across calls                                : 3
             Over basic blocks                           : 2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 44
-            Across calls                                :  4
-            Over basic blocks                           : 40
-    *** The number of SCALAR REGISTER TRANSFER          : 23
+          Total                                         : 46
+            Across calls                                :  3
+            Over basic blocks                           : 43
+    *** The number of SCALAR REGISTER TRANSFER          : 22
 
     LOOP BEGIN: (nodalattr.F:2253)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DBOTTOMFRICTION
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  2308: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2308: vec( 101): Vectorized loop.
   2309: opt(1394): Moved invariant if outside of an inner loop.
-  2311: opt(3014): Moved reference within a conditional branch.
-  2312: opt(3014): Moved reference within a conditional branch.
-  2314: opt(3014): Moved reference within a conditional branch.
-  2322: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2322: vec( 101): Vectorized loop.
   2324: opt(1394): Moved invariant if outside of an inner loop.
   2326: opt(1394): Moved invariant if outside of an inner loop.
-  2327: opt(3014): Moved reference within a conditional branch.
-  2329: opt(3014): Moved reference within a conditional branch.
-  2332: opt(3014): Moved reference within a conditional branch.
   2332: vec( 128): Fused multiply-add operation applied.
   2339: vec( 128): Fused multiply-add operation applied.
   2340: opt(1394): Moved invariant if outside of an inner loop.
-  2342: opt(3014): Moved reference within a conditional branch.
   2342: vec( 128): Fused multiply-add operation applied.
-  2343: opt(3014): Moved reference within a conditional branch.
-  2352: opt(3014): Moved reference within a conditional branch.
-  2354: opt(3014): Moved reference within a conditional branch.
-  2360: opt(3014): Moved reference within a conditional branch.
-  2361: opt(3014): Moved reference within a conditional branch.
-  2368: opt(3014): Moved reference within a conditional branch.
-  2369: opt(3014): Moved reference within a conditional branch.
   2379: vec( 101): Vectorized loop.
   2387: vec( 101): Vectorized loop.
   2388: vec( 128): Fused multiply-add operation applied.
@@ -4751,8 +4706,8 @@ DIAGNOSTIC LIST
   2432: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DBOTTOMFRICTION
 FORMAT LIST
@@ -4939,8 +4894,8 @@ FORMAT LIST
   2440:                 END SUBROUTINE Apply2DBottomFriction
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DBOTTOMFRICTION
 INLINE LIST
@@ -4948,8 +4903,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DBOTTOMFRICTION
 VECTORIZATION LIST
@@ -5029,8 +4984,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DBOTTOMFRICTION
 CODE GENERATION LIST
@@ -5125,8 +5080,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY3DBOTTOMFRICTION
 DIAGNOSTIC LIST
@@ -5134,26 +5089,23 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   2477: opt(1409): Alternate code generated.: NH
-  2477: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2477: vec( 101): Vectorized loop.
   2477: vec( 102): Partially vectorized loop.
   2478: vec( 128): Fused multiply-add operation applied.
   2479: opt(1394): Moved invariant if outside of an inner loop.
   2481: opt(1394): Moved invariant if outside of an inner loop.
+  2482: vec( 128): Fused multiply-add operation applied.
+  2489: vec( 128): Fused multiply-add operation applied.
   2493: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: TK
   2495: opt(1394): Moved invariant if outside of an inner loop.
-  2496: opt(3014): Moved reference within a conditional branch.
-  2497: opt(3014): Moved reference within a conditional branch.
-  2498: opt(3014): Moved reference within a conditional branch.
-  2499: opt(3014): Moved reference within a conditional branch.
   2500: vec( 128): Fused multiply-add operation applied.
   2502: opt(1019): Feedback of scalar value from one loop pass to another.
   2502: vec( 126): Idiom detected.: SUM
   2502: vec( 120): Unvectorizable dependency.: TK
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY3DBOTTOMFRICTION
 FORMAT LIST
@@ -5203,14 +5155,14 @@ FORMAT LIST
   2479: |                  IF (LoadZ0B_var) THEN
   2480: |                     Z0B1 = Z0B_var(NH)
   2481: |                  ELSEIF (LoadManningsN) THEN
-  2482: |                     Z0B1 = ( H1 )* exp(-(1.0D0+
+  2482: |       F             Z0B1 = ( H1 )* exp(-(1.0D0+
   2483: |              &             ( (0.41D0*( H1 )**(1.0D0/6.0D0) )/
   2484: |              &                            (ManningsN(NH)*sqrt(g)) ) ))
   2485: |                  ELSE
   2486: |                     Z0B1 = Z0B
   2487: |                  ENDIF
   2488: |         
-  2489: |                  FRIC(NH)= (1.D0 / ( (1.D0/0.41D0) *
+  2489: |       F          FRIC(NH)= (1.D0 / ( (1.D0/0.41D0) *
   2490: |              &   LOG((ABS( ( ( SIGMA(2)-SIGMA(1) )/2.d0 ) *(H1) ) + Z0B1 )/Z0B1)
   2491: |              &       ) )**2.D0
   2492: |         
@@ -5232,8 +5184,8 @@ FORMAT LIST
   2508:                 END SUBROUTINE Apply3DBottomFriction
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY3DBOTTOMFRICTION
 INLINE LIST
@@ -5241,8 +5193,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY3DBOTTOMFRICTION
 VECTORIZATION LIST
@@ -5359,8 +5311,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:24 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY3DBOTTOMFRICTION
 CODE GENERATION LIST
@@ -5369,7 +5321,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 59 [s0-s12 s15-s16 s18-s44 s47-s63]
+      Scalar registers         : 61 [s0-s12 s15-s16 s18-s63]
       Vector registers         : 53 [v0-v1 v8-v9 v14 v16-v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -5394,7 +5346,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:2477)
-    *** Estimated execution cycle                       : 254
+    *** Estimated execution cycle                       : 256
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 1
             Over basic blocks                           : 1
@@ -5433,7 +5385,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:2477)
-    *** Estimated execution cycle                       : 261
+    *** Estimated execution cycle                       : 263
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 1
             Over basic blocks                           : 1
@@ -5476,7 +5428,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:2477)
-    *** Estimated execution cycle                       : 254
+    *** Estimated execution cycle                       : 256
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 1
             Over basic blocks                           : 1
@@ -5504,56 +5456,35 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DINTERNALWAVEDRAG
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  2558: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2558: vec( 101): Vectorized loop.
-  2560: opt(3014): Moved reference within a conditional branch.
-  2563: opt(3014): Moved reference within a conditional branch.
   2569: inl(1212): Source for routine not found.: MESH::DRVMAP2DSPVEC
-  2571: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2571: vec( 101): Vectorized loop.
-  2573: opt(3014): Moved reference within a conditional branch.
-  2576: opt(3014): Moved reference within a conditional branch.
   2590: inl(1212): Source for routine not found.: INTERNALTIDE::MUNKHPFILTER
-  2596: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2596: vec( 101): Vectorized loop.
   2599: opt(1418): Constant-length loop is expanded.
-  2599: opt(3014): Moved reference within a conditional branch.
-  2604: opt(3014): Moved reference within a conditional branch.
   2604: vec( 128): Fused multiply-add operation applied.
   2607: vec( 128): Fused multiply-add operation applied.
   2609: vec( 128): Fused multiply-add operation applied.
-  2612: opt(3014): Moved reference within a conditional branch.
   2612: vec( 128): Fused multiply-add operation applied.
-  2613: opt(3014): Moved reference within a conditional branch.
   2613: vec( 128): Fused multiply-add operation applied.
   2614: vec( 128): Fused multiply-add operation applied.
-  2623: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2623: vec( 101): Vectorized loop.
   2625: vec( 128): Fused multiply-add operation applied.
   2626: vec( 128): Fused multiply-add operation applied.
   2627: vec( 128): Fused multiply-add operation applied.
   2631: opt(1418): Constant-length loop is expanded.
-  2631: opt(3014): Moved reference within a conditional branch.
-  2639: opt(3014): Moved reference within a conditional branch.
-  2645: opt(3014): Moved reference within a conditional branch.
   2645: vec( 128): Fused multiply-add operation applied.
-  2647: opt(3014): Moved reference within a conditional branch.
-  2658: opt(3014): Moved reference within a conditional branch.
-  2659: opt(3014): Moved reference within a conditional branch.
-  2665: opt(3014): Moved reference within a conditional branch.
   2665: vec( 128): Fused multiply-add operation applied.
-  2666: opt(3014): Moved reference within a conditional branch.
   2666: vec( 128): Fused multiply-add operation applied.
   2669: opt(1418): Constant-length loop is expanded.
-  2669: opt(3014): Moved reference within a conditional branch.
   2669: vec( 128): Fused multiply-add operation applied.
   2681: vec( 101): Vectorized loop.
   2688: vec( 101): Vectorized loop.
@@ -5562,8 +5493,8 @@ DIAGNOSTIC LIST
   2699: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DINTERNALWAVEDRAG
 FORMAT LIST
@@ -5769,8 +5700,8 @@ FORMAT LIST
   2704:                 END SUBROUTINE Apply2DInternalWaveDrag
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DINTERNALWAVEDRAG
 INLINE LIST
@@ -5782,8 +5713,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DINTERNALWAVEDRAG
 VECTORIZATION LIST
@@ -5841,8 +5772,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DINTERNALWAVEDRAG
 CODE GENERATION LIST
@@ -5892,8 +5823,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:2623)
-    *** Estimated execution cycle                       : 4130
-    *** The number of SCALAR REGISTER TRANSFER          : 42
+    *** Estimated execution cycle                       : 4129
+    *** The number of SCALAR REGISTER TRANSFER          : 38
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:2596)
@@ -5904,29 +5835,24 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DMOMENTUMDISP
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  2741: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2741: vec( 101): Vectorized loop.
-  2745: opt(3014): Moved reference within a conditional branch.
   2745: vec( 128): Fused multiply-add operation applied.
   2746: vec( 128): Fused multiply-add operation applied.
-  2748: opt(3014): Moved reference within a conditional branch.
-  2752: opt(3014): Moved reference within a conditional branch.
-  2753: opt(3014): Moved reference within a conditional branch.
-  2758: opt(3014): Moved reference within a conditional branch.
+  2748: vec( 128): Fused multiply-add operation applied.
   2758: vec( 128): Fused multiply-add operation applied.
   2759: vec( 128): Fused multiply-add operation applied.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DMOMENTUMDISP
 FORMAT LIST
@@ -5977,7 +5903,7 @@ FORMAT LIST
   2745: |       F          UVBar = SQRT(UBar(I)*UBar(I)+VBar(I)*VBar(I))
   2746: |       F          H1  = DP(I) + IFNLFA*ETA2(I)
   2747: |         C        ... Cd as a power function [a(x^b-1)] of x = MLD
-  2748: |                  Cd = HBREAK*(max(4d-3,MLD(I))**FTHETA - 1d0)
+  2748: |       F          Cd = HBREAK*(max(4d-3,MLD(I))**FTHETA - 1d0)
   2749: |                  ! adjust to put in TKM matrix
   2750: |                  IF ( ABS(UU1(I)).GT.1d-3
   2751: |              &        .AND.ABS(VV1(I)).GT.1d-3 ) THEN
@@ -6004,8 +5930,8 @@ FORMAT LIST
   2772:                 END SUBROUTINE Apply2DMomentumDisp
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DMOMENTUMDISP
 INLINE LIST
@@ -6013,8 +5939,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DMOMENTUMDISP
 VECTORIZATION LIST
@@ -6029,8 +5955,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLY2DMOMENTUMDISP
 CODE GENERATION LIST
@@ -6039,7 +5965,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 52 [s0-s6 s8-s12 s15-s16 s18-s19 s21-s42 s50-s63]
+      Scalar registers         : 51 [s0-s6 s8-s12 s15-s16 s18-s19 s21-s42 s51-s63]
       Vector registers         : 48 [v0 v9 v18-v63]
       Vector mask registers    :  3 [vm13-vm15]
       VREG directive           :  0
@@ -6056,7 +5982,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (nodalattr.F:2741)
-    *** Estimated execution cycle                       : 3358
+    *** Estimated execution cycle                       : 3354
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 25
             Over basic blocks                           : 25
@@ -6064,8 +5990,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYDIRECTIONALWINDREDUCTION
 DIAGNOSTIC LIST
@@ -6075,8 +6001,8 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYDIRECTIONALWINDREDUCTION
 FORMAT LIST
@@ -6204,8 +6130,8 @@ FORMAT LIST
   2903:                 END SUBROUTINE ApplyDirectionalWindReduction
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYDIRECTIONALWINDREDUCTION
 INLINE LIST
@@ -6213,8 +6139,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYDIRECTIONALWINDREDUCTION
 VECTORIZATION LIST
@@ -6222,8 +6148,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYDIRECTIONALWINDREDUCTION
 CODE GENERATION LIST
@@ -6232,7 +6158,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 32 [s0-s6 s8-s12 s15-s16 s18 s23-s31 s56-s63]
+      Scalar registers         : 33 [s0-s6 s8-s12 s15-s16 s18 s23-s31 s55-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -6249,8 +6175,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYCANOPYCOEFFICIENT
 DIAGNOSTIC LIST
@@ -6260,8 +6186,8 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYCANOPYCOEFFICIENT
 FORMAT LIST
@@ -6295,8 +6221,8 @@ FORMAT LIST
   2927:                 END SUBROUTINE ApplyCanopyCoefficient
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYCANOPYCOEFFICIENT
 INLINE LIST
@@ -6304,8 +6230,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYCANOPYCOEFFICIENT
 VECTORIZATION LIST
@@ -6313,8 +6239,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::APPLYCANOPYCOEFFICIENT
 CODE GENERATION LIST
@@ -6340,8 +6266,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ADVECTLOCAL
 DIAGNOSTIC LIST
@@ -6351,8 +6277,8 @@ DIAGNOSTIC LIST
   No diagnostic message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ADVECTLOCAL
 FORMAT LIST
@@ -6394,8 +6320,8 @@ FORMAT LIST
   2954:                 END SUBROUTINE ADVECTLOCAL
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ADVECTLOCAL
 INLINE LIST
@@ -6403,8 +6329,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ADVECTLOCAL
 VECTORIZATION LIST
@@ -6412,8 +6338,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::ADVECTLOCAL
 CODE GENERATION LIST
@@ -6439,8 +6365,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYSTARTDRYFILE
 DIAGNOSTIC LIST
@@ -6449,16 +6375,13 @@ DIAGNOSTIC LIST
 
   2986: vec( 103): Unvectorized loop.
   2986: vec( 108): Unvectorizable loop structure.
-  3007: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3007: vec( 103): Unvectorized loop.
   3007: vec( 180): I/O statement obstructs vectorization.
   3008: opt(1118): This I/O statement inhibits optimization of loop.
-  3010: opt(3014): Moved reference within a conditional branch.
-  3011: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYSTARTDRYFILE
 FORMAT LIST
@@ -6535,8 +6458,8 @@ FORMAT LIST
   3024:                 END SUBROUTINE ReadLegacyStartDryFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYSTARTDRYFILE
 INLINE LIST
@@ -6544,8 +6467,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYSTARTDRYFILE
 VECTORIZATION LIST
@@ -6561,8 +6484,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYSTARTDRYFILE
 CODE GENERATION LIST
@@ -6571,7 +6494,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 39 [s0-s12 s15-s16 s18-s37 s60-s63]
+      Scalar registers         : 38 [s0-s12 s15-s16 s18-s36 s60-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -6588,7 +6511,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (nodalattr.F:2986)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:3007)
@@ -6604,8 +6527,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYBOTTOMFRICTIONFILE
 DIAGNOSTIC LIST
@@ -6614,20 +6537,17 @@ DIAGNOSTIC LIST
 
   3052: vec( 103): Unvectorized loop.
   3052: vec( 108): Unvectorizable loop structure.
-  3054: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3054: vec( 103): Unvectorized loop.
   3054: vec( 180): I/O statement obstructs vectorization.
   3054: vec( 109): Vectorization obstructive statement.
   3055: opt(1118): This I/O statement inhibits optimization of loop.
-  3057: opt(3014): Moved reference within a conditional branch.
-  3058: opt(3014): Moved reference within a conditional branch.
   3072: vec( 103): Unvectorized loop.
   3072: vec( 180): I/O statement obstructs vectorization.
   3073: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYBOTTOMFRICTIONFILE
 FORMAT LIST
@@ -6694,8 +6614,8 @@ FORMAT LIST
   3084:                 END SUBROUTINE ReadLegacyBottomFrictionFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYBOTTOMFRICTIONFILE
 INLINE LIST
@@ -6703,8 +6623,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYBOTTOMFRICTIONFILE
 VECTORIZATION LIST
@@ -6726,8 +6646,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::READLEGACYBOTTOMFRICTIONFILE
 CODE GENERATION LIST
@@ -6736,7 +6656,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 40 [s0-s12 s15-s16 s18-s37 s59-s63]
+      Scalar registers         : 39 [s0-s12 s15-s16 s18-s36 s59-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -6753,7 +6673,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (nodalattr.F:3052)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:3054)
@@ -6770,8 +6690,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::NA_TERMINATE
 DIAGNOSTIC LIST
@@ -6784,8 +6704,8 @@ DIAGNOSTIC LIST
   3122: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::NA_TERMINATE
 FORMAT LIST
@@ -6839,8 +6759,8 @@ FORMAT LIST
   3124:                 END SUBROUTINE na_terminate
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::NA_TERMINATE
 INLINE LIST
@@ -6858,8 +6778,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::NA_TERMINATE
 VECTORIZATION LIST
@@ -6867,8 +6787,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::NA_TERMINATE
 CODE GENERATION LIST
@@ -6894,8 +6814,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::PREPCONDENSEDNODES
 DIAGNOSTIC LIST
@@ -6914,37 +6834,25 @@ DIAGNOSTIC LIST
   3170: opt(1592): Outer loop unrolled inside inner loop.
   3170: vec( 101): Vectorized loop.
   3171: vec( 101): Vectorized loop.
-  3174: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
-  3177: opt(3014): Moved reference within a conditional branch.
   3178: vec( 103): Unvectorized loop.
   3181: opt(1059): Unable to determine last value of scalar temporary.: NCONDENSEDNODES
   3181: opt(1060): Use "nolstval" directive if possible.
-  3181: opt(3014): Moved reference within a conditional branch.
-  3182: opt(3014): Moved reference within a conditional branch.
   3183: opt(1059): Unable to determine last value of scalar temporary.: NNODESLISTCONDENSEDNODES
   3183: opt(1060): Use "nolstval" directive if possible.
-  3183: opt(3014): Moved reference within a conditional branch.
   3184: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: CONDENSEDNODES
   3186: vec( 103): Unvectorized loop.
   3189: opt(1084): Branch out of the loop inhibits optimization.
-  3189: opt(3014): Moved reference within a conditional branch.
   3189: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: NCONDENSEDNODES
   3195: vec( 101): Vectorized loop.
   3196: vec( 101): Vectorized loop.
-  3198: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3198: vec( 102): Partially vectorized loop.
-  3204: opt(3014): Moved reference within a conditional branch.
-  3208: opt(3014): Moved reference within a conditional branch.
-  3209: opt(3014): Moved reference within a conditional branch.
-  3218: opt(3014): Moved reference within a conditional branch.
   3218: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: CSIICN
-  3219: opt(3014): Moved reference within a conditional branch.
   3219: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: SIIICN
   3229: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::PREPCONDENSEDNODES
 FORMAT LIST
@@ -7064,8 +6972,8 @@ FORMAT LIST
   3230:                 END SUBROUTINE PrepCondensedNodes
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::PREPCONDENSEDNODES
 INLINE LIST
@@ -7077,8 +6985,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::PREPCONDENSEDNODES
 VECTORIZATION LIST
@@ -7169,8 +7077,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:53:25 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F
 
 PROCEDURE NAME: NODALATTRIBUTES::PREPCONDENSEDNODES
 CODE GENERATION LIST
@@ -7200,7 +7108,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 19
 
     LOOP BEGIN: (nodalattr.F:3158)
-      *** Estimated execution cycle                     : 138
+      *** Estimated execution cycle                     : 137
       *** The number of SCALAR REGISTER TRANSFER        : 3
     LOOP END
   LOOP END
@@ -7232,15 +7140,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (nodalattr.F:3174)
-    *** Estimated execution cycle                       : 56
-    *** The number of SCALAR REGISTER TRANSFER          : 34
+    *** Estimated execution cycle                       : 50
+    *** The number of SCALAR REGISTER TRANSFER          : 28
 
     LOOP BEGIN: (nodalattr.F:3178)
       *** Estimated execution cycle                     : 20
     LOOP END
 
     LOOP BEGIN: (nodalattr.F:3186)
-      *** Estimated execution cycle                     : 12
+      *** Estimated execution cycle                     : 11
     LOOP END
   LOOP END
 

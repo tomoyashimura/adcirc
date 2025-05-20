@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
-  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir4/read_input.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/nec/ve/mpi/3.6.0/lib64/ve/module -I/opt/nec/ve/mpi/3.6.0/include
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/read_input.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT
 DIAGNOSTIC LIST
@@ -484,12 +484,9 @@ DIAGNOSTIC LIST
   3608: vec( 103): Unvectorized loop.
   3608: vec( 180): I/O statement obstructs vectorization.
   3609: opt(1118): This I/O statement inhibits optimization of loop.
-  3623: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3630: vec( 103): Unvectorized loop.
   3630: vec( 180): I/O statement obstructs vectorization.
   3633: opt(1118): This I/O statement inhibits optimization of loop.
-  3634: opt(3014): Moved reference within a conditional branch.
-  3640: opt(3014): Moved reference within a conditional branch.
   3751: vec( 103): Unvectorized loop.
   3751: vec( 108): Unvectorizable loop structure.
   3789: inl(1212): Source for routine not found.: GLOBAL::ALLOC_MAIN7
@@ -563,8 +560,8 @@ DIAGNOSTIC LIST
   5023: inl(1212): Source for routine not found.: MESH::FREEMESH
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT
 FORMAT LIST
@@ -5611,8 +5608,8 @@ FORMAT LIST
   5062:                 END SUBROUTINE READ_INPUT
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT
 INLINE LIST
@@ -6395,8 +6392,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT
 VECTORIZATION LIST
@@ -7887,8 +7884,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT
 CODE GENERATION LIST
@@ -7903,18 +7900,18 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 132560 bytes
-      Register spill area      :  17080 bytes
+    Total size                 : 132608 bytes
+      Register spill area      :  17104 bytes
       Parameter area           :    160 bytes
       Register save area       :    176 bytes
-      User data area           : 115144 bytes
+      User data area           : 115168 bytes
       Others                   :      0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (read_input.F:344)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:367)
@@ -7926,19 +7923,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:395)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:424)
@@ -7950,19 +7947,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:428)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:433)
@@ -7974,19 +7971,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:442)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:447)
@@ -7998,19 +7995,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
@@ -8022,11 +8019,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
@@ -8038,11 +8035,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
@@ -8054,11 +8051,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
@@ -8070,11 +8067,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:450)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:454)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:460)
@@ -8086,19 +8083,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:466)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:500)
@@ -8110,27 +8107,27 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:504)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:508)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:511)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:519)
@@ -8142,51 +8139,51 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:523)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:525)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:527)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:529)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:534)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:536)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:538)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:540)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:542)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:548)
@@ -8198,23 +8195,23 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:552)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:554)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:559)
@@ -8226,19 +8223,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:562)
-    *** Estimated execution cycle                       : 8
+    *** Estimated execution cycle                       : 7
   LOOP END
 
   LOOP BEGIN: (read_input.F:562)
@@ -8250,19 +8247,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:562)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:564)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:566)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:568)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:581)
@@ -8274,19 +8271,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:614)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:621)
@@ -8298,51 +8295,51 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:624)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:626)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:629)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:632)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:635)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:638)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:639)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:641)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:642)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:652)
@@ -8354,19 +8351,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:658)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:672)
@@ -8378,31 +8375,31 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:676)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:678)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:680)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:682)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:687)
@@ -8414,35 +8411,35 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:697)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:699)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:701)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:703)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:705)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:710)
@@ -8470,87 +8467,87 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:718)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:720)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:721)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:723)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:724)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:726)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:729)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:733)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:735)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:739)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:741)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:743)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:745)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:747)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:749)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:752)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:754)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:756)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:776)
@@ -8562,7 +8559,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:869)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:905)
@@ -8662,15 +8659,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:1274)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:1274)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:1274)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:1696)
@@ -8703,7 +8700,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:3089)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:3122)
@@ -8755,7 +8752,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:3138)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:3154)
@@ -8837,14 +8834,13 @@ CODE GENERATION LIST
             Across calls                                : 6
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 12
-            Across calls                                :  7
+            Across calls                                :  8
             Over basic blocks                           :  4
-            Others                                      :  1
     *** The number of SCALAR REGISTER TRANSFER          : 13
   LOOP END
 
   LOOP BEGIN: (read_input.F:3382)
-    *** Estimated execution cycle                       : 214
+    *** Estimated execution cycle                       : 213
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 7
             Across calls                                : 7
@@ -8872,11 +8868,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:3475)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:3491)
-    *** Estimated execution cycle                       : 317
+    *** Estimated execution cycle                       : 316
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 10
             Across calls                                : 10
@@ -8938,18 +8934,18 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:3581)
-    *** Estimated execution cycle                       : 369
+    *** Estimated execution cycle                       : 337
   LOOP END
 
   LOOP BEGIN: (read_input.F:3608)
-    *** Estimated execution cycle                       : 335
+    *** Estimated execution cycle                       : 333
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 12
             Across calls                                : 12
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 52
+          Total                                         : 51
             Across calls                                : 27
-            Over basic blocks                           : 24
+            Over basic blocks                           : 23
             Others                                      :  1
     *** The number of SCALAR REGISTER TRANSFER          : 37
   LOOP END
@@ -8982,19 +8978,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:3751)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6149)
-    *** Estimated execution cycle                       : 1742
+    *** Estimated execution cycle                       : 1710
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 110
             Across calls                                :  30
             Over basic blocks                           :  77
             Others                                      :   3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 290
-            Across calls                                :  36
+          Total                                         : 289
+            Across calls                                :  35
             Over basic blocks                           : 253
             Others                                      :   1
     *** The number of SCALAR REGISTER TRANSFER          : 113
@@ -9004,7 +9000,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
@@ -9012,7 +9008,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6259)
-      *** Estimated execution cycle                     : 183
+      *** Estimated execution cycle                     : 179
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -9024,29 +9020,29 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:3890)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6149)
-    *** Estimated execution cycle                       : 1742
+    *** Estimated execution cycle                       : 1710
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 110
             Across calls                                :  30
             Over basic blocks                           :  77
             Others                                      :   3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 290
-            Across calls                                :  36
+          Total                                         : 289
+            Across calls                                :  35
             Over basic blocks                           : 253
             Others                                      :   1
-    *** The number of SCALAR REGISTER TRANSFER          : 112
+    *** The number of SCALAR REGISTER TRANSFER          : 113
 
     LOOP BEGIN: (read_input.F:6153)
       *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
@@ -9054,7 +9050,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6259)
-      *** Estimated execution cycle                     : 183
+      *** Estimated execution cycle                     : 179
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -9066,19 +9062,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:4035)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6149)
-    *** Estimated execution cycle                       : 1768
+    *** Estimated execution cycle                       : 1736
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 111
             Across calls                                :  32
             Over basic blocks                           :  76
             Others                                      :   3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 297
-            Across calls                                :  39
+          Total                                         : 296
+            Across calls                                :  38
             Over basic blocks                           : 257
             Others                                      :   1
     *** The number of SCALAR REGISTER TRANSFER          : 117
@@ -9088,7 +9084,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
@@ -9096,7 +9092,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6259)
-      *** Estimated execution cycle                     : 183
+      *** Estimated execution cycle                     : 179
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -9108,19 +9104,19 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:4187)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6149)
-    *** Estimated execution cycle                       : 1768
+    *** Estimated execution cycle                       : 1736
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 111
             Across calls                                :  32
             Over basic blocks                           :  76
             Others                                      :   3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 297
-            Across calls                                :  39
+          Total                                         : 296
+            Across calls                                :  38
             Over basic blocks                           : 257
             Others                                      :   1
     *** The number of SCALAR REGISTER TRANSFER          : 117
@@ -9130,7 +9126,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
@@ -9138,7 +9134,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6259)
-      *** Estimated execution cycle                     : 183
+      *** Estimated execution cycle                     : 179
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -9171,7 +9167,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 8
 
     LOOP BEGIN: (read_input.F:447)
-      *** Estimated execution cycle                     : 138
+      *** Estimated execution cycle                     : 137
       *** The number of SCALAR REGISTER TRANSFER        : 3
     LOOP END
   LOOP END
@@ -9211,7 +9207,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6259)
-      *** Estimated execution cycle                     : 12
+      *** Estimated execution cycle                     : 11
     LOOP END
   LOOP END
 
@@ -9248,7 +9244,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 27
             Over basic blocks                           : 27
-    *** The number of SCALAR REGISTER TRANSFER          : 23
+    *** The number of SCALAR REGISTER TRANSFER          : 26
   LOOP END
 
   LOOP BEGIN: (read_input.F:4835)
@@ -9256,51 +9252,51 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:4979)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:4981)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:4984)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:4986)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:4988)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:4991)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:4993)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:4995)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:4997)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:4999)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
+  LOOP END
+
+  LOOP BEGIN: (read_input.F:5002)
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:5002)
     *** Estimated execution cycle                       : 7
-  LOOP END
-
-  LOOP BEGIN: (read_input.F:5002)
-    *** Estimated execution cycle                       : 8
   LOOP END
 
   LOOP BEGIN: (read_input.F:5002)
@@ -9312,8 +9308,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES
 DIAGNOSTIC LIST
@@ -9325,8 +9321,8 @@ DIAGNOSTIC LIST
   5085: inl(1222): Inlined: RECOMPUTEFDXEFDYEATCONDENSEDNODES::GET_NEW_XY
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES
 FORMAT LIST
@@ -9479,8 +9475,8 @@ FORMAT LIST
   5196:                 END SUBROUTINE RecomputeFDXEFDYEAtCondensedNodes
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES
 INLINE LIST
@@ -9491,8 +9487,8 @@ INLINE LIST
       *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES
 VECTORIZATION LIST
@@ -9503,8 +9499,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES
 CODE GENERATION LIST
@@ -9541,8 +9537,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES::GET_NEW_XY
 DIAGNOSTIC LIST
@@ -9552,8 +9548,8 @@ DIAGNOSTIC LIST
   5130: inl(1212): Source for routine not found.: VEW1D::GET_STREAMDIRECTION_AT_ELEMENT
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES::GET_NEW_XY
 FORMAT LIST
@@ -9657,8 +9653,8 @@ FORMAT LIST
   5194:                    END SUBROUTINE GET_New_XY
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES::GET_NEW_XY
 INLINE LIST
@@ -9668,8 +9664,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES::GET_NEW_XY
 VECTORIZATION LIST
@@ -9677,8 +9673,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:50 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:08 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: RECOMPUTEFDXEFDYEATCONDENSEDNODES::GET_NEW_XY
 CODE GENERATION LIST
@@ -9687,7 +9683,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 38 [s0-s12 s15-s16 s18-s19 s23-s34 s55-s63]
+      Scalar registers         : 39 [s0-s12 s15-s16 s18-s19 s23-s34 s54-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
@@ -9704,8 +9700,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:09 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT_3D
 DIAGNOSTIC LIST
@@ -9768,33 +9764,22 @@ DIAGNOSTIC LIST
   5676: vec( 103): Unvectorized loop.
   5676: vec( 118): Unvectorizable data type.: CDUM80
   5677: inl(1222): Inlined: CHECKANDFILLIOPARAMETERS
-  5790: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   5792: opt(1418): Constant-length loop is expanded.
   5796: vec( 102): Partially vectorized loop.
   5804: vec( 128): Fused multiply-add operation applied.
   5808: opt(1019): Feedback of scalar value from one loop pass to another.: COUNTER
   5810: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: COMPDIST
-  5811: opt(3014): Moved reference within a conditional branch.
   5813: opt(1019): Feedback of scalar value from one loop pass to another.
   5814: vec( 120): Unvectorizable dependency.: COMPDIST
-  5815: opt(3014): Moved reference within a conditional branch.
   5815: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: NODEDIST
   5818: opt(1019): Feedback of scalar value from one loop pass to another.
   5819: vec( 120): Unvectorizable dependency.: COMPDIST
   5820: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: NODEDIST
-  5827: opt(3014): Moved reference within a conditional branch.
-  5829: opt(3014): Moved reference within a conditional branch.
-  5831: opt(3014): Moved reference within a conditional branch.
-  5832: opt(3014): Moved reference within a conditional branch.
-  5833: opt(3014): Moved reference within a conditional branch.
-  5834: opt(3014): Moved reference within a conditional branch.
-  5847: opt(3014): Moved reference within a conditional branch.
-  5849: opt(3014): Moved reference within a conditional branch.
   5856: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT_3D
 FORMAT LIST
@@ -10567,8 +10552,8 @@ FORMAT LIST
   5956:                 END SUBROUTINE READ_INPUT_3D
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:09 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT_3D
 INLINE LIST
@@ -10947,8 +10932,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:09 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT_3D
 VECTORIZATION LIST
@@ -11241,8 +11226,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:09 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READ_INPUT_3D
 CODE GENERATION LIST
@@ -11295,27 +11280,27 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:5999)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6026)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:5497)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6149)
-    *** Estimated execution cycle                       : 1754
+    *** Estimated execution cycle                       : 1721
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 103
             Across calls                                :  31
             Over basic blocks                           :  69
             Others                                      :   3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 298
-            Across calls                                :  38
+          Total                                         : 297
+            Across calls                                :  37
             Over basic blocks                           : 260
     *** The number of SCALAR REGISTER TRANSFER          : 97
 
@@ -11324,7 +11309,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
@@ -11332,7 +11317,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6259)
-      *** Estimated execution cycle                     : 179
+      *** Estimated execution cycle                     : 175
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -11351,32 +11336,32 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:5999)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6026)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6149)
-    *** Estimated execution cycle                       : 1741
+    *** Estimated execution cycle                       : 1708
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 105
             Across calls                                :  31
             Over basic blocks                           :  71
             Others                                      :   3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 292
-            Across calls                                :  38
+          Total                                         : 291
+            Across calls                                :  37
             Over basic blocks                           : 254
-    *** The number of SCALAR REGISTER TRANSFER          : 106
+    *** The number of SCALAR REGISTER TRANSFER          : 107
 
     LOOP BEGIN: (read_input.F:6153)
       *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
@@ -11384,7 +11369,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6259)
-      *** Estimated execution cycle                     : 179
+      *** Estimated execution cycle                     : 175
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -11403,32 +11388,32 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:5999)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6026)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6149)
-    *** Estimated execution cycle                       : 1741
+    *** Estimated execution cycle                       : 1708
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 105
             Across calls                                :  31
             Over basic blocks                           :  71
             Others                                      :   3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 292
-            Across calls                                :  38
+          Total                                         : 291
+            Across calls                                :  37
             Over basic blocks                           : 254
-    *** The number of SCALAR REGISTER TRANSFER          : 106
+    *** The number of SCALAR REGISTER TRANSFER          : 107
 
     LOOP BEGIN: (read_input.F:6153)
       *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
@@ -11436,7 +11421,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6259)
-      *** Estimated execution cycle                     : 179
+      *** Estimated execution cycle                     : 175
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -11455,11 +11440,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:5999)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6026)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:5654)
@@ -11471,11 +11456,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:5999)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6026)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:5676)
@@ -11487,11 +11472,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:5999)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6026)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:5856)
@@ -11499,14 +11484,14 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:5790)
-    *** Estimated execution cycle                       : 298
+    *** Estimated execution cycle                       : 295
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 6
-            Across calls                                : 6
+          Total                                         : 7
+            Across calls                                : 7
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 6
-            Across calls                                : 6
-    *** The number of SCALAR REGISTER TRANSFER          : 61
+          Total                                         : 7
+            Across calls                                : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 56
 
     LOOP BEGIN: (read_input.F:5796)
       *** Estimated execution cycle                     : 702
@@ -11519,8 +11504,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:09 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: CHECKANDFILLIOPARAMETERS
 DIAGNOSTIC LIST
@@ -11538,8 +11523,8 @@ DIAGNOSTIC LIST
   6101: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: CHECKANDFILLIOPARAMETERS
 FORMAT LIST
@@ -11699,8 +11684,8 @@ FORMAT LIST
   6104:                 END SUBROUTINE checkAndFillIOParameters
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:09 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: CHECKANDFILLIOPARAMETERS
 INLINE LIST
@@ -11742,8 +11727,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:09 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: CHECKANDFILLIOPARAMETERS
 VECTORIZATION LIST
@@ -11759,8 +11744,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:09 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: CHECKANDFILLIOPARAMETERS
 CODE GENERATION LIST
@@ -11769,33 +11754,33 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 41 [s0-s12 s15-s16 s18 s23-s40 s57-s63]
+      Scalar registers         : 40 [s0-s12 s15-s16 s18 s23-s40 s58-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 10144 bytes
-      Register spill area      :   288 bytes
+    Total size                 : 10128 bytes
+      Register spill area      :   280 bytes
       Parameter area           :    40 bytes
       Register save area       :   176 bytes
-      User data area           :  9632 bytes
+      User data area           :  9624 bytes
       Others                   :     8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (read_input.F:5999)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6026)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSTATIONS
 DIAGNOSTIC LIST
@@ -11803,7 +11788,6 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   6144: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
-  6149: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   6149: vec( 180): I/O statement obstructs vectorization.
   6149: vec( 110): Vectorization obstructive procedure reference.: GLOBAL::SETMESSAGESOURCE
   6149: vec( 110): Vectorization obstructive procedure reference.: GLOBAL::A2F
@@ -11822,13 +11806,11 @@ DIAGNOSTIC LIST
   6247: inl(1212): Source for routine not found.: KDTREE2_MODULE::KDTREE2_N_NEAREST
   6315: inl(1212): Source for routine not found.: ADCIRC_MOD::ADCIRC_TERMINATE
   6339: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
-  6176: opt(3014): Moved reference within a conditional branch.
-  6178: opt(3014): Moved reference within a conditional branch.
   6183: inl(1222): Inlined: COMPUTEINTERPOLATINGFACTORS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSTATIONS
 FORMAT LIST
@@ -11925,8 +11907,8 @@ FORMAT LIST
   6194:                 END SUBROUTINE readStations
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSTATIONS
 INLINE LIST
@@ -11966,8 +11948,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSTATIONS
 VECTORIZATION LIST
@@ -12014,8 +11996,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSTATIONS
 CODE GENERATION LIST
@@ -12041,15 +12023,15 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (read_input.F:6149)
-    *** Estimated execution cycle                       : 1656
+    *** Estimated execution cycle                       : 1624
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 105
             Across calls                                :  31
             Over basic blocks                           :  68
             Others                                      :   6
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 251
-            Across calls                                :  38
+          Total                                         : 250
+            Across calls                                :  37
             Over basic blocks                           : 213
     *** The number of SCALAR REGISTER TRANSFER          : 106
 
@@ -12058,7 +12040,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_input.F:6254)
@@ -12066,7 +12048,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6259)
-      *** Estimated execution cycle                     : 183
+      *** Estimated execution cycle                     : 179
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -12078,8 +12060,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: KDTSEARCH
 DIAGNOSTIC LIST
@@ -12091,21 +12073,17 @@ DIAGNOSTIC LIST
   6254: opt(1418): Constant-length loop is expanded.
   6254: vec( 101): Vectorized loop.
   6254: vec( 126): Idiom detected.: MAX/MIN
-  6259: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   6259: vec( 103): Unvectorized loop.
   6259: vec( 108): Unvectorizable loop structure.
   6269: opt(1418): Constant-length loop is expanded.
-  6269: opt(3014): Moved reference within a conditional branch.
   6270: opt(1418): Constant-length loop is expanded.
-  6270: opt(3014): Moved reference within a conditional branch.
   6271: opt(1418): Constant-length loop is expanded.
-  6271: opt(3014): Moved reference within a conditional branch.
   6315: inl(1212): Source for routine not found.: ADCIRC_MOD::ADCIRC_TERMINATE
   6339: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: KDTSEARCH
 FORMAT LIST
@@ -12259,8 +12237,8 @@ FORMAT LIST
   6340:                 END SUBROUTINE KDTSEARCH
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: KDTSEARCH
 INLINE LIST
@@ -12276,8 +12254,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: KDTSEARCH
 VECTORIZATION LIST
@@ -12305,8 +12283,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: KDTSEARCH
 CODE GENERATION LIST
@@ -12321,18 +12299,18 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 1808 bytes
-      Register spill area      :  112 bytes
+    Total size                 : 1824 bytes
+      Register spill area      :  120 bytes
       Parameter area           :   64 bytes
       Register save area       :  176 bytes
-      User data area           : 1456 bytes
+      User data area           : 1464 bytes
       Others                   :    0 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (read_input.F:6254)
-    *** Estimated execution cycle                       : 541
+    *** Estimated execution cycle                       : 511
   LOOP END
 
   LOOP BEGIN: (read_input.F:6254)
@@ -12340,7 +12318,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6259)
-    *** Estimated execution cycle                       : 174
+    *** Estimated execution cycle                       : 177
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Over basic blocks                           : 2
@@ -12351,8 +12329,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COORDINATETOELEMENT
 DIAGNOSTIC LIST
@@ -12370,8 +12348,8 @@ DIAGNOSTIC LIST
   6446: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COORDINATETOELEMENT
 FORMAT LIST
@@ -12492,8 +12470,8 @@ FORMAT LIST
   6449:                 END SUBROUTINE CoordinateToElement
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COORDINATETOELEMENT
 INLINE LIST
@@ -12507,8 +12485,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COORDINATETOELEMENT
 VECTORIZATION LIST
@@ -12530,8 +12508,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COORDINATETOELEMENT
 CODE GENERATION LIST
@@ -12557,12 +12535,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (read_input.F:6384)
-    *** Estimated execution cycle                       : 2251
+    *** Estimated execution cycle                       : 2156
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COMPUTEINTERPOLATINGFACTORS
 DIAGNOSTIC LIST
@@ -12573,8 +12551,8 @@ DIAGNOSTIC LIST
   6495: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COMPUTEINTERPOLATINGFACTORS
 FORMAT LIST
@@ -12634,8 +12612,8 @@ FORMAT LIST
   6498:                 END SUBROUTINE ComputeInterpolatingFactors
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COMPUTEINTERPOLATINGFACTORS
 INLINE LIST
@@ -12647,8 +12625,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COMPUTEINTERPOLATINGFACTORS
 VECTORIZATION LIST
@@ -12656,8 +12634,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: COMPUTEINTERPOLATINGFACTORS
 CODE GENERATION LIST
@@ -12683,8 +12661,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: LOGNAMELISTREADSTATUS
 DIAGNOSTIC LIST
@@ -12703,8 +12681,8 @@ DIAGNOSTIC LIST
   6544: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: LOGNAMELISTREADSTATUS
 FORMAT LIST
@@ -12765,8 +12743,8 @@ FORMAT LIST
   6546:                 end subroutine logNamelistReadStatus
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: LOGNAMELISTREADSTATUS
 INLINE LIST
@@ -12784,8 +12762,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: LOGNAMELISTREADSTATUS
 VECTORIZATION LIST
@@ -12806,8 +12784,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:51 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: LOGNAMELISTREADSTATUS
 CODE GENERATION LIST
@@ -12833,20 +12811,20 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (read_input.F:6535)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6530)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6526)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSELFATTRACTIONANDLOADINGFILE
 DIAGNOSTIC LIST
@@ -12922,8 +12900,8 @@ DIAGNOSTIC LIST
   6731: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSELFATTRACTIONANDLOADINGFILE
 FORMAT LIST
@@ -13131,8 +13109,8 @@ FORMAT LIST
   6735:                 end subroutine readSelfAttractionAndLoadingFile
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSELFATTRACTIONANDLOADINGFILE
 INLINE LIST
@@ -13228,8 +13206,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSELFATTRACTIONANDLOADINGFILE
 VECTORIZATION LIST
@@ -13479,8 +13457,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 13:14:52 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/read_input.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:56:10 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/read_input.F
 
 PROCEDURE NAME: READSELFATTRACTIONANDLOADINGFILE
 CODE GENERATION LIST
@@ -13495,11 +13473,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 7776 bytes
-      Register spill area      :  944 bytes
+    Total size                 : 7808 bytes
+      Register spill area      :  960 bytes
       Parameter area           :  104 bytes
       Register save area       :  176 bytes
-      User data area           : 6544 bytes
+      User data area           : 6560 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
@@ -13514,7 +13492,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6596)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6596)
@@ -13526,29 +13504,29 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6605)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6693)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6697)
-    *** Estimated execution cycle                       : 415
+    *** Estimated execution cycle                       : 414
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 19
+          Total                                         : 20
             Across calls                                : 10
-            Over basic blocks                           :  6
+            Over basic blocks                           :  7
             Others                                      :  3
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 46
-            Across calls                                : 13
-            Over basic blocks                           : 31
-            Others                                      :  2
-    *** The number of SCALAR REGISTER TRANSFER          : 86
+          Total                                         : 47
+            Across calls                                : 14
+            Over basic blocks                           : 32
+            Others                                      :  1
+    *** The number of SCALAR REGISTER TRANSFER          : 84
 
     LOOP BEGIN: (read_input.F:6702)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (read_input.F:6702)
@@ -13560,7 +13538,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6702)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (read_input.F:6702)
@@ -13572,33 +13550,32 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_input.F:6706)
-      *** Estimated execution cycle                     : 94
+      *** Estimated execution cycle                     : 89
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 8
               Across calls                              : 5
               Over basic blocks                         : 3
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 12
-              Across calls                              :  7
+              Across calls                              :  8
               Over basic blocks                         :  4
-              Others                                    :  1
-      *** The number of SCALAR REGISTER TRANSFER        : 17
+      *** The number of SCALAR REGISTER TRANSFER        : 15
 
       LOOP BEGIN: (read_input.F:6707)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
 
       LOOP BEGIN: (read_input.F:6707)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
     LOOP END
 
     LOOP BEGIN: (read_input.F:6713)
-      *** Estimated execution cycle                     : 7
+      *** Estimated execution cycle                     : 6
     LOOP END
 
     LOOP BEGIN: (read_input.F:6720)
-      *** Estimated execution cycle                     : 94
+      *** Estimated execution cycle                     : 92
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 5
               Across calls                              : 5
@@ -13647,16 +13624,14 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6681)
-    *** Estimated execution cycle                       : 278
+    *** Estimated execution cycle                       : 264
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 11
-            Across calls                                : 10
-            Over basic blocks                           :  1
+            Across calls                                : 11
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 22
-            Across calls                                : 10
+            Across calls                                : 11
             Over basic blocks                           : 11
-            Others                                      :  1
     *** The number of SCALAR REGISTER TRANSFER          : 20
 
     LOOP BEGIN: (read_input.F:6684)
@@ -13669,32 +13644,30 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_input.F:6617)
-    *** Estimated execution cycle                       : 7
+    *** Estimated execution cycle                       : 6
   LOOP END
 
   LOOP BEGIN: (read_input.F:6645)
-    *** Estimated execution cycle                       : 825
+    *** Estimated execution cycle                       : 809
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 36
             Across calls                                : 11
-            Over basic blocks                           : 24
-            Others                                      :  1
+            Over basic blocks                           : 25
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 120
             Across calls                                :  11
-            Over basic blocks                           : 108
-            Others                                      :   1
+            Over basic blocks                           : 109
     *** The number of SCALAR REGISTER TRANSFER          : 56
 
     LOOP BEGIN: (read_input.F:6646)
-      *** Estimated execution cycle                     : 219
+      *** Estimated execution cycle                     : 221
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 2
-              Over basic blocks                         : 2
+            Total                                       : 4
+              Over basic blocks                         : 4
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 18
-              Over basic blocks                         : 18
-      *** The number of SCALAR REGISTER TRANSFER        : 55
+            Total                                       : 19
+              Over basic blocks                         : 19
+      *** The number of SCALAR REGISTER TRANSFER        : 58
 
       LOOP BEGIN: (read_input.F:6647)
         *** Estimated execution cycle                   : 5
@@ -13709,15 +13682,15 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (read_input.F:6651)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
 
       LOOP BEGIN: (read_input.F:6651)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
 
       LOOP BEGIN: (read_input.F:6670)
-        *** Estimated execution cycle                   : 7
+        *** Estimated execution cycle                   : 6
       LOOP END
     LOOP END
 

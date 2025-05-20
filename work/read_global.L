@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
-  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/read_global.o
+  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/read_global.o
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
 DIAGNOSTIC LIST
@@ -260,8 +260,8 @@ DIAGNOSTIC LIST
    397: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
 FORMAT LIST
@@ -638,8 +638,8 @@ FORMAT LIST
    403:                 end subroutine prepRead14
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
 INLINE LIST
@@ -681,8 +681,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
 VECTORIZATION LIST
@@ -1020,8 +1020,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: PREPREAD14
 CODE GENERATION LIST
@@ -1406,8 +1406,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
 DIAGNOSTIC LIST
@@ -1437,8 +1437,8 @@ DIAGNOSTIC LIST
    484: vec( 126): Idiom detected.: MAX/MIN
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
 FORMAT LIST
@@ -1533,8 +1533,8 @@ FORMAT LIST
    488:                 end subroutine getMeshParametersXDMF
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
 INLINE LIST
@@ -1554,8 +1554,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
 VECTORIZATION LIST
@@ -1614,8 +1614,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:09 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:27 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: GETMESHPARAMETERSXDMF
 CODE GENERATION LIST
@@ -1679,7 +1679,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_global.F:478)
-    *** Estimated execution cycle                       : 320
+    *** Estimated execution cycle                       : 224
   LOOP END
 
   LOOP BEGIN: (read_global.F:478)
@@ -1691,8 +1691,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:11 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:29 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15
 DIAGNOSTIC LIST
@@ -1730,20 +1730,15 @@ DIAGNOSTIC LIST
   1352: vec( 103): Unvectorized loop.
   1352: vec( 180): I/O statement obstructs vectorization.
   1353: opt(1118): This I/O statement inhibits optimization of loop.
-  1357: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1361: vec( 103): Unvectorized loop.
   1361: vec( 180): I/O statement obstructs vectorization.
   1365: opt(1118): This I/O statement inhibits optimization of loop.
-  1365: opt(3014): Moved reference within a conditional branch.
   1379: opt(1135): Outer loop conditionally executes inner loop.
   1379: vec( 103): Unvectorized loop.
   1379: vec( 113): Overhead of loop division is too large.
   1380: vec( 101): Vectorized loop.
-  1390: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1390: vec( 101): Vectorized loop.
   1394: opt(1019): Feedback of scalar value from one loop pass to another.: NFLBN
-  1395: opt(3014): Moved reference within a conditional branch.
-  1396: opt(3014): Moved reference within a conditional branch.
   1411: vec( 101): Vectorized loop.
   1422: inl(1212): Source for routine not found.: PREP_WEIR::PARSE_TIME_VARYING_WEIR
   1473: vec( 180): I/O statement obstructs vectorization.
@@ -1785,8 +1780,8 @@ DIAGNOSTIC LIST
   2019: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15
 FORMAT LIST
@@ -3336,8 +3331,8 @@ FORMAT LIST
   2023:                 END SUBROUTINE READ15
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:11 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:29 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15
 INLINE LIST
@@ -3498,8 +3493,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:11 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:29 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15
 VECTORIZATION LIST
@@ -3801,8 +3796,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:11 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:29 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15
 CODE GENERATION LIST
@@ -3817,11 +3812,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 112944 bytes
-      Register spill area      :   5736 bytes
+    Total size                 : 112240 bytes
+      Register spill area      :   5384 bytes
       Parameter area           :    160 bytes
       Register save area       :    176 bytes
-      User data area           : 106872 bytes
+      User data area           : 106520 bytes
       Others                   :      0 bytes
 
     Note: Total size of Routine stack does not include
@@ -3864,7 +3859,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_global.F:1288)
-    *** Estimated execution cycle                       : 372
+    *** Estimated execution cycle                       : 368
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 14
             Across calls                                : 13
@@ -3873,10 +3868,10 @@ CODE GENERATION LIST
           Total                                         : 55
             Across calls                                : 22
             Over basic blocks                           : 33
-    *** The number of SCALAR REGISTER TRANSFER          : 67
+    *** The number of SCALAR REGISTER TRANSFER          : 64
 
     LOOP BEGIN: (read_global.F:1291)
-      *** Estimated execution cycle                     : 8
+      *** Estimated execution cycle                     : 7
     LOOP END
 
     LOOP BEGIN: (read_global.F:1291)
@@ -3992,9 +3987,8 @@ CODE GENERATION LIST
             Over basic blocks                           :  8
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 61
-            Across calls                                : 14
+            Across calls                                : 16
             Over basic blocks                           : 45
-            Others                                      :  2
     *** The number of SCALAR REGISTER TRANSFER          : 84
 
     LOOP BEGIN: (read_global.F:1509)
@@ -4007,24 +4001,24 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_global.F:2478)
-    *** Estimated execution cycle                       : 2956
+    *** Estimated execution cycle                       : 2858
   LOOP END
 
   LOOP BEGIN: (read_global.F:2555)
-    *** Estimated execution cycle                       : 734
+    *** Estimated execution cycle                       : 707
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 32
             Across calls                                : 11
             Over basic blocks                           : 19
             Others                                      :  2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 89
-            Across calls                                : 12
+          Total                                         : 88
+            Across calls                                : 11
             Over basic blocks                           : 77
     *** The number of SCALAR REGISTER TRANSFER          : 62
 
     LOOP BEGIN: (read_global.F:2566)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_global.F:2566)
@@ -4032,7 +4026,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_global.F:2570)
-      *** Estimated execution cycle                     : 189
+      *** Estimated execution cycle                     : 186
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -4051,9 +4045,8 @@ CODE GENERATION LIST
             Over basic blocks                           :  7
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 61
-            Across calls                                : 14
+            Across calls                                : 16
             Over basic blocks                           : 45
-            Others                                      :  2
     *** The number of SCALAR REGISTER TRANSFER          : 86
 
     LOOP BEGIN: (read_global.F:1615)
@@ -4066,20 +4059,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_global.F:2555)
-    *** Estimated execution cycle                       : 734
+    *** Estimated execution cycle                       : 707
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 32
             Across calls                                : 11
             Over basic blocks                           : 19
             Others                                      :  2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 89
-            Across calls                                : 12
+          Total                                         : 88
+            Across calls                                : 11
             Over basic blocks                           : 77
     *** The number of SCALAR REGISTER TRANSFER          : 62
 
     LOOP BEGIN: (read_global.F:2566)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_global.F:2566)
@@ -4087,7 +4080,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_global.F:2570)
-      *** Estimated execution cycle                     : 189
+      *** Estimated execution cycle                     : 186
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -4105,27 +4098,26 @@ CODE GENERATION LIST
             Across calls                                : 6
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 29
-            Across calls                                :  7
+            Across calls                                :  9
             Over basic blocks                           : 20
-            Others                                      :  2
     *** The number of SCALAR REGISTER TRANSFER          : 50
   LOOP END
 
   LOOP BEGIN: (read_global.F:2555)
-    *** Estimated execution cycle                       : 734
+    *** Estimated execution cycle                       : 707
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 32
             Across calls                                : 11
             Over basic blocks                           : 19
             Others                                      :  2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 89
-            Across calls                                : 12
+          Total                                         : 88
+            Across calls                                : 11
             Over basic blocks                           : 77
     *** The number of SCALAR REGISTER TRANSFER          : 62
 
     LOOP BEGIN: (read_global.F:2566)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_global.F:2566)
@@ -4133,7 +4125,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_global.F:2570)
-      *** Estimated execution cycle                     : 189
+      *** Estimated execution cycle                     : 186
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -4152,9 +4144,8 @@ CODE GENERATION LIST
             Over basic blocks                           :  8
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 61
-            Across calls                                : 14
+            Across calls                                : 16
             Over basic blocks                           : 45
-            Others                                      :  2
     *** The number of SCALAR REGISTER TRANSFER          : 84
 
     LOOP BEGIN: (read_global.F:1796)
@@ -4167,20 +4158,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_global.F:2555)
-    *** Estimated execution cycle                       : 764
+    *** Estimated execution cycle                       : 737
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 30
             Across calls                                : 10
             Over basic blocks                           : 18
             Others                                      :  2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 113
-            Across calls                                :  11
+          Total                                         : 112
+            Across calls                                :  10
             Over basic blocks                           : 102
     *** The number of SCALAR REGISTER TRANSFER          : 35
 
     LOOP BEGIN: (read_global.F:2566)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_global.F:2566)
@@ -4188,7 +4179,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_global.F:2570)
-      *** Estimated execution cycle                     : 189
+      *** Estimated execution cycle                     : 186
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -4212,8 +4203,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
 DIAGNOSTIC LIST
@@ -4260,8 +4251,8 @@ DIAGNOSTIC LIST
   2452: inl(1212): Source for routine not found.: MEMORY_USAGE::MEMORY_STATUS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
 FORMAT LIST
@@ -4709,8 +4700,8 @@ FORMAT LIST
   2457:                 END SUBROUTINE READ15_3DVS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
 INLINE LIST
@@ -4825,8 +4816,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
 VECTORIZATION LIST
@@ -4990,8 +4981,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: READ15_3DVS
 CODE GENERATION LIST
@@ -5000,7 +4991,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 56 [s0-s12 s15-s16 s18-s44 s50-s63]
+      Scalar registers         : 57 [s0-s12 s15-s16 s18-s44 s49-s63]
       Vector registers         : 49 [v15-v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -5059,20 +5050,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_global.F:2555)
-    *** Estimated execution cycle                       : 775
+    *** Estimated execution cycle                       : 753
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 33
             Across calls                                : 11
             Over basic blocks                           : 18
             Others                                      :  4
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 114
-            Across calls                                :  12
+          Total                                         : 113
+            Across calls                                :  11
             Over basic blocks                           : 102
     *** The number of SCALAR REGISTER TRANSFER          : 29
 
     LOOP BEGIN: (read_global.F:2566)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_global.F:2566)
@@ -5080,7 +5071,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_global.F:2570)
-      *** Estimated execution cycle                     : 189
+      *** Estimated execution cycle                     : 186
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -5108,20 +5099,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_global.F:2555)
-    *** Estimated execution cycle                       : 775
+    *** Estimated execution cycle                       : 753
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 33
             Across calls                                : 11
             Over basic blocks                           : 18
             Others                                      :  4
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 114
-            Across calls                                :  12
+          Total                                         : 113
+            Across calls                                :  11
             Over basic blocks                           : 102
     *** The number of SCALAR REGISTER TRANSFER          : 29
 
     LOOP BEGIN: (read_global.F:2566)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_global.F:2566)
@@ -5129,7 +5120,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_global.F:2570)
-      *** Estimated execution cycle                     : 189
+      *** Estimated execution cycle                     : 186
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -5157,20 +5148,20 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (read_global.F:2555)
-    *** Estimated execution cycle                       : 775
+    *** Estimated execution cycle                       : 753
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 33
             Across calls                                : 11
             Over basic blocks                           : 18
             Others                                      :  4
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 114
-            Across calls                                :  12
+          Total                                         : 113
+            Across calls                                :  11
             Over basic blocks                           : 102
     *** The number of SCALAR REGISTER TRANSFER          : 29
 
     LOOP BEGIN: (read_global.F:2566)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_global.F:2566)
@@ -5178,7 +5169,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_global.F:2570)
-      *** Estimated execution cycle                     : 189
+      *** Estimated execution cycle                     : 186
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -5190,8 +5181,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
 DIAGNOSTIC LIST
@@ -5208,8 +5199,8 @@ DIAGNOSTIC LIST
   2503: opt(1418): Constant-length loop is expanded.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
 FORMAT LIST
@@ -5270,8 +5261,8 @@ FORMAT LIST
   2508:                 end subroutine setup_kdt_search
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
 INLINE LIST
@@ -5279,8 +5270,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
 VECTORIZATION LIST
@@ -5297,8 +5288,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: SETUP_KDT_SEARCH
 CODE GENERATION LIST
@@ -5324,12 +5315,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (read_global.F:2478)
-    *** Estimated execution cycle                       : 2956
+    *** Estimated execution cycle                       : 2858
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
 DIAGNOSTIC LIST
@@ -5337,7 +5328,6 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   2549: inl(1212): Source for routine not found.: KDTREE2_MODULE::KDTREE2_CREATE
-  2555: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2555: vec( 110): Vectorization obstructive procedure reference.: KDTREE2_MODULE::KDTREE2_N_NEAREST
   2555: vec( 180): I/O statement obstructs vectorization.
   2555: vec( 109): Vectorization obstructive statement.
@@ -5347,21 +5337,16 @@ DIAGNOSTIC LIST
   2566: vec( 101): Vectorized loop.
   2566: vec( 126): Idiom detected.: MAX/MIN
   2570: opt(1082): Backward transfers inhibit loop optimization.
-  2570: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2570: vec( 103): Unvectorized loop.
   2570: vec( 108): Unvectorizable loop structure.
   2580: opt(1418): Constant-length loop is expanded.
-  2580: opt(3014): Moved reference within a conditional branch.
   2581: opt(1418): Constant-length loop is expanded.
-  2581: opt(3014): Moved reference within a conditional branch.
   2582: opt(1418): Constant-length loop is expanded.
-  2582: opt(3014): Moved reference within a conditional branch.
-  2611: opt(3014): Moved reference within a conditional branch.
   2628: inl(1212): Source for routine not found.: KDTREE2_MODULE::KDTREE2_DESTROY
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
 FORMAT LIST
@@ -5498,8 +5483,8 @@ FORMAT LIST
   2634:                 end subroutine kdtsearch
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
 INLINE LIST
@@ -5513,8 +5498,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
 VECTORIZATION LIST
@@ -5549,8 +5534,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: KDTSEARCH
 CODE GENERATION LIST
@@ -5576,20 +5561,20 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (read_global.F:2555)
-    *** Estimated execution cycle                       : 759
+    *** Estimated execution cycle                       : 743
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 30
             Across calls                                :  8
             Over basic blocks                           : 18
             Others                                      :  4
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 107
-            Across calls                                :   9
-            Over basic blocks                           :  98
+          Total                                         : 109
+            Across calls                                :   8
+            Over basic blocks                           : 101
     *** The number of SCALAR REGISTER TRANSFER          : 28
 
     LOOP BEGIN: (read_global.F:2566)
-      *** Estimated execution cycle                     : 541
+      *** Estimated execution cycle                     : 511
     LOOP END
 
     LOOP BEGIN: (read_global.F:2566)
@@ -5597,7 +5582,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (read_global.F:2570)
-      *** Estimated execution cycle                     : 179
+      *** Estimated execution cycle                     : 181
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 1
               Over basic blocks                         : 1
@@ -5609,15 +5594,14 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE
 DIAGNOSTIC LIST
 
  LINE              DIAGNOSTIC MESSAGE
 
-  2660: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2660: vec( 180): I/O statement obstructs vectorization.
   2660: vec( 109): Vectorization obstructive statement.
   2664: opt(1059): Unable to determine last value of scalar temporary.: KMIN
@@ -5627,11 +5611,10 @@ DIAGNOSTIC LIST
   2678: vec( 128): Fused multiply-add operation applied.
   2680: vec( 128): Fused multiply-add operation applied.
   2682: vec( 126): Idiom detected.: MAX/MIN
-  2692: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE
 FORMAT LIST
@@ -5719,8 +5702,8 @@ FORMAT LIST
   2710:                 END SUBROUTINE CoordToEle
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE
 INLINE LIST
@@ -5728,8 +5711,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE
 VECTORIZATION LIST
@@ -5757,8 +5740,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:12 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/read_global.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:30 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/read_global.F
 
 PROCEDURE NAME: COORDTOELE
 CODE GENERATION LIST
@@ -5767,7 +5750,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 58 [s0-s12 s15-s16 s18-s34 s38-s63]
+      Scalar registers         : 56 [s0-s12 s15-s16 s18-s34 s40-s63]
       Vector registers         : 64 [v0-v63]
       Vector mask registers    :  2 [vm14-vm15]
       VREG directive           :  0
@@ -5784,20 +5767,20 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (read_global.F:2660)
-    *** Estimated execution cycle                       : 587
+    *** Estimated execution cycle                       : 586
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 12
-            Across calls                                :  2
-            Over basic blocks                           :  8
+            Across calls                                :  1
+            Over basic blocks                           :  9
             Others                                      :  2
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 37
-            Across calls                                :  2
-            Over basic blocks                           : 35
-    *** The number of SCALAR REGISTER TRANSFER          : 68
+          Total                                         : 34
+            Across calls                                :  1
+            Over basic blocks                           : 33
+    *** The number of SCALAR REGISTER TRANSFER          : 65
 
     LOOP BEGIN: (read_global.F:2664)
-      *** Estimated execution cycle                     : 2412
+      *** Estimated execution cycle                     : 2317
     LOOP END
   LOOP END
 

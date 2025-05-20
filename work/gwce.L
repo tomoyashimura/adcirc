@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
-  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/gwce.o
+  COMPILER OPTIONS : -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DCSCA -DCMPI -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir4/gwce.o -fpp -DMPI_REAL2=NEC_MPI_BINARY16 -Dmpi_real2=NEC_MPI_BINARY16 -DNEC_MPI_FLOAT16_INT=NEC_MPI_BINARY16_INT -Dnec_mpi_float16_int=NEC_MPI_BINARY16_INT -DMPI_2REAL2=NEC_MPI_2BINARY16 -Dmpi_2real2=NEC_MPI_2BINARY16 -proginf -I/opt/share/velibs/mpi/3.8.0/lib64/ve/module -I/opt/share/velibs/mpi/3.8.0/include
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:40 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:28 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::INITGWCE
 DIAGNOSTIC LIST
@@ -185,8 +185,8 @@ DIAGNOSTIC LIST
    151: inl(1212): Source for routine not found.: GLOBAL::ALLOC_MAIN11_LUMPED
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::INITGWCE
 FORMAT LIST
@@ -242,8 +242,8 @@ FORMAT LIST
    155:                 end subroutine initGWCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:40 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:28 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::INITGWCE
 INLINE LIST
@@ -257,8 +257,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:40 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:28 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::INITGWCE
 VECTORIZATION LIST
@@ -266,8 +266,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:40 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:28 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::INITGWCE
 CODE GENERATION LIST
@@ -293,8 +293,8 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:40 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:28 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::SOLVEGWCE
 DIAGNOSTIC LIST
@@ -304,14 +304,15 @@ DIAGNOSTIC LIST
    181: inl(2238): Inlining inhibited: SAVEed variables and/or not-inlinable data in routine.: GWCE::GWCE_NEW
    184: inl(1222): Inlined: GWCE::CHECK_SLOPES
    185: inl(2238): Inlining inhibited: SAVEed variables and/or not-inlinable data in routine.: GWCE::APPLY_SLOPE_LIMITS
+   187: inl(1212): Source for routine not found.: MESSENGER::UPDATER
    190: inl(1212): Source for routine not found.: MOMENTUM::MOM_EQS_NEW_NC
    196: inl(1214): Expansion routine is too big for automatic expansion.: GWCE::GWCE_NEW_PC
    199: inl(1222): Inlined: GWCE::CHECK_SLOPES
    215: inl(1235): Inline halted: code size exceeds limit.: GWCE::SOLVEGWCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::SOLVEGWCE
 FORMAT LIST
@@ -394,8 +395,8 @@ FORMAT LIST
    224:                 end subroutine solveGWCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:40 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:28 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::SOLVEGWCE
 INLINE LIST
@@ -414,7 +415,13 @@ INLINE LIST
       *** Source for routine not found.
   -> NOINLINE: GWCE::APPLY_SLOPE_LIMITS (gwce.F:185)
      *** Inlining inhibited: SAVEed variables and/or not-inlinable data in routine.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:187)
+     *** Source for routine not found.
   -> NOINLINE: MOMENTUM::MOM_EQS_NEW_NC (gwce.F:190)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:193)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:194)
      *** Source for routine not found.
   -> NOINLINE: GWCE::GWCE_NEW_PC (gwce.F:196)
      *** Expansion routine is too big for automatic expansion.
@@ -427,12 +434,16 @@ INLINE LIST
       *** Source for routine not found.
    -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (gwce.F:4062)
       *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:202)
+     *** Source for routine not found.
   -> NOINLINE: GWCE::CHECK_SLOPES (gwce.F:215)
      *** Inline halted: code size exceeds limit.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:218)
+     *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:40 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:28 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::SOLVEGWCE
 VECTORIZATION LIST
@@ -465,8 +476,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:40 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:28 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::SOLVEGWCE
 CODE GENERATION LIST
@@ -475,17 +486,17 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 61 [s0-s12 s15-s16 s18-s63]
+      Scalar registers         : 60 [s0-s4 s6-s12 s15-s16 s18-s63]
       Vector registers         :  2 [v62-v63]
       Vector mask registers    :  0
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 8832 bytes
-      Register spill area      : 1208 bytes
+    Total size                 : 8896 bytes
+      Register spill area      : 1224 bytes
       Parameter area           :   40 bytes
       Register save area       :  176 bytes
-      User data area           : 7400 bytes
+      User data area           : 7448 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
@@ -496,15 +507,15 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3963)
-    *** Estimated execution cycle                       : 1791
+    *** Estimated execution cycle                       : 1789
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 52
             Across calls                                : 43
             Over basic blocks                           :  9
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 231
+          Total                                         : 230
             Across calls                                :  59
-            Over basic blocks                           : 172
+            Over basic blocks                           : 171
     *** The number of SCALAR REGISTER TRANSFER          : 52
   LOOP END
 
@@ -513,21 +524,21 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3963)
-    *** Estimated execution cycle                       : 1791
+    *** Estimated execution cycle                       : 1789
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 52
             Across calls                                : 43
             Over basic blocks                           :  9
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 231
+          Total                                         : 230
             Across calls                                :  59
-            Over basic blocks                           : 172
+            Over basic blocks                           : 171
     *** The number of SCALAR REGISTER TRANSFER          : 52
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW
 DIAGNOSTIC LIST
@@ -545,21 +556,15 @@ DIAGNOSTIC LIST
    560: vec( 101): Vectorized loop.
    567: opt(1059): Unable to determine last value of scalar temporary.
    567: opt(1060): Use "nolstval" directive if possible.
-   578: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    578: vec( 102): Partially vectorized loop.
    587: opt(1019): Feedback of scalar value from one loop pass to another.: H1N1
-   587: opt(3014): Moved reference within a conditional branch.
    588: opt(1019): Feedback of scalar value from one loop pass to another.: H1N2
    589: opt(1019): Feedback of scalar value from one loop pass to another.: H1N3
-   590: opt(3014): Moved reference within a conditional branch.
-   593: opt(3014): Moved reference within a conditional branch.
    596: opt(1019): Feedback of scalar value from one loop pass to another.: PHIAVG1
    597: opt(1019): Feedback of scalar value from one loop pass to another.: PHIAVG2
    608: vec( 128): Fused multiply-add operation applied.
    609: vec( 128): Fused multiply-add operation applied.
-   630: opt(3014): Moved reference within a conditional branch.
    630: vec( 128): Fused multiply-add operation applied.
-   654: opt(3014): Moved reference within a conditional branch.
    659: vec( 128): Fused multiply-add operation applied.
    663: vec( 128): Fused multiply-add operation applied.
    667: vec( 128): Fused multiply-add operation applied.
@@ -584,7 +589,6 @@ DIAGNOSTIC LIST
    728: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: COEF
    728: vec( 128): Fused multiply-add operation applied.
    731: opt(1062): Too many data dependency problems.
-   734: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    734: vec( 101): Vectorized loop.
    734: vec( 102): Partially vectorized loop.
    750: opt(1394): Moved invariant if outside of an inner loop.
@@ -594,30 +598,21 @@ DIAGNOSTIC LIST
    770: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: COEFD
    771: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: COEFD
    772: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: COEFD
-   785: vec( 101): Vectorized loop.
-   786: vec( 126): Idiom detected.: SUM
-   786: vec( 128): Fused multiply-add operation applied.
+   781: inl(1212): Source for routine not found.: MESSENGER::PSDOT
    792: vec( 101): Vectorized loop.
    796: opt(1135): Outer loop conditionally executes inner loop.
    796: vec( 101): Vectorized loop.
    798: vec( 101): Vectorized loop.
    805: vec( 101): Vectorized loop.
-   806: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    806: vec( 102): Partially vectorized loop.
    807: vec( 102): Partially vectorized loop.
-   808: opt(3014): Moved reference within a conditional branch.
    808: vec( 101): Vectorized loop.
-   810: opt(3014): Moved reference within a conditional branch.
-   813: opt(3014): Moved reference within a conditional branch.
    817: inl(1222): Inlined: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_CONSISTENT
   4179: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
   4194: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
-   821: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    821: vec( 103): Unvectorized loop.
    821: vec( 180): I/O statement obstructs vectorization.
    825: opt(1118): This I/O statement inhibits optimization of loop.
-   825: opt(3014): Moved reference within a conditional branch.
-   826: opt(3014): Moved reference within a conditional branch.
    835: vec( 103): Unvectorized loop.
    835: vec( 180): I/O statement obstructs vectorization.
    837: opt(1118): This I/O statement inhibits optimization of loop.
@@ -627,15 +622,11 @@ DIAGNOSTIC LIST
    854: vec( 128): Fused multiply-add operation applied.
    859: vec( 101): Vectorized loop.
    863: inl(1222): Inlined: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_LUMPED
-   867: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    867: vec( 103): Unvectorized loop.
    867: vec( 180): I/O statement obstructs vectorization.
    871: opt(1118): This I/O statement inhibits optimization of loop.
-   871: opt(3014): Moved reference within a conditional branch.
-   872: opt(3014): Moved reference within a conditional branch.
    879: inl(1222): Inlined: GWCE::GWCETERMINATE
    934: vec( 101): Vectorized loop.
-   941: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    941: vec( 101): Vectorized loop.
    941: vec( 102): Partially vectorized loop.
    952: vec( 128): Fused multiply-add operation applied.
@@ -659,26 +650,10 @@ DIAGNOSTIC LIST
    993: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
    994: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
    995: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
-   998: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    998: vec( 101): Vectorized loop.
   1003: opt(1394): Moved invariant if outside of an inner loop.
-  1004: opt(3014): Moved reference within a conditional branch.
-  1007: opt(3014): Moved reference within a conditional branch.
-  1009: opt(3014): Moved reference within a conditional branch.
   1011: opt(1394): Moved invariant if outside of an inner loop.
-  1012: opt(3014): Moved reference within a conditional branch.
-  1013: opt(3014): Moved reference within a conditional branch.
-  1014: opt(3014): Moved reference within a conditional branch.
-  1015: opt(3014): Moved reference within a conditional branch.
-  1018: opt(3014): Moved reference within a conditional branch.
-  1019: opt(3014): Moved reference within a conditional branch.
-  1021: opt(3014): Moved reference within a conditional branch.
-  1024: opt(3014): Moved reference within a conditional branch.
-  1025: opt(3014): Moved reference within a conditional branch.
-  1026: opt(3014): Moved reference within a conditional branch.
-  1027: opt(3014): Moved reference within a conditional branch.
   1037: vec( 101): Vectorized loop.
-  1044: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1044: vec( 101): Vectorized loop.
   1044: vec( 102): Partially vectorized loop.
   1057: vec( 128): Fused multiply-add operation applied.
@@ -706,27 +681,101 @@ DIAGNOSTIC LIST
   1100: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
   1101: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
   1102: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
-  1105: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   1105: vec( 101): Vectorized loop.
   1107: opt(1394): Moved invariant if outside of an inner loop.
-  1108: opt(3014): Moved reference within a conditional branch.
-  1109: opt(3014): Moved reference within a conditional branch.
-  1110: opt(3014): Moved reference within a conditional branch.
-  1111: opt(3014): Moved reference within a conditional branch.
   1113: opt(1394): Moved invariant if outside of an inner loop.
-  1114: opt(3014): Moved reference within a conditional branch.
-  1115: opt(3014): Moved reference within a conditional branch.
   1115: vec( 128): Fused multiply-add operation applied.
-  1117: opt(3014): Moved reference within a conditional branch.
-  1120: opt(3014): Moved reference within a conditional branch.
-  1121: opt(3014): Moved reference within a conditional branch.
-  1122: opt(3014): Moved reference within a conditional branch.
-  1123: opt(3014): Moved reference within a conditional branch.
+  1131: inl(1212): Source for routine not found.: MESSENGER::UPDATER
+  1140: opt(1135): Outer loop conditionally executes inner loop.
+  1144: vec( 101): Vectorized loop.
+  1150: inl(1222): Inlined: NODALATTRIBUTES::ADVECTLOCAL
+  1150: opt(1394): Moved invariant if outside of an inner loop.
+  1155: vec( 101): Vectorized loop.
+  1186: vec( 128): Fused multiply-add operation applied.
+  1187: vec( 128): Fused multiply-add operation applied.
+  1188: vec( 128): Fused multiply-add operation applied.
+  1199: vec( 101): Vectorized loop.
+  1230: opt(1394): Moved invariant if outside of an inner loop.
+  1259: vec( 128): Fused multiply-add operation applied.
+  1260: vec( 128): Fused multiply-add operation applied.
+  1261: vec( 128): Fused multiply-add operation applied.
+  1273: vec( 101): Vectorized loop.
+  1283: opt(1394): Moved invariant if outside of an inner loop.
+  1289: opt(1394): Moved invariant if outside of an inner loop.
+  1312: vec( 101): Vectorized loop.
+  1321: opt(1394): Moved invariant if outside of an inner loop.
+  1333: opt(1394): Moved invariant if outside of an inner loop.
+  1335: vec( 128): Fused multiply-add operation applied.
+  1336: vec( 128): Fused multiply-add operation applied.
+  1337: vec( 128): Fused multiply-add operation applied.
+  1338: vec( 128): Fused multiply-add operation applied.
+  1339: vec( 128): Fused multiply-add operation applied.
+  1340: vec( 128): Fused multiply-add operation applied.
+  1354: vec( 101): Vectorized loop.
+  1368: vec( 128): Fused multiply-add operation applied.
+  1369: vec( 128): Fused multiply-add operation applied.
+  1390: vec( 101): Vectorized loop.
+  1398: opt(1394): Moved invariant if outside of an inner loop.
+  1399: vec( 128): Fused multiply-add operation applied.
+  1400: vec( 128): Fused multiply-add operation applied.
+  1402: vec( 128): Fused multiply-add operation applied.
+  1403: vec( 128): Fused multiply-add operation applied.
+  1404: vec( 128): Fused multiply-add operation applied.
+  1405: vec( 128): Fused multiply-add operation applied.
+  1418: opt(1394): Moved invariant if outside of an inner loop.
+  1419: vec( 128): Fused multiply-add operation applied.
+  1420: vec( 128): Fused multiply-add operation applied.
+  1422: vec( 128): Fused multiply-add operation applied.
+  1425: vec( 128): Fused multiply-add operation applied.
+  1437: vec( 128): Fused multiply-add operation applied.
+  1443: vec( 128): Fused multiply-add operation applied.
+  1450: vec( 101): Vectorized loop.
+  1458: opt(1394): Moved invariant if outside of an inner loop.
+  1459: vec( 128): Fused multiply-add operation applied.
+  1461: vec( 128): Fused multiply-add operation applied.
+  1477: vec( 128): Fused multiply-add operation applied.
+  1480: vec( 128): Fused multiply-add operation applied.
+  1502: vec( 101): Vectorized loop.
+  1514: vec( 128): Fused multiply-add operation applied.
+  1519: opt(1394): Moved invariant if outside of an inner loop.
+  1522: opt(1394): Moved invariant if outside of an inner loop.
+  1532: vec( 128): Fused multiply-add operation applied.
+  1533: vec( 128): Fused multiply-add operation applied.
+  1539: opt(1394): Moved invariant if outside of an inner loop.
+  1541: vec( 128): Fused multiply-add operation applied.
+  1543: vec( 128): Fused multiply-add operation applied.
+  1554: vec( 101): Vectorized loop.
+  1563: vec( 128): Fused multiply-add operation applied.
+  1566: vec( 128): Fused multiply-add operation applied.
+  1569: vec( 128): Fused multiply-add operation applied.
+  1578: vec( 128): Fused multiply-add operation applied.
+  1582: vec( 128): Fused multiply-add operation applied.
+  1583: vec( 128): Fused multiply-add operation applied.
+  1585: vec( 128): Fused multiply-add operation applied.
+  1587: vec( 128): Fused multiply-add operation applied.
+  1599: vec( 128): Fused multiply-add operation applied.
+  1600: vec( 128): Fused multiply-add operation applied.
+  1602: vec( 128): Fused multiply-add operation applied.
+  1605: vec( 128): Fused multiply-add operation applied.
+  1617: opt(1394): Moved invariant if outside of an inner loop.
+  1618: vec( 128): Fused multiply-add operation applied.
+  1622: vec( 128): Fused multiply-add operation applied.
+  1627: opt(1394): Moved invariant if outside of an inner loop.
+  1628: vec( 128): Fused multiply-add operation applied.
+  1632: vec( 128): Fused multiply-add operation applied.
+  1638: vec( 128): Fused multiply-add operation applied.
+  1643: vec( 128): Fused multiply-add operation applied.
+  1660: vec( 128): Fused multiply-add operation applied.
+  1686: vec( 128): Fused multiply-add operation applied.
+  1714: vec( 128): Fused multiply-add operation applied.
+  1750: vec( 102): Partially vectorized loop.
+  1754: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
+  1755: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
+  1756: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
   2405: vec( 103): Unvectorized loop.
   2405: vec( 180): I/O statement obstructs vectorization.
   2413: opt(1118): This I/O statement inhibits optimization of loop.
   2425: opt(1408): Loop interchanged.
-  2425: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2425: vec( 101): Vectorized loop.
   2435: vec( 128): Fused multiply-add operation applied.
   2440: vec( 126): Idiom detected.: SUM
@@ -746,27 +795,17 @@ DIAGNOSTIC LIST
   2500: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ETA2
   2509: vec( 102): Partially vectorized loop.
   2511: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ETA2
-  2568: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2568: vec( 103): Unvectorized loop.
   2568: vec( 113): Overhead of loop division is too large.
   2569: opt(1019): Feedback of scalar value from one loop pass to another.: NBDJ
   2570: vec( 121): Unvectorizable dependency.
   2571: opt(1019): Feedback of scalar value from one loop pass to another.: QFORCEJ
-  2574: opt(3014): Moved reference within a conditional branch.
   2574: vec( 121): Unvectorizable dependency.
-  2577: opt(3014): Moved reference within a conditional branch.
-  2578: opt(3014): Moved reference within a conditional branch.
   2578: vec( 121): Unvectorizable dependency.
-  2583: opt(3014): Moved reference within a conditional branch.
-  2590: opt(3014): Moved reference within a conditional branch.
   2590: vec( 121): Unvectorizable dependency.
-  2595: opt(3014): Moved reference within a conditional branch.
   2595: vec( 121): Unvectorizable dependency.
-  2600: opt(3014): Moved reference within a conditional branch.
   2600: vec( 121): Unvectorizable dependency.
   2601: opt(1394): Moved invariant if outside of an inner loop.
-  2603: opt(3014): Moved reference within a conditional branch.
-  2604: opt(3014): Moved reference within a conditional branch.
   2604: vec( 121): Unvectorizable dependency.
   2612: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
   2614: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
@@ -776,31 +815,20 @@ DIAGNOSTIC LIST
   2634: vec( 102): Partially vectorized loop.
   2635: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
   2640: vec( 101): Vectorized loop.
+  2657: inl(1212): Source for routine not found.: MESSENGER::UPDATER_W_PERBC
   2666: inl(1212): Source for routine not found.: SUBDOMAIN::ENFORCEEOB
   2667: inl(1212): Source for routine not found.: SUBDOMAIN::ENFORCEEIB
   2668: inl(1212): Source for routine not found.: SUBDOMAIN::ENFORCEGWCELVOB
   2686: vec( 101): Vectorized loop.
-  2694: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2697: vec( 103): Unvectorized loop.
   2697: vec( 113): Overhead of loop division is too large.
-  2700: opt(3014): Moved reference within a conditional branch.
-  2701: opt(3014): Moved reference within a conditional branch.
-  2702: opt(3014): Moved reference within a conditional branch.
-  2703: opt(3014): Moved reference within a conditional branch.
   2703: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: COEFDTEMP
-  2705: opt(3014): Moved reference within a conditional branch.
   2705: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
-  2707: opt(3014): Moved reference within a conditional branch.
   2707: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ETA1
   2709: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
   2710: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ETA1
-  2714: opt(3014): Moved reference within a conditional branch.
-  2716: opt(3014): Moved reference within a conditional branch.
-  2718: opt(3014): Moved reference within a conditional branch.
   2725: opt(1135): Outer loop conditionally executes inner loop.
-  2725: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2725: vec( 102): Partially vectorized loop.
-  2728: opt(3014): Moved reference within a conditional branch.
   2730: vec( 102): Partially vectorized loop.
   2732: opt(1019): Feedback of scalar value from one loop pass to another.: COEFDTEMP
   2732: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: COEFDTEMP
@@ -808,26 +836,17 @@ DIAGNOSTIC LIST
   2733: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
   2734: opt(1019): Feedback of scalar value from one loop pass to another.: ETA1
   2734: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ETA1
-  2737: opt(3014): Moved reference within a conditional branch.
   2738: vec( 102): Partially vectorized loop.
   2740: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: COEFDTEMP
   2741: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
   2742: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ETA1
-  2758: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
+  2751: opt(3009): Copy-in/out loops have been generated.: COEFDTEMP
+  2751: vec( 101): Vectorized loop.
   2761: vec( 103): Unvectorized loop.
   2761: vec( 113): Overhead of loop division is too large.
-  2764: opt(3014): Moved reference within a conditional branch.
-  2765: opt(3014): Moved reference within a conditional branch.
-  2766: opt(3014): Moved reference within a conditional branch.
-  2767: opt(3014): Moved reference within a conditional branch.
   2767: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: COEFDTEMP
-  2768: opt(3014): Moved reference within a conditional branch.
   2768: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
-  2769: opt(3014): Moved reference within a conditional branch.
   2769: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ETA1
-  2773: opt(3014): Moved reference within a conditional branch.
-  2775: opt(3014): Moved reference within a conditional branch.
-  2777: opt(3014): Moved reference within a conditional branch.
   2786: inl(1212): Source for routine not found.: ITPACKV::JCG
   2789: vec( 101): Vectorized loop.
   2790: vec( 128): Fused multiply-add operation applied.
@@ -837,8 +856,8 @@ DIAGNOSTIC LIST
   2808: inl(1222): Inlined: GWCE::GWCE_NEW::UPDATE_PERSLNODES
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW
 FORMAT LIST
@@ -1408,9 +1427,9 @@ FORMAT LIST
    782:                       EP = SQRT(RNP_GLOBAL*EP)
    783:           #else
    784:                       EP=0.0D0
-   785: V------>              DO I=1,NP
-   786: |       F                EP=EP+Coef(I,1)*Coef(I,1)
-   787: V------               ENDDO
+   785:                       DO I=1,NP
+   786:                          EP=EP+Coef(I,1)*Coef(I,1)
+   787:                       ENDDO
    788:                       EP=SQRT(EP/NP)
    789:           #endif
    790:           c...        for each elevation specified boundary node, zero all off diagonal
@@ -1763,624 +1782,624 @@ FORMAT LIST
   1137:           
   1138:           #ifdef ES_TUNE
   1139:           #ifdef CSCA
-  1140:                 DO IE2=1,NE, VLEN
-  1141:                  ista = IE2
-  1142:                  iend = min(IE2+VLEN-1, NE)
-  1143:           
-  1144:                  do IE=ista, iend
-  1145:                    IE0 = IE-IE2+1
-  1146:           
-  1147:           C...     Set nodal values for each element
-  1148:           
-  1149:           Corbitt 120322: Localized Advection
-  1150:                    IF (LoadAdvectionState) CALL ADVECTLOCAL(IE)
-  1151:                    WK_IFNLCT(IE0) = IFNLCT
-  1152:                    WK_IFNLCAT(IE0) = IFNLCAT
-  1153:                  end do
-  1154:           
-  1155:                  do IE=ista, iend
-  1156:                    IE0 = IE-IE2+1
-  1157:                    NM1=NM(IE,1)
-  1158:                    NM2=NM(IE,2)
-  1159:                    NM3=NM(IE,3)
-  1160:           
-  1161:                    NC1=NODECODE(NM1)
-  1162:                    NC2=NODECODE(NM2)
-  1163:                    NC3=NODECODE(NM3)
-  1164:                    WK_NCELE(IE0)=NC1*NC2*NC3*NOFF(IE)
-  1165:                    WK_E0N1(IE0)=ETA1(NM1)
-  1166:                    WK_E0N2(IE0)=ETA1(NM2)
-  1167:                    WK_E0N3(IE0)=ETA1(NM3)
-  1168:                    WK_E1N1(IE0)=ETA2(NM1)
-  1169:                    WK_E1N2(IE0)=ETA2(NM2)
-  1170:                    WK_E1N3(IE0)=ETA2(NM3)
-  1171:                    WK_ESN1(IE0)=ETAS(NM1)
-  1172:                    WK_ESN2(IE0)=ETAS(NM2)
-  1173:                    WK_ESN3(IE0)=ETAS(NM3)
-  1174:                    WK_U1N1(IE0)=UU1(NM1)
-  1175:                    WK_U1N2(IE0)=UU1(NM2)
-  1176:                    WK_U1N3(IE0)=UU1(NM3)
-  1177:                    WK_V1N1(IE0)=VV1(NM1)
-  1178:                    WK_V1N2(IE0)=VV1(NM2)
-  1179:                    WK_V1N3(IE0)=VV1(NM3)
-  1180:                    WK_QX1N1(IE0)=QX1(NM1)
-  1181:                    WK_QX1N2(IE0)=QX1(NM2)
-  1182:                    WK_QX1N3(IE0)=QX1(NM3)
-  1183:                    WK_QY1N1(IE0)=QY1(NM1)
-  1184:                    WK_QY1N2(IE0)=QY1(NM2)
-  1185:                    WK_QY1N3(IE0)=QY1(NM3)
-  1186:                    WK_H1N1(IE0)=DP(NM1)+IFNLFA*WK_E1N1(IE0)
-  1187:                    WK_H1N2(IE0)=DP(NM2)+IFNLFA*WK_E1N2(IE0)
-  1188:                    WK_H1N3(IE0)=DP(NM3)+IFNLFA*WK_E1N3(IE0)
-  1189:                    WK_EVMN1(IE0)=EVM(NM1)
-  1190:                    WK_EVMN2(IE0)=EVM(NM2)
-  1191:                    WK_EVMN3(IE0)=EVM(NM3)
-  1192:                    WK_T0N1(IE0)=Tau0Var(NM1)
-  1193:                    WK_T0N2(IE0)=Tau0Var(NM2)
-  1194:                    WK_T0N3(IE0)=Tau0Var(NM3)
-  1195:                  end do
-  1196:           C
-  1197:           C.... DW: begin ! absorbing layer
-  1198:           C
-  1199:                  do IE=ista, iend
-  1200:                    IE0 = IE-IE2+1
-  1201:                    NM1=NM(IE,1)
-  1202:                    NM2=NM(IE,2)
-  1203:                    NM3=NM(IE,3)
-  1204:           
-  1205:                    WK_ESAN1(IE0) = 0.D0
-  1206:                    WK_ESAN2(IE0) = 0.D0
-  1207:                    WK_ESAN3(IE0) = 0.D0 ;
-  1208:           
-  1209:                    WK_ABC00_EAN1(IE0) = 0.D0
-  1210:                    WK_ABC00_EAN2(IE0) = 0.D0
-  1211:                    WK_ABC00_EAN3(IE0) = 0.D0
-  1212:           
-  1213:                    WK_U1AN1(IE0) = 0.D0
-  1214:                    WK_U1AN2(IE0) = 0.D0
-  1215:                    WK_U1AN3(IE0) = 0.D0
-  1216:                    WK_V1AN1(IE0) = 0.D0
-  1217:                    WK_V1AN2(IE0) = 0.D0
-  1218:                    WK_V1AN3(IE0) = 0.D0
-  1219:           
-  1220:                    WK_SgN1_eta(IE0) = 0.D0
-  1221:                    WK_SgN2_eta(IE0) = 0.D0
-  1222:                    WK_SgN3_eta(IE0) = 0.D0
-  1223:                    WK_SgN1_mnx(IE0) = 0.D0
-  1224:                    WK_SgN2_mnx(IE0) = 0.D0
-  1225:                    WK_SgN3_mnx(IE0) = 0.D0
-  1226:                    WK_SgN1_mny(IE0) = 0.D0
-  1227:                    WK_SgN2_mny(IE0) = 0.D0
-  1228:                    WK_SgN3_mny(IE0) = 0.D0 ;
-  1229:           
-  1230:                    IF ( GWCE_SPONGE ) THEN
-  1231:                       WK_SgN1_eta(IE0) = absorblayer_sigma_eta(NM1,1) ;
-  1232:                       WK_SgN2_eta(IE0) = absorblayer_sigma_eta(NM2,1) ;
-  1233:                       WK_SgN3_eta(IE0) = absorblayer_sigma_eta(NM3,1) ;
-  1234:           
-  1235:                       WK_SgN1_mnx(IE0) = absorblayer_sigma_mnx(NM1,1) ;
-  1236:                       WK_SgN2_mnx(IE0) = absorblayer_sigma_mnx(NM2,1) ;
-  1237:                       WK_SgN3_mnx(IE0) = absorblayer_sigma_mnx(NM3,1) ;
-  1238:           
-  1239:                       WK_SgN1_mny(IE0) = absorblayer_sigma_mny(NM1,1) ;
-  1240:                       WK_SgN2_mny(IE0) = absorblayer_sigma_mny(NM2,1) ;
-  1241:                       WK_SgN3_mny(IE0) = absorblayer_sigma_mny(NM3,1) ;
-  1242:           
-  1243:                       E0AN1 = eta0_abslayer(NM1) ;
-  1244:                       E0AN2 = eta0_abslayer(NM2) ;
-  1245:                       E0AN3 = eta0_abslayer(NM3) ;
-  1246:           
-  1247:                       E1AN1 = eta1_abslayer(NM1) ;
-  1248:                       E1AN2 = eta1_abslayer(NM2) ;
-  1249:                       E1AN3 = eta1_abslayer(NM3) ;
-  1250:           
-  1251:                       E2AN1 = eta2_abslayer(NM1) ;
-  1252:                       E2AN2 = eta2_abslayer(NM2) ;
-  1253:                       E2AN3 = eta2_abslayer(NM3) ;
-  1254:           
-  1255:                       WK_ESAN1(IE0) = E2AN1 - E0AN1 ;
-  1256:                       WK_ESAN2(IE0) = E2AN2 - E0AN2 ;
-  1257:                       WK_ESAN3(IE0) = E2AN3 - E0AN3 ;
-  1258:           
-  1259:                       WK_ABC00_EAN1(IE0) = A00*E2AN1 + B00*E1AN1 + C00*E0AN1 ;
-  1260:                       WK_ABC00_EAN2(IE0) = A00*E2AN2 + B00*E1AN2 + C00*E0AN2 ;
-  1261:                       WK_ABC00_EAN3(IE0) = A00*E2AN3 + B00*E1AN3 + C00*E0AN3 ;
-  1262:           
-  1263:                       WK_U1AN1(IE0) = uu1_abslayer(NM1) ;
-  1264:                       WK_U1AN2(IE0) = uu1_abslayer(NM2) ;
-  1265:                       WK_U1AN3(IE0) = uu1_abslayer(NM3) ;
-  1266:           
-  1267:                       WK_V1AN1(IE0) = vv1_abslayer(NM1) ;
-  1268:                       WK_V1AN2(IE0) = vv1_abslayer(NM2) ;
-  1269:                       WK_V1AN3(IE0) = vv1_abslayer(NM3) ;
-  1270:                    END IF
-  1271:                  end do
-  1272:           C
-  1273:                  do IE=ista, iend
-  1274:                    IE0 = IE-IE2+1
-  1275:                    NM1=NM(IE,1)
-  1276:                    NM2=NM(IE,2)
-  1277:                    NM3=NM(IE,3)
-  1278:           
-  1279:                    WK_Pr1N1(IE0)=0.0d0
-  1280:                    WK_Pr1N2(IE0)=0.0d0
-  1281:                    WK_Pr1N3(IE0)=0.0d0
-  1282:           
-  1283:                    IF ((NWS.NE.0).OR.(NRS.NE.0)) THEN     !wind or radiation stress
-  1284:                       WK_Pr1N1(IE0)=PR1(NM1)
-  1285:                       WK_Pr1N2(IE0)=PR1(NM2)
-  1286:                       WK_Pr1N3(IE0)=PR1(NM3)
-  1287:           
-  1288:                       !c Pressure c!
-  1289:                       IF ( NO_MET_IN_SPONGE ) THEN
-  1290:                          IF ( absorblayer_sigma_eta(NM1,1) > 1.0e-9 ) THEN
-  1291:                             WK_Pr1N1(IE0) = PRBCKGRND_MH2O
-  1292:                          END IF
-  1293:                          IF ( absorblayer_sigma_eta(NM2,1) > 1.0e-9 ) THEN
-  1294:                             WK_Pr1N2(IE0) = PRBCKGRND_MH2O
-  1295:                          END IF
-  1296:                          IF ( absorblayer_sigma_eta(NM3,1) > 1.0e-9 ) THEN
-  1297:                             WK_Pr1N3(IE0) = PRBCKGRND_MH2O
-  1298:                          END IF
-  1299:                       END IF
-  1300:                    ENDIF
-  1301:                  end do
-  1302:           C ....,... END DW
-  1303:           C
-  1304:           !!         ! jgf: Adding support for water level offset as a pseudo barometric
-  1305:           !!         ! pressure
-  1306:           !!         if (usingDynamicWaterLevelCorrection.eqv..true.) then
-  1307:           !!            Off1N1 = dynamicWaterLevelCorrection1(NM1)
-  1308:           !!            Off1N2 = dynamicWaterLevelCorrection1(NM2)
-  1309:           !!            Off1N3 = dynamicWaterLevelCorrection1(NM3)
-  1310:           !!         endif
-  1311:           
-  1312:                  do IE=ista, iend
-  1313:                    IE0 = IE-IE2+1
-  1314:                    NM1=NM(IE,1)
-  1315:                    NM2=NM(IE,2)
-  1316:                    NM3=NM(IE,3)
-  1317:           
-  1318:                    WK_TiPN1(IE0)=0.d0
-  1319:                    WK_TiPN2(IE0)=0.d0
-  1320:                    WK_TiPN3(IE0)=0.d0
-  1321:                    IF (CTIP) THEN                        !tidal potential
-  1322:                       WK_TiPN1(IE0)=TiP1(NM1)
-  1323:                       WK_TiPN2(IE0)=TiP1(NM2)
-  1324:                       WK_TiPN3(IE0)=TiP1(NM3)
-  1325:                    ENDIF
-  1326:           
-  1327:                     BSXN1=0.0d0
-  1328:                     BSXN2=0.0d0
-  1329:                     BSXN3=0.0d0
-  1330:                     BSYN1=0.0d0
-  1331:                     BSYN2=0.0d0
-  1332:                     BSYN3=0.0d0
-  1333:                    IF (C2DDI) THEN                       !2D bottom friction
-  1334:                       !WJP taking into account the symmetrical friction matrix
-  1335:                       BSXN1 = TKM(1,NM1)*WK_QX1N1(IE0) + TKM(3,NM1)*WK_QY1N1(IE0)
-  1336:                       BSYN1 = TKM(3,NM1)*WK_QX1N1(IE0) + TKM(2,NM1)*WK_QY1N1(IE0)
-  1337:                       BSXN2 = TKM(1,NM2)*WK_QX1N2(IE0) + TKM(3,NM2)*WK_QY1N2(IE0)
-  1338:                       BSYN2 = TKM(3,NM2)*WK_QX1N2(IE0) + TKM(2,NM2)*WK_QY1N2(IE0)
-  1339:                       BSXN3 = TKM(1,NM3)*WK_QX1N3(IE0) + TKM(3,NM3)*WK_QY1N3(IE0)
-  1340:                       BSYN3 = TKM(3,NM3)*WK_QX1N3(IE0) + TKM(2,NM3)*WK_QY1N3(IE0)
-  1341:                    ENDIF
-  1342:                    IF (C3D) THEN                         !3D bottom friction
-  1343:                       BSXN1=BSX1(NM1)
-  1344:                       BSXN2=BSX1(NM2)
-  1345:                       BSXN3=BSX1(NM3)
-  1346:                       BSYN1=BSY1(NM1)
-  1347:                       BSYN2=BSY1(NM2)
-  1348:                       BSYN3=BSY1(NM3)
-  1349:                    ENDIF
-  1350:                    WK_BSXAvg(IE0)=(BSXN1+BSXN2+BSXN3)/3.d0
-  1351:                    WK_BSYAvg(IE0)=(BSYN1+BSYN2+BSYN3)/3.d0
-  1352:                  end do
-  1353:           
-  1354:                  do IE=ista, iend
-  1355:                    IE0 = IE-IE2+1
-  1356:                    NM1=NM(IE,1)
-  1357:                    NM2=NM(IE,2)
-  1358:                    NM3=NM(IE,3)
-  1359:           
-  1360:                    WK_AreaIE2(IE0)=1.0d0/Areas(IE)               !2A
-  1361:                    WK_AreaIE1(IE0)=Areas(IE)/2.d0             ! A
-  1362:                    WK_AreaIE4(IE0)=1.0d0/(2.d0*Areas(IE))            !4A
-  1363:                    SFacAvg= SFacEle(IE)
-  1364:           C..... DW
-  1365:                    ! derivative: accomodate corrected spherical coordinate
-  1366:                    SFmxAvg=SFMXEle(IE)  ;
-  1367:                    SFmyAvg=SFMYEle(IE) ;
-  1368:                    sfdxfac=(1 - IFSFM)*SFacAvg + IFSFM*SFmxAvg ;
-  1369:                    sfdyfac=(1 - IFSFM)*1.0_SZ  + IFSFM*SFmyAvg ;
-  1370:           
-  1371:                    ! continuity
-  1372:                    SFCXAvg=SFCXEle(IE) ;
-  1373:                    SFCYAvg=SFCYEle(IE) ;
-  1374:                    YCFACAvg=YCSFACEle(IE) ;
-  1375:                    WK_TANPHIAvg(IE0)=TANPHIEle(IE) ;
-  1376:                    WK_SFCXADJ(IE0) = SFCXAvg/sfdxfac ;
-  1377:                    WK_SFCYADJ(IE0) = YCFACAvg*SFCYAvg/sfdyfac ;
-  1378:           
-  1379:                    WK_FDX1(IE0) = FDXE(1,IE)*sfdxfac ; !c dx/dlambda*b1*2A
-  1380:                    WK_FDX2(IE0) = FDXE(2,IE)*sfdxfac ; !c dx/dlambda*b2*2A
-  1381:                    WK_FDX3(IE0) = FDXE(3,IE)*sfdxfac ; !c dx/dlambda*b3*2A
-  1382:                    WK_FDY1(IE0) = FDYE(1,IE)*sfdyfac ; !c dy/dphi*a1*2A
-  1383:                    WK_FDY2(IE0) = FDYE(2,IE)*sfdyfac ; !c dy/dphi*a1*2A
-  1384:                    WK_FDY3(IE0) = FDYE(3,IE)*sfdyfac ; !c dy/dphi*a1*2A
-  1385:                  end do
-  1386:           
-  1387:           C..... DW
-  1388:           
-  1389:           C...     Compute part of several spatial gradients for use below
-  1390:                  do IE=ista, iend
-  1391:                    IE0 = IE-IE2+1
-  1392:                    NM1=NM(IE,1)
-  1393:                    NM2=NM(IE,2)
-  1394:                    NM3=NM(IE,3)
-  1395:           
-  1396:                    WK_E0XGrad2A(IE0) = 0.0d0
-  1397:                    WK_E0YGrad2A(IE0) = 0.0d0
-  1398:                    IF (ILump.eq.0) THEN
-  1399:                       WK_E0XGrad2A(IE0)=WK_E0N1(IE0)*WK_FDX1(IE0)+WK_E0N2(IE0)*WK_FDX2(IE0)+WK_E0N3(IE0)*WK_FDX3(IE0)        !2*Area*deta0/dx
-  1400:                       WK_E0YGrad2A(IE0)=WK_E0N1(IE0)*WK_FDY1(IE0)+WK_E0N2(IE0)*WK_FDY2(IE0)+WK_E0N3(IE0)*WK_FDY3(IE0)        !2*Area*deta0/dy
-  1401:                    ENDIF
-  1402:                    WK_E1XGrad2A(IE0)=WK_E1N1(IE0)*WK_FDX1(IE0)+WK_E1N2(IE0)*WK_FDX2(IE0)+WK_E1N3(IE0)*WK_FDX3(IE0)        !2*Area*deta1/dx
-  1403:                    WK_E1YGrad2A(IE0)=WK_E1N1(IE0)*WK_FDY1(IE0)+WK_E1N2(IE0)*WK_FDY2(IE0)+WK_E1N3(IE0)*WK_FDY3(IE0)        !2*Area*deta1/dy
-  1404:                    WK_Tau0XGrad2A(IE0)=WK_T0N1(IE0)*WK_FDX1(IE0)+WK_T0N2(IE0)*WK_FDX2(IE0)+WK_T0N3(IE0)*WK_FDX3(IE0)      !2*Area*dTau0/dx
-  1405:                    WK_Tau0YGrad2A(IE0)=WK_T0N1(IE0)*WK_FDY1(IE0)+WK_T0N2(IE0)*WK_FDY2(IE0)+WK_T0N3(IE0)*WK_FDY3(IE0)      !2*Area*dTau0/dy
-  1406:           
-  1407:           C...... BEG: DW, Nov 2019
-  1408:                    WK_Tau0XGrad2A(IE0)=WK_SFCXADJ(IE0)*WK_Tau0XGrad2A(IE0)      !2*Area*dTau0/dx
-  1409:                    WK_Tau0YGrad2A(IE0)=WK_SFCYADJ(IE0)*WK_Tau0YGrad2A(IE0)      !2*Area*dTau0/dy
-  1410:           C...... END DW
-  1411:           
-  1412:           C...     Compute the Kolar & Gray lateral stress term extended for spatially varying EVM
-  1413:           C...     ********     Need to think about this more: DW ********
-  1414:           C...     ********     Kolar & Gray does not seem to be suitable for
-  1415:           C...     ********     the spherical coordinates
-  1416:                    WK_MX(IE0)=0.0d0
-  1417:                    WK_MY(IE0)=0.0d0
-  1418:                    IF(CGWCE_LS_KGQ) THEN
-  1419:                       EVMXGrad=(WK_EVMN1(IE0)*WK_FDX1(IE0)+WK_EVMN2(IE0)*WK_FDX2(IE0)+WK_EVMN3(IE0)*WK_FDX3(IE0))*WK_AreaIE2(IE0)
-  1420:                       EVMYGrad=(WK_EVMN1(IE0)*WK_FDY1(IE0)+WK_EVMN2(IE0)*WK_FDY2(IE0)+WK_EVMN3(IE0)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
-  1421:                       EVMAvgODT=((WK_EVMN1(IE0)+WK_EVMN2(IE0)+WK_EVMN3(IE0))/3.d0)/DT
-  1422:                       WK_MX(IE0)=(EVMXGrad*(WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_QX1N3(IE0)*WK_FDX3(IE0))
-  1423:                &         +EVMYGrad*(WK_QY1N1(IE0)*WK_FDX1(IE0)+WK_QY1N2(IE0)*WK_FDX2(IE0)+WK_QY1N3(IE0)*WK_FDX3(IE0))
-  1424:                &         -EVMAvgODT*(WK_ESN1(IE0)*WK_FDX1(IE0)+WK_ESN2(IE0)*WK_FDX2(IE0)+WK_ESN3(IE0)*WK_FDX3(IE0)))*WK_AreaIE2(IE0)
-  1425:                       WK_MY(IE0)=(EVMXGrad*(WK_QX1N1(IE0)*WK_FDY1(IE0)+WK_QX1N2(IE0)*WK_FDY2(IE0)+WK_QX1N3(IE0)*WK_FDY3(IE0))
-  1426:                &         +EVMYGrad*(WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_QY1N3(IE0)*WK_FDY3(IE0))
-  1427:                &         -EVMAvgODT*(WK_ESN1(IE0)*WK_FDY1(IE0)+WK_ESN2(IE0)*WK_FDY2(IE0)+WK_ESN3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
-  1428:                    ENDIF
-  1429:           
-  1430:           C...     Compute the remainder of the 2 Part lateral stress terms
-  1431:           
-  1432:                    IF((CGWCE_LS_2PartQ).OR.(CGWCE_LS_2PartV) .OR.
-  1433:                &        (CGWCE_LS_2PartSQ).OR.(CGWCE_LS_2PartSV)) THEN
-  1434:           C           X-direction
-  1435:                       LSXYEle = (LSXY(NM1)+LSXY(NM2)+LSXY(NM3))/3.d0
-  1436:                       LSYXEle = (LSYX(NM1)+LSYX(NM2)+LSYX(NM3))/3.d0
-  1437:                       WK_MX(IE0)=(LSXX(NM1)*WK_FDX1(IE0)+LSXX(NM2)*WK_FDX2(IE0)+LSXX(NM3)*WK_FDX3(IE0)
-  1438:                &         +LSXY(NM1)*WK_FDY1(IE0)+LSXY(NM2)*WK_FDY2(IE0)+LSXY(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
-  1439:                &         -WK_TANPHIAvg(IE0)*(LSXYEle + LSYXEle)
-  1440:           C           Y-direction
-  1441:                       LSXXEle = (LSXX(NM1)+LSXX(NM2)+LSXX(NM3))/3.d0
-  1442:                       LSYYEle = (LSYY(NM1)+LSYY(NM2)+LSYY(NM3))/3.d0
-  1443:                       WK_MY(IE0)=(LSYX(NM1)*WK_FDX1(IE0)+LSYX(NM2)*WK_FDX2(IE0)+LSYX(NM3)*WK_FDX3(IE0)
-  1444:                &         +LSYY(NM1)*WK_FDY1(IE0)+LSYY(NM2)*WK_FDY2(IE0)+LSYY(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
-  1445:                &         +WK_TANPHIAvg(IE0)*(LSXXEle - LSYYEle)
-  1446:                    ENDIF
-  1447:                  end do
-  1448:           
-  1449:           C...     Compute the spatial gradients of the velocity dispersion terms if 3D
-  1450:                  do IE=ista, iend
-  1451:                    IE0 = IE-IE2+1
-  1452:                    NM1=NM(IE,1)
-  1453:                    NM2=NM(IE,2)
-  1454:                    NM3=NM(IE,3)
-  1455:           
-  1456:                    WK_DispXAvg(IE0)=0.0d0
-  1457:                    WK_DispYAvg(IE0)=0.0d0
-  1458:                    IF (C3D) THEN                         !3D bottom friction
-  1459:                       DispX = (DUU1(NM1)*WK_FDX1(IE0)+DUU1(NM2)*WK_FDX2(IE0)+DUU1(NM3)*WK_FDX3(IE0)
-  1460:                &          +  DUV1(NM1)*WK_FDY1(IE0)+DUV1(NM2)*WK_FDY2(IE0)+DUV1(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
-  1461:                       DispY = (DUV1(NM1)*WK_FDX1(IE0)+DUV1(NM2)*WK_FDX2(IE0)+DUV1(NM3)*WK_FDX3(IE0)
-  1462:                &          +  DVV1(NM1)*WK_FDY1(IE0)+DVV1(NM2)*WK_FDY2(IE0)+DVV1(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
-  1463:                       WK_DispXAvg(IE0) = WK_IFNLCT(IE0)*DispX
-  1464:                       WK_DispYAvg(IE0) = WK_IFNLCT(IE0)*DispY
-  1465:                    ENDIF
-  1466:           
-  1467:           C...     Compute elemental averages
-  1468:                    WK_CorifAvg(IE0)=(Corif(NM1)+Corif(NM2)+Corif(NM3))/3.d0
-  1469:                    WK_Tau0Avg(IE0)=(WK_T0N1(IE0)+WK_T0N2(IE0)+WK_T0N3(IE0))/3.d0
-  1470:                    WK_U1Avg(IE0)=(WK_U1N1(IE0)+WK_U1N2(IE0)+WK_U1N3(IE0))/3.d0
-  1471:                    WK_V1Avg(IE0)=(WK_V1N1(IE0)+WK_V1N2(IE0)+WK_V1N3(IE0))/3.d0
-  1472:                    WK_QX1Avg(IE0)=(WK_QX1N1(IE0)+WK_QX1N2(IE0)+WK_QX1N3(IE0))/3.d0
-  1473:                    WK_QY1Avg(IE0)=(WK_QY1N1(IE0)+WK_QY1N2(IE0)+WK_QY1N3(IE0))/3.d0
-  1474:                    WK_ESAvg(IE0)=(WK_ESN1(IE0)+WK_ESN2(IE0)+WK_ESN3(IE0))/3.d0
-  1475:           
-  1476:           C.....   DW, Nov 2019
-  1477:                    DPAvg = (DP(NM1)+DP(NM2)+DP(NM3))/3.d0 + ! BAVG if GWCE_HDP = .FALSE.
-  1478:                &        IFNLFA*IFNL_HDP*(WK_E1N1(IE0) + WK_E1N2(IE0) + WK_E1N3(IE0))/3.d0 ; ! H^{s}_{avg} otherwise
-  1479:           
-  1480:                    DPAvgS0 = (DP(NM1)+DP(NM2)+DP(NM3))/3.d0 + ! BAVG if GWCE_HDP = .FALSE.
-  1481:                &        IFNLFA*IFNL_HDP*(WK_E0N1(IE0) + WK_E0N2(IE0) + WK_E0N3(IE0))/3.d0 ; ! H^{s-1}_{avg} otherwise
-  1482:           
-  1483:           
-  1484:           C.....   WJP adjust the dispersion equation through
-  1485:           C        Ali et al. formula
-  1486:           
-  1487:           #ifdef PCALIDISP
-  1488:                    if (CAliDisp) then
-  1489:                       Ma2    = G*DPavg/Cs2
-  1490:                       Cfac   = (1.0_SZ - 0.25_SZ*Ma2 - Ad*DPavg**Bd)**2
-  1491:                       Ma2    = G*DPavg/Cs2
-  1492:                       CfacS0 = (1.0_SZ - 0.25_SZ*Ma2 - Ad*DPavgS0**Bd)**2
-  1493:                    endif
-  1494:                  end do
-  1495:           #endif PCALIDISP
-  1496:           
-  1497:                    WK_GDPAvgOAreaIE4(IE0) = G*DPAvg*Cfac*WK_AreaIE4(IE0)
-  1498:                    WK_GDPAvgOAreaIE4_S0(IE0) = G*DPAvgS0*CfacS0*WK_AreaIE4(IE0)
-  1499:                  end do
-  1500:           
-  1501:           C....  END DW & WJP
-  1502:                  do IE=ista, iend
-  1503:                    IE0 = IE-IE2+1
-  1504:                    NM1=NM(IE,1)
-  1505:                    NM2=NM(IE,2)
-  1506:                    NM3=NM(IE,3)
-  1507:           
-  1508:                    HAvg=(WK_H1N1(IE0)+WK_H1N2(IE0)+WK_H1N3(IE0))/3.d0
-  1509:                    GHAvg=G*HAvg
-  1510:                    WK_GHAvgOAreaIE2(IE0)=GHAvg*WK_AreaIE2(IE0)
-  1511:           C        WJP: Add on the contribution from spherical correction term
-  1512:           C        from the momentum equation
-  1513:                    ! (tan \phi V_{lambda})/R + f
-  1514:                    WK_CorifAvg(IE0) = WK_CorifAvg(IE0) + WK_IFNLCT(IE0)*WK_TANPHIAvg(IE0)*WK_U1Avg(IE0)
-  1515:           C
-  1516:           !---------
-  1517:                    WK_WSXAvg(IE0)=0.0d0
-  1518:                    WK_WSYAvg(IE0)=0.0d0
-  1519:                    IF ((NWS.NE.0).OR.(NRS.NE.0)) THEN     !wind or radiation stress
-  1520:                       fwsx1 = 1.D0 ; fwsx2 = 1.D0 ; fwsx3 = 1.D0 ;
-  1521:                       fwsy1 = 1.D0 ; fwsy2 = 1.D0 ; fwsy3 = 1.D0 ;
-  1522:                       IF ( NO_MET_IN_SPONGE ) THEN
-  1523:                          IF ( absorblayer_sigma_mnx(NM1,1) > 1e-9 ) fwsx1 = 0.D0
-  1524:                          IF ( absorblayer_sigma_mnx(NM2,1) > 1e-9 ) fwsx2 = 0.D0
-  1525:                          IF ( absorblayer_sigma_mnx(NM3,1) > 1e-9 ) fwsx3 = 0.D0
-  1526:           
-  1527:                          IF ( absorblayer_sigma_mny(NM1,1) > 1e-9 ) fwsy1 = 0.D0
-  1528:                          IF ( absorblayer_sigma_mny(NM2,1) > 1e-9 ) fwsy2 = 0.D0
-  1529:                          IF ( absorblayer_sigma_mny(NM3,1) > 1e-9 ) fwsy3 = 0.D0
-  1530:                       END IF
-  1531:           
-  1532:                       WK_WSXAvg(IE0)=(fwsx1*WSX1(NM1)+fwsx2*WSX1(NM2)+fwsx3*WSX1(NM3))/3.d0
-  1533:                       WK_WSYAvg(IE0)=(fwsy1*WSY1(NM1)+fwsy2*WSY1(NM2)+fwsy3*WSY1(NM3))/3.d0
-  1534:                    ENDIF
-  1535:           C------- END DW
-  1536:           C
-  1537:                    WK_BCXAvg(IE0)=0.0d0
-  1538:                    WK_BCYAvg(IE0)=0.0d0
-  1539:                    IF (CBaroclinic) THEN
-  1540:           #ifndef NOFSBPG
-  1541:                       WK_BCXAvg(IE0) = (WK_H1N1(IE0)*VIDBCPDXOH(NM1)+WK_H1N2(IE0)*VIDBCPDXOH(NM2)
-  1542:                &                                    +WK_H1N3(IE0)*VIDBCPDXOH(NM3))/3.d0
-  1543:                       WK_BCYAvg(IE0) = (WK_H1N1(IE0)*VIDBCPDYOH(NM1)+WK_H1N2(IE0)*VIDBCPDYOH(NM2)
-  1544:                &                                    +WK_H1N3(IE0)*VIDBCPDYOH(NM3))/3.d0
-  1545:           #else
-  1546:                       WK_BCXAvg(IE0) = (DP(NM1)*VIDBCPDXOH(NM1) + DP(NM2)*VIDBCPDXOH(NM2)
-  1547:                &                + DP(NM3)*VIDBCPDXOH(NM3))/3.d0
-  1548:                       WK_BCYAvg(IE0) = (DP(NM1)*VIDBCPDYOH(NM1) + DP(NM2)*VIDBCPDYOH(NM2)
-  1549:                &                + DP(NM3)*VIDBCPDYOH(NM3))/3.d0
-  1550:           #endif
-  1551:                    ENDIF
-  1552:                  end do
-  1553:           
-  1554:                  do IE=ista, iend
-  1555:                    IE0 = IE-IE2+1
-  1556:                    NM1=NM(IE,1)
-  1557:                    NM2=NM(IE,2)
-  1558:                    NM3=NM(IE,3)
-  1559:           
-  1560:           C...     Compute additional partial factors
-  1561:           C........DW: begin add absorbing layer term
-  1562:                    SigmaAvg = (WK_SgN1_eta(IE0) + WK_SgN2_eta(IE0) + WK_SgN3_eta(IE0))/3.D0
-  1563:                    Tau0SigmaAvg = (WK_SgN1_eta(IE0)*WK_T0N1(IE0) + WK_SgN2_eta(IE0)*WK_T0N2(IE0) +
-  1564:                &                   WK_SgN3_eta(IE0)*WK_T0N3(IE0))/3.d0
-  1565:           
-  1566:                    Tau0Avg_S = WK_Tau0Avg(IE0) +
-  1567:                &     ((A00 + B00)*2.D0*Tau0SigmaAvg*DT + SigmaAvg)*sponge_dis_mthd
-  1568:           
-  1569:                    MsFacR=WK_AreaIE1(IE0)*(1.d0/DT-Tau0Avg_S/2.d0)/DT/12.d0
-  1570:                    MsFacR_S = (-(A00 + B00 + C00)*WK_AreaIE1(IE0)*
-  1571:                &          Tau0SigmaAvg/12.D0)*sponge_dis_mthd
-  1572:           
-  1573:                    MsFacRS_ABC00 = (Tau0SigmaAvg*WK_AreaIE1(IE0)/12.D0)*sponge_dis_mthd
-  1574:                    MsFacRS_T = ((SigmaAvg/(2.D0*DT))*WK_AreaIE1(IE0)/12.D0)*sponge_dis_mthd
-  1575:           C......... end DW
-  1576:           C
-  1577:                    GOAreaIE4=G*WK_AreaIE4(IE0)
-  1578:                    Tau0SpaVar=(WK_QX1Avg(IE0)*WK_Tau0XGrad2A(IE0)+WK_QY1Avg(IE0)*WK_Tau0YGrad2A(IE0))/6.d0
-  1579:                    A00pB00=A00+B00
-  1580:           
-  1581:           C...     Compute the JX, JY terms less the advection terms
-  1582:                    Tau0QXAvg=(WK_T0N1(IE0)*WK_QX1N1(IE0)+WK_T0N2(IE0)*WK_QX1N2(IE0)+WK_T0N3(IE0)*WK_QX1N3(IE0))/3.d0
-  1583:                    SigmaQxAvg = (WK_SgN1_mnx(IE0)*WK_QX1N1(IE0) +
-  1584:                &         WK_SgN2_mnx(IE0)*WK_QX1N2(IE0) + WK_SgN3_mnx(IE0)*WK_QX1N3(IE0))/3.d0 ;
-  1585:                    AvgSigmaHAbsU = (WK_SgN1_mnx(IE0)*WK_H1N1(IE0)*WK_U1AN1(IE0) +
-  1586:                &        WK_SgN2_mnx(IE0)*WK_H1N2(IE0)*WK_U1AN2(IE0) + WK_SgN3_mnx(IE0)*WK_H1N3(IE0)*WK_U1AN3(IE0))/3.D0 ;
-  1587:                    JXAvg = WK_CorifAvg(IE0)*WK_QY1Avg(IE0)
-  1588:                &          -IFNLFA*GOAreaIE4*(1 - IFNL_HDP)*(
-  1589:                &               WK_E1N1(IE0)*WK_E1N1(IE0)*WK_FDX1(IE0) +WK_E1N2(IE0)*WK_E1N2(IE0)*WK_FDX2(IE0) + WK_E1N3(IE0)*WK_E1N3(IE0)*WK_FDX3(IE0))
-  1590:                &          -WK_GHAvgOAreaIE2(IE0)*((WK_Pr1N1(IE0)-WK_TiPN1(IE0))*WK_FDX1(IE0)
-  1591:                &                     +(WK_Pr1N2(IE0)-WK_TiPN2(IE0))*WK_FDX2(IE0)+(WK_Pr1N3(IE0)-WK_TiPN3(IE0))*WK_FDX3(IE0))
-  1592:                &          +WK_WSXAvg(IE0)-WK_BSXAvg(IE0)+WK_MX(IE0)-WK_DispXAvg(IE0)-WK_BCXAvg(IE0)+Tau0QXAvg
-  1593:           C--- begin: DW, absorbing layer
-  1594:                &          - SigmaQxAvg*sponge_dis_mthd
-  1595:                &          + AvgSigmaHAbsU*sponge_dis_mthd
-  1596:           C--- end DW
-  1597:           
-  1598:           
-  1599:                    Tau0QYAvg=(WK_T0N1(IE0)*WK_QY1N1(IE0)+WK_T0N2(IE0)*WK_QY1N2(IE0)+WK_T0N3(IE0)*WK_QY1N3(IE0))/3.d0
-  1600:                    SigmaQyAvg = (WK_SgN1_mny(IE0)*WK_QY1N1(IE0) +
-  1601:                &         WK_SgN2_mny(IE0)*WK_QY1N2(IE0) + WK_SgN3_mny(IE0)*WK_QY1N3(IE0))/3.d0 ;
-  1602:                    AvgSigmaHAbsV = (WK_SgN1_mny(IE0)*WK_H1N1(IE0)*WK_V1AN1(IE0) +
-  1603:                &        WK_SgN2_mny(IE0)*WK_H1N2(IE0)*WK_V1AN2(IE0) + WK_SgN3_mny(IE0)*WK_H1N3(IE0)*WK_V1AN3(IE0))/3.D0 ;
-  1604:           
-  1605:                    JYAvg =-WK_CorifAvg(IE0)*WK_QX1Avg(IE0)
-  1606:                &          -IFNLFA*GOAreaIE4*(1 - IFNL_HDP)*(
-  1607:                &                WK_E1N1(IE0)*WK_E1N1(IE0)*WK_FDY1(IE0)+WK_E1N2(IE0)*WK_E1N2(IE0)*WK_FDY2(IE0)+WK_E1N3(IE0)*WK_E1N3(IE0)*WK_FDY3(IE0))
-  1608:                &          -WK_GHAvgOAreaIE2(IE0)*((WK_Pr1N1(IE0)-WK_TiPN1(IE0))*WK_FDY1(IE0)
-  1609:                &                    +(WK_Pr1N2(IE0)-WK_TiPN2(IE0))*WK_FDY2(IE0)+(WK_Pr1N3(IE0)-WK_TiPN3(IE0))*WK_FDY3(IE0))
-  1610:                &          +WK_WSYAvg(IE0)-WK_BSYAvg(IE0)+WK_MY(IE0)-WK_DispYAvg(IE0)-WK_BCYAvg(IE0)+Tau0QYAvg
-  1611:           C--- begin: DW, absorbing layer
-  1612:                &          -SigmaQYAvg*sponge_dis_mthd
-  1613:                &          +AvgSigmaHAbsV*sponge_dis_mthd
-  1614:           C--- end DW
-  1615:           
-  1616:           C...     Complete the JX, JY terms depending on the advection formulation
-  1617:                    IF(CGWCE_Advec_NC) THEN        !nonconservative advection
-  1618:                      JXAvg = JXAvg - WK_IFNLCT(IE0)*(
-  1619:                &              WK_QX1Avg(IE0)*(WK_U1N1(IE0)*WK_FDX1(IE0)+WK_U1N2(IE0)*WK_FDX2(IE0)+WK_U1N3(IE0)*WK_FDX3(IE0))
-  1620:                &             +WK_QY1Avg(IE0)*(WK_U1N1(IE0)*WK_FDY1(IE0)+WK_U1N2(IE0)*WK_FDY2(IE0)+WK_U1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
-  1621:                &             +WK_IFNLCAT(IE0)*WK_U1Avg(IE0)*WK_ESAvg(IE0)/DT
-  1622:                      JYAvg = JYAvg - WK_IFNLCT(IE0)*(
-  1623:                &              WK_QX1Avg(IE0)*(WK_V1N1(IE0)*WK_FDX1(IE0)+WK_V1N2(IE0)*WK_FDX2(IE0)+WK_V1N3(IE0)*WK_FDX3(IE0))
-  1624:                &             +WK_QY1Avg(IE0)*(WK_V1N1(IE0)*WK_FDY1(IE0)+WK_V1N2(IE0)*WK_FDY2(IE0)+WK_V1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
-  1625:                &             +WK_IFNLCAT(IE0)*WK_V1Avg(IE0)*WK_ESAvg(IE0)/DT
-  1626:                    ENDIF
-  1627:                    IF(CGWCE_Advec_C1) THEN        !conservative v1 advection
-  1628:                      JXAvg = JXAvg - WK_IFNLCT(IE0)*(
-  1629:                &              (WK_U1N1(IE0)*WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_U1N2(IE0)*WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_U1N3(IE0)*WK_QX1N3(IE0)*WK_FDX3(IE0))
-  1630:                &             +(WK_U1N1(IE0)*WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_U1N2(IE0)*WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_U1N3(IE0)*WK_QY1N3(IE0)*WK_FDY3(IE0)))
-  1631:                &             *WK_AreaIE2(IE0)
-  1632:                      JYAvg = JYAvg - WK_IFNLCT(IE0)*(
-  1633:                &              (WK_V1N1(IE0)*WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_V1N2(IE0)*WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_V1N3(IE0)*WK_QX1N3(IE0)*WK_FDX3(IE0))
-  1634:                &             +(WK_V1N1(IE0)*WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_V1N2(IE0)*WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_V1N3(IE0)*WK_QY1N3(IE0)*WK_FDY3(IE0)))
-  1635:                &             *WK_AreaIE2(IE0)
-  1636:                    ENDIF
-  1637:                    IF(CGWCE_Advec_C2) THEN        !conservative v2 advection
-  1638:                      JXAvg = JXAvg - WK_IFNLCT(IE0)*(
-  1639:                &              WK_QX1Avg(IE0)*(WK_U1N1(IE0)*WK_FDX1(IE0)+WK_U1N2(IE0)*WK_FDX2(IE0)+WK_U1N3(IE0)*WK_FDX3(IE0))
-  1640:                &             +WK_QY1Avg(IE0)*(WK_U1N1(IE0)*WK_FDY1(IE0)+WK_U1N2(IE0)*WK_FDY2(IE0)+WK_U1N3(IE0)*WK_FDY3(IE0))
-  1641:                &             +WK_U1Avg(IE0)*(WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_QX1N3(IE0)*WK_FDX3(IE0))
-  1642:                &             +WK_U1Avg(IE0)*(WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_QY1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
-  1643:                      JYAvg = JYAvg - WK_IFNLCT(IE0)*(
-  1644:                &              WK_QX1Avg(IE0)*(WK_V1N1(IE0)*WK_FDX1(IE0)+WK_V1N2(IE0)*WK_FDX2(IE0)+WK_V1N3(IE0)*WK_FDX3(IE0))
-  1645:                &             +WK_QY1Avg(IE0)*(WK_V1N1(IE0)*WK_FDY1(IE0)+WK_V1N2(IE0)*WK_FDY2(IE0)+WK_V1N3(IE0)*WK_FDY3(IE0))
-  1646:                &             +WK_V1Avg(IE0)*(WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_QX1N3(IE0)*WK_FDX3(IE0))
-  1647:                &             +WK_V1Avg(IE0)*(WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_QY1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
-  1648:                    ENDIF
-  1649:           
-  1650:           C...... BEG: DW, DEC 2019
-  1651:           C...     Needs multiplying by cos(lat) in case of the correction
-  1652:           C        Node by node
-  1653:                    SPM1 = SFCT(NM1) ;
-  1654:                    SPM2 = SFCT(NM2) ;
-  1655:                    SPM3 = SFCT(NM3) ;
-  1656:           C...... END DW
-  1657:           
-  1658:           C...     Assemble forcing for node NM1 (local index j=1)
-  1659:           
-  1660:                    Temp_LV_A1=
-  1661:           
-  1662:           C...     Transient and Tau0 terms from LHS
-  1663:                &         (OnDiag*WK_ESN1(IE0)*SPM1 + OffDiag*(WK_ESN2(IE0)*SPM2+WK_ESN3(IE0)*SPM3))*MsFacR
-  1664:           
-  1665:           C...     Free surface terms from LHS (time levels s-1 & s)
-  1666:                &        - WK_GDPAvgOAreaIE4_S0(IE0)*( C00*( WK_SFCXADJ(IE0)*WK_FDX1(IE0)*WK_E0XGrad2A(IE0)+
-  1667:                &                                    WK_SFCYADJ(IE0)*WK_FDY1(IE0)*WK_E0YGrad2A(IE0) ) )
-  1668:                &        - WK_GDPAvgOAreaIE4(IE0)*(A00pB00*( WK_SFCXADJ(IE0)*WK_FDX1(IE0)*WK_E1XGrad2A(IE0)+
-  1669:                &                                    WK_SFCYADJ(IE0)*WK_FDY1(IE0)*WK_E1YGrad2A(IE0) ) )
-  1670:           
-  1671:           C...     Terms from momentum eqs.
-  1672:                &        +(WK_SFCXADJ(IE0)*JXAvg*WK_FDX1(IE0) + WK_SFCYADJ(IE0)*JYAvg*WK_FDY1(IE0))*0.5d0
-  1673:           
-  1674:           C...     Spatially varying Tau0 terms
-  1675:                &        +Tau0SpaVar
-  1676:           C
-  1677:           C..... DW: begin
-  1678:                &        +(OnDiag*WK_E0N1(IE0) + OffDiag*(WK_E0N2(IE0)+WK_E0N3(IE0)))*MsFacR_S
-  1679:                &        +(onDiag*WK_ESAN1(IE0) + OffDiag*(WK_ESAN2(IE0)+WK_ESAN3(IE0)))*MsFacRS_T
-  1680:                &        +(onDiag*WK_ABC00_EAN1(IE0) +
-  1681:                &                OffDiag*(WK_ABC00_EAN2(IE0) + WK_ABC00_EAN3(IE0)))*MsFacRS_ABC00
-  1682:           C..... END DW
-  1683:           C
-  1684:           
-  1685:           C...     Assemble forcing for node NM2 (local index j=2)
-  1686:                    Temp_LV_A2=
-  1687:           
-  1688:           C...     Transient and Tau0 terms from LHS
-  1689:                &         (OnDiag*WK_ESN2(IE0)*SPM2 + OffDiag*(WK_ESN1(IE0)*SPM1+WK_ESN3(IE0)*SPM3))*MsFacR
-  1690:           
-  1691:           C...     Free surface terms from LHS (time levels s-1 & s)
-  1692:                &        - WK_GDPAvgOAreaIE4_S0(IE0)*( C00*( WK_SFCXADJ(IE0)*WK_FDX2(IE0)*WK_E0XGrad2A(IE0) +
-  1693:                &                                    WK_SFCYADJ(IE0)*WK_FDY2(IE0)*WK_E0YGrad2A(IE0) ) )
-  1694:                &        - WK_GDPAvgOAreaIE4(IE0)*(A00pB00*( WK_SFCXADJ(IE0)*WK_FDX2(IE0)*WK_E1XGrad2A(IE0) +
-  1695:                &                                    WK_SFCYADJ(IE0)*WK_FDY2(IE0)*WK_E1YGrad2A(IE0) ) )
-  1696:           
-  1697:           C...     Terms from momentum eqs.
-  1698:                &        +(WK_SFCXADJ(IE0)*JXAvg*WK_FDX2(IE0) + WK_SFCYADJ(IE0)*JYAvg*WK_FDY2(IE0))*0.5d0
-  1699:           
-  1700:           C...     Spatially varying Tau0 terms
-  1701:                &        +Tau0SpaVar
-  1702:           C
-  1703:           C..... DW: begin
-  1704:                &        +(OnDiag*WK_E0N2(IE0) + OffDiag*(WK_E0N1(IE0)+WK_E0N3(IE0)))*MsFacR_S
-  1705:                &        +(onDiag*WK_ESAN2(IE0) + OffDiag*(WK_ESAN1(IE0)+WK_ESAN3(IE0)))*MsFacRS_T
-  1706:                &        +(onDiag*WK_ABC00_EAN2(IE0) +
-  1707:                &                 OffDiag*(WK_ABC00_EAN1(IE0) + WK_ABC00_EAN3(IE0)))*MsFacRS_ABC00
-  1708:           C..... END DW
-  1709:           C
-  1710:           
-  1711:           
-  1712:           C...     Assemble forcing for node NM3 (local index j=3)
-  1713:           
-  1714:                    Temp_LV_A3=
-  1715:           
-  1716:           C...     Transient and Tau0 terms from LHS
-  1717:                &         (OnDiag*WK_ESN3(IE0)*SPM3 + OffDiag*(WK_ESN1(IE0)*SPM1+WK_ESN2(IE0)*SPM2))*MsFacR
-  1718:           
-  1719:           C...     Free surface terms from LHS (time levels s-1 & s)
-  1720:                &        - WK_GDPAvgOAreaIE4_S0(IE0)*(  C00*( WK_SFCXADJ(IE0)*WK_FDX3(IE0)*WK_E0XGrad2A(IE0) +
-  1721:                &                                     WK_SFCYADJ(IE0)*WK_FDY3(IE0)*WK_E0YGrad2A(IE0) ) )
-  1722:                &        - WK_GDPAvgOAreaIE4(IE0)*( A00pB00*( WK_SFCXADJ(IE0)*WK_FDX3(IE0)*WK_E1XGrad2A(IE0) +
-  1723:                &                                     WK_SFCYADJ(IE0)*WK_FDY3(IE0)*WK_E1YGrad2A(IE0) ) )
-  1724:           
-  1725:           C...     Terms from momentum eqs.
-  1726:                &        +(WK_SFCXADJ(IE0)*JXAvg*WK_FDX3(IE0) + WK_SFCYADJ(IE0)*JYAvg*WK_FDY3(IE0))*0.5d0
-  1727:           
-  1728:           C...     Spatially varying Tau0 terms
-  1729:                &        +Tau0SpaVar
-  1730:           C
-  1731:           C..... DW: begin, absorbing layer
-  1732:                &        +(OnDiag*WK_E0N3(IE0) + OffDiag*(WK_E0N1(IE0)+WK_E0N2(IE0)))*MsFacR_S
-  1733:                &        +(OnDiag*WK_ESAN3(IE0) + OffDiag*(WK_ESAN1(IE0)+WK_ESAN2(IE0)))*MsFacRS_T
-  1734:                &        +(OnDiag*WK_ABC00_EAN3(IE0) +
-  1735:                &               OffDiag*(WK_ABC00_EAN1(IE0) + WK_ABC00_EAN2(IE0)))*MsFacRS_ABC00
-  1736:           C..... END DW
-  1737:           C
-  1738:           
-  1739:           C...     Put these partial products into further elemental storage for a vector computer
-  1740:           C...     These will be put into nodal storage outside of the elemental loop
-  1741:           
-  1742:                    Temp_LV_A(IE,1)=Temp_LV_A1*WK_NCELE(IE0)
-  1743:                    Temp_LV_A(IE,2)=Temp_LV_A2*WK_NCELE(IE0)
-  1744:                    Temp_LV_A(IE,3)=Temp_LV_A3*WK_NCELE(IE0)
-  1745:           
-  1746:                  end do
-  1747:                 END DO                  !End of elemental loop
+  1140: +------>        DO IE2=1,NE, VLEN
+  1141: |                ista = IE2
+  1142: |                iend = min(IE2+VLEN-1, NE)
+  1143: |         
+  1144: |V----->         do IE=ista, iend
+  1145: ||                 IE0 = IE-IE2+1
+  1146: ||        
+  1147: ||        C...     Set nodal values for each element
+  1148: ||        
+  1149: ||        Corbitt 120322: Localized Advection
+  1150: ||      I          IF (LoadAdvectionState) CALL ADVECTLOCAL(IE)
+  1151: ||                 WK_IFNLCT(IE0) = IFNLCT
+  1152: ||                 WK_IFNLCAT(IE0) = IFNLCAT
+  1153: |V-----          end do
+  1154: |         
+  1155: |V----->         do IE=ista, iend
+  1156: ||                 IE0 = IE-IE2+1
+  1157: ||                 NM1=NM(IE,1)
+  1158: ||                 NM2=NM(IE,2)
+  1159: ||                 NM3=NM(IE,3)
+  1160: ||        
+  1161: ||      G          NC1=NODECODE(NM1)
+  1162: ||      G          NC2=NODECODE(NM2)
+  1163: ||      G          NC3=NODECODE(NM3)
+  1164: ||                 WK_NCELE(IE0)=NC1*NC2*NC3*NOFF(IE)
+  1165: ||      G          WK_E0N1(IE0)=ETA1(NM1)
+  1166: ||      G          WK_E0N2(IE0)=ETA1(NM2)
+  1167: ||      G          WK_E0N3(IE0)=ETA1(NM3)
+  1168: ||      G          WK_E1N1(IE0)=ETA2(NM1)
+  1169: ||      G          WK_E1N2(IE0)=ETA2(NM2)
+  1170: ||      G          WK_E1N3(IE0)=ETA2(NM3)
+  1171: ||      G          WK_ESN1(IE0)=ETAS(NM1)
+  1172: ||      G          WK_ESN2(IE0)=ETAS(NM2)
+  1173: ||      G          WK_ESN3(IE0)=ETAS(NM3)
+  1174: ||      G          WK_U1N1(IE0)=UU1(NM1)
+  1175: ||      G          WK_U1N2(IE0)=UU1(NM2)
+  1176: ||      G          WK_U1N3(IE0)=UU1(NM3)
+  1177: ||      G          WK_V1N1(IE0)=VV1(NM1)
+  1178: ||      G          WK_V1N2(IE0)=VV1(NM2)
+  1179: ||      G          WK_V1N3(IE0)=VV1(NM3)
+  1180: ||      G          WK_QX1N1(IE0)=QX1(NM1)
+  1181: ||      G          WK_QX1N2(IE0)=QX1(NM2)
+  1182: ||      G          WK_QX1N3(IE0)=QX1(NM3)
+  1183: ||      G          WK_QY1N1(IE0)=QY1(NM1)
+  1184: ||      G          WK_QY1N2(IE0)=QY1(NM2)
+  1185: ||      G          WK_QY1N3(IE0)=QY1(NM3)
+  1186: ||      G          WK_H1N1(IE0)=DP(NM1)+IFNLFA*WK_E1N1(IE0)
+  1187: ||      G          WK_H1N2(IE0)=DP(NM2)+IFNLFA*WK_E1N2(IE0)
+  1188: ||      G          WK_H1N3(IE0)=DP(NM3)+IFNLFA*WK_E1N3(IE0)
+  1189: ||      G          WK_EVMN1(IE0)=EVM(NM1)
+  1190: ||      G          WK_EVMN2(IE0)=EVM(NM2)
+  1191: ||      G          WK_EVMN3(IE0)=EVM(NM3)
+  1192: ||      G          WK_T0N1(IE0)=Tau0Var(NM1)
+  1193: ||      G          WK_T0N2(IE0)=Tau0Var(NM2)
+  1194: ||      G          WK_T0N3(IE0)=Tau0Var(NM3)
+  1195: |V-----          end do
+  1196: |         C
+  1197: |         C.... DW: begin ! absorbing layer
+  1198: |         C
+  1199: |V----->         do IE=ista, iend
+  1200: ||                 IE0 = IE-IE2+1
+  1201: ||                 NM1=NM(IE,1)
+  1202: ||                 NM2=NM(IE,2)
+  1203: ||                 NM3=NM(IE,3)
+  1204: ||        
+  1205: ||                 WK_ESAN1(IE0) = 0.D0
+  1206: ||                 WK_ESAN2(IE0) = 0.D0
+  1207: ||                 WK_ESAN3(IE0) = 0.D0 ;
+  1208: ||        
+  1209: ||                 WK_ABC00_EAN1(IE0) = 0.D0
+  1210: ||                 WK_ABC00_EAN2(IE0) = 0.D0
+  1211: ||                 WK_ABC00_EAN3(IE0) = 0.D0
+  1212: ||        
+  1213: ||                 WK_U1AN1(IE0) = 0.D0
+  1214: ||                 WK_U1AN2(IE0) = 0.D0
+  1215: ||                 WK_U1AN3(IE0) = 0.D0
+  1216: ||                 WK_V1AN1(IE0) = 0.D0
+  1217: ||                 WK_V1AN2(IE0) = 0.D0
+  1218: ||                 WK_V1AN3(IE0) = 0.D0
+  1219: ||        
+  1220: ||                 WK_SgN1_eta(IE0) = 0.D0
+  1221: ||                 WK_SgN2_eta(IE0) = 0.D0
+  1222: ||                 WK_SgN3_eta(IE0) = 0.D0
+  1223: ||                 WK_SgN1_mnx(IE0) = 0.D0
+  1224: ||                 WK_SgN2_mnx(IE0) = 0.D0
+  1225: ||                 WK_SgN3_mnx(IE0) = 0.D0
+  1226: ||                 WK_SgN1_mny(IE0) = 0.D0
+  1227: ||                 WK_SgN2_mny(IE0) = 0.D0
+  1228: ||                 WK_SgN3_mny(IE0) = 0.D0 ;
+  1229: ||        
+  1230: ||                 IF ( GWCE_SPONGE ) THEN
+  1231: ||      G             WK_SgN1_eta(IE0) = absorblayer_sigma_eta(NM1,1) ;
+  1232: ||      G             WK_SgN2_eta(IE0) = absorblayer_sigma_eta(NM2,1) ;
+  1233: ||      G             WK_SgN3_eta(IE0) = absorblayer_sigma_eta(NM3,1) ;
+  1234: ||        
+  1235: ||      G             WK_SgN1_mnx(IE0) = absorblayer_sigma_mnx(NM1,1) ;
+  1236: ||      G             WK_SgN2_mnx(IE0) = absorblayer_sigma_mnx(NM2,1) ;
+  1237: ||      G             WK_SgN3_mnx(IE0) = absorblayer_sigma_mnx(NM3,1) ;
+  1238: ||        
+  1239: ||      G             WK_SgN1_mny(IE0) = absorblayer_sigma_mny(NM1,1) ;
+  1240: ||      G             WK_SgN2_mny(IE0) = absorblayer_sigma_mny(NM2,1) ;
+  1241: ||      G             WK_SgN3_mny(IE0) = absorblayer_sigma_mny(NM3,1) ;
+  1242: ||        
+  1243: ||      G             E0AN1 = eta0_abslayer(NM1) ;
+  1244: ||      G             E0AN2 = eta0_abslayer(NM2) ;
+  1245: ||      G             E0AN3 = eta0_abslayer(NM3) ;
+  1246: ||        
+  1247: ||      G             E1AN1 = eta1_abslayer(NM1) ;
+  1248: ||      G             E1AN2 = eta1_abslayer(NM2) ;
+  1249: ||      G             E1AN3 = eta1_abslayer(NM3) ;
+  1250: ||        
+  1251: ||      G             E2AN1 = eta2_abslayer(NM1) ;
+  1252: ||      G             E2AN2 = eta2_abslayer(NM2) ;
+  1253: ||      G             E2AN3 = eta2_abslayer(NM3) ;
+  1254: ||        
+  1255: ||                    WK_ESAN1(IE0) = E2AN1 - E0AN1 ;
+  1256: ||                    WK_ESAN2(IE0) = E2AN2 - E0AN2 ;
+  1257: ||                    WK_ESAN3(IE0) = E2AN3 - E0AN3 ;
+  1258: ||        
+  1259: ||      F             WK_ABC00_EAN1(IE0) = A00*E2AN1 + B00*E1AN1 + C00*E0AN1 ;
+  1260: ||      F             WK_ABC00_EAN2(IE0) = A00*E2AN2 + B00*E1AN2 + C00*E0AN2 ;
+  1261: ||      F             WK_ABC00_EAN3(IE0) = A00*E2AN3 + B00*E1AN3 + C00*E0AN3 ;
+  1262: ||        
+  1263: ||      G             WK_U1AN1(IE0) = uu1_abslayer(NM1) ;
+  1264: ||      G             WK_U1AN2(IE0) = uu1_abslayer(NM2) ;
+  1265: ||      G             WK_U1AN3(IE0) = uu1_abslayer(NM3) ;
+  1266: ||        
+  1267: ||      G             WK_V1AN1(IE0) = vv1_abslayer(NM1) ;
+  1268: ||      G             WK_V1AN2(IE0) = vv1_abslayer(NM2) ;
+  1269: ||      G             WK_V1AN3(IE0) = vv1_abslayer(NM3) ;
+  1270: ||                 END IF
+  1271: |V-----          end do
+  1272: |         C
+  1273: |V----->         do IE=ista, iend
+  1274: ||                 IE0 = IE-IE2+1
+  1275: ||                 NM1=NM(IE,1)
+  1276: ||                 NM2=NM(IE,2)
+  1277: ||                 NM3=NM(IE,3)
+  1278: ||        
+  1279: ||                 WK_Pr1N1(IE0)=0.0d0
+  1280: ||                 WK_Pr1N2(IE0)=0.0d0
+  1281: ||                 WK_Pr1N3(IE0)=0.0d0
+  1282: ||        
+  1283: ||                 IF ((NWS.NE.0).OR.(NRS.NE.0)) THEN     !wind or radiation stress
+  1284: ||      G             WK_Pr1N1(IE0)=PR1(NM1)
+  1285: ||      G             WK_Pr1N2(IE0)=PR1(NM2)
+  1286: ||      G             WK_Pr1N3(IE0)=PR1(NM3)
+  1287: ||        
+  1288: ||                    !c Pressure c!
+  1289: ||                    IF ( NO_MET_IN_SPONGE ) THEN
+  1290: ||      G                IF ( absorblayer_sigma_eta(NM1,1) > 1.0e-9 ) THEN
+  1291: ||                          WK_Pr1N1(IE0) = PRBCKGRND_MH2O
+  1292: ||                       END IF
+  1293: ||      G                IF ( absorblayer_sigma_eta(NM2,1) > 1.0e-9 ) THEN
+  1294: ||                          WK_Pr1N2(IE0) = PRBCKGRND_MH2O
+  1295: ||                       END IF
+  1296: ||      G                IF ( absorblayer_sigma_eta(NM3,1) > 1.0e-9 ) THEN
+  1297: ||                          WK_Pr1N3(IE0) = PRBCKGRND_MH2O
+  1298: ||                       END IF
+  1299: ||                    END IF
+  1300: ||                 ENDIF
+  1301: |V-----          end do
+  1302: |         C ....,... END DW
+  1303: |         C
+  1304: |         !!         ! jgf: Adding support for water level offset as a pseudo barometric
+  1305: |         !!         ! pressure
+  1306: |         !!         if (usingDynamicWaterLevelCorrection.eqv..true.) then
+  1307: |         !!            Off1N1 = dynamicWaterLevelCorrection1(NM1)
+  1308: |         !!            Off1N2 = dynamicWaterLevelCorrection1(NM2)
+  1309: |         !!            Off1N3 = dynamicWaterLevelCorrection1(NM3)
+  1310: |         !!         endif
+  1311: |         
+  1312: |V----->         do IE=ista, iend
+  1313: ||                 IE0 = IE-IE2+1
+  1314: ||                 NM1=NM(IE,1)
+  1315: ||                 NM2=NM(IE,2)
+  1316: ||                 NM3=NM(IE,3)
+  1317: ||        
+  1318: ||                 WK_TiPN1(IE0)=0.d0
+  1319: ||                 WK_TiPN2(IE0)=0.d0
+  1320: ||                 WK_TiPN3(IE0)=0.d0
+  1321: ||                 IF (CTIP) THEN                        !tidal potential
+  1322: ||      G             WK_TiPN1(IE0)=TiP1(NM1)
+  1323: ||      G             WK_TiPN2(IE0)=TiP1(NM2)
+  1324: ||      G             WK_TiPN3(IE0)=TiP1(NM3)
+  1325: ||                 ENDIF
+  1326: ||        
+  1327: ||                  BSXN1=0.0d0
+  1328: ||                  BSXN2=0.0d0
+  1329: ||                  BSXN3=0.0d0
+  1330: ||                  BSYN1=0.0d0
+  1331: ||                  BSYN2=0.0d0
+  1332: ||                  BSYN3=0.0d0
+  1333: ||                 IF (C2DDI) THEN                       !2D bottom friction
+  1334: ||                    !WJP taking into account the symmetrical friction matrix
+  1335: ||      G             BSXN1 = TKM(1,NM1)*WK_QX1N1(IE0) + TKM(3,NM1)*WK_QY1N1(IE0)
+  1336: ||      G             BSYN1 = TKM(3,NM1)*WK_QX1N1(IE0) + TKM(2,NM1)*WK_QY1N1(IE0)
+  1337: ||      G             BSXN2 = TKM(1,NM2)*WK_QX1N2(IE0) + TKM(3,NM2)*WK_QY1N2(IE0)
+  1338: ||      G             BSYN2 = TKM(3,NM2)*WK_QX1N2(IE0) + TKM(2,NM2)*WK_QY1N2(IE0)
+  1339: ||      G             BSXN3 = TKM(1,NM3)*WK_QX1N3(IE0) + TKM(3,NM3)*WK_QY1N3(IE0)
+  1340: ||      G             BSYN3 = TKM(3,NM3)*WK_QX1N3(IE0) + TKM(2,NM3)*WK_QY1N3(IE0)
+  1341: ||                 ENDIF
+  1342: ||                 IF (C3D) THEN                         !3D bottom friction
+  1343: ||      G             BSXN1=BSX1(NM1)
+  1344: ||      G             BSXN2=BSX1(NM2)
+  1345: ||      G             BSXN3=BSX1(NM3)
+  1346: ||      G             BSYN1=BSY1(NM1)
+  1347: ||      G             BSYN2=BSY1(NM2)
+  1348: ||      G             BSYN3=BSY1(NM3)
+  1349: ||                 ENDIF
+  1350: ||                 WK_BSXAvg(IE0)=(BSXN1+BSXN2+BSXN3)/3.d0
+  1351: ||                 WK_BSYAvg(IE0)=(BSYN1+BSYN2+BSYN3)/3.d0
+  1352: |V-----          end do
+  1353: |         
+  1354: |V----->         do IE=ista, iend
+  1355: ||                 IE0 = IE-IE2+1
+  1356: ||                 NM1=NM(IE,1)
+  1357: ||                 NM2=NM(IE,2)
+  1358: ||                 NM3=NM(IE,3)
+  1359: ||        
+  1360: ||                 WK_AreaIE2(IE0)=1.0d0/Areas(IE)               !2A
+  1361: ||                 WK_AreaIE1(IE0)=Areas(IE)/2.d0             ! A
+  1362: ||                 WK_AreaIE4(IE0)=1.0d0/(2.d0*Areas(IE))            !4A
+  1363: ||                 SFacAvg= SFacEle(IE)
+  1364: ||        C..... DW
+  1365: ||                 ! derivative: accomodate corrected spherical coordinate
+  1366: ||                 SFmxAvg=SFMXEle(IE)  ;
+  1367: ||                 SFmyAvg=SFMYEle(IE) ;
+  1368: ||      F          sfdxfac=(1 - IFSFM)*SFacAvg + IFSFM*SFmxAvg ;
+  1369: ||      F          sfdyfac=(1 - IFSFM)*1.0D0  + IFSFM*SFmyAvg ;
+  1370: ||        
+  1371: ||                 ! continuity
+  1372: ||                 SFCXAvg=SFCXEle(IE) ;
+  1373: ||                 SFCYAvg=SFCYEle(IE) ;
+  1374: ||                 YCFACAvg=YCSFACEle(IE) ;
+  1375: ||                 WK_TANPHIAvg(IE0)=TANPHIEle(IE) ;
+  1376: ||                 WK_SFCXADJ(IE0) = SFCXAvg/sfdxfac ;
+  1377: ||                 WK_SFCYADJ(IE0) = YCFACAvg*SFCYAvg/sfdyfac ;
+  1378: ||        
+  1379: ||                 WK_FDX1(IE0) = FDXE(1,IE)*sfdxfac ; !c dx/dlambda*b1*2A
+  1380: ||                 WK_FDX2(IE0) = FDXE(2,IE)*sfdxfac ; !c dx/dlambda*b2*2A
+  1381: ||                 WK_FDX3(IE0) = FDXE(3,IE)*sfdxfac ; !c dx/dlambda*b3*2A
+  1382: ||                 WK_FDY1(IE0) = FDYE(1,IE)*sfdyfac ; !c dy/dphi*a1*2A
+  1383: ||                 WK_FDY2(IE0) = FDYE(2,IE)*sfdyfac ; !c dy/dphi*a1*2A
+  1384: ||                 WK_FDY3(IE0) = FDYE(3,IE)*sfdyfac ; !c dy/dphi*a1*2A
+  1385: |V-----          end do
+  1386: |         
+  1387: |         C..... DW
+  1388: |         
+  1389: |         C...     Compute part of several spatial gradients for use below
+  1390: |V----->         do IE=ista, iend
+  1391: ||                 IE0 = IE-IE2+1
+  1392: ||                 NM1=NM(IE,1)
+  1393: ||                 NM2=NM(IE,2)
+  1394: ||                 NM3=NM(IE,3)
+  1395: ||        
+  1396: ||                 WK_E0XGrad2A(IE0) = 0.0d0
+  1397: ||                 WK_E0YGrad2A(IE0) = 0.0d0
+  1398: ||                 IF (ILump.eq.0) THEN
+  1399: ||      F             WK_E0XGrad2A(IE0)=WK_E0N1(IE0)*WK_FDX1(IE0)+WK_E0N2(IE0)*WK_FDX2(IE0)+WK_E0N3(IE0)*WK_FDX3(IE0)        !2*Area*deta0/dx
+  1400: ||      F             WK_E0YGrad2A(IE0)=WK_E0N1(IE0)*WK_FDY1(IE0)+WK_E0N2(IE0)*WK_FDY2(IE0)+WK_E0N3(IE0)*WK_FDY3(IE0)        !2*Area*deta0/dy
+  1401: ||                 ENDIF
+  1402: ||      F          WK_E1XGrad2A(IE0)=WK_E1N1(IE0)*WK_FDX1(IE0)+WK_E1N2(IE0)*WK_FDX2(IE0)+WK_E1N3(IE0)*WK_FDX3(IE0)        !2*Area*deta1/dx
+  1403: ||      F          WK_E1YGrad2A(IE0)=WK_E1N1(IE0)*WK_FDY1(IE0)+WK_E1N2(IE0)*WK_FDY2(IE0)+WK_E1N3(IE0)*WK_FDY3(IE0)        !2*Area*deta1/dy
+  1404: ||      F          WK_Tau0XGrad2A(IE0)=WK_T0N1(IE0)*WK_FDX1(IE0)+WK_T0N2(IE0)*WK_FDX2(IE0)+WK_T0N3(IE0)*WK_FDX3(IE0)      !2*Area*dTau0/dx
+  1405: ||      F          WK_Tau0YGrad2A(IE0)=WK_T0N1(IE0)*WK_FDY1(IE0)+WK_T0N2(IE0)*WK_FDY2(IE0)+WK_T0N3(IE0)*WK_FDY3(IE0)      !2*Area*dTau0/dy
+  1406: ||        
+  1407: ||        C...... BEG: DW, Nov 2019
+  1408: ||                 WK_Tau0XGrad2A(IE0)=WK_SFCXADJ(IE0)*WK_Tau0XGrad2A(IE0)      !2*Area*dTau0/dx
+  1409: ||                 WK_Tau0YGrad2A(IE0)=WK_SFCYADJ(IE0)*WK_Tau0YGrad2A(IE0)      !2*Area*dTau0/dy
+  1410: ||        C...... END DW
+  1411: ||        
+  1412: ||        C...     Compute the Kolar & Gray lateral stress term extended for spatially varying EVM
+  1413: ||        C...     ********     Need to think about this more: DW ********
+  1414: ||        C...     ********     Kolar & Gray does not seem to be suitable for
+  1415: ||        C...     ********     the spherical coordinates
+  1416: ||                 WK_MX(IE0)=0.0d0
+  1417: ||                 WK_MY(IE0)=0.0d0
+  1418: ||                 IF(CGWCE_LS_KGQ) THEN
+  1419: ||      F             EVMXGrad=(WK_EVMN1(IE0)*WK_FDX1(IE0)+WK_EVMN2(IE0)*WK_FDX2(IE0)+WK_EVMN3(IE0)*WK_FDX3(IE0))*WK_AreaIE2(IE0)
+  1420: ||      F             EVMYGrad=(WK_EVMN1(IE0)*WK_FDY1(IE0)+WK_EVMN2(IE0)*WK_FDY2(IE0)+WK_EVMN3(IE0)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+  1421: ||                    EVMAvgODT=((WK_EVMN1(IE0)+WK_EVMN2(IE0)+WK_EVMN3(IE0))/3.d0)/DT
+  1422: ||      F             WK_MX(IE0)=(EVMXGrad*(WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_QX1N3(IE0)*WK_FDX3(IE0))
+  1423: ||             &         +EVMYGrad*(WK_QY1N1(IE0)*WK_FDX1(IE0)+WK_QY1N2(IE0)*WK_FDX2(IE0)+WK_QY1N3(IE0)*WK_FDX3(IE0))
+  1424: ||             &         -EVMAvgODT*(WK_ESN1(IE0)*WK_FDX1(IE0)+WK_ESN2(IE0)*WK_FDX2(IE0)+WK_ESN3(IE0)*WK_FDX3(IE0)))*WK_AreaIE2(IE0)
+  1425: ||      F             WK_MY(IE0)=(EVMXGrad*(WK_QX1N1(IE0)*WK_FDY1(IE0)+WK_QX1N2(IE0)*WK_FDY2(IE0)+WK_QX1N3(IE0)*WK_FDY3(IE0))
+  1426: ||             &         +EVMYGrad*(WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_QY1N3(IE0)*WK_FDY3(IE0))
+  1427: ||             &         -EVMAvgODT*(WK_ESN1(IE0)*WK_FDY1(IE0)+WK_ESN2(IE0)*WK_FDY2(IE0)+WK_ESN3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+  1428: ||                 ENDIF
+  1429: ||        
+  1430: ||        C...     Compute the remainder of the 2 Part lateral stress terms
+  1431: ||        
+  1432: ||                 IF((CGWCE_LS_2PartQ).OR.(CGWCE_LS_2PartV) .OR.
+  1433: ||             &        (CGWCE_LS_2PartSQ).OR.(CGWCE_LS_2PartSV)) THEN
+  1434: ||        C           X-direction
+  1435: ||      G             LSXYEle = (LSXY(NM1)+LSXY(NM2)+LSXY(NM3))/3.d0
+  1436: ||      G             LSYXEle = (LSYX(NM1)+LSYX(NM2)+LSYX(NM3))/3.d0
+  1437: ||      G             WK_MX(IE0)=(LSXX(NM1)*WK_FDX1(IE0)+LSXX(NM2)*WK_FDX2(IE0)+LSXX(NM3)*WK_FDX3(IE0)
+  1438: ||             &         +LSXY(NM1)*WK_FDY1(IE0)+LSXY(NM2)*WK_FDY2(IE0)+LSXY(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+  1439: ||             &         -WK_TANPHIAvg(IE0)*(LSXYEle + LSYXEle)
+  1440: ||        C           Y-direction
+  1441: ||                    LSXXEle = (LSXX(NM1)+LSXX(NM2)+LSXX(NM3))/3.d0
+  1442: ||      G             LSYYEle = (LSYY(NM1)+LSYY(NM2)+LSYY(NM3))/3.d0
+  1443: ||      F             WK_MY(IE0)=(LSYX(NM1)*WK_FDX1(IE0)+LSYX(NM2)*WK_FDX2(IE0)+LSYX(NM3)*WK_FDX3(IE0)
+  1444: ||             &         +LSYY(NM1)*WK_FDY1(IE0)+LSYY(NM2)*WK_FDY2(IE0)+LSYY(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+  1445: ||             &         +WK_TANPHIAvg(IE0)*(LSXXEle - LSYYEle)
+  1446: ||                 ENDIF
+  1447: |V-----          end do
+  1448: |         
+  1449: |         C...     Compute the spatial gradients of the velocity dispersion terms if 3D
+  1450: |V----->         do IE=ista, iend
+  1451: ||                 IE0 = IE-IE2+1
+  1452: ||                 NM1=NM(IE,1)
+  1453: ||                 NM2=NM(IE,2)
+  1454: ||                 NM3=NM(IE,3)
+  1455: ||        
+  1456: ||                 WK_DispXAvg(IE0)=0.0d0
+  1457: ||                 WK_DispYAvg(IE0)=0.0d0
+  1458: ||                 IF (C3D) THEN                         !3D bottom friction
+  1459: ||      G             DispX = (DUU1(NM1)*WK_FDX1(IE0)+DUU1(NM2)*WK_FDX2(IE0)+DUU1(NM3)*WK_FDX3(IE0)
+  1460: ||             &          +  DUV1(NM1)*WK_FDY1(IE0)+DUV1(NM2)*WK_FDY2(IE0)+DUV1(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+  1461: ||      G             DispY = (DUV1(NM1)*WK_FDX1(IE0)+DUV1(NM2)*WK_FDX2(IE0)+DUV1(NM3)*WK_FDX3(IE0)
+  1462: ||             &          +  DVV1(NM1)*WK_FDY1(IE0)+DVV1(NM2)*WK_FDY2(IE0)+DVV1(NM3)*WK_FDY3(IE0))*WK_AreaIE2(IE0)
+  1463: ||                    WK_DispXAvg(IE0) = WK_IFNLCT(IE0)*DispX
+  1464: ||                    WK_DispYAvg(IE0) = WK_IFNLCT(IE0)*DispY
+  1465: ||                 ENDIF
+  1466: ||        
+  1467: ||        C...     Compute elemental averages
+  1468: ||      G          WK_CorifAvg(IE0)=(Corif(NM1)+Corif(NM2)+Corif(NM3))/3.d0
+  1469: ||                 WK_Tau0Avg(IE0)=(WK_T0N1(IE0)+WK_T0N2(IE0)+WK_T0N3(IE0))/3.d0
+  1470: ||                 WK_U1Avg(IE0)=(WK_U1N1(IE0)+WK_U1N2(IE0)+WK_U1N3(IE0))/3.d0
+  1471: ||                 WK_V1Avg(IE0)=(WK_V1N1(IE0)+WK_V1N2(IE0)+WK_V1N3(IE0))/3.d0
+  1472: ||                 WK_QX1Avg(IE0)=(WK_QX1N1(IE0)+WK_QX1N2(IE0)+WK_QX1N3(IE0))/3.d0
+  1473: ||                 WK_QY1Avg(IE0)=(WK_QY1N1(IE0)+WK_QY1N2(IE0)+WK_QY1N3(IE0))/3.d0
+  1474: ||                 WK_ESAvg(IE0)=(WK_ESN1(IE0)+WK_ESN2(IE0)+WK_ESN3(IE0))/3.d0
+  1475: ||        
+  1476: ||        C.....   DW, Nov 2019
+  1477: ||      G          DPAvg = (DP(NM1)+DP(NM2)+DP(NM3))/3.d0 + ! BAVG if GWCE_HDP = .FALSE.
+  1478: ||             &        IFNLFA*IFNL_HDP*(WK_E1N1(IE0) + WK_E1N2(IE0) + WK_E1N3(IE0))/3.d0 ; ! H^{s}_{avg} otherwise
+  1479: ||        
+  1480: ||      F          DPAvgS0 = (DP(NM1)+DP(NM2)+DP(NM3))/3.d0 + ! BAVG if GWCE_HDP = .FALSE.
+  1481: ||             &        IFNLFA*IFNL_HDP*(WK_E0N1(IE0) + WK_E0N2(IE0) + WK_E0N3(IE0))/3.d0 ; ! H^{s-1}_{avg} otherwise
+  1482: ||        
+  1483: ||        
+  1484: ||        C.....   WJP adjust the dispersion equation through
+  1485: ||        C        Ali et al. formula
+  1486: ||        
+  1487: ||        #ifdef PCALIDISP
+  1488: ||                 if (CAliDisp) then
+  1489: ||                    Ma2    = G*DPavg/Cs2
+  1490: ||                    Cfac   = (1.0_SZ - 0.25_SZ*Ma2 - Ad*DPavg**Bd)**2
+  1491: ||                    Ma2    = G*DPavg/Cs2
+  1492: ||                    CfacS0 = (1.0_SZ - 0.25_SZ*Ma2 - Ad*DPavgS0**Bd)**2
+  1493: ||                 endif
+  1494: ||               end do
+  1495: ||        #endif PCALIDISP
+  1496: ||        
+  1497: ||                 WK_GDPAvgOAreaIE4(IE0) = G*DPAvg*Cfac*WK_AreaIE4(IE0)
+  1498: ||                 WK_GDPAvgOAreaIE4_S0(IE0) = G*DPAvgS0*CfacS0*WK_AreaIE4(IE0)
+  1499: |V-----          end do
+  1500: |         
+  1501: |         C....  END DW & WJP
+  1502: |V----->         do IE=ista, iend
+  1503: ||                 IE0 = IE-IE2+1
+  1504: ||                 NM1=NM(IE,1)
+  1505: ||                 NM2=NM(IE,2)
+  1506: ||                 NM3=NM(IE,3)
+  1507: ||        
+  1508: ||                 HAvg=(WK_H1N1(IE0)+WK_H1N2(IE0)+WK_H1N3(IE0))/3.d0
+  1509: ||                 GHAvg=G*HAvg
+  1510: ||                 WK_GHAvgOAreaIE2(IE0)=GHAvg*WK_AreaIE2(IE0)
+  1511: ||        C        WJP: Add on the contribution from spherical correction term
+  1512: ||        C        from the momentum equation
+  1513: ||                 ! (tan \phi V_{lambda})/R + f
+  1514: ||      F          WK_CorifAvg(IE0) = WK_CorifAvg(IE0) + WK_IFNLCT(IE0)*WK_TANPHIAvg(IE0)*WK_U1Avg(IE0)
+  1515: ||        C
+  1516: ||        !---------
+  1517: ||                 WK_WSXAvg(IE0)=0.0d0
+  1518: ||                 WK_WSYAvg(IE0)=0.0d0
+  1519: ||                 IF ((NWS.NE.0).OR.(NRS.NE.0)) THEN     !wind or radiation stress
+  1520: ||                    fwsx1 = 1.D0 ; fwsx2 = 1.D0 ; fwsx3 = 1.D0 ;
+  1521: ||                    fwsy1 = 1.D0 ; fwsy2 = 1.D0 ; fwsy3 = 1.D0 ;
+  1522: ||                    IF ( NO_MET_IN_SPONGE ) THEN
+  1523: ||      G                IF ( absorblayer_sigma_mnx(NM1,1) > 1e-9 ) fwsx1 = 0.D0
+  1524: ||      G                IF ( absorblayer_sigma_mnx(NM2,1) > 1e-9 ) fwsx2 = 0.D0
+  1525: ||      G                IF ( absorblayer_sigma_mnx(NM3,1) > 1e-9 ) fwsx3 = 0.D0
+  1526: ||        
+  1527: ||      G                IF ( absorblayer_sigma_mny(NM1,1) > 1e-9 ) fwsy1 = 0.D0
+  1528: ||      G                IF ( absorblayer_sigma_mny(NM2,1) > 1e-9 ) fwsy2 = 0.D0
+  1529: ||      G                IF ( absorblayer_sigma_mny(NM3,1) > 1e-9 ) fwsy3 = 0.D0
+  1530: ||                    END IF
+  1531: ||        
+  1532: ||      G             WK_WSXAvg(IE0)=(fwsx1*WSX1(NM1)+fwsx2*WSX1(NM2)+fwsx3*WSX1(NM3))/3.d0
+  1533: ||      G             WK_WSYAvg(IE0)=(fwsy1*WSY1(NM1)+fwsy2*WSY1(NM2)+fwsy3*WSY1(NM3))/3.d0
+  1534: ||                 ENDIF
+  1535: ||        C------- END DW
+  1536: ||        C
+  1537: ||                 WK_BCXAvg(IE0)=0.0d0
+  1538: ||                 WK_BCYAvg(IE0)=0.0d0
+  1539: ||                 IF (CBaroclinic) THEN
+  1540: ||        #ifndef NOFSBPG
+  1541: ||      G             WK_BCXAvg(IE0) = (WK_H1N1(IE0)*VIDBCPDXOH(NM1)+WK_H1N2(IE0)*VIDBCPDXOH(NM2)
+  1542: ||             &                                    +WK_H1N3(IE0)*VIDBCPDXOH(NM3))/3.d0
+  1543: ||      G             WK_BCYAvg(IE0) = (WK_H1N1(IE0)*VIDBCPDYOH(NM1)+WK_H1N2(IE0)*VIDBCPDYOH(NM2)
+  1544: ||             &                                    +WK_H1N3(IE0)*VIDBCPDYOH(NM3))/3.d0
+  1545: ||        #else
+  1546: ||                    WK_BCXAvg(IE0) = (DP(NM1)*VIDBCPDXOH(NM1) + DP(NM2)*VIDBCPDXOH(NM2)
+  1547: ||             &                + DP(NM3)*VIDBCPDXOH(NM3))/3.d0
+  1548: ||                    WK_BCYAvg(IE0) = (DP(NM1)*VIDBCPDYOH(NM1) + DP(NM2)*VIDBCPDYOH(NM2)
+  1549: ||             &                + DP(NM3)*VIDBCPDYOH(NM3))/3.d0
+  1550: ||        #endif
+  1551: ||                 ENDIF
+  1552: |V-----          end do
+  1553: |         
+  1554: |V----->         do IE=ista, iend
+  1555: ||                 IE0 = IE-IE2+1
+  1556: ||                 NM1=NM(IE,1)
+  1557: ||                 NM2=NM(IE,2)
+  1558: ||                 NM3=NM(IE,3)
+  1559: ||        
+  1560: ||        C...     Compute additional partial factors
+  1561: ||        C........DW: begin add absorbing layer term
+  1562: ||                 SigmaAvg = (WK_SgN1_eta(IE0) + WK_SgN2_eta(IE0) + WK_SgN3_eta(IE0))/3.D0
+  1563: ||      F          Tau0SigmaAvg = (WK_SgN1_eta(IE0)*WK_T0N1(IE0) + WK_SgN2_eta(IE0)*WK_T0N2(IE0) +
+  1564: ||             &                   WK_SgN3_eta(IE0)*WK_T0N3(IE0))/3.d0
+  1565: ||        
+  1566: ||      F          Tau0Avg_S = WK_Tau0Avg(IE0) +
+  1567: ||             &     ((A00 + B00)*2.D0*Tau0SigmaAvg*DT + SigmaAvg)*sponge_dis_mthd
+  1568: ||        
+  1569: ||      F          MsFacR=WK_AreaIE1(IE0)*(1.d0/DT-Tau0Avg_S/2.d0)/DT/12.d0
+  1570: ||                 MsFacR_S = (-(A00 + B00 + C00)*WK_AreaIE1(IE0)*
+  1571: ||             &          Tau0SigmaAvg/12.D0)*sponge_dis_mthd
+  1572: ||        
+  1573: ||                 MsFacRS_ABC00 = (Tau0SigmaAvg*WK_AreaIE1(IE0)/12.D0)*sponge_dis_mthd
+  1574: ||                 MsFacRS_T = ((SigmaAvg/(2.D0*DT))*WK_AreaIE1(IE0)/12.D0)*sponge_dis_mthd
+  1575: ||        C......... end DW
+  1576: ||        C
+  1577: ||                 GOAreaIE4=G*WK_AreaIE4(IE0)
+  1578: ||      F          Tau0SpaVar=(WK_QX1Avg(IE0)*WK_Tau0XGrad2A(IE0)+WK_QY1Avg(IE0)*WK_Tau0YGrad2A(IE0))/6.d0
+  1579: ||                 A00pB00=A00+B00
+  1580: ||        
+  1581: ||        C...     Compute the JX, JY terms less the advection terms
+  1582: ||      F          Tau0QXAvg=(WK_T0N1(IE0)*WK_QX1N1(IE0)+WK_T0N2(IE0)*WK_QX1N2(IE0)+WK_T0N3(IE0)*WK_QX1N3(IE0))/3.d0
+  1583: ||      F          SigmaQxAvg = (WK_SgN1_mnx(IE0)*WK_QX1N1(IE0) +
+  1584: ||             &         WK_SgN2_mnx(IE0)*WK_QX1N2(IE0) + WK_SgN3_mnx(IE0)*WK_QX1N3(IE0))/3.d0 ;
+  1585: ||      F          AvgSigmaHAbsU = (WK_SgN1_mnx(IE0)*WK_H1N1(IE0)*WK_U1AN1(IE0) +
+  1586: ||             &        WK_SgN2_mnx(IE0)*WK_H1N2(IE0)*WK_U1AN2(IE0) + WK_SgN3_mnx(IE0)*WK_H1N3(IE0)*WK_U1AN3(IE0))/3.D0 ;
+  1587: ||      F          JXAvg = WK_CorifAvg(IE0)*WK_QY1Avg(IE0)
+  1588: ||             &          -IFNLFA*GOAreaIE4*(1 - IFNL_HDP)*(
+  1589: ||             &               WK_E1N1(IE0)*WK_E1N1(IE0)*WK_FDX1(IE0) +WK_E1N2(IE0)*WK_E1N2(IE0)*WK_FDX2(IE0) + WK_E1N3(IE0)*WK_E1N3(IE0)*WK_FDX3(IE0))
+  1590: ||             &          -WK_GHAvgOAreaIE2(IE0)*((WK_Pr1N1(IE0)-WK_TiPN1(IE0))*WK_FDX1(IE0)
+  1591: ||             &                     +(WK_Pr1N2(IE0)-WK_TiPN2(IE0))*WK_FDX2(IE0)+(WK_Pr1N3(IE0)-WK_TiPN3(IE0))*WK_FDX3(IE0))
+  1592: ||             &          +WK_WSXAvg(IE0)-WK_BSXAvg(IE0)+WK_MX(IE0)-WK_DispXAvg(IE0)-WK_BCXAvg(IE0)+Tau0QXAvg
+  1593: ||        C--- begin: DW, absorbing layer
+  1594: ||             &          - SigmaQxAvg*sponge_dis_mthd
+  1595: ||             &          + AvgSigmaHAbsU*sponge_dis_mthd
+  1596: ||        C--- end DW
+  1597: ||        
+  1598: ||        
+  1599: ||      F          Tau0QYAvg=(WK_T0N1(IE0)*WK_QY1N1(IE0)+WK_T0N2(IE0)*WK_QY1N2(IE0)+WK_T0N3(IE0)*WK_QY1N3(IE0))/3.d0
+  1600: ||      F          SigmaQyAvg = (WK_SgN1_mny(IE0)*WK_QY1N1(IE0) +
+  1601: ||             &         WK_SgN2_mny(IE0)*WK_QY1N2(IE0) + WK_SgN3_mny(IE0)*WK_QY1N3(IE0))/3.d0 ;
+  1602: ||      F          AvgSigmaHAbsV = (WK_SgN1_mny(IE0)*WK_H1N1(IE0)*WK_V1AN1(IE0) +
+  1603: ||             &        WK_SgN2_mny(IE0)*WK_H1N2(IE0)*WK_V1AN2(IE0) + WK_SgN3_mny(IE0)*WK_H1N3(IE0)*WK_V1AN3(IE0))/3.D0 ;
+  1604: ||        
+  1605: ||      F          JYAvg =-WK_CorifAvg(IE0)*WK_QX1Avg(IE0)
+  1606: ||             &          -IFNLFA*GOAreaIE4*(1 - IFNL_HDP)*(
+  1607: ||             &                WK_E1N1(IE0)*WK_E1N1(IE0)*WK_FDY1(IE0)+WK_E1N2(IE0)*WK_E1N2(IE0)*WK_FDY2(IE0)+WK_E1N3(IE0)*WK_E1N3(IE0)*WK_FDY3(IE0))
+  1608: ||             &          -WK_GHAvgOAreaIE2(IE0)*((WK_Pr1N1(IE0)-WK_TiPN1(IE0))*WK_FDY1(IE0)
+  1609: ||             &                    +(WK_Pr1N2(IE0)-WK_TiPN2(IE0))*WK_FDY2(IE0)+(WK_Pr1N3(IE0)-WK_TiPN3(IE0))*WK_FDY3(IE0))
+  1610: ||             &          +WK_WSYAvg(IE0)-WK_BSYAvg(IE0)+WK_MY(IE0)-WK_DispYAvg(IE0)-WK_BCYAvg(IE0)+Tau0QYAvg
+  1611: ||        C--- begin: DW, absorbing layer
+  1612: ||             &          -SigmaQYAvg*sponge_dis_mthd
+  1613: ||             &          +AvgSigmaHAbsV*sponge_dis_mthd
+  1614: ||        C--- end DW
+  1615: ||        
+  1616: ||        C...     Complete the JX, JY terms depending on the advection formulation
+  1617: ||                 IF(CGWCE_Advec_NC) THEN        !nonconservative advection
+  1618: ||      F            JXAvg = JXAvg - WK_IFNLCT(IE0)*(
+  1619: ||             &              WK_QX1Avg(IE0)*(WK_U1N1(IE0)*WK_FDX1(IE0)+WK_U1N2(IE0)*WK_FDX2(IE0)+WK_U1N3(IE0)*WK_FDX3(IE0))
+  1620: ||             &             +WK_QY1Avg(IE0)*(WK_U1N1(IE0)*WK_FDY1(IE0)+WK_U1N2(IE0)*WK_FDY2(IE0)+WK_U1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+  1621: ||             &             +WK_IFNLCAT(IE0)*WK_U1Avg(IE0)*WK_ESAvg(IE0)/DT
+  1622: ||      F            JYAvg = JYAvg - WK_IFNLCT(IE0)*(
+  1623: ||             &              WK_QX1Avg(IE0)*(WK_V1N1(IE0)*WK_FDX1(IE0)+WK_V1N2(IE0)*WK_FDX2(IE0)+WK_V1N3(IE0)*WK_FDX3(IE0))
+  1624: ||             &             +WK_QY1Avg(IE0)*(WK_V1N1(IE0)*WK_FDY1(IE0)+WK_V1N2(IE0)*WK_FDY2(IE0)+WK_V1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+  1625: ||             &             +WK_IFNLCAT(IE0)*WK_V1Avg(IE0)*WK_ESAvg(IE0)/DT
+  1626: ||                 ENDIF
+  1627: ||                 IF(CGWCE_Advec_C1) THEN        !conservative v1 advection
+  1628: ||      F            JXAvg = JXAvg - WK_IFNLCT(IE0)*(
+  1629: ||             &              (WK_U1N1(IE0)*WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_U1N2(IE0)*WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_U1N3(IE0)*WK_QX1N3(IE0)*WK_FDX3(IE0))
+  1630: ||             &             +(WK_U1N1(IE0)*WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_U1N2(IE0)*WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_U1N3(IE0)*WK_QY1N3(IE0)*WK_FDY3(IE0)))
+  1631: ||             &             *WK_AreaIE2(IE0)
+  1632: ||      F            JYAvg = JYAvg - WK_IFNLCT(IE0)*(
+  1633: ||             &              (WK_V1N1(IE0)*WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_V1N2(IE0)*WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_V1N3(IE0)*WK_QX1N3(IE0)*WK_FDX3(IE0))
+  1634: ||             &             +(WK_V1N1(IE0)*WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_V1N2(IE0)*WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_V1N3(IE0)*WK_QY1N3(IE0)*WK_FDY3(IE0)))
+  1635: ||             &             *WK_AreaIE2(IE0)
+  1636: ||                 ENDIF
+  1637: ||                 IF(CGWCE_Advec_C2) THEN        !conservative v2 advection
+  1638: ||      F            JXAvg = JXAvg - WK_IFNLCT(IE0)*(
+  1639: ||             &              WK_QX1Avg(IE0)*(WK_U1N1(IE0)*WK_FDX1(IE0)+WK_U1N2(IE0)*WK_FDX2(IE0)+WK_U1N3(IE0)*WK_FDX3(IE0))
+  1640: ||             &             +WK_QY1Avg(IE0)*(WK_U1N1(IE0)*WK_FDY1(IE0)+WK_U1N2(IE0)*WK_FDY2(IE0)+WK_U1N3(IE0)*WK_FDY3(IE0))
+  1641: ||             &             +WK_U1Avg(IE0)*(WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_QX1N3(IE0)*WK_FDX3(IE0))
+  1642: ||             &             +WK_U1Avg(IE0)*(WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_QY1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+  1643: ||      F            JYAvg = JYAvg - WK_IFNLCT(IE0)*(
+  1644: ||             &              WK_QX1Avg(IE0)*(WK_V1N1(IE0)*WK_FDX1(IE0)+WK_V1N2(IE0)*WK_FDX2(IE0)+WK_V1N3(IE0)*WK_FDX3(IE0))
+  1645: ||             &             +WK_QY1Avg(IE0)*(WK_V1N1(IE0)*WK_FDY1(IE0)+WK_V1N2(IE0)*WK_FDY2(IE0)+WK_V1N3(IE0)*WK_FDY3(IE0))
+  1646: ||             &             +WK_V1Avg(IE0)*(WK_QX1N1(IE0)*WK_FDX1(IE0)+WK_QX1N2(IE0)*WK_FDX2(IE0)+WK_QX1N3(IE0)*WK_FDX3(IE0))
+  1647: ||             &             +WK_V1Avg(IE0)*(WK_QY1N1(IE0)*WK_FDY1(IE0)+WK_QY1N2(IE0)*WK_FDY2(IE0)+WK_QY1N3(IE0)*WK_FDY3(IE0)))*WK_AreaIE2(IE0)
+  1648: ||                 ENDIF
+  1649: ||        
+  1650: ||        C...... BEG: DW, DEC 2019
+  1651: ||        C...     Needs multiplying by cos(lat) in case of the correction
+  1652: ||        C        Node by node
+  1653: ||      G          SPM1 = SFCT(NM1) ;
+  1654: ||      G          SPM2 = SFCT(NM2) ;
+  1655: ||      G          SPM3 = SFCT(NM3) ;
+  1656: ||        C...... END DW
+  1657: ||        
+  1658: ||        C...     Assemble forcing for node NM1 (local index j=1)
+  1659: ||        
+  1660: ||      F          Temp_LV_A1=
+  1661: ||        
+  1662: ||        C...     Transient and Tau0 terms from LHS
+  1663: ||             &         (OnDiag*WK_ESN1(IE0)*SPM1 + OffDiag*(WK_ESN2(IE0)*SPM2+WK_ESN3(IE0)*SPM3))*MsFacR
+  1664: ||        
+  1665: ||        C...     Free surface terms from LHS (time levels s-1 & s)
+  1666: ||             &        - WK_GDPAvgOAreaIE4_S0(IE0)*( C00*( WK_SFCXADJ(IE0)*WK_FDX1(IE0)*WK_E0XGrad2A(IE0)+
+  1667: ||             &                                    WK_SFCYADJ(IE0)*WK_FDY1(IE0)*WK_E0YGrad2A(IE0) ) )
+  1668: ||             &        - WK_GDPAvgOAreaIE4(IE0)*(A00pB00*( WK_SFCXADJ(IE0)*WK_FDX1(IE0)*WK_E1XGrad2A(IE0)+
+  1669: ||             &                                    WK_SFCYADJ(IE0)*WK_FDY1(IE0)*WK_E1YGrad2A(IE0) ) )
+  1670: ||        
+  1671: ||        C...     Terms from momentum eqs.
+  1672: ||             &        +(WK_SFCXADJ(IE0)*JXAvg*WK_FDX1(IE0) + WK_SFCYADJ(IE0)*JYAvg*WK_FDY1(IE0))*0.5d0
+  1673: ||        
+  1674: ||        C...     Spatially varying Tau0 terms
+  1675: ||             &        +Tau0SpaVar
+  1676: ||        C
+  1677: ||        C..... DW: begin
+  1678: ||             &        +(OnDiag*WK_E0N1(IE0) + OffDiag*(WK_E0N2(IE0)+WK_E0N3(IE0)))*MsFacR_S
+  1679: ||             &        +(onDiag*WK_ESAN1(IE0) + OffDiag*(WK_ESAN2(IE0)+WK_ESAN3(IE0)))*MsFacRS_T
+  1680: ||             &        +(onDiag*WK_ABC00_EAN1(IE0) +
+  1681: ||             &                OffDiag*(WK_ABC00_EAN2(IE0) + WK_ABC00_EAN3(IE0)))*MsFacRS_ABC00
+  1682: ||        C..... END DW
+  1683: ||        C
+  1684: ||        
+  1685: ||        C...     Assemble forcing for node NM2 (local index j=2)
+  1686: ||      F          Temp_LV_A2=
+  1687: ||        
+  1688: ||        C...     Transient and Tau0 terms from LHS
+  1689: ||             &         (OnDiag*WK_ESN2(IE0)*SPM2 + OffDiag*(WK_ESN1(IE0)*SPM1+WK_ESN3(IE0)*SPM3))*MsFacR
+  1690: ||        
+  1691: ||        C...     Free surface terms from LHS (time levels s-1 & s)
+  1692: ||             &        - WK_GDPAvgOAreaIE4_S0(IE0)*( C00*( WK_SFCXADJ(IE0)*WK_FDX2(IE0)*WK_E0XGrad2A(IE0) +
+  1693: ||             &                                    WK_SFCYADJ(IE0)*WK_FDY2(IE0)*WK_E0YGrad2A(IE0) ) )
+  1694: ||             &        - WK_GDPAvgOAreaIE4(IE0)*(A00pB00*( WK_SFCXADJ(IE0)*WK_FDX2(IE0)*WK_E1XGrad2A(IE0) +
+  1695: ||             &                                    WK_SFCYADJ(IE0)*WK_FDY2(IE0)*WK_E1YGrad2A(IE0) ) )
+  1696: ||        
+  1697: ||        C...     Terms from momentum eqs.
+  1698: ||             &        +(WK_SFCXADJ(IE0)*JXAvg*WK_FDX2(IE0) + WK_SFCYADJ(IE0)*JYAvg*WK_FDY2(IE0))*0.5d0
+  1699: ||        
+  1700: ||        C...     Spatially varying Tau0 terms
+  1701: ||             &        +Tau0SpaVar
+  1702: ||        C
+  1703: ||        C..... DW: begin
+  1704: ||             &        +(OnDiag*WK_E0N2(IE0) + OffDiag*(WK_E0N1(IE0)+WK_E0N3(IE0)))*MsFacR_S
+  1705: ||             &        +(onDiag*WK_ESAN2(IE0) + OffDiag*(WK_ESAN1(IE0)+WK_ESAN3(IE0)))*MsFacRS_T
+  1706: ||             &        +(onDiag*WK_ABC00_EAN2(IE0) +
+  1707: ||             &                 OffDiag*(WK_ABC00_EAN1(IE0) + WK_ABC00_EAN3(IE0)))*MsFacRS_ABC00
+  1708: ||        C..... END DW
+  1709: ||        C
+  1710: ||        
+  1711: ||        
+  1712: ||        C...     Assemble forcing for node NM3 (local index j=3)
+  1713: ||        
+  1714: ||      F          Temp_LV_A3=
+  1715: ||        
+  1716: ||        C...     Transient and Tau0 terms from LHS
+  1717: ||             &         (OnDiag*WK_ESN3(IE0)*SPM3 + OffDiag*(WK_ESN1(IE0)*SPM1+WK_ESN2(IE0)*SPM2))*MsFacR
+  1718: ||        
+  1719: ||        C...     Free surface terms from LHS (time levels s-1 & s)
+  1720: ||             &        - WK_GDPAvgOAreaIE4_S0(IE0)*(  C00*( WK_SFCXADJ(IE0)*WK_FDX3(IE0)*WK_E0XGrad2A(IE0) +
+  1721: ||             &                                     WK_SFCYADJ(IE0)*WK_FDY3(IE0)*WK_E0YGrad2A(IE0) ) )
+  1722: ||             &        - WK_GDPAvgOAreaIE4(IE0)*( A00pB00*( WK_SFCXADJ(IE0)*WK_FDX3(IE0)*WK_E1XGrad2A(IE0) +
+  1723: ||             &                                     WK_SFCYADJ(IE0)*WK_FDY3(IE0)*WK_E1YGrad2A(IE0) ) )
+  1724: ||        
+  1725: ||        C...     Terms from momentum eqs.
+  1726: ||             &        +(WK_SFCXADJ(IE0)*JXAvg*WK_FDX3(IE0) + WK_SFCYADJ(IE0)*JYAvg*WK_FDY3(IE0))*0.5d0
+  1727: ||        
+  1728: ||        C...     Spatially varying Tau0 terms
+  1729: ||             &        +Tau0SpaVar
+  1730: ||        C
+  1731: ||        C..... DW: begin, absorbing layer
+  1732: ||             &        +(OnDiag*WK_E0N3(IE0) + OffDiag*(WK_E0N1(IE0)+WK_E0N2(IE0)))*MsFacR_S
+  1733: ||             &        +(OnDiag*WK_ESAN3(IE0) + OffDiag*(WK_ESAN1(IE0)+WK_ESAN2(IE0)))*MsFacRS_T
+  1734: ||             &        +(OnDiag*WK_ABC00_EAN3(IE0) +
+  1735: ||             &               OffDiag*(WK_ABC00_EAN1(IE0) + WK_ABC00_EAN2(IE0)))*MsFacRS_ABC00
+  1736: ||        C..... END DW
+  1737: ||        C
+  1738: ||        
+  1739: ||        C...     Put these partial products into further elemental storage for a vector computer
+  1740: ||        C...     These will be put into nodal storage outside of the elemental loop
+  1741: ||        
+  1742: ||                 Temp_LV_A(IE,1)=Temp_LV_A1*WK_NCELE(IE0)
+  1743: ||                 Temp_LV_A(IE,2)=Temp_LV_A2*WK_NCELE(IE0)
+  1744: ||                 Temp_LV_A(IE,3)=Temp_LV_A3*WK_NCELE(IE0)
+  1745: ||        
+  1746: |V-----          end do
+  1747: +------         END DO                  !End of elemental loop
   1748:           
   1749:           !nec$ list_vector
-  1750:                 DO IE=1,NE
-  1751:                    NM1=NM(IE,1)
-  1752:                    NM2=NM(IE,2)
-  1753:                    NM3=NM(IE,3)
-  1754:                    GWCE_LV(NM1)=GWCE_LV(NM1)+Temp_LV_A(IE,1)
-  1755:                    GWCE_LV(NM2)=GWCE_LV(NM2)+Temp_LV_A(IE,2)
-  1756:                    GWCE_LV(NM3)=GWCE_LV(NM3)+Temp_LV_A(IE,3)
-  1757:                 END DO
+  1750: S------>        DO IE=1,NE
+  1751: |                  NM1=NM(IE,1)
+  1752: |                  NM2=NM(IE,2)
+  1753: |                  NM3=NM(IE,3)
+  1754: |                  GWCE_LV(NM1)=GWCE_LV(NM1)+Temp_LV_A(IE,1)
+  1755: |                  GWCE_LV(NM2)=GWCE_LV(NM2)+Temp_LV_A(IE,2)
+  1756: |                  GWCE_LV(NM3)=GWCE_LV(NM3)+Temp_LV_A(IE,3)
+  1757: S------         END DO
   1758:           #endif /* CSCA */
   1759:           #else /* ES_TUNE */
   1760:           
@@ -3374,7 +3393,7 @@ FORMAT LIST
   2748:           #ifdef CMPI
   2749:                 IF ((NFLUXIB64_GBL.GT.0.OR.LoadCondensedNodes)
   2750:                &    .AND.(ILump.NE.0)) THEN
-  2751:                    CALL UPDATER(COEFDTemp,GWCE_LV,DUMY1,2)
+  2751: V======>           CALL UPDATER(COEFDTemp,GWCE_LV,DUMY1,2)
   2752:                 ENDIF
   2753:           #endif
   2754:            
@@ -3525,8 +3544,8 @@ FORMAT LIST
   2899:                 END SUBROUTINE GWCE_NEW
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW
 INLINE LIST
@@ -3540,11 +3559,17 @@ INLINE LIST
      *** Source for routine not found.
   -> NOINLINE: NODALATTRIBUTES::CALCULATETIMEVARYINGTAU0 (gwce.F:546)
   -> NOINLINE: NODALATTRIBUTES::CALCULATETIMEVARYINGTAU0 (gwce.F:552)
+  -> NOINLINE: MESSENGER::PSDOT (gwce.F:781)
+     *** Source for routine not found.
   -> INLINE: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_CONSISTENT (gwce.F:817)
   -> INLINE: GWCE::GWCETERMINATE (gwce.F:846)
    -> NOINLINE: GLOBAL::SETMESSAGESOURCE (gwce.F:4175)
       *** Source for routine not found.
    -> NOINLINE: GLOBAL::ALLMESSAGE (gwce.F:4179)
+      *** Source for routine not found.
+   -> NOINLINE: MESSENGER::MSG_FINI (gwce.F:4184)
+      *** Source for routine not found.
+   -> NOINLINE: MESSENGER::MSG_FINI (gwce.F:4186)
       *** Source for routine not found.
    -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (gwce.F:4194)
       *** Source for routine not found.
@@ -3554,28 +3579,47 @@ INLINE LIST
       *** Source for routine not found.
    -> NOINLINE: GLOBAL::ALLMESSAGE (gwce.F:4179)
       *** Source for routine not found.
+   -> NOINLINE: MESSENGER::MSG_FINI (gwce.F:4184)
+      *** Source for routine not found.
+   -> NOINLINE: MESSENGER::MSG_FINI (gwce.F:4186)
+      *** Source for routine not found.
    -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (gwce.F:4194)
       *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:1131)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:1132)
+     *** Source for routine not found.
+  -> INLINE: NODALATTRIBUTES::ADVECTLOCAL (gwce.F:1150)
   -> NOINLINE: SUBDOMAIN::ENFORCEECB (gwce.F:2447)
      *** Source for routine not found.
   -> INLINE: GWCE::GWCE_NEW::UPDATE_RHS_SLPERBC (gwce.F:2620)
+  -> NOINLINE: MESSENGER::UPDATER_W_PERBC (gwce.F:2657)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:2659)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:2662)
+     *** Source for routine not found.
   -> NOINLINE: SUBDOMAIN::ENFORCEEOB (gwce.F:2666)
      *** Source for routine not found.
   -> NOINLINE: SUBDOMAIN::ENFORCEEIB (gwce.F:2667)
      *** Source for routine not found.
   -> NOINLINE: SUBDOMAIN::ENFORCEGWCELVOB (gwce.F:2668)
      *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:2751)
+     *** Source for routine not found.
   -> NOINLINE: ITPACKV::JCG (gwce.F:2786)
      *** Source for routine not found.
   -> INLINE: GWCE::GWCE_NEW::UPDATE_PERSLNODES (gwce.F:2808)
   -> NOINLINE: MESH::SWITCH_ELTAB_PERBC (gwce.F:2810)
      *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:2814)
+     *** Source for routine not found.
   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (gwce.F:2820)
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW
 VECTORIZATION LIST
@@ -3751,13 +3795,6 @@ VECTORIZATION LIST
   LOOP BEGIN: (gwce.F:867)
     <Unvectorized loop.>
     *** I/O statement obstructs vectorization. (gwce.F:867)
-  LOOP END
-
-  LOOP BEGIN: (gwce.F:785)
-    <Vectorized loop.>
-    *** The number of VGT,   VSC.    :  0,  0. (gwce.F:785)
-    *** The number of VLOAD, VSTORE. :  1,  0. (gwce.F:785)
-    *** Idiom detected. : SUM (gwce.F:786)
   LOOP END
 
   LOOP BEGIN: (gwce.F:792)
@@ -4408,6 +4445,357 @@ VECTORIZATION LIST
     *** The number of VLOAD, VSTORE. :  6,  4. (gwce.F:1105)
   LOOP END
 
+  LOOP BEGIN: (gwce.F:1140)
+    <Unvectorized loop.>
+
+    LOOP BEGIN: (gwce.F:1144)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1144)
+      *** The number of VGT,   VSC.    :  0,  0. (gwce.F:1144)
+      *** The number of VLOAD, VSTORE. :  0,  2. (gwce.F:1144)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1144)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    :  6,  0. (gwce.F:1144)
+      *** The number of VLOAD, VSTORE. :  3,  2. (gwce.F:1144)
+      *** VGT generated (gwce.F:1144)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1155)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    : 33,  0. (gwce.F:1155)
+      *** The number of VLOAD, VSTORE. :  4, 31. (gwce.F:1155)
+      *** VGT generated (gwce.F:1161)
+      *** VGT generated (gwce.F:1165)
+      *** VGT generated (gwce.F:1168)
+      *** VGT generated (gwce.F:1171)
+      *** VGT generated (gwce.F:1174)
+      *** VGT generated (gwce.F:1177)
+      *** VGT generated (gwce.F:1180)
+      *** VGT generated (gwce.F:1183)
+      *** VGT generated (gwce.F:1186)
+      *** VGT generated (gwce.F:1189)
+      *** VGT generated (gwce.F:1192)
+      *** VGT generated (gwce.F:1162)
+      *** VGT generated (gwce.F:1166)
+      *** VGT generated (gwce.F:1169)
+      *** VGT generated (gwce.F:1172)
+      *** VGT generated (gwce.F:1175)
+      *** VGT generated (gwce.F:1178)
+      *** VGT generated (gwce.F:1181)
+      *** VGT generated (gwce.F:1184)
+      *** VGT generated (gwce.F:1187)
+      *** VGT generated (gwce.F:1190)
+      *** VGT generated (gwce.F:1193)
+      *** VGT generated (gwce.F:1163)
+      *** VGT generated (gwce.F:1167)
+      *** VGT generated (gwce.F:1170)
+      *** VGT generated (gwce.F:1173)
+      *** VGT generated (gwce.F:1176)
+      *** VGT generated (gwce.F:1179)
+      *** VGT generated (gwce.F:1182)
+      *** VGT generated (gwce.F:1185)
+      *** VGT generated (gwce.F:1188)
+      *** VGT generated (gwce.F:1191)
+      *** VGT generated (gwce.F:1194)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1199)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1199)
+      *** The number of VGT,   VSC.    :  0,  0. (gwce.F:1199)
+      *** The number of VLOAD, VSTORE. :  0, 21. (gwce.F:1199)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1199)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    : 24,  0. (gwce.F:1199)
+      *** The number of VLOAD, VSTORE. :  3, 21. (gwce.F:1199)
+      *** VGT generated (gwce.F:1243)
+      *** VGT generated (gwce.F:1247)
+      *** VGT generated (gwce.F:1251)
+      *** VGT generated (gwce.F:1263)
+      *** VGT generated (gwce.F:1267)
+      *** VGT generated (gwce.F:1244)
+      *** VGT generated (gwce.F:1248)
+      *** VGT generated (gwce.F:1252)
+      *** VGT generated (gwce.F:1264)
+      *** VGT generated (gwce.F:1268)
+      *** VGT generated (gwce.F:1245)
+      *** VGT generated (gwce.F:1249)
+      *** VGT generated (gwce.F:1253)
+      *** VGT generated (gwce.F:1265)
+      *** VGT generated (gwce.F:1269)
+      *** VGT generated (gwce.F:1231)
+      *** VGT generated (gwce.F:1232)
+      *** VGT generated (gwce.F:1233)
+      *** VGT generated (gwce.F:1235)
+      *** VGT generated (gwce.F:1236)
+      *** VGT generated (gwce.F:1237)
+      *** VGT generated (gwce.F:1239)
+      *** VGT generated (gwce.F:1240)
+      *** VGT generated (gwce.F:1241)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1273)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1273)
+      *** The number of VGT,   VSC.    :  0,  0. (gwce.F:1273)
+      *** The number of VLOAD, VSTORE. :  0,  3. (gwce.F:1273)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1273)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1273)
+      *** The number of VGT,   VSC.    :  3,  0. (gwce.F:1273)
+      *** The number of VLOAD, VSTORE. :  3,  3. (gwce.F:1273)
+      *** VGT generated (gwce.F:1284)
+      *** VGT generated (gwce.F:1285)
+      *** VGT generated (gwce.F:1286)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1273)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    :  6,  0. (gwce.F:1273)
+      *** The number of VLOAD, VSTORE. :  3,  6. (gwce.F:1273)
+      *** VGT generated (gwce.F:1284)
+      *** VGT generated (gwce.F:1285)
+      *** VGT generated (gwce.F:1286)
+      *** VGT generated (gwce.F:1290)
+      *** VGT generated (gwce.F:1293)
+      *** VGT generated (gwce.F:1296)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1312)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1312)
+      *** The number of VGT,   VSC.    :  6,  0. (gwce.F:1312)
+      *** The number of VLOAD, VSTORE. :  3,  5. (gwce.F:1312)
+      *** VGT generated (gwce.F:1343)
+      *** VGT generated (gwce.F:1346)
+      *** VGT generated (gwce.F:1344)
+      *** VGT generated (gwce.F:1347)
+      *** VGT generated (gwce.F:1345)
+      *** VGT generated (gwce.F:1348)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1312)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1312)
+      *** The number of VGT,   VSC.    : 15,  0. (gwce.F:1312)
+      *** The number of VLOAD, VSTORE. :  9,  5. (gwce.F:1312)
+      *** VGT generated (gwce.F:1335)
+      *** VGT generated (gwce.F:1337)
+      *** VGT generated (gwce.F:1339)
+      *** VGT generated (gwce.F:1336)
+      *** VGT generated (gwce.F:1338)
+      *** VGT generated (gwce.F:1340)
+      *** VGT generated (gwce.F:1343)
+      *** VGT generated (gwce.F:1344)
+      *** VGT generated (gwce.F:1345)
+      *** VGT generated (gwce.F:1346)
+      *** VGT generated (gwce.F:1347)
+      *** VGT generated (gwce.F:1348)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1312)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1312)
+      *** The number of VGT,   VSC.    :  9,  0. (gwce.F:1312)
+      *** The number of VLOAD, VSTORE. :  3,  5. (gwce.F:1312)
+      *** VGT generated (gwce.F:1322)
+      *** VGT generated (gwce.F:1323)
+      *** VGT generated (gwce.F:1324)
+      *** VGT generated (gwce.F:1343)
+      *** VGT generated (gwce.F:1344)
+      *** VGT generated (gwce.F:1345)
+      *** VGT generated (gwce.F:1346)
+      *** VGT generated (gwce.F:1347)
+      *** VGT generated (gwce.F:1348)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1312)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    : 18,  0. (gwce.F:1312)
+      *** The number of VLOAD, VSTORE. :  9,  5. (gwce.F:1312)
+      *** VGT generated (gwce.F:1322)
+      *** VGT generated (gwce.F:1323)
+      *** VGT generated (gwce.F:1324)
+      *** VGT generated (gwce.F:1335)
+      *** VGT generated (gwce.F:1337)
+      *** VGT generated (gwce.F:1339)
+      *** VGT generated (gwce.F:1336)
+      *** VGT generated (gwce.F:1338)
+      *** VGT generated (gwce.F:1340)
+      *** VGT generated (gwce.F:1343)
+      *** VGT generated (gwce.F:1344)
+      *** VGT generated (gwce.F:1345)
+      *** VGT generated (gwce.F:1346)
+      *** VGT generated (gwce.F:1347)
+      *** VGT generated (gwce.F:1348)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1354)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    :  0,  0. (gwce.F:1354)
+      *** The number of VLOAD, VSTORE. : 14, 12. (gwce.F:1354)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1390)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1390)
+      *** The number of VGT,   VSC.    : 12,  0. (gwce.F:1390)
+      *** The number of VLOAD, VSTORE. : 19, 10. (gwce.F:1390)
+      *** VGT generated (gwce.F:1435)
+      *** VGT generated (gwce.F:1436)
+      *** VGT generated (gwce.F:1437)
+      *** VGT generated (gwce.F:1442)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1390)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1390)
+      *** The number of VGT,   VSC.    : 12,  0. (gwce.F:1390)
+      *** The number of VLOAD, VSTORE. : 31, 10. (gwce.F:1390)
+      *** VGT generated (gwce.F:1435)
+      *** VGT generated (gwce.F:1436)
+      *** VGT generated (gwce.F:1437)
+      *** VGT generated (gwce.F:1442)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1390)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1390)
+      *** The number of VGT,   VSC.    : 12,  0. (gwce.F:1390)
+      *** The number of VLOAD, VSTORE. : 22, 10. (gwce.F:1390)
+      *** VGT generated (gwce.F:1435)
+      *** VGT generated (gwce.F:1436)
+      *** VGT generated (gwce.F:1437)
+      *** VGT generated (gwce.F:1442)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1390)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    : 12,  0. (gwce.F:1390)
+      *** The number of VLOAD, VSTORE. : 34, 10. (gwce.F:1390)
+      *** VGT generated (gwce.F:1435)
+      *** VGT generated (gwce.F:1436)
+      *** VGT generated (gwce.F:1437)
+      *** VGT generated (gwce.F:1442)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1450)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1450)
+      *** The number of VGT,   VSC.    :  6,  0. (gwce.F:1450)
+      *** The number of VLOAD, VSTORE. : 28, 11. (gwce.F:1450)
+      *** VGT generated (gwce.F:1468)
+      *** VGT generated (gwce.F:1477)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1450)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    : 15,  0. (gwce.F:1450)
+      *** The number of VLOAD, VSTORE. : 36, 11. (gwce.F:1450)
+      *** VGT generated (gwce.F:1459)
+      *** VGT generated (gwce.F:1461)
+      *** VGT generated (gwce.F:1468)
+      *** VGT generated (gwce.F:1477)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1502)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1502)
+      *** The number of VGT,   VSC.    :  0,  0. (gwce.F:1502)
+      *** The number of VLOAD, VSTORE. :  8,  6. (gwce.F:1502)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1502)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1502)
+      *** The number of VGT,   VSC.    :  6,  0. (gwce.F:1502)
+      *** The number of VLOAD, VSTORE. : 11,  6. (gwce.F:1502)
+      *** VGT generated (gwce.F:1541)
+      *** VGT generated (gwce.F:1543)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1502)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1502)
+      *** The number of VGT,   VSC.    : 12,  0. (gwce.F:1502)
+      *** The number of VLOAD, VSTORE. : 11,  8. (gwce.F:1502)
+      *** VGT generated (gwce.F:1532)
+      *** VGT generated (gwce.F:1533)
+      *** VGT generated (gwce.F:1541)
+      *** VGT generated (gwce.F:1543)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1502)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    : 18,  0. (gwce.F:1502)
+      *** The number of VLOAD, VSTORE. : 14, 10. (gwce.F:1502)
+      *** VGT generated (gwce.F:1523)
+      *** VGT generated (gwce.F:1524)
+      *** VGT generated (gwce.F:1525)
+      *** VGT generated (gwce.F:1527)
+      *** VGT generated (gwce.F:1528)
+      *** VGT generated (gwce.F:1529)
+      *** VGT generated (gwce.F:1532)
+      *** VGT generated (gwce.F:1533)
+      *** VGT generated (gwce.F:1541)
+      *** VGT generated (gwce.F:1543)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1554)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1554)
+      *** The number of VGT,   VSC.    :  3,  0. (gwce.F:1554)
+      *** The number of VLOAD, VSTORE. : 101,  3. (gwce.F:1554)
+      *** VGT generated (gwce.F:1653)
+      *** VGT generated (gwce.F:1654)
+      *** VGT generated (gwce.F:1655)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1554)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1554)
+      *** The number of VGT,   VSC.    :  3,  0. (gwce.F:1554)
+      *** The number of VLOAD, VSTORE. : 101,  3. (gwce.F:1554)
+      *** VGT generated (gwce.F:1653)
+      *** VGT generated (gwce.F:1654)
+      *** VGT generated (gwce.F:1655)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1554)
+      <Vectorized loop.>
+      **  Copied loop. : FOR REMOVING INVARIANT IF (gwce.F:1554)
+      *** The number of VGT,   VSC.    :  3,  0. (gwce.F:1554)
+      *** The number of VLOAD, VSTORE. : 103,  3. (gwce.F:1554)
+      *** VGT generated (gwce.F:1653)
+      *** VGT generated (gwce.F:1654)
+      *** VGT generated (gwce.F:1655)
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1554)
+      <Vectorized loop.>
+      *** The number of VGT,   VSC.    :  3,  0. (gwce.F:1554)
+      *** The number of VLOAD, VSTORE. : 103,  3. (gwce.F:1554)
+      *** VGT generated (gwce.F:1653)
+      *** VGT generated (gwce.F:1654)
+      *** VGT generated (gwce.F:1655)
+    LOOP END
+  LOOP END
+
+  LOOP BEGIN: (gwce.F:1750)
+    <Partially vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (gwce.F:1750)
+    *** The number of VLOAD, VSTORE. :  6,  6. (gwce.F:1750)
+    *** Dependency unknown. Unvectorizable dependency is assumed. : GWCE_LV (gwce.F:1756)
+    *** Dependency unknown. Unvectorizable dependency is assumed. : GWCE_LV (gwce.F:1755)
+    *** Dependency unknown. Unvectorizable dependency is assumed. : GWCE_LV (gwce.F:1754)
+  LOOP END
+
   LOOP BEGIN: (gwce.F:2405)
     <Unvectorized loop.>
     *** I/O statement obstructs vectorization. (gwce.F:2405)
@@ -4582,6 +4970,18 @@ VECTORIZATION LIST
     LOOP END
   LOOP END
 
+  LOOP BEGIN: (gwce.F:2751)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (gwce.F:2751)
+    *** The number of VLOAD, VSTORE. :  1,  1. (gwce.F:2751)
+  LOOP END
+
+  LOOP BEGIN: (gwce.F:2751)
+    <Vectorized loop.>
+    *** The number of VGT,   VSC.    :  0,  0. (gwce.F:2751)
+    *** The number of VLOAD, VSTORE. :  1,  1. (gwce.F:2751)
+  LOOP END
+
   LOOP BEGIN: (gwce.F:2758)
     <Unvectorized loop.>
 
@@ -4616,8 +5016,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW
 CODE GENERATION LIST
@@ -4628,15 +5028,15 @@ CODE GENERATION LIST
     Assigned
       Scalar registers         : 61 [s0-s12 s15-s16 s18-s63]
       Vector registers         : 64 [v0-v63]
-      Vector mask registers    :  2 [vm14-vm15]
+      Vector mask registers    :  6 [vm10-vm15]
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 7282320 bytes
-      Register spill area      :   42088 bytes
+    Total size                 : 7497504 bytes
+      Register spill area      :   49312 bytes
       Parameter area           :     160 bytes
       Register save area       :     176 bytes
-      User data area           : 7239896 bytes
+      User data area           : 7447856 bytes
       Others                   :       0 bytes
 
     Note: Total size of Routine stack does not include
@@ -4656,8 +5056,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:532)
-    *** Estimated execution cycle                       : 53
-    *** The number of SCALAR REGISTER TRANSFER          : 18
+    *** Estimated execution cycle                       : 49
+    *** The number of SCALAR REGISTER TRANSFER          : 12
 
     LOOP BEGIN: (gwce.F:532)
       *** Estimated execution cycle                     : 162
@@ -4669,21 +5069,21 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:734)
-    *** Estimated execution cycle                       : 167
+    *** Estimated execution cycle                       : 165
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 6
-            Over basic blocks                           : 6
+          Total                                         : 4
+            Over basic blocks                           : 4
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 6
-            Over basic blocks                           : 6
-    *** The number of SCALAR REGISTER TRANSFER          : 38
+          Total                                         : 4
+            Over basic blocks                           : 4
+    *** The number of SCALAR REGISTER TRANSFER          : 41
 
     LOOP BEGIN: (gwce.F:734)
       *** Estimated execution cycle                     : 1764
     LOOP END
 
     LOOP BEGIN: (gwce.F:734)
-      *** Estimated execution cycle                     : 804
+      *** Estimated execution cycle                     : 708
     LOOP END
 
     LOOP BEGIN: (gwce.F:734)
@@ -4692,21 +5092,21 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:734)
-    *** Estimated execution cycle                       : 184
+    *** Estimated execution cycle                       : 170
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 10
-            Over basic blocks                           : 10
+          Total                                         : 7
+            Over basic blocks                           : 7
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 10
-            Over basic blocks                           : 10
-    *** The number of SCALAR REGISTER TRANSFER          : 37
+          Total                                         : 7
+            Over basic blocks                           : 7
+    *** The number of SCALAR REGISTER TRANSFER          : 33
 
     LOOP BEGIN: (gwce.F:734)
       *** Estimated execution cycle                     : 2418
     LOOP END
 
     LOOP BEGIN: (gwce.F:734)
-      *** Estimated execution cycle                     : 804
+      *** Estimated execution cycle                     : 708
     LOOP END
 
     LOOP BEGIN: (gwce.F:734)
@@ -4715,8 +5115,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:559)
-    *** Estimated execution cycle                       : 45
-    *** The number of SCALAR REGISTER TRANSFER          : 5
+    *** Estimated execution cycle                       : 46
+    *** The number of SCALAR REGISTER TRANSFER          : 7
 
     LOOP BEGIN: (gwce.F:560)
       *** Estimated execution cycle                     : 1050
@@ -4724,7 +5124,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:578)
-    *** Estimated execution cycle                       : 10916
+    *** Estimated execution cycle                       : 10510
     *** The number of VECTOR REGISTER SPILL
           Total                                         : 5
             Over basic blocks                           : 5
@@ -4738,7 +5138,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 75
             Over basic blocks                           : 75
-    *** The number of SCALAR REGISTER TRANSFER          : 41
+    *** The number of SCALAR REGISTER TRANSFER          : 89
   LOOP END
 
   LOOP BEGIN: (gwce.F:578)
@@ -4750,11 +5150,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:859)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 147
   LOOP END
 
   LOOP BEGIN: (gwce.F:2855)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 147
   LOOP END
 
   LOOP BEGIN: (gwce.F:867)
@@ -4768,21 +5168,17 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 43
   LOOP END
 
-  LOOP BEGIN: (gwce.F:785)
-    *** Estimated execution cycle                       : 97
-  LOOP END
-
   LOOP BEGIN: (gwce.F:792)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 147
   LOOP END
 
   LOOP BEGIN: (gwce.F:796)
-    *** Estimated execution cycle                       : 250
+    *** Estimated execution cycle                       : 188
   LOOP END
 
   LOOP BEGIN: (gwce.F:796)
-    *** Estimated execution cycle                       : 52
-    *** The number of SCALAR REGISTER TRANSFER          : 9
+    *** Estimated execution cycle                       : 50
+    *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (gwce.F:798)
       *** Estimated execution cycle                     : 65
@@ -4794,25 +5190,25 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:806)
-    *** Estimated execution cycle                       : 256
+    *** Estimated execution cycle                       : 186
   LOOP END
 
   LOOP BEGIN: (gwce.F:806)
-    *** Estimated execution cycle                       : 97
+    *** Estimated execution cycle                       : 94
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 1
             Across calls                                : 1
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 1
             Across calls                                : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 29
+    *** The number of SCALAR REGISTER TRANSFER          : 28
 
     LOOP BEGIN: (gwce.F:807)
-      *** Estimated execution cycle                     : 250
+      *** Estimated execution cycle                     : 188
     LOOP END
 
     LOOP BEGIN: (gwce.F:807)
-      *** Estimated execution cycle                     : 44
+      *** Estimated execution cycle                     : 45
       *** The number of SCALAR REGISTER TRANSFER        : 9
 
       LOOP BEGIN: (gwce.F:808)
@@ -4822,12 +5218,12 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:2837)
-    *** Estimated execution cycle                       : 312
+    *** Estimated execution cycle                       : 284
   LOOP END
 
   LOOP BEGIN: (gwce.F:2837)
-    *** Estimated execution cycle                       : 51
-    *** The number of SCALAR REGISTER TRANSFER          : 7
+    *** Estimated execution cycle                       : 54
+    *** The number of SCALAR REGISTER TRANSFER          : 12
 
     LOOP BEGIN: (gwce.F:2840)
       *** Estimated execution cycle                     : 65
@@ -4846,8 +5242,8 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:833)
-    *** Estimated execution cycle                       : 38
-    *** The number of SCALAR REGISTER TRANSFER          : 6
+    *** Estimated execution cycle                       : 40
+    *** The number of SCALAR REGISTER TRANSFER          : 8
 
     LOOP BEGIN: (gwce.F:835)
       *** Estimated execution cycle                     : 87
@@ -4860,7 +5256,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:941)
-    *** Estimated execution cycle                       : 527
+    *** Estimated execution cycle                       : 528
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 26
             Across calls                                :  4
@@ -4869,14 +5265,14 @@ CODE GENERATION LIST
           Total                                         : 26
             Across calls                                :  4
             Over basic blocks                           : 22
-    *** The number of SCALAR REGISTER TRANSFER          : 81
+    *** The number of SCALAR REGISTER TRANSFER          : 77
 
     LOOP BEGIN: (gwce.F:941)
       *** Estimated execution cycle                     : 3062
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -4888,7 +5284,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -4900,7 +5296,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -4912,7 +5308,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -4921,35 +5317,23 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:941)
-    *** Estimated execution cycle                       : 532
+    *** Estimated execution cycle                       : 539
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 27
+          Total                                         : 28
             Across calls                                :  4
-            Over basic blocks                           : 23
+            Over basic blocks                           : 24
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 27
+          Total                                         : 28
             Across calls                                :  4
-            Over basic blocks                           : 23
-    *** The number of SCALAR REGISTER TRANSFER          : 83
+            Over basic blocks                           : 24
+    *** The number of SCALAR REGISTER TRANSFER          : 79
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 3452
+      *** Estimated execution cycle                     : 3580
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 28
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 132
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -4961,7 +5345,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -4973,7 +5357,19 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:941)
+      *** Estimated execution cycle                     : 28
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:941)
+      *** Estimated execution cycle                     : 132
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:941)
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -4982,35 +5378,23 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:941)
-    *** Estimated execution cycle                       : 541
+    *** Estimated execution cycle                       : 544
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 30
+          Total                                         : 31
             Across calls                                :  4
-            Over basic blocks                           : 26
+            Over basic blocks                           : 27
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 30
+          Total                                         : 31
             Across calls                                :  4
-            Over basic blocks                           : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 80
+            Over basic blocks                           : 27
+    *** The number of SCALAR REGISTER TRANSFER          : 75
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 3516
+      *** Estimated execution cycle                     : 3644
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 28
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 132
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -5022,7 +5406,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -5034,7 +5418,19 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:941)
+      *** Estimated execution cycle                     : 28
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:941)
+      *** Estimated execution cycle                     : 132
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:941)
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:941)
@@ -5071,7 +5467,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:1044)
-    *** Estimated execution cycle                       : 527
+    *** Estimated execution cycle                       : 528
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 26
             Across calls                                :  4
@@ -5080,14 +5476,14 @@ CODE GENERATION LIST
           Total                                         : 26
             Across calls                                :  4
             Over basic blocks                           : 22
-    *** The number of SCALAR REGISTER TRANSFER          : 81
+    *** The number of SCALAR REGISTER TRANSFER          : 77
 
     LOOP BEGIN: (gwce.F:1044)
       *** Estimated execution cycle                     : 3030
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5099,7 +5495,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5111,7 +5507,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5123,7 +5519,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5132,16 +5528,14 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:1044)
-    *** Estimated execution cycle                       : 546
+    *** Estimated execution cycle                       : 540
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 33
-            Across calls                                :  4
-            Over basic blocks                           : 29
+            Over basic blocks                           : 33
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 33
-            Across calls                                :  4
-            Over basic blocks                           : 29
-    *** The number of SCALAR REGISTER TRANSFER          : 79
+            Over basic blocks                           : 33
+    *** The number of SCALAR REGISTER TRANSFER          : 67
 
     LOOP BEGIN: (gwce.F:1044)
       *** Estimated execution cycle                     : 4598
@@ -5154,7 +5548,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5166,7 +5560,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5178,7 +5572,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5190,7 +5584,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5199,16 +5593,14 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:1044)
-    *** Estimated execution cycle                       : 557
+    *** Estimated execution cycle                       : 548
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 37
-            Across calls                                :  4
-            Over basic blocks                           : 33
+          Total                                         : 35
+            Over basic blocks                           : 35
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 37
-            Across calls                                :  4
-            Over basic blocks                           : 33
-    *** The number of SCALAR REGISTER TRANSFER          : 80
+          Total                                         : 35
+            Over basic blocks                           : 35
+    *** The number of SCALAR REGISTER TRANSFER          : 69
 
     LOOP BEGIN: (gwce.F:1044)
       *** Estimated execution cycle                     : 4662
@@ -5221,7 +5613,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5233,7 +5625,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5245,7 +5637,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5257,7 +5649,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:1044)
@@ -5288,6 +5680,238 @@ CODE GENERATION LIST
     *** The number of VECTOR REGISTER RESTORE
           Total                                         : 1
             Over basic blocks                           : 1
+  LOOP END
+
+  LOOP BEGIN: (gwce.F:1140)
+    *** Estimated execution cycle                       : 5580
+    *** The number of SCALAR REGISTER SPILL
+          Total                                         : 681
+            Not enough registers                        :   1
+            Over basic blocks                           : 677
+            Others                                      :   3
+    *** The number of SCALAR REGISTER RESTORE
+          Total                                         : 1445
+            Not enough registers                        :    1
+            Over basic blocks                           : 1441
+            Others                                      :    3
+    *** The number of SCALAR REGISTER TRANSFER          : 487
+
+    LOOP BEGIN: (gwce.F:1144)
+      *** Estimated execution cycle                     : 96
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1144)
+      *** Estimated execution cycle                     : 1092
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1155)
+      *** Estimated execution cycle                     : 5032
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 34
+              Not enough registers                      : 33
+              Over basic blocks                         :  1
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 44
+              Over basic blocks                         : 44
+      *** The number of SCALAR REGISTER TRANSFER        : 1
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1199)
+      *** Estimated execution cycle                     : 706
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1199)
+      *** Estimated execution cycle                     : 3490
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1273)
+      *** Estimated execution cycle                     : 130
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1273)
+      *** Estimated execution cycle                     : 500
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1273)
+      *** Estimated execution cycle                     : 960
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1312)
+      *** Estimated execution cycle                     : 1367
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1312)
+      *** Estimated execution cycle                     : 2534
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1312)
+      *** Estimated execution cycle                     : 1356
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1312)
+      *** Estimated execution cycle                     : 2730
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1354)
+      *** Estimated execution cycle                     : 2324
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 9
+              Not enough registers                      : 9
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 9
+              Over basic blocks                         : 9
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1390)
+      *** Estimated execution cycle                     : 3592
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 1
+              Over basic blocks                         : 1
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 13
+              Over basic blocks                         : 13
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1390)
+      *** Estimated execution cycle                     : 5170
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 26
+              Not enough registers                      : 25
+              Over basic blocks                         :  1
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 37
+              Over basic blocks                         : 37
+      *** The number of SCALAR REGISTER TRANSFER        : 1
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1390)
+      *** Estimated execution cycle                     : 3844
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 6
+              Not enough registers                      : 5
+              Over basic blocks                         : 1
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 18
+              Over basic blocks                         : 18
+      *** The number of SCALAR REGISTER TRANSFER        : 1
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1390)
+      *** Estimated execution cycle                     : 5438
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 32
+              Not enough registers                      : 31
+              Over basic blocks                         :  1
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 43
+              Over basic blocks                         : 43
+      *** The number of SCALAR REGISTER TRANSFER        : 1
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1450)
+      *** Estimated execution cycle                     : 2884
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 45
+              Not enough registers                      : 45
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 45
+              Over basic blocks                         : 45
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1450)
+      *** Estimated execution cycle                     : 4590
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 53
+              Not enough registers                      : 52
+              Over basic blocks                         :  1
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 64
+              Not enough registers                      :  2
+              Over basic blocks                         : 62
+      *** The number of SCALAR REGISTER TRANSFER        : 2
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1502)
+      *** Estimated execution cycle                     : 642
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1502)
+      *** Estimated execution cycle                     : 1658
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1502)
+      *** Estimated execution cycle                     : 2183
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1502)
+      *** Estimated execution cycle                     : 3544
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 1
+              Over basic blocks                         : 1
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 7
+              Over basic blocks                         : 7
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1554)
+      *** Estimated execution cycle                     : 10986
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 91
+              Not enough registers                      : 71
+              Over basic blocks                         : 20
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 127
+              Not enough registers                      :   2
+              Over basic blocks                         : 125
+      *** The number of SCALAR REGISTER TRANSFER        : 18
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1554)
+      *** Estimated execution cycle                     : 11702
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 90
+              Not enough registers                      : 70
+              Over basic blocks                         : 20
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 125
+              Not enough registers                      :   1
+              Over basic blocks                         : 124
+      *** The number of SCALAR REGISTER TRANSFER        : 19
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1554)
+      *** Estimated execution cycle                     : 11347
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 90
+              Not enough registers                      : 70
+              Over basic blocks                         : 20
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 127
+              Not enough registers                      :   1
+              Over basic blocks                         : 126
+      *** The number of SCALAR REGISTER TRANSFER        : 19
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:1554)
+      *** Estimated execution cycle                     : 12189
+      *** The number of SCALAR REGISTER SPILL
+            Total                                       : 90
+              Not enough registers                      : 70
+              Over basic blocks                         : 20
+      *** The number of SCALAR REGISTER RESTORE
+            Total                                       : 127
+              Not enough registers                      :   1
+              Over basic blocks                         : 126
+      *** The number of SCALAR REGISTER TRANSFER        : 19
+    LOOP END
+  LOOP END
+
+  LOOP BEGIN: (gwce.F:1750)
+    *** Estimated execution cycle                       : 418
+  LOOP END
+
+  LOOP BEGIN: (gwce.F:1750)
+    *** Estimated execution cycle                       : 32
   LOOP END
 
   LOOP BEGIN: (gwce.F:2405)
@@ -5346,7 +5970,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:2460)
-    *** Estimated execution cycle                       : 324
+    *** Estimated execution cycle                       : 292
   LOOP END
 
   LOOP BEGIN: (gwce.F:2460)
@@ -5354,7 +5978,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:2476)
-    *** Estimated execution cycle                       : 250
+    *** Estimated execution cycle                       : 220
   LOOP END
 
   LOOP BEGIN: (gwce.F:2476)
@@ -5362,7 +5986,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:2490)
-    *** Estimated execution cycle                       : 314
+    *** Estimated execution cycle                       : 284
   LOOP END
 
   LOOP BEGIN: (gwce.F:2490)
@@ -5370,7 +5994,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:2499)
-    *** Estimated execution cycle                       : 250
+    *** Estimated execution cycle                       : 220
   LOOP END
 
   LOOP BEGIN: (gwce.F:2499)
@@ -5378,7 +6002,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:2509)
-    *** Estimated execution cycle                       : 194
+    *** Estimated execution cycle                       : 190
   LOOP END
 
   LOOP BEGIN: (gwce.F:2509)
@@ -5386,53 +6010,53 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:2568)
-    *** Estimated execution cycle                       : 384
+    *** Estimated execution cycle                       : 378
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 30
             Across calls                                : 30
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 34
+          Total                                         : 31
             Across calls                                : 30
-            Over basic blocks                           :  4
+            Over basic blocks                           :  1
     *** The number of SCALAR REGISTER TRANSFER          : 47
   LOOP END
 
   LOOP BEGIN: (gwce.F:2568)
-    *** Estimated execution cycle                       : 472
+    *** Estimated execution cycle                       : 468
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 46
-            Across calls                                : 46
+          Total                                         : 47
+            Across calls                                : 47
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 53
-            Across calls                                : 46
-            Over basic blocks                           :  7
+          Total                                         : 49
+            Across calls                                : 47
+            Over basic blocks                           :  2
     *** The number of SCALAR REGISTER TRANSFER          : 68
   LOOP END
 
   LOOP BEGIN: (gwce.F:2870)
-    *** Estimated execution cycle                       : 427
+    *** Estimated execution cycle                       : 397
   LOOP END
 
   LOOP BEGIN: (gwce.F:2640)
-    *** Estimated execution cycle                       : 663
+    *** Estimated execution cycle                       : 631
   LOOP END
 
   LOOP BEGIN: (gwce.F:2630)
-    *** Estimated execution cycle                       : 752
+    *** Estimated execution cycle                       : 710
   LOOP END
 
   LOOP BEGIN: (gwce.F:2630)
-    *** Estimated execution cycle                       : 114
+    *** Estimated execution cycle                       : 110
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 1
             Across calls                                : 1
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 1
             Across calls                                : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 32
+    *** The number of SCALAR REGISTER TRANSFER          : 26
 
     LOOP BEGIN: (gwce.F:2634)
-      *** Estimated execution cycle                     : 224
+      *** Estimated execution cycle                     : 192
     LOOP END
 
     LOOP BEGIN: (gwce.F:2634)
@@ -5445,30 +6069,30 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:2694)
-    *** Estimated execution cycle                       : 53
+    *** Estimated execution cycle                       : 52
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (gwce.F:2697)
-      *** Estimated execution cycle                     : 75
+      *** Estimated execution cycle                     : 74
     LOOP END
   LOOP END
 
   LOOP BEGIN: (gwce.F:2725)
-    *** Estimated execution cycle                       : 61
+    *** Estimated execution cycle                       : 62
   LOOP END
 
   LOOP BEGIN: (gwce.F:2725)
-    *** Estimated execution cycle                       : 219
+    *** Estimated execution cycle                       : 220
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 2
             Across calls                                : 2
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 2
             Across calls                                : 2
-    *** The number of SCALAR REGISTER TRANSFER          : 60
+    *** The number of SCALAR REGISTER TRANSFER          : 62
 
     LOOP BEGIN: (gwce.F:2730)
-      *** Estimated execution cycle                     : 320
+      *** Estimated execution cycle                     : 288
     LOOP END
 
     LOOP BEGIN: (gwce.F:2730)
@@ -5476,7 +6100,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:2738)
-      *** Estimated execution cycle                     : 320
+      *** Estimated execution cycle                     : 288
     LOOP END
 
     LOOP BEGIN: (gwce.F:2738)
@@ -5484,12 +6108,20 @@ CODE GENERATION LIST
     LOOP END
   LOOP END
 
+  LOOP BEGIN: (gwce.F:2751)
+    *** Estimated execution cycle                       : 63
+  LOOP END
+
+  LOOP BEGIN: (gwce.F:2751)
+    *** Estimated execution cycle                       : 63
+  LOOP END
+
   LOOP BEGIN: (gwce.F:2758)
-    *** Estimated execution cycle                       : 53
+    *** Estimated execution cycle                       : 52
     *** The number of SCALAR REGISTER TRANSFER          : 16
 
     LOOP BEGIN: (gwce.F:2761)
-      *** Estimated execution cycle                     : 57
+      *** Estimated execution cycle                     : 56
     LOOP END
   LOOP END
 
@@ -5502,7 +6134,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:2886)
-    *** Estimated execution cycle                       : 418
+    *** Estimated execution cycle                       : 354
   LOOP END
 
   LOOP BEGIN: (gwce.F:2886)
@@ -5510,8 +6142,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_CONSISTENT
 DIAGNOSTIC LIST
@@ -5519,14 +6151,12 @@ DIAGNOSTIC LIST
  LINE              DIAGNOSTIC MESSAGE
 
   2837: opt(1135): Outer loop conditionally executes inner loop.
-  2837: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   2837: vec( 102): Partially vectorized loop.
   2840: vec( 101): Vectorized loop.
-  2842: opt(3014): Moved reference within a conditional branch.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_CONSISTENT
 FORMAT LIST
@@ -5568,8 +6198,8 @@ FORMAT LIST
   2847:                   END SUBROUTINE UPDATE_COEF_PERBCSL_CONSISTENT
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_CONSISTENT
 INLINE LIST
@@ -5577,8 +6207,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_CONSISTENT
 VECTORIZATION LIST
@@ -5601,8 +6231,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_CONSISTENT
 CODE GENERATION LIST
@@ -5611,7 +6241,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 40 [s0-s1 s8-s12 s15-s16 s23-s25 s36-s63]
+      Scalar registers         : 40 [s0-s1 s8-s12 s15-s16 s18 s23-s25 s37-s63]
       Vector registers         :  9 [v55-v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -5629,11 +6259,10 @@ CODE GENERATION LIST
 
   LOOP BEGIN: (gwce.F:2837)
     *** Estimated execution cycle                       : 318
-    *** The number of SCALAR REGISTER TRANSFER          : 1
   LOOP END
 
   LOOP BEGIN: (gwce.F:2837)
-    *** Estimated execution cycle                       : 65
+    *** Estimated execution cycle                       : 64
     *** The number of SCALAR REGISTER TRANSFER          : 13
 
     LOOP BEGIN: (gwce.F:2840)
@@ -5642,8 +6271,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_LUMPED
 DIAGNOSTIC LIST
@@ -5653,8 +6282,8 @@ DIAGNOSTIC LIST
   2855: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_LUMPED
 FORMAT LIST
@@ -5690,8 +6319,8 @@ FORMAT LIST
   2862:                   END SUBROUTINE  UPDATE_COEF_PERBCSL_LUMPED
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_LUMPED
 INLINE LIST
@@ -5699,8 +6328,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_LUMPED
 VECTORIZATION LIST
@@ -5716,8 +6345,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_COEF_PERBCSL_LUMPED
 CODE GENERATION LIST
@@ -5743,12 +6372,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (gwce.F:2855)
-    *** Estimated execution cycle                       : 179
+    *** Estimated execution cycle                       : 147
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_RHS_SLPERBC
 DIAGNOSTIC LIST
@@ -5758,8 +6387,8 @@ DIAGNOSTIC LIST
   2870: vec( 101): Vectorized loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_RHS_SLPERBC
 FORMAT LIST
@@ -5796,8 +6425,8 @@ FORMAT LIST
   2878:                   END SUBROUTINE UPDATE_RHS_SLPERBC
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_RHS_SLPERBC
 INLINE LIST
@@ -5805,8 +6434,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_RHS_SLPERBC
 VECTORIZATION LIST
@@ -5824,8 +6453,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_RHS_SLPERBC
 CODE GENERATION LIST
@@ -5851,12 +6480,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (gwce.F:2870)
-    *** Estimated execution cycle                       : 427
+    *** Estimated execution cycle                       : 397
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_PERSLNODES
 DIAGNOSTIC LIST
@@ -5868,8 +6497,8 @@ DIAGNOSTIC LIST
   2891: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: ETA2
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_PERSLNODES
 FORMAT LIST
@@ -5908,8 +6537,8 @@ FORMAT LIST
   2896:                   END SUBROUTINE UPDATE_PERSLNODES
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_PERSLNODES
 INLINE LIST
@@ -5917,8 +6546,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_PERSLNODES
 VECTORIZATION LIST
@@ -5935,8 +6564,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:42 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:39 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW::UPDATE_PERSLNODES
 CODE GENERATION LIST
@@ -5962,7 +6591,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (gwce.F:2886)
-    *** Estimated execution cycle                       : 418
+    *** Estimated execution cycle                       : 354
   LOOP END
 
   LOOP BEGIN: (gwce.F:2886)
@@ -5970,8 +6599,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW_PC
 DIAGNOSTIC LIST
@@ -5981,7 +6610,6 @@ DIAGNOSTIC LIST
   3022: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
   3029: vec( 101): Vectorized loop.
   3084: vec( 101): Vectorized loop.
-  3091: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3091: vec( 101): Vectorized loop.
   3091: vec( 102): Partially vectorized loop.
   3106: vec( 128): Fused multiply-add operation applied.
@@ -6003,25 +6631,11 @@ DIAGNOSTIC LIST
   3136: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
   3137: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
   3138: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
-  3141: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3141: vec( 101): Vectorized loop.
-  3144: opt(3014): Moved reference within a conditional branch.
   3145: opt(1394): Moved invariant if outside of an inner loop.
-  3146: opt(3014): Moved reference within a conditional branch.
-  3147: opt(3014): Moved reference within a conditional branch.
-  3148: opt(3014): Moved reference within a conditional branch.
-  3149: opt(3014): Moved reference within a conditional branch.
   3151: opt(1394): Moved invariant if outside of an inner loop.
-  3152: opt(3014): Moved reference within a conditional branch.
-  3153: opt(3014): Moved reference within a conditional branch.
   3153: vec( 128): Fused multiply-add operation applied.
-  3155: opt(3014): Moved reference within a conditional branch.
-  3158: opt(3014): Moved reference within a conditional branch.
-  3159: opt(3014): Moved reference within a conditional branch.
-  3160: opt(3014): Moved reference within a conditional branch.
-  3161: opt(3014): Moved reference within a conditional branch.
   3171: vec( 101): Vectorized loop.
-  3178: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3178: vec( 101): Vectorized loop.
   3178: vec( 102): Partially vectorized loop.
   3195: opt(1394): Moved invariant if outside of an inner loop.
@@ -6047,22 +6661,10 @@ DIAGNOSTIC LIST
   3227: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
   3228: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
   3229: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: LSYY
-  3232: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3232: vec( 101): Vectorized loop.
   3234: opt(1394): Moved invariant if outside of an inner loop.
-  3235: opt(3014): Moved reference within a conditional branch.
-  3236: opt(3014): Moved reference within a conditional branch.
-  3237: opt(3014): Moved reference within a conditional branch.
-  3238: opt(3014): Moved reference within a conditional branch.
   3240: opt(1394): Moved invariant if outside of an inner loop.
-  3241: opt(3014): Moved reference within a conditional branch.
-  3242: opt(3014): Moved reference within a conditional branch.
   3242: vec( 128): Fused multiply-add operation applied.
-  3244: opt(3014): Moved reference within a conditional branch.
-  3247: opt(3014): Moved reference within a conditional branch.
-  3248: opt(3014): Moved reference within a conditional branch.
-  3249: opt(3014): Moved reference within a conditional branch.
-  3250: opt(3014): Moved reference within a conditional branch.
   3256: vec( 101): Vectorized loop.
   3261: vec( 128): Fused multiply-add operation applied.
   3262: vec( 128): Fused multiply-add operation applied.
@@ -6078,7 +6680,6 @@ DIAGNOSTIC LIST
   3512: opt(1025): Reference to this procedure inhibits optimization.: WIND::WINDLIMITER
   3737: vec( 101): Vectorized loop.
   3747: opt(1408): Loop interchanged.
-  3747: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3747: vec( 101): Vectorized loop.
   3757: vec( 128): Fused multiply-add operation applied.
   3762: vec( 126): Idiom detected.: SUM
@@ -6088,35 +6689,29 @@ DIAGNOSTIC LIST
   3774: opt(1118): This I/O statement inhibits optimization of loop.
   3778: vec( 101): Vectorized loop.
   3780: vec( 128): Fused multiply-add operation applied.
-  3822: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3822: vec( 103): Unvectorized loop.
   3822: vec( 113): Overhead of loop division is too large.
   3823: opt(1019): Feedback of scalar value from one loop pass to another.: NBDJ
   3824: vec( 121): Unvectorizable dependency.
   3825: opt(1019): Feedback of scalar value from one loop pass to another.: QFORCEJ
-  3828: opt(3014): Moved reference within a conditional branch.
   3828: vec( 121): Unvectorizable dependency.
-  3832: opt(3014): Moved reference within a conditional branch.
-  3833: opt(3014): Moved reference within a conditional branch.
   3833: vec( 121): Unvectorizable dependency.
-  3838: opt(3014): Moved reference within a conditional branch.
-  3839: opt(3014): Moved reference within a conditional branch.
   3839: vec( 121): Unvectorizable dependency.
-  3844: opt(3014): Moved reference within a conditional branch.
   3844: vec( 121): Unvectorizable dependency.
   3850: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
   3852: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
   3864: vec( 102): Partially vectorized loop.
   3868: vec( 102): Partially vectorized loop.
   3869: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: GWCE_LV
+  3882: inl(1212): Source for routine not found.: MESSENGER::UPDATER
   3887: inl(1212): Source for routine not found.: ITPACKV::JCG
   3891: vec( 101): Vectorized loop.
   3892: vec( 128): Fused multiply-add operation applied.
   3907: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW_PC
 FORMAT LIST
@@ -7136,8 +7731,8 @@ FORMAT LIST
   3911:                 END SUBROUTINE GWCE_NEW_PC
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW_PC
 INLINE LIST
@@ -7152,14 +7747,18 @@ INLINE LIST
      *** Source for routine not found.
   -> NOINLINE: WIND::WINDLIMITER (gwce.F:3516)
      *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:3882)
+     *** Source for routine not found.
   -> NOINLINE: ITPACKV::JCG (gwce.F:3887)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::UPDATER (gwce.F:3898)
      *** Source for routine not found.
   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (gwce.F:3907)
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW_PC
 VECTORIZATION LIST
@@ -7861,8 +8460,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCE_NEW_PC
 CODE GENERATION LIST
@@ -7877,11 +8476,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 5630608 bytes
-      Register spill area      :   16104 bytes
+    Total size                 : 5634112 bytes
+      Register spill area      :   17856 bytes
       Parameter area           :     104 bytes
       Register save area       :     176 bytes
-      User data area           : 5614216 bytes
+      User data area           : 5615968 bytes
       Others                   :       8 bytes
 
     Note: Total size of Routine stack does not include
@@ -7896,7 +8495,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3091)
-    *** Estimated execution cycle                       : 512
+    *** Estimated execution cycle                       : 514
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 23
             Across calls                                :  4
@@ -7905,14 +8504,14 @@ CODE GENERATION LIST
           Total                                         : 23
             Across calls                                :  4
             Over basic blocks                           : 19
-    *** The number of SCALAR REGISTER TRANSFER          : 74
+    *** The number of SCALAR REGISTER TRANSFER          : 65
 
     LOOP BEGIN: (gwce.F:3091)
       *** Estimated execution cycle                     : 3832
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -7924,7 +8523,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -7936,7 +8535,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -7948,7 +8547,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -7957,35 +8556,23 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3091)
-    *** Estimated execution cycle                       : 514
+    *** Estimated execution cycle                       : 519
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 24
+          Total                                         : 25
             Across calls                                :  4
-            Over basic blocks                           : 20
+            Over basic blocks                           : 21
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 24
+          Total                                         : 25
             Across calls                                :  4
-            Over basic blocks                           : 20
-    *** The number of SCALAR REGISTER TRANSFER          : 72
+            Over basic blocks                           : 21
+    *** The number of SCALAR REGISTER TRANSFER          : 62
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 4220
+      *** Estimated execution cycle                     : 4348
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 28
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 132
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -7997,7 +8584,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -8009,7 +8596,19 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:3091)
+      *** Estimated execution cycle                     : 28
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:3091)
+      *** Estimated execution cycle                     : 132
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:3091)
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -8018,35 +8617,23 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3091)
-    *** Estimated execution cycle                       : 504
+    *** Estimated execution cycle                       : 497
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 29
+          Total                                         : 28
             Across calls                                :  4
-            Over basic blocks                           : 25
+            Over basic blocks                           : 24
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 29
+          Total                                         : 28
             Across calls                                :  4
-            Over basic blocks                           : 25
-    *** The number of SCALAR REGISTER TRANSFER          : 73
+            Over basic blocks                           : 24
+    *** The number of SCALAR REGISTER TRANSFER          : 58
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 4284
+      *** Estimated execution cycle                     : 4412
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 28
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 132
-    LOOP END
-
-    LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -8058,7 +8645,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -8070,7 +8657,19 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:3091)
+      *** Estimated execution cycle                     : 28
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:3091)
+      *** Estimated execution cycle                     : 132
+    LOOP END
+
+    LOOP BEGIN: (gwce.F:3091)
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3091)
@@ -8108,7 +8707,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3178)
-    *** Estimated execution cycle                       : 512
+    *** Estimated execution cycle                       : 514
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 23
             Across calls                                :  4
@@ -8117,14 +8716,14 @@ CODE GENERATION LIST
           Total                                         : 23
             Across calls                                :  4
             Over basic blocks                           : 19
-    *** The number of SCALAR REGISTER TRANSFER          : 74
+    *** The number of SCALAR REGISTER TRANSFER          : 65
 
     LOOP BEGIN: (gwce.F:3178)
       *** Estimated execution cycle                     : 3800
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8136,7 +8735,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8148,7 +8747,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8160,7 +8759,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8169,7 +8768,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3178)
-    *** Estimated execution cycle                       : 540
+    *** Estimated execution cycle                       : 541
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 30
             Across calls                                :  4
@@ -8178,14 +8777,14 @@ CODE GENERATION LIST
           Total                                         : 30
             Across calls                                :  4
             Over basic blocks                           : 26
-    *** The number of SCALAR REGISTER TRANSFER          : 78
+    *** The number of SCALAR REGISTER TRANSFER          : 70
 
     LOOP BEGIN: (gwce.F:3178)
       *** Estimated execution cycle                     : 5366
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8197,7 +8796,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8209,7 +8808,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8221,7 +8820,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8230,23 +8829,23 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3178)
-    *** Estimated execution cycle                       : 531
+    *** Estimated execution cycle                       : 535
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 35
+          Total                                         : 36
             Across calls                                :  4
-            Over basic blocks                           : 31
+            Over basic blocks                           : 32
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 35
+          Total                                         : 36
             Across calls                                :  4
-            Over basic blocks                           : 31
-    *** The number of SCALAR REGISTER TRANSFER          : 72
+            Over basic blocks                           : 32
+    *** The number of SCALAR REGISTER TRANSFER          : 61
 
     LOOP BEGIN: (gwce.F:3178)
       *** Estimated execution cycle                     : 5430
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8258,7 +8857,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8270,7 +8869,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8282,7 +8881,7 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
-      *** Estimated execution cycle                     : 452
+      *** Estimated execution cycle                     : 356
     LOOP END
 
     LOOP BEGIN: (gwce.F:3178)
@@ -8327,14 +8926,18 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3286)
-    *** Estimated execution cycle                       : 230
+    *** Estimated execution cycle                       : 3397
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 11
-            Across calls                                : 11
+          Total                                         : 263
+            Across calls                                :  27
+            Not enough registers                        : 125
+            Over basic blocks                           : 111
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 11
-            Across calls                                : 11
-    *** The number of SCALAR REGISTER TRANSFER          : 25
+          Total                                         : 393
+            Across calls                                :  27
+            Not enough registers                        :  31
+            Over basic blocks                           : 335
+    *** The number of SCALAR REGISTER TRANSFER          : 104
   LOOP END
 
   LOOP BEGIN: (gwce.F:3737)
@@ -8342,14 +8945,14 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3747)
-    *** Estimated execution cycle                       : 168
+    *** Estimated execution cycle                       : 167
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 20
             Over basic blocks                           : 20
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 17
             Over basic blocks                           : 17
-    *** The number of SCALAR REGISTER TRANSFER          : 41
+    *** The number of SCALAR REGISTER TRANSFER          : 39
 
     LOOP BEGIN: (gwce.F:3747)
       *** Estimated execution cycle                     : 740
@@ -8383,7 +8986,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3778)
-    *** Estimated execution cycle                       : 309
+    *** Estimated execution cycle                       : 277
   LOOP END
 
   LOOP BEGIN: (gwce.F:3822)
@@ -8398,11 +9001,11 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3864)
-    *** Estimated execution cycle                       : 752
+    *** Estimated execution cycle                       : 710
   LOOP END
 
   LOOP BEGIN: (gwce.F:3864)
-    *** Estimated execution cycle                       : 115
+    *** Estimated execution cycle                       : 116
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 1
             Across calls                                : 1
@@ -8412,7 +9015,7 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 32
 
     LOOP BEGIN: (gwce.F:3868)
-      *** Estimated execution cycle                     : 224
+      *** Estimated execution cycle                     : 192
     LOOP END
 
     LOOP BEGIN: (gwce.F:3868)
@@ -8425,8 +9028,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::CHECK_SLOPES
 DIAGNOSTIC LIST
@@ -8435,19 +9038,16 @@ DIAGNOSTIC LIST
 
   3948: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
   3958: vec( 101): Vectorized loop.
-  3963: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   3963: vec( 103): Unvectorized loop.
   3963: vec( 180): I/O statement obstructs vectorization.
   3963: vec( 110): Vectorization obstructive procedure reference.: GLOBAL::ALLMESSAGE
   4000: opt(1418): Constant-length loop is expanded.
-  4023: opt(3014): Moved reference within a conditional branch.
   4026: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
-  4035: opt(3014): Moved reference within a conditional branch.
   4062: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::CHECK_SLOPES
 FORMAT LIST
@@ -8613,8 +9213,8 @@ FORMAT LIST
   4064:                 END SUBROUTINE CHECK_SLOPES
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::CHECK_SLOPES
 INLINE LIST
@@ -8630,8 +9230,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::CHECK_SLOPES
 VECTORIZATION LIST
@@ -8652,8 +9252,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::CHECK_SLOPES
 CODE GENERATION LIST
@@ -8662,7 +9262,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 61 [s0-s12 s15-s16 s18-s63]
+      Scalar registers         : 60 [s0-s4 s6-s12 s15-s16 s18-s63]
       Vector registers         :  1 [v63]
       Vector mask registers    :  0
       VREG directive           :  0
@@ -8683,21 +9283,21 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:3963)
-    *** Estimated execution cycle                       : 1791
+    *** Estimated execution cycle                       : 1789
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 52
             Across calls                                : 43
             Over basic blocks                           :  9
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 231
+          Total                                         : 230
             Across calls                                :  59
-            Over basic blocks                           : 172
+            Over basic blocks                           : 171
     *** The number of SCALAR REGISTER TRANSFER          : 52
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::APPLY_SLOPE_LIMITS
 DIAGNOSTIC LIST
@@ -8707,7 +9307,6 @@ DIAGNOSTIC LIST
   4093: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
   4102: vec( 101): Vectorized loop.
   4114: vec( 101): Vectorized loop.
-  4115: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
   4115: vec( 101): Vectorized loop.
   4115: vec( 102): Partially vectorized loop.
   4127: vec( 128): Fused multiply-add operation applied.
@@ -8718,8 +9317,8 @@ DIAGNOSTIC LIST
   4151: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::APPLY_SLOPE_LIMITS
 FORMAT LIST
@@ -8822,8 +9421,8 @@ FORMAT LIST
   4156:                 END SUBROUTINE APPLY_SLOPE_LIMITS
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::APPLY_SLOPE_LIMITS
 INLINE LIST
@@ -8835,8 +9434,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::APPLY_SLOPE_LIMITS
 VECTORIZATION LIST
@@ -8890,8 +9489,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::APPLY_SLOPE_LIMITS
 CODE GENERATION LIST
@@ -8925,21 +9524,21 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (gwce.F:4115)
-    *** Estimated execution cycle                       : 139
+    *** Estimated execution cycle                       : 140
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 1
             Across calls                                : 1
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 1
             Across calls                                : 1
-    *** The number of SCALAR REGISTER TRANSFER          : 30
+    *** The number of SCALAR REGISTER TRANSFER          : 29
 
     LOOP BEGIN: (gwce.F:4115)
       *** Estimated execution cycle                     : 1212
     LOOP END
 
     LOOP BEGIN: (gwce.F:4115)
-      *** Estimated execution cycle                     : 420
+      *** Estimated execution cycle                     : 324
     LOOP END
 
     LOOP BEGIN: (gwce.F:4115)
@@ -8955,8 +9554,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCETERMINATE
 DIAGNOSTIC LIST
@@ -8965,11 +9564,12 @@ DIAGNOSTIC LIST
 
   4175: inl(1212): Source for routine not found.: GLOBAL::SETMESSAGESOURCE
   4179: inl(1212): Source for routine not found.: GLOBAL::ALLMESSAGE
+  4184: inl(1212): Source for routine not found.: MESSENGER::MSG_FINI
   4194: inl(1212): Source for routine not found.: GLOBAL::UNSETMESSAGESOURCE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCETERMINATE
 FORMAT LIST
@@ -9020,8 +9620,8 @@ FORMAT LIST
   4196:                 end subroutine gwceTerminate
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCETERMINATE
 INLINE LIST
@@ -9031,12 +9631,16 @@ INLINE LIST
      *** Source for routine not found.
   -> NOINLINE: GLOBAL::ALLMESSAGE (gwce.F:4179)
      *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MSG_FINI (gwce.F:4184)
+     *** Source for routine not found.
+  -> NOINLINE: MESSENGER::MSG_FINI (gwce.F:4186)
+     *** Source for routine not found.
   -> NOINLINE: GLOBAL::UNSETMESSAGESOURCE (gwce.F:4194)
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCETERMINATE
 VECTORIZATION LIST
@@ -9044,8 +9648,8 @@ VECTORIZATION LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:43:43 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/gwce.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:54:41 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/gwce.F
 
 PROCEDURE NAME: GWCE::GWCETERMINATE
 CODE GENERATION LIST
@@ -9054,7 +9658,7 @@ CODE GENERATION LIST
     Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
     Callee-saved               : 16 [s18-s33]
     Assigned
-      Scalar registers         : 14 [s0-s2 s8-s12 s15-s16 s23 s61-s63]
+      Scalar registers         : 15 [s0-s2 s8-s12 s15-s16 s23-s24 s61-s63]
       Vector registers         :  0
       Vector mask registers    :  0
       VREG directive           :  0

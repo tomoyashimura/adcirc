@@ -1,7 +1,7 @@
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
-  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc_src/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc_src/work/odir1/decomp.o
+  COMPILER OPTIONS : -fpp -stdlib=compat -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -c -I. -I/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep -O3 -fextend-source -report-all -finline-functions -finline-max-function-size=200 -finline-file=/S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/src/nodalattr.F -DES_TUNE -DADCNETCDF -I/include -DHAVE_NETCDF4 -DDATETIME -DC_IHM -DREAL8 -DLINUX -DADCSWAN -I /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/ -I/S/home01/G6012/d0954/util/datetime/datetime-fortran/include -o /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/work/odir1/decomp.o
 
   PARAMETER :
 
@@ -76,7 +76,7 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
         -mvector-shortloop-reduction             : disable
         -mvector-sqrt-instruction                : disable
         -mvector-threshold                       : 5
-        -mwork-vector-kind=none                  : disable
+        -mwork-vector-kind                       : stack
 
       Parallelization Options :
         -fopenmp                                 : disable
@@ -165,15 +165,15 @@ FILE NAME : /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
         -report-vector                           : enable
 
       Directory Options :
-        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.2.0/include
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/5.3.0/include
         -module                                  : not specified
 
       Miscellaneous Options :
         -v                                       : disable
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:05 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DECOMP
 DIAGNOSTIC LIST
@@ -185,59 +185,42 @@ DIAGNOSTIC LIST
     76: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: NOD_RES_TOT
     86: vec( 180): I/O statement obstructs vectorization.
     86: vec( 109): Vectorization obstructive statement.
-    88: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
     88: vec( 101): Vectorized loop.
     96: opt(1019): Feedback of scalar value from one loop pass to another.: NELP
-    96: opt(3014): Moved reference within a conditional branch.
-    97: opt(3014): Moved reference within a conditional branch.
    101: opt(1118): This I/O statement inhibits optimization of loop.
    111: vec( 180): I/O statement obstructs vectorization.
    111: vec( 109): Vectorization obstructive statement.
    113: vec( 101): Vectorized loop.
    115: opt(1418): Constant-length loop is expanded.
    125: inl(1222): Inlined: SORT
-   131: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    131: vec( 103): Unvectorized loop.
    131: vec( 113): Overhead of loop division is too large.
    132: opt(1019): Feedback of scalar value from one loop pass to another.: ITOT
    133: vec( 121): Unvectorizable dependency.
    134: vec( 120): Unvectorizable dependency.: IMAP_NOD_LG
-   135: opt(3014): Moved reference within a conditional branch.
    136: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: IMAP_NOD_GL
    161: vec( 180): I/O statement obstructs vectorization.
    161: vec( 109): Vectorization obstructive statement.
-   165: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    165: vec( 103): Unvectorized loop.
    165: vec( 113): Overhead of loop division is too large.
    168: vec( 101): Vectorized loop.
    170: vec( 126): Idiom detected.: SEARCH
    171: opt(1019): Feedback of scalar value from one loop pass to another.: ITOT
    197: inl(1222): Inlined: SORT
-   202: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    202: vec( 103): Unvectorized loop.
    202: vec( 113): Overhead of loop division is too large.
    203: opt(1019): Feedback of scalar value from one loop pass to another.: INDX
    203: vec( 121): Unvectorizable dependency.
    205: opt(1019): Feedback of scalar value from one loop pass to another.: ITOT
-   206: opt(3014): Moved reference within a conditional branch.
-   207: opt(3014): Moved reference within a conditional branch.
    219: vec( 101): Vectorized loop.
    232: vec( 101): Vectorized loop.
    234: vec( 180): I/O statement obstructs vectorization.
    234: vec( 109): Vectorization obstructive statement.
    237: opt(1135): Outer loop conditionally executes inner loop.
-   237: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    237: vec( 102): Partially vectorized loop.
    244: inl(1222): Inlined: SEARCH3
    245: inl(1222): Inlined: SEARCH3
    252: opt(1019): Feedback of scalar value from one loop pass to another.: NELP
-   252: opt(3014): Moved reference within a conditional branch.
-   262: opt(3014): Moved reference within a conditional branch.
-   263: opt(3014): Moved reference within a conditional branch.
-   265: opt(3014): Moved reference within a conditional branch.
-   277: opt(3014): Moved reference within a conditional branch.
-   279: opt(3014): Moved reference within a conditional branch.
-   285: opt(3014): Moved reference within a conditional branch.
    292: opt(1118): This I/O statement inhibits optimization of loop.
    307: vec( 103): Unvectorized loop.
    307: vec( 113): Overhead of loop division is too large.
@@ -248,13 +231,11 @@ DIAGNOSTIC LIST
    325: vec( 101): Vectorized loop.
    327: opt(1418): Constant-length loop is expanded.
    337: inl(1222): Inlined: SORT
-   343: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    343: vec( 103): Unvectorized loop.
    343: vec( 113): Overhead of loop division is too large.
    344: opt(1019): Feedback of scalar value from one loop pass to another.: ITOT
    345: vec( 121): Unvectorizable dependency.
    346: vec( 120): Unvectorizable dependency.: IMAP_NOD_LG
-   347: opt(3014): Moved reference within a conditional branch.
    348: vec( 122): Dependency unknown. Unvectorizable dependency is assumed.: IMAP_NOD_GL
    374: vec( 101): Vectorized loop.
    379: vec( 180): I/O statement obstructs vectorization.
@@ -287,8 +268,8 @@ DIAGNOSTIC LIST
    556: opt(1025): Reference to this procedure inhibits optimization.: IWRITE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DECOMP
 FORMAT LIST
@@ -830,8 +811,8 @@ FORMAT LIST
    565:                 END SUBROUTINE DECOMP
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:05 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DECOMP
 INLINE LIST
@@ -848,8 +829,8 @@ INLINE LIST
      *** Source for routine not found.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:05 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DECOMP
 VECTORIZATION LIST
@@ -1138,8 +1119,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:05 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DECOMP
 CODE GENERATION LIST
@@ -1154,11 +1135,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 4016 bytes
-      Register spill area      : 1328 bytes
+    Total size                 : 3984 bytes
+      Register spill area      : 1312 bytes
       Parameter area           :   72 bytes
       Register save area       :  176 bytes
-      User data area           : 2432 bytes
+      User data area           : 2416 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
@@ -1187,12 +1168,12 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 38
 
     LOOP BEGIN: (decomp.F:88)
-      *** Estimated execution cycle                     : 877
+      *** Estimated execution cycle                     : 781
     LOOP END
   LOOP END
 
   LOOP BEGIN: (decomp.F:111)
-    *** Estimated execution cycle                       : 327
+    *** Estimated execution cycle                       : 322
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 10
             Across calls                                : 10
@@ -1200,18 +1181,18 @@ CODE GENERATION LIST
           Total                                         : 17
             Across calls                                : 10
             Over basic blocks                           :  7
-    *** The number of SCALAR REGISTER TRANSFER          : 72
+    *** The number of SCALAR REGISTER TRANSFER          : 76
 
     LOOP BEGIN: (decomp.F:113)
-      *** Estimated execution cycle                     : 466
+      *** Estimated execution cycle                     : 434
     LOOP END
 
     LOOP BEGIN: (decomp.F:982)
-      *** Estimated execution cycle                     : 33
+      *** Estimated execution cycle                     : 32
       *** The number of SCALAR REGISTER TRANSFER        : 9
 
     LOOP BEGIN: (decomp.F:131)
-      *** Estimated execution cycle                     : 31
+      *** Estimated execution cycle                     : 30
     LOOP END
   LOOP END
 
@@ -1220,7 +1201,7 @@ CODE GENERATION LIST
   LOOP END
 
   LOOP BEGIN: (decomp.F:161)
-    *** Estimated execution cycle                       : 266
+    *** Estimated execution cycle                       : 269
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 8
             Across calls                                : 7
@@ -1232,16 +1213,16 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 58
 
     LOOP BEGIN: (decomp.F:165)
-      *** Estimated execution cycle                     : 45
+      *** Estimated execution cycle                     : 48
       *** The number of SCALAR REGISTER TRANSFER        : 18
 
       LOOP BEGIN: (decomp.F:168)
-        *** Estimated execution cycle                   : 306
+        *** Estimated execution cycle                   : 309
       LOOP END
     LOOP END
 
     LOOP BEGIN: (decomp.F:982)
-      *** Estimated execution cycle                     : 33
+      *** Estimated execution cycle                     : 32
       *** The number of SCALAR REGISTER TRANSFER        : 9
 
     LOOP BEGIN: (decomp.F:202)
@@ -1268,12 +1249,12 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (decomp.F:308)
-      *** Estimated execution cycle                     : 22
+      *** Estimated execution cycle                     : 21
     LOOP END
   LOOP END
 
   LOOP BEGIN: (decomp.F:234)
-    *** Estimated execution cycle                       : 465
+    *** Estimated execution cycle                       : 464
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 43
             Across calls                                : 14
@@ -1284,22 +1265,22 @@ CODE GENERATION LIST
             Across calls                                : 14
             Over basic blocks                           : 36
             Others                                      :  1
-    *** The number of SCALAR REGISTER TRANSFER          : 73
+    *** The number of SCALAR REGISTER TRANSFER          : 71
 
     LOOP BEGIN: (decomp.F:237)
       *** Estimated execution cycle                     : 730
     LOOP END
 
     LOOP BEGIN: (decomp.F:237)
-      *** Estimated execution cycle                     : 91
+      *** Estimated execution cycle                     : 95
       *** The number of SCALAR REGISTER TRANSFER        : 46
 
       LOOP BEGIN: (decomp.F:1057)
-        *** Estimated execution cycle                   : 402
+        *** Estimated execution cycle                   : 405
       LOOP END
 
       LOOP BEGIN: (decomp.F:1057)
-        *** Estimated execution cycle                   : 402
+        *** Estimated execution cycle                   : 405
       LOOP END
     LOOP END
 
@@ -1308,37 +1289,37 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (decomp.F:237)
-      *** Estimated execution cycle                     : 77
-      *** The number of SCALAR REGISTER TRANSFER        : 18
+      *** Estimated execution cycle                     : 71
+      *** The number of SCALAR REGISTER TRANSFER        : 8
     LOOP END
   LOOP END
 
   LOOP BEGIN: (decomp.F:323)
-    *** Estimated execution cycle                       : 327
+    *** Estimated execution cycle                       : 316
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 10
-            Across calls                                : 10
+          Total                                         : 9
+            Across calls                                : 9
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 17
-            Across calls                                : 10
+          Total                                         : 16
+            Across calls                                :  9
             Over basic blocks                           :  7
-    *** The number of SCALAR REGISTER TRANSFER          : 72
+    *** The number of SCALAR REGISTER TRANSFER          : 73
 
     LOOP BEGIN: (decomp.F:325)
       *** Estimated execution cycle                     : 530
     LOOP END
 
     LOOP BEGIN: (decomp.F:982)
-      *** Estimated execution cycle                     : 33
+      *** Estimated execution cycle                     : 32
       *** The number of SCALAR REGISTER TRANSFER        : 9
 
     LOOP BEGIN: (decomp.F:343)
-      *** Estimated execution cycle                     : 31
+      *** Estimated execution cycle                     : 30
     LOOP END
   LOOP END
 
   LOOP BEGIN: (decomp.F:370)
-    *** Estimated execution cycle                       : 107
+    *** Estimated execution cycle                       : 106
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 6
             Over basic blocks                           : 6
@@ -1352,33 +1333,33 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (decomp.F:379)
-      *** Estimated execution cycle                     : 1609
+      *** Estimated execution cycle                     : 1570
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 124
-              Across calls                              :  75
+            Total                                       : 115
+              Across calls                              :  66
               Over basic blocks                         :  49
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 145
-              Across calls                              :  75
+            Total                                       : 136
+              Across calls                              :  66
               Over basic blocks                         :  70
-      *** The number of SCALAR REGISTER TRANSFER        : 401
+      *** The number of SCALAR REGISTER TRANSFER        : 411
 
       LOOP BEGIN: (decomp.F:1035)
-        *** Estimated execution cycle                   : 25
+        *** Estimated execution cycle                   : 21
       LOOP END
 
       LOOP BEGIN: (decomp.F:1035)
-        *** Estimated execution cycle                   : 25
+        *** Estimated execution cycle                   : 21
       LOOP END
 
       LOOP BEGIN: (decomp.F:1035)
-        *** Estimated execution cycle                   : 25
+        *** Estimated execution cycle                   : 21
       LOOP END
     LOOP END
   LOOP END
 
   LOOP BEGIN: (decomp.F:431)
-    *** Estimated execution cycle                       : 346
+    *** Estimated execution cycle                       : 341
     *** The number of SCALAR REGISTER SPILL
           Total                                         : 16
             Across calls                                : 16
@@ -1389,11 +1370,11 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 79
 
     LOOP BEGIN: (decomp.F:435)
-      *** Estimated execution cycle                     : 347
+      *** Estimated execution cycle                     : 315
     LOOP END
 
     LOOP BEGIN: (decomp.F:982)
-      *** Estimated execution cycle                     : 33
+      *** Estimated execution cycle                     : 32
       *** The number of SCALAR REGISTER TRANSFER        : 9
 
     LOOP BEGIN: (decomp.F:465)
@@ -1402,7 +1383,7 @@ CODE GENERATION LIST
   LOOP END
 
       LOOP BEGIN: (decomp.F:997)
-        *** Estimated execution cycle                   : 31
+        *** Estimated execution cycle                   : 29
       LOOP END
     LOOP END
 
@@ -1411,14 +1392,14 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER TRANSFER          : 6
 
     LOOP BEGIN: (decomp.F:489)
-      *** Estimated execution cycle                     : 162
+      *** Estimated execution cycle                     : 166
       *** The number of SCALAR REGISTER SPILL
             Total                                       : 6
               Across calls                              : 6
       *** The number of SCALAR REGISTER RESTORE
             Total                                       : 8
               Across calls                              : 8
-      *** The number of SCALAR REGISTER TRANSFER        : 33
+      *** The number of SCALAR REGISTER TRANSFER        : 36
 
       LOOP BEGIN: (decomp.F:496)
         *** Estimated execution cycle                   : 143
@@ -1461,23 +1442,23 @@ CODE GENERATION LIST
   LOOP END
 
       LOOP BEGIN: (decomp.F:997)
-        *** Estimated execution cycle                   : 31
+        *** Estimated execution cycle                   : 29
       LOOP END
     LOOP END
 
       LOOP BEGIN: (decomp.F:997)
-        *** Estimated execution cycle                   : 31
+        *** Estimated execution cycle                   : 29
       LOOP END
     LOOP END
 
       LOOP BEGIN: (decomp.F:997)
-        *** Estimated execution cycle                   : 31
+        *** Estimated execution cycle                   : 29
       LOOP END
     LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: CHECKMAPPINGS
 DIAGNOSTIC LIST
@@ -1486,34 +1467,21 @@ DIAGNOSTIC LIST
 
    589: vec( 101): Vectorized loop.
    593: vec( 180): I/O statement obstructs vectorization.
-   597: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    597: vec( 102): Partially vectorized loop.
    600: opt(1135): Outer loop conditionally executes inner loop.
-   600: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    600: vec( 102): Partially vectorized loop.
-   604: opt(3014): Moved reference within a conditional branch.
    605: vec( 101): Vectorized loop.
-   610: opt(3014): Moved reference within a conditional branch.
    611: opt(1019): Feedback of scalar value from one loop pass to another.: NVELLP
-   611: opt(3014): Moved reference within a conditional branch.
-   612: opt(3014): Moved reference within a conditional branch.
-   613: opt(3014): Moved reference within a conditional branch.
-   614: opt(3014): Moved reference within a conditional branch.
-   622: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    622: vec( 101): Vectorized loop.
    627: vec( 101): Vectorized loop.
-   637: opt(3014): Moved reference within a conditional branch.
    640: opt(1019): Feedback of scalar value from one loop pass to another.: NVELLP
-   640: opt(3014): Moved reference within a conditional branch.
-   644: opt(3014): Moved reference within a conditional branch.
-   647: opt(3014): Moved reference within a conditional branch.
    678: vec( 103): Unvectorized loop.
    678: vec( 180): I/O statement obstructs vectorization.
    680: opt(1118): This I/O statement inhibits optimization of loop.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: CHECKMAPPINGS
 FORMAT LIST
@@ -1668,8 +1636,8 @@ FORMAT LIST
    702:                 end subroutine checkMappings
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: CHECKMAPPINGS
 INLINE LIST
@@ -1677,8 +1645,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: CHECKMAPPINGS
 VECTORIZATION LIST
@@ -1746,8 +1714,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: CHECKMAPPINGS
 CODE GENERATION LIST
@@ -1762,11 +1730,11 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 2128 bytes
-      Register spill area      :  424 bytes
+    Total size                 : 2112 bytes
+      Register spill area      :  416 bytes
       Parameter area           :   72 bytes
       Register save area       :  176 bytes
-      User data area           : 1448 bytes
+      User data area           : 1440 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
@@ -1780,33 +1748,30 @@ CODE GENERATION LIST
     *** The number of SCALAR REGISTER RESTORE
           Total                                         : 25
             Over basic blocks                           : 25
-    *** The number of SCALAR REGISTER TRANSFER          : 34
+    *** The number of SCALAR REGISTER TRANSFER          : 35
 
     LOOP BEGIN: (decomp.F:589)
       *** Estimated execution cycle                     : 63
     LOOP END
 
     LOOP BEGIN: (decomp.F:593)
-      *** Estimated execution cycle                     : 549
+      *** Estimated execution cycle                     : 534
       *** The number of SCALAR REGISTER SPILL
-            Total                                       : 28
+            Total                                       : 27
               Across calls                              : 11
               Over basic blocks                         : 16
-              Others                                    :  1
       *** The number of SCALAR REGISTER RESTORE
-            Total                                       : 48
+            Total                                       : 46
               Across calls                              : 11
-              Not enough registers                      :  1
               Over basic blocks                         : 35
-              Others                                    :  1
-      *** The number of SCALAR REGISTER TRANSFER        : 89
+      *** The number of SCALAR REGISTER TRANSFER        : 84
 
       LOOP BEGIN: (decomp.F:622)
-        *** Estimated execution cycle                   : 218
+        *** Estimated execution cycle                   : 156
       LOOP END
 
       LOOP BEGIN: (decomp.F:622)
-        *** Estimated execution cycle                   : 63
+        *** Estimated execution cycle                   : 64
         *** The number of SCALAR REGISTER TRANSFER      : 15
 
         LOOP BEGIN: (decomp.F:627)
@@ -1815,25 +1780,25 @@ CODE GENERATION LIST
       LOOP END
 
       LOOP BEGIN: (decomp.F:597)
-        *** Estimated execution cycle                   : 250
+        *** Estimated execution cycle                   : 218
       LOOP END
 
       LOOP BEGIN: (decomp.F:597)
-        *** Estimated execution cycle                   : 92
+        *** Estimated execution cycle                   : 93
         *** The number of SCALAR REGISTER SPILL
               Total                                     : 1
                 Across calls                            : 1
         *** The number of SCALAR REGISTER RESTORE
               Total                                     : 1
                 Across calls                            : 1
-        *** The number of SCALAR REGISTER TRANSFER      : 15
+        *** The number of SCALAR REGISTER TRANSFER      : 16
 
         LOOP BEGIN: (decomp.F:600)
           *** Estimated execution cycle                 : 96
         LOOP END
 
         LOOP BEGIN: (decomp.F:600)
-          *** Estimated execution cycle                 : 60
+          *** Estimated execution cycle                 : 61
           *** The number of SCALAR REGISTER TRANSFER    : 12
 
           LOOP BEGIN: (decomp.F:605)
@@ -1856,8 +1821,8 @@ CODE GENERATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DOMSIZE
 DIAGNOSTIC LIST
@@ -1886,14 +1851,11 @@ DIAGNOSTIC LIST
    843: vec( 126): Idiom detected.: SEARCH
    844: opt(1019): Feedback of scalar value from one loop pass to another.: ITOT
    870: inl(1222): Inlined: SORT
-   875: opt(3008): Reference within a conditional branch moved outside loop - use "move" directive to suppress this optimization.
    875: vec( 103): Unvectorized loop.
    875: vec( 113): Overhead of loop division is too large.
    876: opt(1019): Feedback of scalar value from one loop pass to another.: INDX
    876: vec( 121): Unvectorizable dependency.
    878: opt(1019): Feedback of scalar value from one loop pass to another.: ITOT
-   879: opt(3014): Moved reference within a conditional branch.
-   880: opt(3014): Moved reference within a conditional branch.
    905: opt(1135): Outer loop conditionally executes inner loop.
    905: vec( 101): Vectorized loop.
    912: inl(1222): Inlined: SEARCH3
@@ -1909,8 +1871,8 @@ DIAGNOSTIC LIST
    946: vec( 120): Unvectorizable dependency.: NODE_LG
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DOMSIZE
 FORMAT LIST
@@ -2185,8 +2147,8 @@ FORMAT LIST
    966:                 END SUBROUTINE DOMSIZE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DOMSIZE
 INLINE LIST
@@ -2199,8 +2161,8 @@ INLINE LIST
   -> INLINE: SORT (decomp.F:940)
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DOMSIZE
 VECTORIZATION LIST
@@ -2351,8 +2313,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: DOMSIZE
 CODE GENERATION LIST
@@ -2367,27 +2329,27 @@ CODE GENERATION LIST
       VREG directive           :  0
 
   Routine stack
-    Total size                 : 6512 bytes
-      Register spill area      : 2608 bytes
+    Total size                 : 6528 bytes
+      Register spill area      : 2616 bytes
       Parameter area           :   72 bytes
       Register save area       :  176 bytes
-      User data area           : 3648 bytes
+      User data area           : 3656 bytes
       Others                   :    8 bytes
 
     Note: Total size of Routine stack does not include
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (decomp.F:742)
-    *** Estimated execution cycle                       : 1330
+    *** Estimated execution cycle                       : 1304
     *** The number of SCALAR REGISTER SPILL
-          Total                                         : 80
-            Across calls                                : 68
-            Over basic blocks                           : 12
+          Total                                         : 75
+            Across calls                                : 65
+            Over basic blocks                           : 10
     *** The number of SCALAR REGISTER RESTORE
-          Total                                         : 103
-            Across calls                                :  68
-            Over basic blocks                           :  35
-    *** The number of SCALAR REGISTER TRANSFER          : 291
+          Total                                         : 97
+            Across calls                                : 65
+            Over basic blocks                           : 32
+    *** The number of SCALAR REGISTER TRANSFER          : 297
 
     LOOP BEGIN: (decomp.F:751)
       *** Estimated execution cycle                     : 164
@@ -2409,28 +2371,28 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (decomp.F:800)
-      *** Estimated execution cycle                     : 466
+      *** Estimated execution cycle                     : 434
     LOOP END
 
     LOOP BEGIN: (decomp.F:982)
-      *** Estimated execution cycle                     : 29
+      *** Estimated execution cycle                     : 28
       *** The number of SCALAR REGISTER TRANSFER        : 5
 
     LOOP BEGIN: (decomp.F:818)
-      *** Estimated execution cycle                     : 19
+      *** Estimated execution cycle                     : 18
     LOOP END
 
     LOOP BEGIN: (decomp.F:838)
-      *** Estimated execution cycle                     : 39
+      *** Estimated execution cycle                     : 42
       *** The number of SCALAR REGISTER TRANSFER        : 6
 
       LOOP BEGIN: (decomp.F:841)
-        *** Estimated execution cycle                   : 306
+        *** Estimated execution cycle                   : 309
       LOOP END
     LOOP END
 
     LOOP BEGIN: (decomp.F:982)
-      *** Estimated execution cycle                     : 29
+      *** Estimated execution cycle                     : 28
       *** The number of SCALAR REGISTER TRANSFER        : 5
 
     LOOP BEGIN: (decomp.F:875)
@@ -2442,15 +2404,15 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (decomp.F:905)
-      *** Estimated execution cycle                     : 81
-      *** The number of SCALAR REGISTER TRANSFER        : 22
+      *** Estimated execution cycle                     : 91
+      *** The number of SCALAR REGISTER TRANSFER        : 30
 
       LOOP BEGIN: (decomp.F:1057)
-        *** Estimated execution cycle                   : 402
+        *** Estimated execution cycle                   : 405
       LOOP END
 
       LOOP BEGIN: (decomp.F:1057)
-        *** Estimated execution cycle                   : 402
+        *** Estimated execution cycle                   : 405
       LOOP END
     LOOP END
 
@@ -2459,11 +2421,11 @@ CODE GENERATION LIST
     LOOP END
 
     LOOP BEGIN: (decomp.F:928)
-      *** Estimated execution cycle                     : 466
+      *** Estimated execution cycle                     : 434
     LOOP END
 
     LOOP BEGIN: (decomp.F:982)
-      *** Estimated execution cycle                     : 29
+      *** Estimated execution cycle                     : 28
       *** The number of SCALAR REGISTER TRANSFER        : 5
 
     LOOP BEGIN: (decomp.F:943)
@@ -2472,23 +2434,23 @@ CODE GENERATION LIST
   LOOP END
 
       LOOP BEGIN: (decomp.F:997)
-        *** Estimated execution cycle                   : 31
+        *** Estimated execution cycle                   : 29
       LOOP END
     LOOP END
 
       LOOP BEGIN: (decomp.F:997)
-        *** Estimated execution cycle                   : 35
+        *** Estimated execution cycle                   : 33
       LOOP END
     LOOP END
 
       LOOP BEGIN: (decomp.F:997)
-        *** Estimated execution cycle                   : 31
+        *** Estimated execution cycle                   : 29
       LOOP END
     LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SORT
 DIAGNOSTIC LIST
@@ -2500,8 +2462,8 @@ DIAGNOSTIC LIST
    997: vec( 108): Unvectorizable loop structure.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SORT
 FORMAT LIST
@@ -2561,8 +2523,8 @@ FORMAT LIST
   1012:                 END SUBROUTINE SORT
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SORT
 INLINE LIST
@@ -2570,8 +2532,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SORT
 VECTORIZATION LIST
@@ -2587,8 +2549,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SORT
 CODE GENERATION LIST
@@ -2614,17 +2576,17 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (decomp.F:982)
-    *** Estimated execution cycle                       : 33
+    *** Estimated execution cycle                       : 32
     *** The number of SCALAR REGISTER TRANSFER          : 9
 
     LOOP BEGIN: (decomp.F:997)
-      *** Estimated execution cycle                     : 30
+      *** Estimated execution cycle                     : 27
     LOOP END
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: LOCATE
 DIAGNOSTIC LIST
@@ -2635,8 +2597,8 @@ DIAGNOSTIC LIST
   1035: vec( 108): Unvectorizable loop structure.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: LOCATE
 FORMAT LIST
@@ -2683,8 +2645,8 @@ FORMAT LIST
   1047:                    END SUBROUTINE LOCATE
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: LOCATE
 INLINE LIST
@@ -2692,8 +2654,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: LOCATE
 VECTORIZATION LIST
@@ -2704,8 +2666,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: LOCATE
 CODE GENERATION LIST
@@ -2731,12 +2693,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (decomp.F:1035)
-    *** Estimated execution cycle                       : 25
+    *** Estimated execution cycle                       : 21
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH3
 DIAGNOSTIC LIST
@@ -2747,8 +2709,8 @@ DIAGNOSTIC LIST
   1059: vec( 126): Idiom detected.: SEARCH
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH3
 FORMAT LIST
@@ -2784,8 +2746,8 @@ FORMAT LIST
   1066:                 END SUBROUTINE SEARCH3
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH3
 INLINE LIST
@@ -2793,8 +2755,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH3
 VECTORIZATION LIST
@@ -2810,8 +2772,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH3
 CODE GENERATION LIST
@@ -2837,12 +2799,12 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (decomp.F:1057)
-    *** Estimated execution cycle                       : 402
+    *** Estimated execution cycle                       : 405
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH
 DIAGNOSTIC LIST
@@ -2853,8 +2815,8 @@ DIAGNOSTIC LIST
   1078: vec( 126): Idiom detected.: SEARCH
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH
 FORMAT LIST
@@ -2890,8 +2852,8 @@ FORMAT LIST
   1085:                 END SUBROUTINE SEARCH
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH
 INLINE LIST
@@ -2899,8 +2861,8 @@ INLINE LIST
   No message.
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH
 VECTORIZATION LIST
@@ -2916,8 +2878,8 @@ VECTORIZATION LIST
   LOOP END
 
 
-NEC Fortran Compiler (5.2.0) for Vector Engine   Mon Jun 10 14:44:06 2024
-FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc_src/prep/decomp.F
+NEC Fortran Compiler (5.3.0) for Vector Engine   Mon May 19 17:52:23 2025
+FILE NAME: /S/home01/G6012/d0954/DATA/model_run/adcirc/_src/adcirc_IHM/adcirc/prep/decomp.F
 
 PROCEDURE NAME: SEARCH
 CODE GENERATION LIST
@@ -2943,7 +2905,7 @@ CODE GENERATION LIST
           the size extended by alloca() and so on.
 
   LOOP BEGIN: (decomp.F:1077)
-    *** Estimated execution cycle                       : 118
+    *** Estimated execution cycle                       : 121
   LOOP END
 
 
